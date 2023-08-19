@@ -1,31 +1,26 @@
 <?php
     session_start();
-
-    require_once("requestlogs_connection.php");
-    $query = "select * from request_logs";
+    require_once("usermanager_logsconnection.php");
+    $query = "select * from usermanager_logs";
     $result = mysqli_query($con,$query);
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="website icon" type="png" href="logo/depedlogo.png">
-    <link rel="stylesheet" href="request_logs.css">
+    <link rel="stylesheet" href="usermanager_logs.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    
-    <title>Request Logs Inventory</title>
+    <link rel="website icon" type="png" href="logo/depedlogo.png">
+    <title>User Manager Logs</title>
 </head>
 <body>
     <header>
         <img src="logo/depedlogo.png" alt="">
         <h1>DEPARTMENT OF EDUCATION <br> REGION III <br> SCHOOLS DIVISION OF SAN JOSE DEL MONTE </h1>
-        <div class="searchbar">
-            <input type="text" id="searchInput" placeholder="Search Account Name...." oninput="searchTable()">
-        </div>
         <input class ="menu_checkbox" type="checkbox" name="" id="check">
         <div class="container">
             <label for="check">
@@ -40,41 +35,34 @@
                 <li><a href="usermanager_logs.php"><i class='bx bxs-user-detail' ></i>User Manager</a></li>
                 <li><a href="logout.php"><i class='bx bx-exit'></i>Logout</a></li>
             </ol>
-        </div>  
+        </div>         
     </header>
-    <h2>REQUEST LOGS</h2>
-    
+    <h2>USER MANAGER LOGS</h2>
     <div class="scroll">
-        <table>
+        <table id="table">
             <tr>
                 <div class="headrow">
-                    <th class="RIS-number">RIS No.</th>
                     <th class="account-name">Account Name</th>
-                    <th class="user-office">User Office</th>
-                    <th class="stock-no">Stock No.</th>
+                    <th class="stock-number">Stock no.</th>
                     <th class="item-description">Item Description</th>
-                    <th class="stock-unit">Stock Unit</th>
-                    <th class="quantity-input">Quantity Input</th>
-                    <th class="form-date">Form Date</th>
+                    <th class="added-quantity">Added Quantity</th>
+                    <th class="date-added">Date Added</th>
                 </div>
             </tr>
             <tr>
                 <div class="row2">
                     <?php
-                        $selectQuery = "SELECT * FROM request_logs";
+                        $selectQuery = "SELECT * FROM usermanager_logs ORDER BY formDate";
                         $result = mysqli_query($con, $selectQuery);
                         $rowNumber = 1;
                         while($row = mysqli_fetch_assoc($result))
                         {
                     ?>
                         
-                        <td class ="RISno"><?php echo $row["risNoDate"];?></td>
                         <td class ="align-account-name"><?php echo $row["accountName"];?></td>
-                        <td class ="align-user-office"><?php echo $row["userOffice"];?></td>
-                        <td class="align-stock-no"><?php echo $row["stock_number"];?></td>
-                        <td class="align-item-description"><?php echo $row["item_description"];?></td>
-                        <td class ="align-stock-unit"><?php echo $row["stock_unit"];?></td>
-                        <td class="align-quantity-input"><?php echo $row["quantityInput"];?></td>
+                        <td class ="align-stock-number"><?php echo $row["stock_number"];?></td>
+                        <td class ="align-item-description"><?php echo $row["item_description"];?></td>
+                        <td class="align-add-quantity"><?php echo $row["add_quantity"];?></td>
                         <td class="align-form-date"><?php echo $row["formDate"];?></td>
             </tr>
                     <?php
@@ -83,7 +71,5 @@
                     ?>
                 </div>
         </table>
-    </div>
-    <script src="request_logs.js"></script>
 </body>
 </html>

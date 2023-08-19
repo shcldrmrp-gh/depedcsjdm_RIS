@@ -37,6 +37,7 @@
             <li><a href="superadmin_inventory.php"><i class='bx bx-table'></i>Item Inventory</a></li>
             <li><a href="Accounts_inventory.php"><i class='bx bxs-user-account'></i>Accounts</a></li>
             <li><a href="request_logs.php"><i class='bx bx-git-pull-request' ></i>Request Logs</a></li>
+            <li><a href="usermanager_logs.php"><i class='bx bxs-user-detail' ></i>User Manager</a></li>
             <li><a href="logout.php"><i class='bx bx-exit'></i>Logout</a></li>
         </ol>
     </div>

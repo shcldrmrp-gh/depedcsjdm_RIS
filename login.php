@@ -36,10 +36,7 @@
             } elseif ($accountType == 'Super Admin') {
                 header("Location: superadmin_inventory.php");// Handle superAdmin redirection here, change location page
             } else {
-                echo '<script>
-                    alert("Login failed. Invalid DepEd E-mail or password.")
-                    window.location.href = "homepage.php";
-                    </script>';
+                echo zz;
             }
         } else {
             echo '<script>

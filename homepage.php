@@ -7,7 +7,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DepEd CSJDM Requisition and Issue Slip Form</title> 
+    <title>DepEd CSJDM Requisition and Issue Slip Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <link rel="icon" type="image/x-icon" href="logos/depedcsjdmlogo.png">
     <link rel="stylesheet" href="homepage_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
@@ -25,6 +27,9 @@
           <div class="row">
             <i class="fas fa-lock"></i>
             <input type="password" placeholder="Password" name="loginPass" required>
+          </div>
+          <div class="row">
+            <a class="forgot-password" href="#">Forgot Password?</a>
           </div>
           <div class="row button">
             <input type="submit" value="Login" name="login">

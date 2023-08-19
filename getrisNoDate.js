@@ -18,17 +18,8 @@ $(document).ready(function() {
                     const year = onlineDate.getUTCFullYear();
                     const month = (onlineDate.getUTCMonth() + 1).toString().padStart(2, '0');
                     
-                    // Check if the year has changed
-                    const currentYear = sessionStorage.getItem('currentYear');
-                    if (currentYear !== year) {
-                        // If the year has changed, reset seriesNumber to 1
-                        lastSeriesNumber = 1;
-                        sessionStorage.setItem('currentYear', year);
-                    } else {
-                        // Increment the last series number
-                        lastSeriesNumber++;
-                    }
-                    
+                    lastSeriesNumber++;
+                   
                     // Format the series number
                     const formattedSeriesNumber = String(lastSeriesNumber).padStart(6, '0');
                     

@@ -22,8 +22,8 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    $latestSeriesNumber = $row["seriesNumber"];
-    echo $latestSeriesNumber;
+    $lastSeriesNumber = $row["seriesNumber"];
+    echo $lastSeriesNumber;
 } else {
     echo "0"; // If no data is available, return 0
 }

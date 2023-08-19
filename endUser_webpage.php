@@ -79,7 +79,7 @@
                         <div class="risNo">
                             RIS No.:
                             <input type="text" name="risNoDate" class="risNoDate" readonly>
-                            <script type="text/javascript" src="getrisNoDate.js"></script>
+                            <script src="getrisNoDate.js"></script>
                         </div>
                     </th>
                 </tr>
