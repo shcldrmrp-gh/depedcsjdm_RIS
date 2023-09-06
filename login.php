@@ -11,6 +11,7 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
+    
     if(isset($_POST['login'])){
         $loginEmail = $_POST['loginEmail'];
         $loginPass = $_POST['loginPass'];
@@ -33,7 +34,4 @@
                 </script>';
         };
     };
- 
-
-
 ?>
