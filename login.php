@@ -32,7 +32,7 @@
             if ($accountType == 'End User') {
                 header("Location: endUser_webpage.php"); //page for enduser
             } elseif ($accountType == 'User Manager') {
-                header("Location: sample.php"); //change location page, sample.php only for testing
+                header("Location: usermanagement.php"); //change location page, sample.php only for testing
             } elseif ($accountType == 'Super Admin') {
                 // Handle superAdmin redirection here, change location page
             } else {
