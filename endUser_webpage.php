@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="icon" type="image/x-icon" href="logos/depedcsjdmlogo.png">
     
-    <title>RIS Form</title>
+    <title>DepEd CSJDM RIS Form</title>
 
 </head>
 
@@ -102,7 +102,7 @@
                       </th>  
 
                     <th>
-                        <select class="item_description" name="item_description[]">
+                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -141,7 +141,7 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                    <select class="item_description" name="item_description[]">
+                    <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -180,7 +180,7 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                    <select class="item_description" name="item_description[]">
+                    <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -219,7 +219,7 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                    <select class="item_description" name="item_description[]">
+                    <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -258,7 +258,7 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                    <select class="item_description" name="item_description[]">
+                    <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -297,7 +297,7 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                    <select class="item_description" name="item_description[]">
+                    <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -336,7 +336,7 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                    <select class="item_description" name="item_description[]">
+                    <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -375,7 +375,7 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                    <select class="item_description" name="item_description[]">
+                    <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -414,7 +414,7 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                    <select class="item_description" name="item_description[]">
+                    <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -453,7 +453,7 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                    <select class="item_description" name="item_description[]">
+                    <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -696,10 +696,13 @@
                 if (itemQuantity > 0) {
                     yesInputCheck.text("✓");
                     noInputCheck.text("");
-                } else {
+                } else if (itemQuantity == 0) {
                     yesInputCheck.text("");
                     noInputCheck.text("✓");
-                }
+                } else if (itemQuantity == -1) {
+                    yesInputCheck.text("");
+                    noInputCheck.text("");
+                } 
             }
 
             $(".item_description").change(function () {
@@ -780,8 +783,6 @@
         }
 
         resetInactivityTimer();
-
     </script>
-
 </body>
 </html>

@@ -14,7 +14,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEPED TAYO</title>
+    <title>DepEd CSJDM Property Office Item Inventory</title>
+    <link rel="icon" type="image/x-icon" href="logos/depedcsjdmlogo.png">
     <link rel="stylesheet" href="usermanagementstyle.css?v=<?php echo time(); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -127,7 +128,8 @@
         <tr>
             <div class="row2">
                 <?php
-
+                    $sql = "SELECT * FROM inventory ORDER BY item_description ASC";
+                    $result = mysqli_query($con, $sql);
                     while($row = mysqli_fetch_assoc($result))
                     {
                 ?>
@@ -138,24 +140,11 @@
                 </tr>
                 <?php
                     }
-
-
-
-
                 ?>
             </div>      
     </table>
     </div>
 
-
-
-
-
-
-
-
-
-    
     <!-----Add Propmpt------->
     <div class="popup" id="popup">
         <form class="insert_form" id="insert_form" method="post" action="" onsubmit="return validateForm();">
@@ -185,22 +174,12 @@
     </div>
     <!-----Add Propmpt------->
 
-
-
-
-
-
-
-
-
-
-
     <!-----Edit Prompt------->
     <div class="popup2" id="popup2">
         <form method="POST" action="edit_inventory.php">
             <h2>EDIT INVENTORY</h2>
             <?php //To connect Dropdown to database
-                $sql = "SELECT stock_number, item_description FROM inventory";
+                $sql = "SELECT stock_number, item_description FROM inventory ORDER BY item_description ASC";
                 $result = $con->query($sql);
             ?>
             <select name="selected_item" class="dropdownedit"> 
@@ -231,19 +210,12 @@
 
     <!-----Edit Prompt------->
 
-
-
-
-
-
-
-
     <!-----Delete Prompt------->
     <div class="popup3" id="popup3">
         <form method="POST" action="delete_inventory.php">
             <h2>DELETE INVENTORY</h2>
             <?php //To connect Dropdownlist to database
-                $sql = "SELECT stock_number, item_description FROM inventory";
+                $sql = "SELECT stock_number, item_description FROM inventory ORDER BY item_description ASC";
                 $result = $con->query($sql);
                 ?>
 
@@ -294,7 +266,6 @@
         }
 
         resetInactivityTimer();
-
     </script>
 
 
