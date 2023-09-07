@@ -532,6 +532,7 @@
                     </th>
                     <th class="accountName" colspan="2">
                         <div class="accountName">
+                             <!-- AUTOMATIC NAME FILL-UP -->
                             <?php
                                 if (isset($_SESSION['accountName'])) {
                                     echo $_SESSION['accountName'];
@@ -551,6 +552,7 @@
                     </th>
                     <th class="accountName"colspan="1">
                       <div class="accountName">
+                         <!-- AUTOMATIC NAME FILL-UP -->
                         <?php
                                 if (isset($_SESSION['accountName'])) {
                                     echo $_SESSION['accountName'];
@@ -587,6 +589,7 @@
                     </th>
                     <th colspan="1">
                         <div class="userPosition">
+                             <!-- AUTOMATIC POSITION FILL-UP -->
                             <?php
                                 if (isset($_SESSION['userPosition'])) {
                                     echo $_SESSION['userPosition'];
@@ -604,11 +607,11 @@
                     </th>
                     <th class="formDate" colspan="2">
                         <div>
+                            <!-- AUTOMATIC DATE FORMATTING (DEVICE-BASED DATE) -->
                             <script>
                                 $(document).ready(function() {
                                     $(".formDate").text(getFormattedDate(new Date()));
                                 });
-
                                 function getFormattedDate(date) {
                                     const day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
                                     const month = (date.getMonth() + 1) < 10 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1);
@@ -622,8 +625,17 @@
                     <th colspan="2"></th>
                     <th class="formDate" colspan="1">
                         <div>
+                             <!-- AUTOMATIC DATE FORMATTING (DEVICE-BASED DATE) -->
                             <script>
-                                
+                                $(document).ready(function() {
+                                    $(".formDate").text(getFormattedDate(new Date()));
+                                });
+                                function getFormattedDate(date) {
+                                    const day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+                                    const month = (date.getMonth() + 1) < 10 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1);
+                                    const year = date.getFullYear();
+                                    return `${month}/${day}/${year}`;
+                                };
                             </script>
                         </div>
                     </th>
@@ -651,7 +663,7 @@
     </div>
         
         
-    
+    <!-- AUTO FILL UP FOR STOCK NUMBER AND UNIT -->
     <script>
         $(document).ready(function() {
             $(".item_description").change(function() {
@@ -674,14 +686,13 @@
         });
     </script>
 
+    <!-- AUTO INPUT FOR STOCK AVAILABILITY -->
     <script>
         $(document).ready(function () {
-            // Function to update "✓" symbols based on item_quantity
             function updateCheckSymbols(selectedRow, itemQuantity) {
                 var yesInputCheck = selectedRow.find(".yesInputCheck");
                 var noInputCheck = selectedRow.find(".noInputCheck");
 
-                // Check item_quantity and update yesInputCheck or noInputCheck
                 if (itemQuantity > 0) {
                     yesInputCheck.text("✓");
                     noInputCheck.text("");
@@ -695,18 +706,15 @@
                 var selectedRow = $(this).closest("tr");
                 var selectedItemOption = $(this).find("option:selected");
                 var itemDescription = selectedItemOption.val();
-
-                // Make an AJAX request to fetch item_quantity based on item_description
                 $.ajax({
-                    type: "POST", // or "GET" depending on your server configuration
-                    url: "fetch_item_quantity.php", // Update with your server-side script
+                    type: "POST",
+                    url: "fetch_item_quantity.php",
                     data: { item_description: itemDescription },
                     success: function (response) {
                         var itemQuantity = parseInt(response);
                         updateCheckSymbols(selectedRow, itemQuantity);
                     },
                     error: function () {
-                        // Handle error if the AJAX request fails
                         console.error("Failed to fetch item_quantity");
                     },
                 });
@@ -714,6 +722,7 @@
         });
     </script>
 
+    <!-- GENERATE PDF FUNCTION -->
     <script>
         let form = document.querySelector("#formContainer");
         let btn = document.querySelector("#generatePDF");
@@ -746,6 +755,7 @@
         });
     </script>
 
+    <!-- DISABLED BACK BUTTON -->
     <script>
           history.pushState(null, null, location.href);
           window.onpopstate = function () {
@@ -753,25 +763,22 @@
           };
     </script>
 
+    <!-- AUTO-LOGOUT FUNCTION -->
     <script>
-        let inactivityTimeout; // Variable to store the inactivity timer ID
+        let inactivityTimeout;
 
-        // Function to reset the inactivity timer
         function resetInactivityTimer() {
             clearTimeout(inactivityTimeout);
-            inactivityTimeout = setTimeout(logout, 60000); // 10 minutes (adjust as needed)
+            inactivityTimeout = setTimeout(logout, 60000);
         }
 
-        // Attach event listeners for user activity (e.g., mousemove and keydown)
         document.addEventListener('mousemove', resetInactivityTimer);
         document.addEventListener('keydown', resetInactivityTimer);
 
-        // Function to logout the user
         function logout() {
-            window.location.href = 'logout.php'; // Redirect to the logout page
+            window.location.href = 'logout.php';
         }
 
-        // Initialize the inactivity timer when the page loads
         resetInactivityTimer();
 
     </script>

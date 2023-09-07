@@ -22,16 +22,30 @@
         $count = mysqli_num_rows($result);
 
         if($count==1 ){
-            header("Location:endUser_webpage.php");
             $_SESSION['accountName'] = $row['accountName'];
             $_SESSION['userPosition'] = $row['userPosition'];
             $_SESSION['centerCode'] = $row['centerCode'];
             $_SESSION['userOffice'] = $row['userOffice'];
-        } else{
+            
+            // check account type so user will access webpage based on their account type
+            $accountType = $row['accountType'];
+            if ($accountType == 'End User') {
+                header("Location: endUser_webpage.php"); //page for enduser
+            } elseif ($accountType == 'User Manager') {
+                header("Location: sample.php"); //change location page, sample.php only for testing
+            } elseif ($accountType == 'Super Admin') {
+                // Handle superAdmin redirection here, change location page
+            } else {
+                echo '<script>
+                    alert("Login failed. Invalid DepEd E-mail or password.")
+                    window.location.href = "homepage.php";
+                    </script>';
+            }
+        } else {
             echo '<script>
                 alert("Login failed. Invalid DepEd E-mail or password.")
                 window.location.href = "homepage.php";
                 </script>';
-        };
-    };
+        }
+    }
 ?>
