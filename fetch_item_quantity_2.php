@@ -9,8 +9,8 @@
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
-    
-    $itemDescription = $_GET['item_description']; // Use $_GET to match the AJAX request method
+
+    $itemDescription = $_POST['item_description'];
 
     // Fetch item_quantity based on the selected item_description
     $sql = "SELECT item_quantity FROM inventory WHERE item_description = '$itemDescription'";

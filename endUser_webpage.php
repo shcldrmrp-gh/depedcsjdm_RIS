@@ -48,10 +48,14 @@
                 <tr>
                     <th colspan="8">
                         <div class="cityDivision">
-                            Division: City of San Jose del Monte
+                            Division:
+                        </div>
+                        <div class="locationDivision">
+                            City of San Jose del Monte
                         </div>
                         <div class="centerCode">
                             Responsibility Code: 
+                        </div>
                             <div class="centerCodePHP">
                                 <?php
                                     if (isset($_SESSION['centerCode'])) {
@@ -71,8 +75,21 @@
                             </div>
                         </div>
                         <div class="risNo">
-                            RIS No.: _______________
+                            RIS No.: 
                         </div>
+                            <div class="risNoDate">
+                                <script>
+                                    $(document).ready(function() {
+                                        $(".risNoDate").text(getrisNoDate(new Date()));
+                                    });
+                                    function getrisNoDate(date) {
+                                        const month = (date.getMonth() + 1) < 10 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1);
+                                        const year = date.getFullYear();
+
+                                        return `${year}-${month}-`;
+                                    };
+                                </script>
+                            </div>
                     </th>
                 </tr>
 
@@ -102,7 +119,8 @@
                       </th>  
 
                     <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
+                            <option value=""></option>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -124,7 +142,7 @@
                     </th>
                     <th class="quantityInput">
                         <div class="quantityInput">
-                            <input type="number" min="1" max="99" name="" id="">
+                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                         </div>
                     </th>
                     <th class="yesInputCheck"></th>
@@ -141,7 +159,8 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                    <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
+                            <option value=""></option>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -159,13 +178,13 @@
 
                                 $conn->close();
                             ?>
-                    </select>
-                  </th>
-                  <th class="quantityInput">
-                    <div class="quantityInput">
-                        <input type="number" min="1" max="99" name="" id="">
-                    </div>
-                  </th>
+                        </select>
+                    </th>
+                    <th class="quantityInput">
+                        <div class="quantityInput">
+                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                        </div>
+                    </th>
                   <th class="yesInputCheck"></th>
                   <th class="noInputCheck"></th>
                   <th class="quantityInput"></th>
@@ -180,7 +199,8 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                    <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
+                            <option value=""></option>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -198,13 +218,13 @@
 
                                 $conn->close();
                             ?>
-                    </select>
-                  </th>
-                  <th class="quantityInput">
-                    <div class="quantityInput">
-                        <input type="number" min="1" max="99" name="" id="">
-                    </div>
-                  </th>
+                        </select>
+                    </th>
+                    <th class="quantityInput">
+                        <div class="quantityInput">
+                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                        </div>
+                    </th>
                   <th class="yesInputCheck"></th>
                   <th class="noInputCheck"></th>
                   <th class="quantityInput"></th>
@@ -219,7 +239,8 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                    <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
+                            <option value=""></option>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -237,13 +258,13 @@
 
                                 $conn->close();
                             ?>
-                    </select>
-                  </th>
-                  <th class="quantityInput">
-                    <div class="quantityInput">
-                        <input type="number" min="1" max="99" name="" id="">
-                    </div>
-                  </th>
+                        </select>
+                    </th>
+                    <th class="quantityInput">
+                        <div class="quantityInput">
+                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                        </div>
+                    </th>
                   <th class="yesInputCheck"></th>
                   <th class="noInputCheck"></th>
                   <th class="quantityInput"></th>
@@ -258,7 +279,8 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                    <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
+                            <option value=""></option>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -276,13 +298,13 @@
 
                                 $conn->close();
                             ?>
-                    </select>
-                  </th>
-                  <th class="quantityInput">
-                    <div class="quantityInput">
-                        <input type="number" min="1" max="99" name="" id="">
-                    </div>
-                  </th>
+                        </select>
+                    </th>
+                    <th class="quantityInput">
+                        <div class="quantityInput">
+                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                        </div>
+                    </th>
                   <th class="yesInputCheck"></th>
                   <th class="noInputCheck"></th>
                   <th class="quantityInput"></th>
@@ -297,7 +319,8 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                    <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
+                            <option value=""></option>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -315,13 +338,13 @@
 
                                 $conn->close();
                             ?>
-                    </select>
-                  </th>
-                  <th class="quantityInput">
-                    <div class="quantityInput">
-                        <input type="number" min="1" max="99" name="" id="">
-                    </div>
-                  </th>
+                        </select>
+                    </th>
+                    <th class="quantityInput">
+                        <div class="quantityInput">
+                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                        </div>
+                    </th>
                   <th class="yesInputCheck"></th>
                   <th class="noInputCheck"></th>
                   <th class="quantityInput"></th>
@@ -336,7 +359,8 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                    <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
+                            <option value=""></option>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -354,13 +378,13 @@
 
                                 $conn->close();
                             ?>
-                    </select>
-                  </th>
-                  <th class="quantityInput">
-                    <div class="quantityInput">
-                        <input type="number" min="1" max="99" name="" id="">
-                    </div>
-                  </th>
+                        </select>
+                    </th>
+                    <th class="quantityInput">
+                        <div class="quantityInput">
+                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                        </div>
+                    </th>
                   <th class="yesInputCheck"></th>
                   <th class="noInputCheck"></th>
                   <th class="quantityInput"></th>
@@ -375,7 +399,8 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                    <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
+                            <option value=""></option>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -393,13 +418,13 @@
 
                                 $conn->close();
                             ?>
-                    </select>
-                  </th>
-                  <th class="quantityInput">
-                    <div class="quantityInput">
-                        <input type="number" min="1" max="99" name="" id="">
-                    </div>
-                  </th>
+                        </select>
+                    </th>
+                    <th class="quantityInput">
+                        <div class="quantityInput">
+                            <input type="number" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                        </div>
+                    </th>
                   <th class="yesInputCheck"></th>
                   <th class="noInputCheck"></th>
                   <th class="quantityInput"></th>
@@ -414,7 +439,8 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                    <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
+                            <option value=""></option>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -432,13 +458,13 @@
 
                                 $conn->close();
                             ?>
-                    </select>
-                  </th>
-                  <th class="quantityInput">
-                    <div class="quantityInput">
-                        <input class="" type="number" min="1" max="99" name="" id="">
-                    </div>
-                  </th>
+                        </select>
+                    </th>
+                    <th class="quantityInput">
+                        <div class="quantityInput">
+                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                        </div>
+                    </th>
                   <th class="yesInputCheck"></th>
                   <th class="noInputCheck"></th>
                   <th class="quantityInput"></th>
@@ -453,7 +479,8 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                    <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
+                            <option value=""></option>
                             <?php
                                 $servername = "localhost";
                                 $username = "root";
@@ -471,13 +498,13 @@
 
                                 $conn->close();
                             ?>
-                    </select>
-                  </th>
-                  <th class="quantityInput">
-                    <div class="quantityInput">
-                        <input type="number" min="1" max="99" name="" id="">
-                    </div>
-                  </th>
+                        </select>
+                    </th>
+                    <th class="quantityInput">
+                        <div class="quantityInput">
+                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                        </div>
+                    </th>
                   <th class="yesInputCheck"></th>
                   <th class="noInputCheck"></th>
                   <th class="quantityInput"></th>
@@ -547,7 +574,7 @@
                     </th>
                     <th class="issuedByName" colspan="2">
                         <div class="issuedByName">
-                            Lalaine T. Manguisi
+                            Mary Lalaine <br> Rachel T. Manguisi
                         </div>
                     </th>
                     <th class="accountName"colspan="1">
@@ -623,20 +650,9 @@
                     </th>
                     <th colspan="2"></th>
                     <th colspan="2"></th>
-                    <th class="formDate" colspan="1">
+                    <th colspan="1">
                         <div>
-                             <!-- AUTOMATIC DATE FORMATTING (DEVICE-BASED DATE) -->
-                            <script>
-                                $(document).ready(function() {
-                                    $(".formDate").text(getFormattedDate(new Date()));
-                                });
-                                function getFormattedDate(date) {
-                                    const day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
-                                    const month = (date.getMonth() + 1) < 10 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1);
-                                    const year = date.getFullYear();
-                                    return `${month}/${day}/${year}`;
-                                };
-                            </script>
+                        
                         </div>
                     </th>
                 </tr>
@@ -711,8 +727,8 @@
                 var itemDescription = selectedItemOption.val();
                 $.ajax({
                     type: "POST",
-                    url: "fetch_item_quantity.php",
-                    data: { item_description: itemDescription },
+                    url: "fetch_item_quantity_2.php",
+                    data: { item_description: itemDescription},
                     success: function (response) {
                         var itemQuantity = parseInt(response);
                         updateCheckSymbols(selectedRow, itemQuantity);
@@ -752,6 +768,28 @@
 
             $(form).append(clonedForm);
 
+            let updateData = [];
+            clonedForm.find('.item_description').each(function(index, selectElement) {
+                let selectedItem = $(selectElement).val();
+                let quantityInput = $(selectElement).closest('tr').find('.quantityInputUser').val();
+                updateData.push({ item_description: selectedItem, quantity: quantityInput });
+            });
+
+            // Send AJAX request for each item to update the database
+            updateData.forEach(function(data) {
+                $.ajax({
+                    url: "update_quantity.php",
+                    type: "POST",
+                    data: data,
+                    success: function(response) {
+                        console.log(response); // Log the response for debugging purposes
+                    },
+                    error: function() {
+                        console.error("Error updating quantity");
+                    },
+                });
+            });
+
             html2pdf().set(opt).from(form).save().then(() => {
                 window.location.reload();
             });
@@ -772,7 +810,7 @@
 
         function resetInactivityTimer() {
             clearTimeout(inactivityTimeout);
-            inactivityTimeout = setTimeout(logout, 60000);
+            inactivityTimeout = setTimeout(logout, 600000);
         }
 
         document.addEventListener('mousemove', resetInactivityTimer);
@@ -784,5 +822,71 @@
 
         resetInactivityTimer();
     </script>
+
+    <script>
+        function updateMaxQuantity(selectElement) {
+            var selectedItemDescription = selectElement.value;
+            var row = selectElement.closest('th').parentNode;
+            var quantityInput = row.querySelector('.quantityInputUser');
+
+            // Create a new XMLHttpRequest
+            var xhr = new XMLHttpRequest();
+
+            // Define the request URL
+            var url = "fetch_item_quantity.php"; // Create a separate PHP file to handle database queries
+
+            // Create a query string to send to the server
+            var params = "item_description=" + selectedItemDescription;
+
+            // Configure the request
+            xhr.open("GET", url + "?" + params, true);
+
+            // Set up the callback function when the request is complete
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var itemQuantity = parseInt(xhr.responseText);
+
+                        // Update the max attribute and placeholder of the input based on the fetched item quantity
+                        if (!isNaN(itemQuantity)) {
+                            quantityInput.max = itemQuantity;
+                            quantityInput.placeholder = "Stock: " + itemQuantity; // Set placeholder
+                        } else {
+                            quantityInput.max = ""; // Set max to an empty string
+                            quantityInput.placeholder = ""; // Remove placeholder
+                        }
+                    } else {
+                        console.error("Error fetching item quantity");
+                    }
+                }
+            };
+
+            // Send the request
+            xhr.send();
+        }
+
+        // Add event listeners to all select elements
+        var selectElements = document.querySelectorAll('.item_description');
+        selectElements.forEach(function (selectElement) {
+            selectElement.addEventListener('change', function () {
+                updateMaxQuantity(this);
+            });
+        });
+
+        // Remove the placeholder when no item is selected in a row
+        selectElements.forEach(function (selectElement) {
+            var row = selectElement.closest('th').parentNode;
+            var quantityInput = row.querySelector('.quantityInputUser');
+
+            selectElement.addEventListener('change', function () {
+                if (selectElement.value === '') {
+                    quantityInput.placeholder = ''; // Remove placeholder
+                }
+            });
+        });
+    </script>
+
+
+    
 </body>
 </html>

@@ -32,10 +32,11 @@ body {
     text-align: center;
     font-family: "Bookman Old Style", sans-serif;
     font-weight: bold;
+
 }
 
 .quantityTitle {
-    width: 10px;
+    width: 5px;
 }
 
 .yesInputCheck {
@@ -74,7 +75,12 @@ nav ul{
 }
 
 .cityDivision {
-    margin-left: -665px;
+    margin-left: -895px;
+}
+
+.locationDivision {
+    margin-top: -20px;
+    margin-left: -525px;
 }
 
 .userOffice {
@@ -84,21 +90,26 @@ nav ul{
 
 .userOfficePHP {
     margin-top: -20px;
-    margin-left: 100px;
+    margin-left: 440px;
 }
 
 .centerCode {
     margin-top: -18px;
-    margin-right: -675px;
+    margin-right: -650px;
 }
 
 .centerCodePHP {
     margin-top: -20px;
-    margin-left: 240px;
+    margin-left: 900px;
 }
 
 .risNo {
-    margin-right: -697px;
+    margin-right: -547px;
+}
+
+.risNoDate {
+    margin-top: -20px;
+    margin-right: -730px;
 }
 
 .purposeTitle {
@@ -175,7 +186,7 @@ nav ul{
     font-family: "Bookman Old Style", sans-serif;
     font-size: 12px;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     width: 225px;
 }
 
