@@ -3,17 +3,18 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'bookman old style';
 }
 
 header{
-   
+    height: 150px;
     background-color: blue;  
     box-shadow: blue;
 }
 
 
 header img{
+    margin-top: 10px;
     width: 120px;
 }
 
@@ -22,8 +23,8 @@ header img{
 .searchbar{
     position: absolute;
     display: flex;
-    margin-left: 1060px;
-    margin-top: -55px;
+    margin-left: 190px;
+    margin-top: 30px;
     
 }
 
@@ -49,7 +50,7 @@ header img{
 nav{
     float: right;
     margin-right: 0px;
-    padding-top: 50px;
+    padding-top: 85px;
     
 }
 
@@ -70,6 +71,9 @@ ul li a{
     text-decoration: none;
     text-align: center;
     font-size: 20px;
+    outline: 2px solid darkblue;
+    box-shadow: 2px darkblue;
+    border-radius: 10px;
 }
 ul li ul.dropdown li{
      display: block;
@@ -90,10 +94,17 @@ ul li:hover ul.dropdown{
 
 /* DROP DOWNLIST*/
 
-
 h1{
+    color: white;
+    position: absolute;
+    margin-top: -130px;
+    margin-left: 120px;
+    
+
+}
+h2{
     font-size: 40px;
-    margin-left: 630px;
+    margin-left: 590px;
 }
 
 
@@ -105,17 +116,28 @@ table{
     margin-left: 180px;
     width: 87%;
     border: 2px solid black;
-    border-collapse: collapse;
-    table-layout: fixed;
-    
-    
-
-    
+    border-collapse: collapse; 
 }
+
+
+.table-number{
+    width: 100px;
+}
+
+
+.table-stock{
+    width: 150px;
+}
+
+
+.table-quantity{
+    width: 150px;
+}
+
+
 table tr {
     text-align: center;
     border: 2px solid black;
-   
 }
 
 table tr th{
@@ -129,10 +151,13 @@ table tr th{
     
 }
 table tr td{
+
     border: 2px solid black;
     
 }
-
+.align-item-description{
+    text-align: left;
+}
 .scroll{
    
     width: 1400px;
@@ -182,49 +207,71 @@ table tr td{
 /* Popup Add Description*/
 
 .popup h2{
-    margin-left: 160px;
+    font-size: 25px;
+    margin-left: 190px;
     
 }
+
+.Item label{
+    position: absolute;
+    margin-left: 20px;
+    margin-top: -30px;
+}
+.Item input{
+    position: absolute;
+    margin-left: 150px;
+    margin-top: -30px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+
 .Stock{
     margin-bottom: 20px;
 }
 .Stock label{
+    position: absolute;
+    margin-top: 50px;
     margin-left: 50px;
 
 }
 .Stock input{
+    position: absolute;
+    margin-top: 50px;
     border: 2px solid black;
-    margin-left: 40px;
+    margin-left: 150px;
     width: 50%;
 }
-.Item label{
-    margin-left: 20px;
-}
-.Item input{
-    margin-left: 10px;
-    border: 2px solid black;
-    margin-bottom: 20px;
-    width: 50%;
-}
+
 .Unit label{
+    position: absolute;
+    margin-top: 30px;
     margin-left: 70px;
     
 }
-.Unit input{
+.Unit .dropdownunit{
+    position: absolute;
     border: 2px solid black;
-    margin-left: 60px;
+    margin-top: 30px;
+    margin-left: 150px;
     width: 50%;
     margin-bottom: 20px;
-
+    font-size: 15px;
+    
 }
 .Quantity label{
+    position: absolute;
+    margin-top: 70px;
     margin-left: 55px;
 
 }
 .Quantity input{
+    position: absolute;
     border: 2px solid black;
     width: 50%;
-    margin-left: 40px
+    margin-top: 70px;
+    margin-left: 150px
 
 }
 
@@ -232,7 +279,7 @@ table tr td{
     display: flex;
     justify-content: space-between;
     margin: 100px;
-    margin-top: 20px;
+    
       
 }
 
@@ -247,6 +294,10 @@ table tr td{
     width: 25%;
     height: 30px;
 }
+
+
+
+
 /* Popup Add Description*/
 
 
@@ -286,7 +337,8 @@ table tr td{
 
 /* Popup Edit Description*/
 .popup2 h2{
-    margin-left: 160px;
+    font-size: 25px;
+    margin-left: 170px;
     
 }
 
@@ -324,7 +376,7 @@ table tr td{
 .Quantity2 input{
     border: 2px solid black;
     width: 15%;
-    margin-left: 105px;
+    margin-left: 117px;
     
     
 
@@ -339,13 +391,18 @@ table tr td{
 }
 
 .Save2{
-    
+    font-size: 20px;
+    height: 30px;
+    width: 70px;
     margin-left: 40px;
     width: 25%;
     height: 30px;
 
 }
 .Close2{
+    font-size: 20px;
+    height: 30px;
+    width: 70px;
     margin-right: 20px;
     width: 25%;
     height: 30px;
@@ -383,7 +440,9 @@ table tr td{
 
 /* Delete Drescription*/
 .popup3 h2{
-    margin-left: 140px;
+    font-size: 25px;
+    margin-left: 120px;
+    margin-top: 20px;
 }
 .buttons3{
     display: flex;
@@ -394,7 +453,7 @@ table tr td{
     width: 90px;
     height: 50px;
     margin-top: 20px;
-    margin-left: 200px;
+    margin-left: 210px;
     background: white;
 
 }
@@ -404,7 +463,9 @@ table tr td{
     cursor: pointer;
 }
 .Close3{
-    width: 50px;
+    font-size: 20px;
+    height: 30px;
+    width: 70px;
     margin-top: 70px;
     margin-right: 30px;
 }
@@ -414,11 +475,11 @@ table tr td{
 
 /* Delete Dropdownlist*/
 .dropdowndelete{
-    width: 300px;
+    width: 400px;
     height: 50px;
     position: relative;
     margin-top: 10px;
-    margin-left: 95px;
+    margin-left: 50px;
     margin-bottom: 20px;
     border: 2px solid black;
     border-radius: 5px;
@@ -434,3 +495,5 @@ table tr td{
 /* Delete Dropdownlist*/
 
 /* Delete Drescription*/
+
+

@@ -22,8 +22,10 @@ if (isset($_POST['save'])) {
                 $insertQuery = "INSERT INTO inventory (stock_number, stock_unit, item_description, item_quantity) VALUES (
                     '" . mysqli_real_escape_string($con, $value) . "','" . mysqli_real_escape_string($con, $stock_unit[$key]) . "','" . mysqli_real_escape_string($con, $item_description[$key]) . "','" . mysqli_real_escape_string($con, $item_quantity[$key]) . "')";
                 $query = mysqli_query($con, $insertQuery);
+                
             }
         }
+       
     }
 
     mysqli_close($con);
