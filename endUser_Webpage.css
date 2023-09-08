@@ -29,23 +29,13 @@ body {
 }
 
 .quantityInput {
-    justify-content: center;
+    text-align: center;
     font-family: "Bookman Old Style", sans-serif;
     font-weight: bold;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    align-self: center;
-    align-content: center;
-    text-align: center;
-}
-
-.quantityInputUser {
-   
 }
 
 .quantityTitle {
-    width: 5px;
+    width: 10px;
 }
 
 .yesInputCheck {
