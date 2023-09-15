@@ -12,7 +12,6 @@
     <script type="text/javascript" src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,15 +20,14 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="icon" type="image/x-icon" href="logos/depedcsjdmlogo.png">
     
-    <title>DepEd CSJDM Requisition and Issue Slip Form</title>
+    <title>DepEd CSJDM RIS Form</title>
 
 </head>
 
 <body>
     <div id="formContainer">
-       
-        <form class="risFORM "action="insert_data.php" method="POST">
-            <table id="forRIS1" border="1" width="950px">
+       <table id="forRIS1" border="1" width="950px">
+            <form class="risFORM "action="" method="POST">
                 <tr>
                     <div class="formHeader">
                         <th width="100px"colspan="8">
@@ -77,9 +75,10 @@
                             </div>
                         </div>
                         <div class="risNo">
-                            RIS No.:
-                            <input type="text" name="risNoDate" class="risNoDate" readonly>
-                            <script type="text/javascript" src="getrisNoDate.js"></script>
+                            RIS No.: 
+                        </div>
+                        <div class="risNoDate">
+                            <script type="text/javascript" src="getRisNumberDate.js"></script>
                         </div>
                     </th>
                 </tr>
@@ -111,7 +110,7 @@
 
                     <th>
                         <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
+                            <option value=""></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
                             ?>
@@ -137,7 +136,7 @@
                   </th>
                   <th>
                         <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
+                            <option value=""></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
                             ?>
@@ -163,7 +162,7 @@
                   </th>
                   <th>
                         <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
+                            <option value=""></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
                             ?>
@@ -189,7 +188,7 @@
                   </th>
                   <th>
                         <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
+                            <option value=""></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
                             ?>
@@ -215,7 +214,7 @@
                   </th>
                   <th>
                         <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
+                            <option value=""></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
                             ?>
@@ -241,7 +240,7 @@
                   </th>
                   <th>
                         <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
+                            <option value=""></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
                             ?>
@@ -267,7 +266,7 @@
                   </th>
                   <th>
                         <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
+                            <option value=""></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
                             ?>
@@ -293,7 +292,7 @@
                   </th>
                   <th>
                         <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
+                            <option value=""></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
                             ?>
@@ -319,7 +318,7 @@
                   </th>
                   <th>
                         <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
+                            <option value=""></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
                             ?>
@@ -345,7 +344,7 @@
                   </th>
                   <th>
                         <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
+                            <option value=""></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
                             ?>
@@ -430,11 +429,12 @@
                     </th>
                     <th class="accountName"colspan="1">
                       <div class="accountName">
-                            <?php
+                        <input class="accountNameInput" type="text" value="<?php
                                     if (isset($_SESSION['accountName'])) {
                                         echo $_SESSION['accountName'];
                                     }
-                            ?>
+                            ?>">
+                            
                       </div>
                     </th>
                 </tr>
@@ -482,12 +482,9 @@
                             Date
                         </div>    
                     </th>
-                    <th colspan="2">
-                        <input type="text" class="formDate" name="formDate" readonly>
-                        <!-- GET CURRENT FORMATTED DATE -->
-                        <script type="text/javascript" src="getCurrentDate.js">
-                            
-                        </script>
+                    <th class="formDate" colspan="2">
+                        <!-- AUTOMATIC DATE FORMATTING (DEVICE-BASED DATE) -->
+                        <script type="text/javascript" src="getCurrentDate.js"></script>
                     </th>
                     <th colspan="2"></th>
                     <th colspan="2"></th>
@@ -497,16 +494,17 @@
                         </div>
                     </th>
                 </tr>
-            </table>
-        </form>
+            </form>
+       </table>
        <br>
        <br>
        <br>
-    </div>
-
+       <br>
+    </div>    
+    
         <div class="endUserButtons">
             <div class="generatePDFplacement">
-                <button type="submit" onclick="sendDataToDatabase()" id="generatePDF">
+                <button id="generatePDF">
                     GENERATE PDF
                 </button>
             </div>
@@ -536,7 +534,5 @@
     <!-- AUTO-LOGOUT FUNCTION -->
     <script type="text/javascript" src="autoLogoutFunction.js"></script>
 
-    <!-- SEND DATA TO DATABASE -->
-    <script type="text/javascript" src="sendDataToDatabase.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-// Connect to the database
+session_start();
 $con = mysqli_connect('localhost', 'user', '', 'ris_propertyoffice');
 
 // Check the connection
@@ -9,11 +9,29 @@ if (!$con) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve data from the form
-    $selectedItem = $_POST["selected_item"];
+    $accountName = $_SESSION['accountName'];
+    $formDate = $_POST['formDate'];
+    $stock_number = $_POST["selected_item"];
     $addQuantity = $_POST["add_quantity"];
+    
 
     // Retrieve the current quantity for the selected item
-    $sql = "SELECT item_quantity FROM inventory WHERE stock_number = '$selectedItem'";
+    
+
+    $insert_sql = "SELECT item_description FROM inventory WHERE stock_number = '$stock_number'";
+    $insert_result = mysqli_query($con, $insert_sql);
+
+    if ($insert_result) {
+        $insert_row = mysqli_fetch_assoc($insert_result);
+        $item_description = $insert_row["item_description"];
+
+            $insertSql = "INSERT INTO usermanager_logs VALUES ('$accountName', '$stock_number','$item_description', '$addQuantity', '$formDate')";
+            if (mysqli_query($con, $insertSql)) {
+            }    
+        } 
+    } 
+
+    $sql = "SELECT item_quantity FROM inventory WHERE stock_number = '$stock_number'";
     $result = mysqli_query($con, $sql);
 
     if ($result) {
@@ -24,14 +42,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $newQuantity = $currentQuantity + $addQuantity;
 
         // Update the quantity in the database
-        $updateSql = "UPDATE inventory SET item_quantity = $newQuantity WHERE stock_number = '$selectedItem'";
-        if (mysqli_query($con, $updateSql)) {
+        $updateSql = "UPDATE inventory SET item_quantity = $newQuantity WHERE stock_number = '$stock_number'";
+        if (mysqli_query($con, $updateSql)) {    
             mysqli_close($con);
             header("Location: usermanagement.php");
-            
         } 
+        
     } 
     
-}
 ?>
-

@@ -1,3 +1,5 @@
+endUser_webpage.php:
+
 <?php
     session_start();
 ?>
@@ -79,7 +81,22 @@
                         <div class="risNo">
                             RIS No.:
                             <input type="text" name="risNoDate" class="risNoDate" readonly>
-                            <script type="text/javascript" src="getrisNoDate.js"></script>
+                            <script>
+                                $(document).ready(function() {
+                                    // Get the formatted date
+                                    const formattedDate = getrisNoDate(new Date());
+                                    
+                                    // Set the formatted date as the value of the input element
+                                    $(".risNoDate").val(formattedDate);
+                                });
+
+                                function getrisNoDate(date) {
+                                    const month = (date.getMonth() + 1) < 10 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1);
+                                    const year = date.getFullYear();
+
+                                    return `${year}-${month}-`;
+                                }
+                            </script>
                         </div>
                     </th>
                 </tr>
@@ -485,8 +502,19 @@
                     <th colspan="2">
                         <input type="text" class="formDate" name="formDate" readonly>
                         <!-- GET CURRENT FORMATTED DATE -->
-                        <script type="text/javascript" src="getCurrentDate.js">
-                            
+                        <script>
+                            $(document).ready(function() {
+                            const formattedDate = getFormattedDate(new Date());
+                                    
+                                    $(".formDate").val(formattedDate);
+                                });
+
+                                function getFormattedDate(date) {
+                                    const day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+                                    const month = (date.getMonth() + 1) < 10 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1);
+                                    const year = date.getFullYear();
+                                    return `${month}/${day}/${year}`;
+                            }
                         </script>
                     </th>
                     <th colspan="2"></th>
@@ -502,8 +530,10 @@
        <br>
        <br>
        <br>
+       <br>
     </div>
 
+        
         <div class="endUserButtons">
             <div class="generatePDFplacement">
                 <button type="submit" onclick="sendDataToDatabase()" id="generatePDF">
@@ -540,3 +570,61 @@
     <script type="text/javascript" src="sendDataToDatabase.js"></script>
 </body>
 </html>
+
+insert_data.php:
+<?php
+session_start();
+
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get user inputs from the form
+    $accountName = $_SESSION['accountName'];
+    $itemDescriptions = $_POST['item_description'];
+    $stockNumbers = $_POST['stock_number'];
+    $stockUnits = $_POST['stock_unit'];
+    $quantities = $_POST['quantity'];
+    $formDate = $_POST['formDate'];
+
+    // Assuming you have a database connection, insert data into the database
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
+    $dbname = "ris_propertyoffice";
+
+    // Create a database connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Check if the connection is successful
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Loop through the submitted data and insert it into the database
+    for ($i = 0; $i < count($itemDescriptions); $i++) {
+        $itemDescription = $itemDescriptions[$i];
+        $stockNumber = $stockNumbers[$i];
+        $stockUnit = $stockUnits[$i];
+        $quantity = $quantities[$i];
+
+        // Check if the itemDescription is not equal to "noValue" before inserting
+        if ($itemDescription != "noValue") {
+            // SQL query to insert data into the request_logs table
+            $sql = "INSERT INTO request_logs (accountName, item_description, stock_number, stock_unit, quantityInput, formDate)
+                    VALUES ('$accountName', '$itemDescription', '$stockNumber', '$stockUnit', '$quantity', '$formDate')";
+
+            if ($conn->query($sql) === TRUE) {
+                // Data inserted successfully
+                echo "Data inserted successfully!";
+            } else {
+                // Error occurred while inserting data
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+        }
+    }
+
+    // Close the database connection
+    $conn->close();
+}
+?>
+
+In the endUser_webpage.php, the 'risNoDate' format is YYYY-MM-NNNNNN from which YYYY is the current year, MM is current month, and NNNNNN will serve as serial number. After the user clicked the "Generate PDF", the risNoDate should be stored to the "ris_propertyoffice" database on "risNoDate" column in "request_logs" table through "insert_data.php". In the system, the NNNNNN should be changing, for example, if the first risNoDate is 2023-09-000001, the second to appear must be 2023-09-000002, whoever the user is. I made a separate column on the same table for serial number named "seriesNumber" where the serial number will be stored and will be used as the basis of the next serial number. In short, risNoDate column should hold "YYYY-MM-NNNNNN" while the seriesNumber should store only the "NNNNNN" of risNoDate and that the stored INT in seriesNumber will be used as the basis for the the next serial number of risNoDate. The "seriesNumber" column is in  "request_logs" table under "ris_propertyoffice" database.

@@ -8,8 +8,8 @@
 
 header{
     height: 150px;
-    background-color: blue;  
-    box-shadow: blue;
+    background-color: #162fa0;  
+    
 }
 
 
@@ -17,6 +17,8 @@ header img{
     margin-top: 10px;
     width: 120px;
 }
+
+
 
 /* Search Bar*/
 
@@ -46,7 +48,7 @@ header img{
 
 
 
-/* DROP DOWNLIST */
+/* NAV DROPDOWN LIST*/
 nav{
     float: right;
     margin-right: 0px;
@@ -66,7 +68,7 @@ ul li{
 }
 ul li a{
     display: block;
-    padding: 20px 25px;
+    padding: 15px 25px;
     color: white;
     text-decoration: none;
     text-align: center;
@@ -80,21 +82,22 @@ ul li ul.dropdown li{
 }
 ul li ul.dropdown{
     width: 100%;
-    background:blue;
+    background:#162fa0;
     position: absolute;
     z-index: 999;
     display: none;
 }
 ul li a:hover{
-    background: green;
+    background: grey;
 }
 ul li:hover ul.dropdown{
     display:block;
 }
 
-/* DROP DOWNLIST*/
+/* NAV DROPDOWN LIST*/
 
 h1{
+    font-size: 32px;
     color: white;
     position: absolute;
     margin-top: -130px;
@@ -106,6 +109,8 @@ h2{
     font-size: 40px;
     margin-left: 590px;
 }
+
+
 
 
 
@@ -121,9 +126,8 @@ table{
 
 
 .table-number{
-    width: 100px;
+    width: 60px;
 }
-
 
 .table-stock{
     width: 150px;
@@ -141,7 +145,7 @@ table tr {
 }
 
 table tr th{
-    background: blue;
+    background: #162fa0;
     color: white;
     font-style: italic;
     border: 2px solid black;
@@ -151,13 +155,14 @@ table tr th{
     
 }
 table tr td{
-
     border: 2px solid black;
     
 }
 .align-item-description{
     text-align: left;
+    padding: 0px 0px 0px 20px;
 }
+
 .scroll{
    
     width: 1400px;
@@ -377,6 +382,7 @@ table tr td{
     border: 2px solid black;
     width: 15%;
     margin-left: 117px;
+    font-size: 20px;
     
     
 
@@ -497,3 +503,9 @@ table tr td{
 /* Delete Drescription*/
 
 
+/* RESPONSIVE WEBSITE */
+@media (min-width:768px){
+    header{
+        width: 100%;
+    }
+}

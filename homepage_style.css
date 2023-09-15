@@ -31,12 +31,19 @@ body{
   background: #162fa0;
   border-radius: 5px 5px 0 0;
   color: #fff;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 600;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
+
+.wrapper .title_two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .wrapper form{
   padding: 30px 25px 25px 25px;
 }

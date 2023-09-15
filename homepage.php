@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEPED CSJDM RIS GENERATOR</title> 
+    <title>DepEd CSJDM Requisition and Issue Slip Form</title> 
     <link rel="icon" type="image/x-icon" href="logos/depedcsjdmlogo.png">
     <link rel="stylesheet" href="homepage_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
@@ -16,7 +16,7 @@
   <body>
     <div class="login_form">
       <div class="wrapper">
-        <div class="title"><span>RIS Login Form</span></div>
+        <div class="title"><span>Requisition and Issue Slip <br> <div class="title_two">Login</div></span></div>
         <form name="form" action="login.php" method="POST">
           <div class="row">
             <i class="fas fa-user"></i>

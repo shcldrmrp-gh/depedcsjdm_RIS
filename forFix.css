@@ -4,7 +4,7 @@ body {
 }
 
 #forRIS1{
-    margin-left: 200px;
+    zmargin-left: 200px;
 }
 
 .stock_number {
@@ -103,7 +103,13 @@ nav ul{
 }
 
 .risNo {
-    margin-left: 710px;
+    margin-right: -547px;
+}
+
+.risNoDate {
+    margin-top: -20px;
+    margin-right: -730px;
+    margin-left: 10px;
 }
 
 .purposeTitle {
@@ -199,10 +205,6 @@ nav ul{
 .accountName{
     text-align: center;
     font-size: 12px;
-}
-
-.accountNameInput {
-    width: 700px;
 }
 
 .issuedRemarks {
@@ -386,7 +388,17 @@ nav ul{
         margin-top: -20px;
         margin-left: 900px;
     }
-        
+    
+    .risNo {
+        margin-right: -547px;
+    }
+    
+    .risNoDate {
+        margin-top: -20px;
+        margin-right: -730px;
+        margin-left: 10px;
+    }
+    
     .purposeTitle {
         text-align: left;
         margin-top: 2px;
@@ -475,6 +487,15 @@ nav ul{
     
     .stock_number {
         text-align: center;
+    }
+    
+    .accountName{
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .accountNameInput {
+        width: 100px;
     }
     
     .issuedRemarks {

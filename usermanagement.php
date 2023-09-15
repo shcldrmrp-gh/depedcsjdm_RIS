@@ -21,13 +21,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function(){
-
-        });
-        
+  
 
 
         // Alert for stock number and item description
@@ -115,7 +112,7 @@
                 <li>
                     <a href="#">UPDATE</a>
                     <ul class="dropdown">
-                        <li><a href="#" onclick="openAdd()">Add Items</a></li>
+                        <li><a href="#" onclick="openAdd()">Add Inventory</a></li>
                         <li><a href="#" onclick="openEdit()">Add Quantity</a></li>
                         <li><a href="#" onclick="openDelete()">Delete</a></li>
                     </ul>
@@ -133,7 +130,7 @@
     <table>
         <tr>
             <div class="headrow">
-                <th class="table-number">Number</th>
+                <th class="table-number">No.</th>
                 <th class="table-stock">Stock No.</th>
                 <th class="table-unit">Unit</th>
                 <th class="table-item">Item Description</th>
@@ -163,6 +160,7 @@
     </table>
     </div>
 
+    <input type="hidden" name="accountName" class="accountName" value="<?php if (isset($_SESSION['accountName'])) {echo $_SESSION['accountName'];}?>">
     <!-----Add Propmpt------->
     <div class="popup" id="popup">
         <form class="insert_form" id="insert_form" method="post" action="" onsubmit="return validateForm();">
@@ -239,9 +237,12 @@
             </div>
 
             <div class="buttons2">
-                <button type="submit" class="Save2">Save</button>
+                <button type="submit" class="Save2">Add</button>
                 <button type="button" class="Close2" onclick="closeEdit()">Close</button>
             </div>
+
+            <input type="hidden" class="formDate" name="formDate" readonly>
+            <script type="text/javascript" src="getCurrentDate.js"></script>
         </form>
     </div>
 
