@@ -33,7 +33,8 @@
                 <li><a href="Accounts_inventory.php"><i class='bx bxs-user-account'></i>Accounts</a></li>
                 <li><a href="request_logs.php"><i class='bx bx-git-pull-request' ></i>Request Logs</a></li>
                 <li><a href="usermanager_logs.php"><i class='bx bxs-user-detail' ></i>User Manager</a></li>
-                <li><a href="logout.php"><i class='bx bx-exit'></i>Logout</a></li>
+                <li><a href="usage_logs.php"><i class='bx bx-bar-chart-alt-2'></i>Usage Logs</a></li>
+                <li><a href="logout.ph"><i class='bx bx-exit'></i>Logout</a></li>
             </ol>
         </div>         
     </header>
@@ -52,7 +53,7 @@
             <tr>
                 <div class="row2">
                     <?php
-                        $selectQuery = "SELECT * FROM usermanager_logs ORDER BY formDate";
+                        $selectQuery = "SELECT * FROM usermanager_logs";
                         $result = mysqli_query($con, $selectQuery);
                         $rowNumber = 1;
                         while($row = mysqli_fetch_assoc($result))

@@ -1,3 +1,4 @@
+// Function for searchbar
 function searchTable() {
     var input, filter, table, tr, td1, td2, i, txtValue1, txtValue2;
     input = document.getElementById("searchInput");
@@ -22,7 +23,42 @@ function searchTable() {
             
     }
 }
+// Function for searchbar END
 
+
+
+// Convert into Excel all data in table in database
+function exportTableToExcel(tableID, filename = ''){
+    var downloadLink;
+    var dataType = 'application/vnd.ms-excel';
+    var tableSelect = document.getElementById(tableID);
+    var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+    
+    // Specify file name
+    filename = filename?filename+'.xls':'Item Inventory.xls';
+    
+    // Create download link element
+    downloadLink = document.createElement("a");
+    
+    document.body.appendChild(downloadLink);
+    
+    if(navigator.msSaveOrOpenBlob){
+        var blob = new Blob(['\ufeff', tableHTML], {
+            type: dataType
+        });
+        navigator.msSaveOrOpenBlob( blob, filename);
+    }else{
+        // Create a link to the file
+        downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+    
+        // Setting the file name
+        downloadLink.download = filename;
+        
+        //triggering the function
+        downloadLink.click();
+    }
+}
+// Convert into Excel all data in table in database END
 
 
 

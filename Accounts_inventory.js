@@ -89,6 +89,7 @@ function validateForm() {
             text: message,
             icon: "Error",
         });
+        
     }
 }
 //Error message for Email that already Exist END//   

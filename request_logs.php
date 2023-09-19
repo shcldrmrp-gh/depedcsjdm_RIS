@@ -1,13 +1,13 @@
 <?php
     session_start();
-
     require_once("requestlogs_connection.php");
     $query = "select * from request_logs";
     $result = mysqli_query($con,$query);
 
+
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,8 +15,7 @@
     <link rel="website icon" type="png" href="logo/depedlogo.png">
     <link rel="stylesheet" href="request_logs.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    
+    <script src="table2excel.js"></script>
     <title>Request Logs Inventory</title>
 </head>
 <body>
@@ -38,14 +37,18 @@
                 <li><a href="Accounts_inventory.php"><i class='bx bxs-user-account'></i>Accounts</a></li>
                 <li><a href="request_logs.php"><i class='bx bx-git-pull-request' ></i>Request Logs</a></li>
                 <li><a href="usermanager_logs.php"><i class='bx bxs-user-detail' ></i>User Manager</a></li>
+                <li><a href="usage_logs.php"><i class='bx bx-bar-chart-alt-2'></i>Usage Logs</a></li>
                 <li><a href="logout.php"><i class='bx bx-exit'></i>Logout</a></li>
             </ol>
-        </div>  
+        </div>
+        <button type="button" class="convertbtn" name="convert_excel" id="convert_excel"  onclick="exportTableToExcel('table')">Convert To Excel</button>
     </header>
     <h2>REQUEST LOGS</h2>
     
+    
+    
     <div class="scroll">
-        <table>
+        <table id="table" border="1">
             <tr>
                 <div class="headrow">
                     <th class="RIS-number">RIS No.</th>
@@ -84,6 +87,10 @@
                 </div>
         </table>
     </div>
-    <script src="request_logs.js"></script>
+
+
+  
+
+<script src="request_logs.js"></script>
 </body>
 </html>
