@@ -1,124 +1,5 @@
-endUser_webpage.php:
-
-<?php
-    session_start();
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="endUser_Webpage.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="icon" type="image/x-icon" href="logos/depedcsjdmlogo.png">
-    
-    <title>DepEd CSJDM Requisition and Issue Slip Form</title>
-
-</head>
-
-<body>
-    <div id="formContainer">
-       
-        <form class="risFORM "action="insert_data.php" method="POST">
-            <table id="forRIS1" border="1" width="950px">
-                <tr>
-                    <div class="formHeader">
-                        <th width="100px"colspan="8">
-                            Division of City Schools
-                            <br>
-                            City of San Jose del Monte
-                            <br>
-                        <div class="entityDeped">
-                            Entity Name: DepEd
-                        </div>
-                        <div class="fundCluster">
-                            Fund Cluster: 01101101
-                        </div>
-                        </th>
-                    </div>
-                </tr>
-
-                <tr>
-                    <th colspan="8">
-                        <div class="cityDivision">
-                            Division:
-                        </div>
-                        <div class="locationDivision">
-                            City of San Jose del Monte
-                        </div>
-                        <div class="centerCode">
-                            Responsibility Code: 
-                        </div>
-                            <div class="centerCodePHP">
-                                <?php
-                                    if (isset($_SESSION['centerCode'])) {
-                                        echo $_SESSION['centerCode'];
-                                    }
-                                ?>
-                            </div>
-                        </div>
-                        <div class="userOffice">
-                            Office: 
-                            <div class="userOfficePHP">
-                                <?php
-                                    if (isset($_SESSION['userOffice'])) {
-                                        echo $_SESSION['userOffice'];
-                                    }
-                                ?>
-                            </div>
-                        </div>
-                        <div class="risNo">
-                            RIS No.:
-                            <input type="text" name="risNoDate" class="risNoDate" readonly>
-                            <script>
-                                $(document).ready(function() {
-                                    // Get the formatted date
-                                    const formattedDate = getrisNoDate(new Date());
-                                    
-                                    // Set the formatted date as the value of the input element
-                                    $(".risNoDate").val(formattedDate);
-                                });
-
-                                function getrisNoDate(date) {
-                                    const month = (date.getMonth() + 1) < 10 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1);
-                                    const year = date.getFullYear();
-
-                                    return `${year}-${month}-`;
-                                }
-                            </script>
-                        </div>
-                    </th>
-                </tr>
-
-                <tr colspan="8">
-                    <th colspan="4">Requisition</th>
-                    <th colspan="2">Stock Available?</th>
-                    <th colspan="2">Issuance</th>
-                </tr>
-
-                <tr colspan="8">
-                    <th class="stock_number">Stock No.</th>
-                    <th class="stock_unit">Unit</th>
-                    <th class="itemDescription_title">Item Description</th>
-                    <th class="quantityInput">Quantity</th>
-                    <th class="yesInputCheck">Yes</th>
-                    <th class="noInputCheck">No</th>
-                    <th class="quantityInput">Quantity</th>
-                    <th class="issuedRemarks">Remarks</th>
-                </tr>
-                
-                <tr colspan="8">
+FORM:
+<tr colspan="8">
                       <th colspan="1" height="18px" class="stock_number">
                           <input class="stock_number" name="stock_number[]" type="text" readonly>
                       </th>
@@ -130,7 +11,21 @@ endUser_webpage.php:
                         <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
                             <option value="noValue"></option>
                             <?php
-                                include('getItemDescriptionFromDatabase.php');
+                                $servername = "localhost";
+                                $username = "root";
+                                $password = "root";
+                                $dbname = "ris_propertyoffice";
+
+                                $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+                                $sql = "SELECT item_description FROM inventory ORDER BY item_description ASC";
+                                $result = $conn->query($sql);
+
+                                while ($row = $result->fetch_assoc()) {
+                                    echo '<option value="' . $row['item_description'] . '">' . $row['item_description'] . '</option>';
+                                }
+
+                                $conn->close();
                             ?>
                         </select>
                     </th>
@@ -144,487 +39,137 @@ endUser_webpage.php:
                     <th class="quantityInput"></th>
                     <th class="issuedRemarks"></th>
                 </tr>
-                
-                <tr colspan="8">
-                  <th colspan="1" height="18px" class="stock_number">
-                      <input class="stock_number" name="stock_number[]" type="text" readonly>
-                  </th>
-                  <th colspan="1" class="stock_unit">
-                      <input class="stock_unit" name="stock_unit[]" type="text" readonly>
-                  </th>
-                  <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
-                            <?php
-                                include('getItemDescriptionFromDatabase.php');
-                            ?>
-                        </select>
-                    </th>
-                    <th class="quantityInput">
-                        <div class="quantityInput">
-                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
-                        </div>
-                    </th>
-                  <th class="yesInputCheck"></th>
-                  <th class="noInputCheck"></th>
-                  <th class="quantityInput"></th>
-                  <th class="issuedRemarks"></th>
-              </tr>
 
-              <tr colspan="8">
-                  <th colspan="1" height="18px" class="stock_number">
-                      <input class="stock_number" name="stock_number[]" type="text" readonly>
-                  </th>
-                  <th colspan="1" class="stock_unit">
-                      <input class="stock_unit" name="stock_unit[]" type="text" readonly>
-                  </th>
-                  <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
-                            <?php
-                                include('getItemDescriptionFromDatabase.php');
-                            ?>
-                        </select>
-                    </th>
-                    <th class="quantityInput">
-                        <div class="quantityInput">
-                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
-                        </div>
-                    </th>
-                  <th class="yesInputCheck"></th>
-                  <th class="noInputCheck"></th>
-                  <th class="quantityInput"></th>
-                  <th class="issuedRemarks"></th>
-              </tr>
-
-              <tr colspan="8">
-                  <th colspan="1" height="18px" class="stock_number">
-                      <input class="stock_number" name="stock_number[]" type="text" readonly>
-                  </th>
-                  <th colspan="1" class="stock_unit">
-                      <input class="stock_unit" name="stock_unit[]" type="text" readonly>
-                  </th>
-                  <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
-                            <?php
-                                include('getItemDescriptionFromDatabase.php');
-                            ?>
-                        </select>
-                    </th>
-                    <th class="quantityInput">
-                        <div class="quantityInput">
-                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
-                        </div>
-                    </th>
-                  <th class="yesInputCheck"></th>
-                  <th class="noInputCheck"></th>
-                  <th class="quantityInput"></th>
-                  <th class="issuedRemarks"></th>
-              </tr>
-
-              <tr colspan="8">
-                  <th colspan="1" height="18px" class="stock_number">
-                      <input class="stock_number" name="stock_number[]" type="text" readonly>
-                  </th>
-                  <th colspan="1" class="stock_unit">
-                      <input class="stock_unit" name="stock_unit[]" type="text" readonly>
-                  </th>
-                  <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
-                            <?php
-                                include('getItemDescriptionFromDatabase.php');
-                            ?>
-                        </select>
-                    </th>
-                    <th class="quantityInput">
-                        <div class="quantityInput">
-                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
-                        </div>
-                    </th>
-                  <th class="yesInputCheck"></th>
-                  <th class="noInputCheck"></th>
-                  <th class="quantityInput"></th>
-                  <th class="issuedRemarks"></th>
-              </tr>
-
-              <tr colspan="8">
-                  <th colspan="1" height="18px" class="stock_number">
-                      <input class="stock_number" name="stock_number[]" type="text" readonly>
-                  </th>
-                  <th colspan="1" class="stock_unit">
-                      <input class="stock_unit" name="stock_unit[]" type="text" readonly>
-                  </th>
-                  <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
-                            <?php
-                                include('getItemDescriptionFromDatabase.php');
-                            ?>
-                        </select>
-                    </th>
-                    <th class="quantityInput">
-                        <div class="quantityInput">
-                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
-                        </div>
-                    </th>
-                  <th class="yesInputCheck"></th>
-                  <th class="noInputCheck"></th>
-                  <th class="quantityInput"></th>
-                  <th class="issuedRemarks"></th>
-              </tr>
-
-              <tr colspan="8">
-                  <th colspan="1" height="18px" class="stock_number">
-                      <input class="stock_number" name="stock_number[]" type="text" readonly>
-                  </th>
-                  <th colspan="1" class="stock_unit">
-                      <input class="stock_unit" name="stock_unit[]" type="text" readonly>
-                  </th>
-                  <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
-                            <?php
-                                include('getItemDescriptionFromDatabase.php');
-                            ?>
-                        </select>
-                    </th>
-                    <th class="quantityInput">
-                        <div class="quantityInput">
-                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
-                        </div>
-                    </th>
-                  <th class="yesInputCheck"></th>
-                  <th class="noInputCheck"></th>
-                  <th class="quantityInput"></th>
-                  <th class="issuedRemarks"></th>
-              </tr>
-
-              <tr colspan="8">
-                  <th colspan="1" height="18px" class="stock_number">
-                      <input class="stock_number" name="stock_number[]" type="text" readonly>
-                  </th>
-                  <th colspan="1" class="stock_unit">
-                      <input class="stock_unit" name="stock_unit[]" type="text" readonly>
-                  </th>
-                  <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
-                            <?php
-                                include('getItemDescriptionFromDatabase.php');
-                            ?>
-                        </select>
-                    </th>
-                    <th class="quantityInput">
-                        <div class="quantityInput">
-                            <input type="number" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
-                        </div>
-                    </th>
-                  <th class="yesInputCheck"></th>
-                  <th class="noInputCheck"></th>
-                  <th class="quantityInput"></th>
-                  <th class="issuedRemarks"></th>
-              </tr>
-
-              <tr colspan="8">
-                  <th colspan="1" height="18px" class="stock_number">
-                      <input class="stock_number" name="stock_number[]" type="text" readonly>
-                  </th>
-                  <th colspan="1" class="stock_unit">
-                      <input class="stock_unit" name="stock_unit[]" type="text" readonly>
-                  </th>
-                  <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
-                            <?php
-                                include('getItemDescriptionFromDatabase.php');
-                            ?>
-                        </select>
-                    </th>
-                    <th class="quantityInput">
-                        <div class="quantityInput">
-                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
-                        </div>
-                    </th>
-                  <th class="yesInputCheck"></th>
-                  <th class="noInputCheck"></th>
-                  <th class="quantityInput"></th>
-                  <th class="issuedRemarks"></th>
-              </tr>
-
-              <tr colspan="8">
-                  <th colspan="1" height="18px" class="stock_number">
-                      <input class="stock_number" name="stock_number[]" type="text" readonly>
-                  </th>
-                  <th colspan="1" class="stock_unit">
-                      <input class="stock_unit" name="stock_unit[]" type="text" readonly>
-                  </th>
-                  <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
-                            <?php
-                                include('getItemDescriptionFromDatabase.php');
-                            ?>
-                        </select>
-                    </th>
-                    <th class="quantityInput">
-                        <div class="quantityInput">
-                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
-                        </div>
-                    </th>
-                  <th class="yesInputCheck"></th>
-                  <th class="noInputCheck"></th>
-                  <th class="quantityInput"></th>
-                  <th class="issuedRemarks"></th>
-              </tr>
-
-              <tr height="100px">
-                  <th class="purposeSection" colspan="8">
-                      <div class="purposeTitle">
-                          Purpose:
-                      </div>
-                      <div>
-                        <input class="purposeInput" type="text" name="" id="">
-                      </div>
-                  </th>
-              </tr>
-
-              <tr>
-                  <th colspan="1" height="50px">
-                      <div id="signature">
-                          Signature
-                      </div>
-                  </th>
-                  <th class="requestedBy" colspan="2">
-                      <div class="requestedBy">
-                          Requested by:
-                      </div?>
-                  </th>
-
-                    <th colspan="2">
-                        <div class="approvalDiv">
-                            Approved by:
-                        </div>
-                    </th>
-                    <th colspan="2">
-                        <div class="approvalDiv">
-                            Issued by:</th>
-                        </div>
-                    </th>
-                    <th colspan="1">
-                        <div class="approvalDiv">
-                            Received by: 
-                        </div>
-                    </th>
-              </tr>
-
-              <tr height="20px">
-                    <th colspan="1" class="firstcolumn_Approval">
-                        <div class="firstcolumn_Approval">
-                            Printed Name
-                        </div>
-                    </th>
-                    <th class="accountName" colspan="2">
-                        <div class="accountName">
-                             <!-- AUTOMATIC NAME FILL-UP -->
-                            <?php
-                                if (isset($_SESSION['accountName'])) {
-                                    echo $_SESSION['accountName'];
-                                }
-                            ?>
-                        </div>
-                    </th>
-                    <th class="approvedByName" colspan="2">
-                        <div class="approvedByName">
-                            Ma. Theresa M. Roxas
-                        </div>
-                    </th>
-                    <th class="issuedByName" colspan="2">
-                        <div class="issuedByName">
-                            Mary Lalaine <br> Rachel T. Manguisi
-                        </div>
-                    </th>
-                    <th class="accountName"colspan="1">
-                      <div class="accountName">
-                            <?php
-                                    if (isset($_SESSION['accountName'])) {
-                                        echo $_SESSION['accountName'];
-                                    }
-                            ?>
-                      </div>
-                    </th>
-                </tr>
-
-                <tr>
-                    <th colspan="1">
-                        <div id="designationID">
-                            Designation
-                        </div>
-                    </th>
-                    <th colspan="2">
-                        <div class="userPosition">
-                            <?php
-                                if (isset($_SESSION['userPosition'])) {
-                                    echo $_SESSION['userPosition'];
-                                }
-                            ?>
-                        </div>
-                    </th>
-                    <th colspan="2">
-                        <div id="approverPosition">
-                            AO IV (Supply)
-                        </div>
-                    </th>
-                    <th colspan="2">
-                        <div id="issuerPosition">
-                            AA I
-                        </div>
-                    </th>
-                    <th colspan="1">
-                        <div class="userPosition">
-                             <!-- AUTOMATIC POSITION FILL-UP -->
-                            <?php
-                                if (isset($_SESSION['userPosition'])) {
-                                    echo $_SESSION['userPosition'];
-                                }
-                            ?>
-                        </div>
-                    </th>
-                </tr>
-
-                <tr>
-                    <th colspan="1">
-                        <div id="dateToday">
-                            Date
-                        </div>    
-                    </th>
-                    <th colspan="2">
-                        <input type="text" class="formDate" name="formDate" readonly>
-                        <!-- GET CURRENT FORMATTED DATE -->
-                        <script>
-                            $(document).ready(function() {
-                            const formattedDate = getFormattedDate(new Date());
-                                    
-                                    $(".formDate").val(formattedDate);
-                                });
-
-                                function getFormattedDate(date) {
-                                    const day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
-                                    const month = (date.getMonth() + 1) < 10 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1);
-                                    const year = date.getFullYear();
-                                    return `${month}/${day}/${year}`;
-                            }
-                        </script>
-                    </th>
-                    <th colspan="2"></th>
-                    <th colspan="2"></th>
-                    <th colspan="1">
-                        <div>
-                        
-                        </div>
-                    </th>
-                </tr>
-            </table>
-        </form>
-       <br>
-       <br>
-       <br>
-       <br>
-    </div>
-
-        
-        <div class="endUserButtons">
-            <div class="generatePDFplacement">
+<div class="generatePDFplacement">
                 <button type="submit" onclick="sendDataToDatabase()" id="generatePDF">
                     GENERATE PDF
                 </button>
             </div>
-   
-            <form action="logout.php">
-                <button id="logoutButton">
-                    LOGOUT
-                </button>
-            </form>
-        </div>
+
+generatePdf.js:
+let form = document.querySelector("#formContainer");
+        let btn = document.querySelector("#generatePDF");
         
-    <!-- AUTO FILL UP FOR STOCK NUMBER AND UNIT -->
-    <script type="text/javascript" src="getStuckNumberUnit.js"></script>
+        var opt = {
+            margin:         [10, -20, -1000, 10],
+            filename:       'ris-form.pdf',
+            image:          { type: 'jpeg', quality: .95},
+            html2canvas:  { scale: 2, allowMagnification: false, width: 1250, height: 2000},
+            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        };
 
-    <!-- AUTO INPUT FOR STOCK AVAILABILITY -->
-    <script type="text/javascript" src="autoStockAvailabilityInput.js"></script>
+        btn.addEventListener('click', () => {
+            
+            let clonedForm = $(form).clone();
 
-    <!-- GENERATE PDF FUNCTION -->
-    <script type="text/javascript" src="generatePdf.js"></script>
+            $(form).find('select').each(function(index, originalSelect) {
+                let clonedSelect = $(clonedForm).find('select').eq(index);
+                
+                let selectedValue = $(originalSelect).val();
+                
+                $(clonedSelect).val(selectedValue);
+            });
 
-    <!-- AUTO UPDATE MAX QUANTITY -->
-    <script type="text/javascript" src="autoUpdateMaxQuantity.js"></script>
+            $(form).append(clonedForm);
 
-    <!-- DISABLED BACK BUTTON -->
-    <script type="text/javscript" src="disableBackButton.js"></script>
+            let updateData = [];
+            clonedForm.find('.item_description').each(function(index, selectElement) {
+                let selectedItem = $(selectElement).val();
+                let quantityInput = $(selectElement).closest('tr').find('.quantityInputUser').val();
+                let stockNumberInput = $(selectElement).closest('tr').find('.stock_number');
+        
+                // Get the stock_number from the class
+                let stockNumber = $(stockNumberInput).attr('class').split(' ').filter(function(className) {
+                    return className.startsWith('stock_number_');
+                })[0].replace('stock_number_', ''); // Extract the stock_number value
+        
+                updateData.push({ item_description: selectedItem, quantity: quantityInput, stock_number: stockNumber });
+            });
 
-    <!-- AUTO-LOGOUT FUNCTION -->
-    <script type="text/javascript" src="autoLogoutFunction.js"></script>
+            // Send AJAX request for each item to update the database
+            updateData.forEach(function(data) {
+                $.ajax({
+                    url: "update_quantity.php",
+                    type: "POST",
+                    data: data,
+                    success: function(response) {
+                        console.log(response); // Log the response for debugging purposes
+                    },
+                    error: function() {
+                        console.error("Error updating quantity");
+                    },
+                });
+            });
+            
+            html2pdf().set(opt).from(form).save().then(() => {
+                window.location.reload();
+            });
+        });
 
-    <!-- SEND DATA TO DATABASE -->
-    <script type="text/javascript" src="sendDataToDatabase.js"></script>
-</body>
-</html>
-
-insert_data.php:
+update_quantity.php:
 <?php
-session_start();
+    // Ensure proper error handling and database connection establishment here.
 
-// Check if the form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get user inputs from the form
-    $accountName = $_SESSION['accountName'];
-    $itemDescriptions = $_POST['item_description'];
-    $stockNumbers = $_POST['stock_number'];
-    $stockUnits = $_POST['stock_unit'];
-    $quantities = $_POST['quantity'];
-    $formDate = $_POST['formDate'];
-
-    // Assuming you have a database connection, insert data into the database
+    // Update the database table 'inventory' to subtract the given quantity from item_quantity.
     $servername = "localhost";
     $username = "root";
     $password = "root";
     $dbname = "ris_propertyoffice";
 
-    // Create a database connection
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-    // Check if the connection is successful
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Loop through the submitted data and insert it into the database
-    for ($i = 0; $i < count($itemDescriptions); $i++) {
-        $itemDescription = $itemDescriptions[$i];
-        $stockNumber = $stockNumbers[$i];
-        $stockUnit = $stockUnits[$i];
-        $quantity = $quantities[$i];
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $itemDescription = $_POST['item_description'];
+        $quantity = $_POST['quantity'];
+        $stock_number = $_POST["stock_number"];
 
-        // Check if the itemDescription is not equal to "noValue" before inserting
-        if ($itemDescription != "noValue") {
-            // SQL query to insert data into the request_logs table
-            $sql = "INSERT INTO request_logs (accountName, item_description, stock_number, stock_unit, quantityInput, formDate)
-                    VALUES ('$accountName', '$itemDescription', '$stockNumber', '$stockUnit', '$quantity', '$formDate')";
+        $sql = "UPDATE inventory SET item_quantity = item_quantity - $quantity WHERE item_description = '$itemDescription'";
 
-            if ($conn->query($sql) === TRUE) {
-                // Data inserted successfully
-                echo "Data inserted successfully!";
-            } else {
-                // Error occurred while inserting data
-                echo "Error: " . $sql . "<br>" . $conn->error;
-            }
+        if ($conn->query($sql) === TRUE) {
+            echo "Quantity updated successfully.";
+        } else {
+            echo "Error updating quantity: " . $conn->error;
         }
     }
 
-    // Close the database connection
-    $conn->close();
-}
-?>
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        // Retrieve the data sent via POST
+        $item_description = $_POST["item_description"];
+        $quantity = $_POST["quantity"];
+        $stock_number = $_POST["stock_number"];
+    
+        // Check if the item_description already exists in the usage_logs table
+        $sql = "SELECT * FROM usage_logs WHERE item_description = '$item_description'";
+        $result = $conn->query($sql);
+    
+        if ($result->num_rows > 0) {
+            // If the item_description exists, update the total_usage
+            $row = $result->fetch_assoc();
+            $current_total_usage = $row["total_usage"];
+            $new_total_usage = $current_total_usage + $quantity;
+    
+            $update_sql = "UPDATE usage_logs SET total_usage = '$new_total_usage' WHERE item_description = '$item_description'";
+            if ($conn->query($update_sql) === TRUE) {
+                echo "Quantity updated successfully.";
+            } else {
+                echo "Error updating quantity: " . $conn->error;
+            }
+        } else {
+            // If the item_description doesn't exist, insert a new row
+            $insert_sql = "INSERT INTO usage_logs (stock_number, item_description, total_usage) VALUES ('$stock_number','$item_description', '$quantity')";
+            if ($conn->query($insert_sql) === TRUE) {
+                echo "Quantity inserted successfully.";
+            } else {
+                echo "Error inserting quantity: " . $conn->error;
+            }
+        }
+    } else {
+        echo "Invalid request.";
+    }
 
-In the endUser_webpage.php, the 'risNoDate' format is YYYY-MM-NNNNNN from which YYYY is the current year, MM is current month, and NNNNNN will serve as serial number. After the user clicked the "Generate PDF", the risNoDate should be stored to the "ris_propertyoffice" database on "risNoDate" column in "request_logs" table through "insert_data.php". In the system, the NNNNNN should be changing, for example, if the first risNoDate is 2023-09-000001, the second to appear must be 2023-09-000002, whoever the user is. I made a separate column on the same table for serial number named "seriesNumber" where the serial number will be stored and will be used as the basis of the next serial number. In short, risNoDate column should hold "YYYY-MM-NNNNNN" while the seriesNumber should store only the "NNNNNN" of risNoDate and that the stored INT in seriesNumber will be used as the basis for the the next serial number of risNoDate. The "seriesNumber" column is in  "request_logs" table under "ris_propertyoffice" database.
+    $conn->close();
+?>

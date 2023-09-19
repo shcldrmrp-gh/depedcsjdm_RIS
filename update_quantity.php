@@ -1,21 +1,22 @@
 <?php
     // Ensure proper error handling and database connection establishment here.
 
+    // Update the database table 'inventory' to subtract the given quantity from item_quantity.
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
+    $dbname = "ris_propertyoffice";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $itemDescription = $_POST['item_description'];
         $quantity = $_POST['quantity'];
-
-        // Update the database table 'inventory' to subtract the given quantity from item_quantity.
-        $servername = "localhost";
-        $username = "root";
-        $password = "root";
-        $dbname = "ris_propertyoffice";
-
-        $conn = new mysqli($servername, $username, $password, $dbname);
-
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        $stock_number = $_POST["stock_number"];
 
         $sql = "UPDATE inventory SET item_quantity = item_quantity - $quantity WHERE item_description = '$itemDescription'";
 
@@ -24,7 +25,7 @@
         } else {
             echo "Error updating quantity: " . $conn->error;
         }
-
-        $conn->close();
     }
+    
+    $conn->close();
 ?>

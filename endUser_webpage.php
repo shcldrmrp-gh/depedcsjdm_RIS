@@ -312,7 +312,7 @@
 
               <tr colspan="8">
                   <th colspan="1" height="18px" class="stock_number">
-                      <input class="stock_number" name="stock_number[]" type="text" readonly>
+                      <input class="stock_number stockNumberInput" name="stock_number[]" type="text" readonly>
                   </th>
                   <th colspan="1" class="stock_unit">
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
@@ -531,7 +531,7 @@
     <script type="text/javascript" src="autoUpdateMaxQuantity.js"></script>
 
     <!-- DISABLED BACK BUTTON -->
-    <script type="text/javscript" src="disableBackButton.js"></script>
+    <script type="text/javascript" src="disableBackButton.js"></script>
 
     <!-- AUTO-LOGOUT FUNCTION -->
     <script type="text/javascript" src="autoLogoutFunction.js"></script>
