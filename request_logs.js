@@ -70,7 +70,7 @@ function exportTableToExcel(tableID, filename = ''){
 }
 
 
-//Function for filter select menu
+//Function for filter
 function filterTable() {
     var filterFrom = document.getElementById("filterFrom").value;
     var filterTo = document.getElementById("filterTo").value;
@@ -95,25 +95,35 @@ function filterTable() {
 }
 
 function filterTable2() {
-    var select = document.getElementById("filterBy");
-    var filterValue = select.value.toLowerCase();
+    var descriptionSelect = document.getElementById("filterBy");
+    var descriptionFilterValue = descriptionSelect.value.toLowerCase();
+
+    var nameSelect = document.getElementById("filterName");
+    var nameFilterValue = nameSelect.value.toLowerCase();
+
     var table = document.getElementById("table");
     var rows = table.getElementsByTagName("tr");
 
     for (var i = 1; i < rows.length; i++) { // Start from 1 to skip the header row
         var descriptionCell = rows[i].querySelector(".align-item-description");
-        if (!descriptionCell) continue; // Skip rows without the cell
+        var nameCell = rows[i].querySelector(".align-account-name");
+
+        if (!descriptionCell || !nameCell) continue; // Skip rows without either cell
 
         var description = descriptionCell.textContent.toLowerCase();
+        var name = nameCell.textContent.toLowerCase();
         var row = rows[i];
 
-        if (filterValue === "" || description.indexOf(filterValue) > -1) {
+        // Check if either filter matches, and show/hide accordingly
+        if ((descriptionFilterValue === "" || description.indexOf(descriptionFilterValue) > -1) &&
+            (nameFilterValue === "" || name.indexOf(nameFilterValue) > -1)) {
             row.style.display = "";
         } else {
             row.style.display = "none";
         }
     }
 }
+
 
 
 
