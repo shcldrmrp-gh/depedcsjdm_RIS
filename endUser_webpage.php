@@ -504,19 +504,26 @@
        <br>
     </div>
 
-        <div class="endUserButtons">
-            <div class="generatePDFplacement">
-                <button type="submit" onclick="sendDataToDatabase()" id="generatePDF">
-                    GENERATE PDF
-                </button>
-            </div>
-   
-            <form action="logout.php">
-                <button id="logoutButton">
-                    LOGOUT
-                </button>
-            </form>
+    <div class="endUserButtons">
+
+        <div class="generatePDFplacement">
+            <button type="submit" onclick="sendDataToDatabase()" id="generatePDF">
+                GENERATE PDF
+            </button>
         </div>
+
+        <a href="changePasswordForm.php">
+            <button id="logoutButton">
+                CHANGE PASSWORD
+            </button>
+        </a>
+   
+        <form action="logout.php">
+            <button id="logoutButton">
+                LOGOUT
+            </button>
+        </form>
+    </div>
         
     <!-- AUTO FILL UP FOR STOCK NUMBER AND UNIT -->
     <script type="text/javascript" src="getStuckNumberUnit.js"></script>

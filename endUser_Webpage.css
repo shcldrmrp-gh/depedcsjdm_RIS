@@ -507,7 +507,6 @@ nav ul{
         border: #000000;
     }
     
-    
     #logoutButton {
         margin-left: 1200px;
         margin-top: 10px;
@@ -525,6 +524,27 @@ nav ul{
     }
     
     #logoutButton:hover {
+        background-color: #000000; /* Darken the background color on hover */
+        border: #000000;
+    }
+
+    #changePasswordButton{
+        margin-left: 1200px;
+        margin-top: 10px;
+        width: 100px;
+        height: 50px;
+        border-radius: 13px;
+        font-family: "Bookman Old Style", sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        background-color: #162fa0; /* Set the initial background color to #162fa0 */
+        color: #fff; /* Set the initial font color to white */
+        border: 2px solid #162fa0; /* Add a border */
+        transition: background-color 0.3s; /* Add a smooth transition for background-color */
+        cursor: pointer; /* Change the cursor to a pointer on hover */
+    }
+
+    #changePasswordButton:hover{
         background-color: #000000; /* Darken the background color on hover */
         border: #000000;
     }

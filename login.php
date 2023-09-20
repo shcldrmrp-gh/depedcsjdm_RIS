@@ -34,7 +34,7 @@
             } elseif ($accountType == 'User Manager') {
                 header("Location: usermanagement.php"); //change location page, sample.php only for testing
             } elseif ($accountType == 'Super Admin') {
-                header("Location: superadmin_inventory.php");// Handle superAdmin redirection here, change location page
+                header("Location: Accounts_inventory.php");// Handle superAdmin redirection here, change location page
             } else {
                 echo '<script>
                 alert("Login failed. Invalid DepEd E-mail or password.")
