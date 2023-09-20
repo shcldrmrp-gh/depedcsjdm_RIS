@@ -23,7 +23,7 @@
         <img src="logo/depedlogo.png" alt="">
         <h1>DEPARTMENT OF EDUCATION <br> REGION III <br> SCHOOLS DIVISION OF SAN JOSE DEL MONTE </h1>
         <div class="searchbar">
-            <input type="text" id="searchInput" placeholder="Search Account Name...." oninput="searchTable()">
+            <input type="text" id="searchInput" placeholder="Search....." oninput="searchTable()">
         </div>
         <input class ="menu_checkbox" type="checkbox" name="" id="check">
         <div class="container">
@@ -37,7 +37,7 @@
                 <li><a href="superadmin_inventory.php"><i class='bx bx-table'></i>Item Inventory</a></li>
                 <li><a href="request_logs.php"><i class='bx bx-git-pull-request' ></i>Request Logs</a></li>
                 <li><a href="usermanager_logs.php"><i class='bx bxs-user-detail' ></i>User Manager</a></li>
-                <li><a href="#"><i class='bx bx-exit'></i>Logout</a></li>
+                <li><a href="logout.php"><i class='bx bx-exit'></i>Logout</a></li>
             </ol>
         </div>
         <button type="button" class="convertbtn" name="convert_excel" id="convert_excel"  onclick="exportTableToExcel('table')">Convert To Excel</button>
@@ -81,7 +81,7 @@
                 <option value="">All</option>
                 <?php
                 // Query the unique item descriptions from your database
-                $itemQuery = "SELECT DISTINCT item_description FROM inventory";
+                $itemQuery = "SELECT DISTINCT item_description FROM inventory ORDER BY item_description ASC";
                 $itemResult = mysqli_query($con, $itemQuery);
 
                 while ($itemRow = mysqli_fetch_assoc($itemResult)) {
@@ -96,7 +96,7 @@
                 <option value="">All</option>
                 <?php
                 // Query the unique item descriptions from your database
-                $itemQuery = "SELECT DISTINCT accountName FROM ris_accounts";
+                $itemQuery = "SELECT DISTINCT accountName FROM ris_accounts ORDER BY accountName ASC";
                 $itemResult = mysqli_query($con, $itemQuery);
 
                 while ($itemRow = mysqli_fetch_assoc($itemResult)) {
