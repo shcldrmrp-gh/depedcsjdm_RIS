@@ -124,10 +124,9 @@ span #times{
 
 /* TABLE */
 table{
-    margin-left: 160px;
     font-size: 20px;
-    margin-top: 50px;
-    width: 80%;
+    margin-left: 117px;
+    width: 91.5%;
     border: 2px solid black;
     border-collapse: collapse;  
 }
@@ -215,8 +214,9 @@ table tr td{
 
 .scroll{
     margin-left: 20px;
-    width: 1500px;
-    height: 500px;
+    margin-top: 10px;
+    width: 91%;
+    height: 350px;
     overflow-y: scroll;
 }
 

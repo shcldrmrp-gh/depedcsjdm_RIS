@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accounts Information Page</title>
-    <link rel="website icon" type="png" href="logo/depedcsjdmlogo.png">
+    <link rel="website icon" type="png" href="logo/depedlogo.png">
     <link rel="stylesheet" href="Accounts_inventory.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -28,11 +28,11 @@
         <nav>
             <ul>
                 <li>
-                    <a href="#">UPDATE</a>
+                    <a href="#">ACCOUNT</a>
                     <ul class="dropdown">
-                        <li><a href="#" onclick="openAdd()">Add Account</a></li>
-                        <li><a href="#" onclick="openEdit()">Edit Account</a></li>
-                        <li><a href="#" onclick="openDelete()">Delete Account</a></li>
+                        <li><a href="#" onclick="openAdd()">Add</a></li>
+                        <li><a href="#" onclick="openEdit()">Edit</a></li>
+                        <li><a href="#" onclick="openDelete()">Delete</a></li>
                     </ul>
                 </li>
             </ul>
@@ -50,12 +50,11 @@
         </label>
         <div class="head">Menu</div>
         <ol>
-            <li><a href="superadmin_inventory.php"><i class='bx bx-table'></i>Item Inventory</a></li>
             <li><a href="Accounts_inventory.php"><i class='bx bxs-user-account'></i>Accounts</a></li>
+            <li><a href="superadmin_inventory.php"><i class='bx bx-table'></i>Item Inventory</a></li>
             <li><a href="request_logs.php"><i class='bx bx-git-pull-request' ></i>Request Logs</a></li>
             <li><a href="usermanager_logs.php"><i class='bx bxs-user-detail' ></i>User Manager</a></li>
-            <li><a href="usage_logs.php"><i class='bx bx-bar-chart-alt-2'></i>Usage Logs</a></li>
-            <li><a href="logout.php"><i class='bx bx-exit'></i>Logout</a></li>
+            <li><a href="#"><i class='bx bx-exit'></i>Logout</a></li>
         </ol>
     </div>
     
@@ -66,12 +65,12 @@
                 <div class="headrow">
                     <th class="table-number">No.</th>
                     <th class="account-type">Account Type</th>
-                    <th class="account-name">Account Name</th>
-                    <th class="user-position">User Position</th>
-                    <th class="user-office">User Office</th>
-                    <th class="center-code">Center Code</th>
+                    <th class="account-name">Name</th>
+                    <th class="user-position">Position</th>
+                    <th class="user-office">Office</th>
+                    <th class="center-code">Code</th>
                     <th class="deped-email">Deped Email</th>
-                    <th class="account-pass">Account Pass</th>
+                    <th class="account-pass">Password</th>
                 </div>
             </tr>
             <tr>

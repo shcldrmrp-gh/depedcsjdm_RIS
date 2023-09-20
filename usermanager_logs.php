@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="usermanager_logs.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="website icon" type="png" href="logo/depedcsjdmlogo.png">
+    <link rel="website icon" type="png" href="logo/depedlogo.png">
     <title>User Manager Logs</title>
 </head>
 <body>
@@ -29,12 +29,11 @@
             </label>
             <div class="head">Menu</div>
             <ol>
-                <li><a href="superadmin_inventory.php"><i class='bx bx-table'></i>Item Inventory</a></li>
                 <li><a href="Accounts_inventory.php"><i class='bx bxs-user-account'></i>Accounts</a></li>
+                <li><a href="superadmin_inventory.php"><i class='bx bx-table'></i>Item Inventory</a></li>
                 <li><a href="request_logs.php"><i class='bx bx-git-pull-request' ></i>Request Logs</a></li>
                 <li><a href="usermanager_logs.php"><i class='bx bxs-user-detail' ></i>User Manager</a></li>
-                <li><a href="usage_logs.php"><i class='bx bx-bar-chart-alt-2'></i>Usage Logs</a></li>
-                <li><a href="logout.php"><i class='bx bx-exit'></i>Logout</a></li>
+                <li><a href="#"><i class='bx bx-exit'></i>Logout</a></li>
             </ol>
         </div>         
     </header>
@@ -53,7 +52,7 @@
             <tr>
                 <div class="row2">
                     <?php
-                        $selectQuery = "SELECT * FROM usermanager_logs ORDER BY formDate DESC";
+                        $selectQuery = "SELECT * FROM usermanager_logs";
                         $result = mysqli_query($con, $selectQuery);
                         $rowNumber = 1;
                         while($row = mysqli_fetch_assoc($result))

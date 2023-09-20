@@ -32,7 +32,7 @@ h2{
 .convertbtn{
     float: right;
     text-decoration: none;
-    margin: 122px -365px 0px 0px;
+    margin: 135px -210px 0px 0px;
     height: 25%;
     width: 10%;
     border-radius: 15px;
@@ -49,6 +49,104 @@ h2{
 }
 
 
+/* Popup Delete Animation*/
+.popup3{
+    height: 250px;
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 500px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(0.1);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+.open-popup3{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%)scale(1);
+}
+/* Popup Delete Animation*/
+
+/* Delete Drescription*/
+.popup3 h2{
+    font-size: 25px;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+.buttons3{
+    display: flex;
+    justify-content: space-between;
+}
+.Delete{
+    font-size: 20px;
+    width: 90px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 210px;
+    background: white;
+
+}
+.Delete:hover{
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+.Close3{
+    font-size: 20px;
+    height: 30px;
+    width: 70px;
+    margin-top: 70px;
+    margin-right: 30px;
+}
+
+
+
+
+/* Delete Dropdownlist*/
+.dropdowndelete{
+    width: 400px;
+    height: 50px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.dropdowndelete *{
+    box-sizing: border-box;
+}
+
+.deletebtn{
+    float: right;
+    text-decoration: none;
+    margin: 135px -50px 0px 0px;
+    height: 25%;
+    width: 10%;
+    border-radius: 15px;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+    border: 1px solid black;
+    outline: none;
+    font-size: 15px;
+}
+
+.deletebtn:hover{
+    background: grey;
+}
+
+/* Delete Dropdownlist*/
+
+/* Delete Drescription*/
 
 
 /* MENU BAR*/
@@ -148,7 +246,7 @@ span #times{
 
 .searchbar{
     float: right;
-    margin: 130px 170px 0px 0px;  
+    margin: 85px 20px 0px 0px;  
     
 }
 
@@ -175,7 +273,6 @@ span #times{
 /* TABLE */
 table{
     font-size: 20px;
-    margin-top: 0px;
     margin-left: 180px;
     width: 87%;
     height: 100%;
@@ -226,7 +323,7 @@ table tr td{
 .scroll{
    
     width: 1400px;
-    height: 400px;
+    height: 350px;
     margin-top: 10px;
     overflow-y: scroll;
     

@@ -68,3 +68,53 @@ function exportTableToExcel(tableID, filename = ''){
         downloadLink.click();
     }
 }
+
+
+//Function for filter select menu
+function filterTable() {
+    var filterFrom = document.getElementById("filterFrom").value;
+    var filterTo = document.getElementById("filterTo").value;
+    var table = document.getElementById("table");
+    var rows = table.getElementsByTagName("tr");
+
+    for (var i = 1; i < rows.length; i++) { // Start from 1 to skip the header row
+        var formDateCell = rows[i].querySelector(".align-form-date");
+        if (!formDateCell) continue; // Skip rows without the cell
+
+        var formDate = formDateCell.textContent;
+
+        if (
+            (filterFrom === "" || formDate >= filterFrom) &&
+            (filterTo === "" || formDate <= filterTo)
+        ) {
+            rows[i].style.display = "";
+        } else {
+            rows[i].style.display = "none";
+        }
+    }
+}
+
+function filterTable2() {
+    var select = document.getElementById("filterBy");
+    var filterValue = select.value.toLowerCase();
+    var table = document.getElementById("table");
+    var rows = table.getElementsByTagName("tr");
+
+    for (var i = 1; i < rows.length; i++) { // Start from 1 to skip the header row
+        var descriptionCell = rows[i].querySelector(".align-item-description");
+        if (!descriptionCell) continue; // Skip rows without the cell
+
+        var description = descriptionCell.textContent.toLowerCase();
+        var row = rows[i];
+
+        if (filterValue === "" || description.indexOf(filterValue) > -1) {
+            row.style.display = "";
+        } else {
+            row.style.display = "none";
+        }
+    }
+}
+
+
+
+

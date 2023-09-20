@@ -60,6 +60,15 @@ function exportTableToExcel(tableID, filename = ''){
 }
 // Convert into Excel all data in table in database END
 
+//Delete Popup animation//
+let popup3 = document.getElementById("popup3");
 
+function openDelete(){
+    popup3.classList.add("open-popup3");
+}
+function closeDelete(){
+    popup3.classList.remove("open-popup3");
+}
+//Delete Popup animation END//
 
 

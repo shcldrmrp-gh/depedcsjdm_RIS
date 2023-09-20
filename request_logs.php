@@ -12,14 +12,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="website icon" type="png" href="logo/depedcsjdmlogo.png">
+    <link rel="website icon" type="png" href="logo/depedlogo.png">  
     <link rel="stylesheet" href="request_logs.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="table2excel.js"></script>
     <title>Request Logs Inventory</title>
 </head>
 <body>
     <header>
+        
         <img src="logo/depedlogo.png" alt="">
         <h1>DEPARTMENT OF EDUCATION <br> REGION III <br> SCHOOLS DIVISION OF SAN JOSE DEL MONTE </h1>
         <div class="searchbar">
@@ -33,20 +33,67 @@
             </label>
             <div class="head">Menu</div>
             <ol>
-                <li><a href="superadmin_inventory.php"><i class='bx bx-table'></i>Item Inventory</a></li>
                 <li><a href="Accounts_inventory.php"><i class='bx bxs-user-account'></i>Accounts</a></li>
+                <li><a href="superadmin_inventory.php"><i class='bx bx-table'></i>Item Inventory</a></li>
                 <li><a href="request_logs.php"><i class='bx bx-git-pull-request' ></i>Request Logs</a></li>
                 <li><a href="usermanager_logs.php"><i class='bx bxs-user-detail' ></i>User Manager</a></li>
-                <li><a href="usage_logs.php"><i class='bx bx-bar-chart-alt-2'></i>Usage Logs</a></li>
-                <li><a href="logout.php"><i class='bx bx-exit'></i>Logout</a></li>
+                <li><a href="#"><i class='bx bx-exit'></i>Logout</a></li>
             </ol>
         </div>
         <button type="button" class="convertbtn" name="convert_excel" id="convert_excel"  onclick="exportTableToExcel('table')">Convert To Excel</button>
+    
     </header>
     <h2>REQUEST LOGS</h2>
+
     
-    
-    
+    <div class="select">
+        <h4>Filter:</h4>
+        <label for="filterFrom">Date From:</label>
+        <select id="filterFrom" onchange="filterTable()">
+            <option value="">All</option>
+            <?php
+            // Query distinct date values from your database
+            $dateQuery = "SELECT DISTINCT formDate FROM request_logs";
+            $dateResult = mysqli_query($con, $dateQuery);
+
+            while ($dateRow = mysqli_fetch_assoc($dateResult)) {
+                echo '<option value="' . $dateRow["formDate"] . '">' . $dateRow["formDate"] . '</option>';
+            }
+            ?>
+        </select>
+
+        <label for="filterTo">To:</label>
+        <select id="filterTo" onchange="filterTable()">
+            <option value="">All</option>
+            <?php
+            // Query distinct date values from your database
+            $dateQuery = "SELECT DISTINCT formDate FROM request_logs";
+            $dateResult = mysqli_query($con, $dateQuery);
+
+            while ($dateRow = mysqli_fetch_assoc($dateResult)) {
+                echo '<option value="' . $dateRow["formDate"] . '">' . $dateRow["formDate"] . '</option>';
+            }
+            ?>
+        </select>
+        <div class="select_item">
+            <label for="filterBy">Item Description:</label>
+            <select id="filterBy" onchange="filterTable2()">
+                <option value="">All</option>
+                <?php
+                // Query the unique item descriptions from your database
+                $itemQuery = "SELECT DISTINCT item_description FROM request_logs";
+                $itemResult = mysqli_query($con, $itemQuery);
+
+                while ($itemRow = mysqli_fetch_assoc($itemResult)) {
+                    echo '<option value="' . $itemRow["item_description"] . '">' . $itemRow["item_description"] . '</option>';
+                }
+                ?>
+            </select>
+        </div>
+    </div>
+
+
+
     <div class="scroll">
         <table id="table" border="1">
             <tr>
@@ -64,6 +111,7 @@
             <tr>
                 <div class="row2">
                     <?php
+                        
                         $selectQuery = "SELECT * FROM request_logs";
                         $result = mysqli_query($con, $selectQuery);
                         $rowNumber = 1;
@@ -87,10 +135,13 @@
                 </div>
         </table>
     </div>
+   
+
 
 
   
 
 <script src="request_logs.js"></script>
+<script src="table2excel.js"></script>
 </body>
 </html>

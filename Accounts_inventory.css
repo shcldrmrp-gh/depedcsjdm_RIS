@@ -132,7 +132,7 @@ span #times{
 /* NAV DROPDOWN LIST*/
 nav{
     float: right;
-    margin-right: -350px;
+    margin-right: -360px;
     padding-top: 120px;
     
 }
@@ -156,7 +156,7 @@ ul li a{
     font-size: 20px;
     outline: 2px solid darkblue;
     box-shadow: 2px darkblue;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 ul li ul.dropdown li{
      display: block;
@@ -613,7 +613,6 @@ ul li:hover ul.dropdown{
 /* TABLE */
 table{
     font-size: 20px;
-    margin-top: 50px;
     width: 100%;
     border: 2px solid black;
     border-collapse: collapse; 
@@ -731,8 +730,9 @@ table tr td{
 
 .scroll{
     margin-left: 20px;
-    width: 1500px;
-    height: 500px;
+    margin-top: 10px;
+    width: 98%;
+    height: 350px;
     overflow-y: scroll;
 }
 

@@ -7,16 +7,16 @@ if (!$con) {
     die("Connection failed: " . mysqli_connect_error());
 }
 // Check if the form has been deletion
-if (isset($_POST["delete_account"])) {
+if (isset($_POST["delete_item"])) {
     // Get the selected item from the dropdown
-     $selectedItem = $_POST["selected_item_delete"];
+     $selectedItem = $_POST["item"];
 
     // Perform the deletion query
-    $sql = "DELETE FROM ris_accounts WHERE depedEmail = '$selectedItem'";
+    $sql = "DELETE FROM inventory WHERE item_description = '$selectedItem'";
 
     if (mysqli_query($con, $sql)) {
         mysqli_close($con);
-        header("Location: Accounts_inventory.php");   
+        header("Location: superadmin_inventory.php");   
     }                             
 }
 ?>

@@ -181,6 +181,8 @@ span #times{
     background: grey;
 }
 
+
+
 /* HEADER  END*/
 
 
@@ -189,13 +191,29 @@ h2{
     text-align: center;
 }
 
+.select{
+    display: flex;
+    
+    margin-top: 40px;
+    margin-left: 200px;
+    font-size: 18px;
+}
+.select label{
+    margin: 0px 0px 0px 5px;
+}
+.select select{
+    border: 2px solid black;
+}
+.select_item{
+    margin: 0px 0px 0px 30px;
+}
 
 /* TABLE */
 table{
-    margin-left: 160px;
+    
+    margin-left: 177px;
     font-size: 20px;
-    margin-top: 50px;
-    width: 80%;
+    width: 87%;
     border: 2px solid black;
     border-collapse: collapse; 
     
@@ -283,7 +301,7 @@ table tr th{
 }
 table tr td{
     margin-left: 10px;
-    font-size: 12px;
+    font-size: 18px;
     border: 2px solid black;
     
     
@@ -291,9 +309,10 @@ table tr td{
 
 
 .scroll{
+    margin-top: 10px;
     margin-left: 20px;
-    width: 1500px;
-    height: 500px;
+    width: 90%;
+    height: 350px;
     overflow-y: scroll;
 }
 

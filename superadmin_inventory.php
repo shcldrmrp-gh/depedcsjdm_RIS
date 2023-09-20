@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUPER ADMIN</title>
-    <link rel="website icon" type="png" href="logo/depedcsjdmlogo.png">
+    <link rel="website icon" type="png" href="logo/depedlogo.png">
     <link rel="stylesheet" href="superadmin_inventory.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="table2excel.js"></script>
@@ -24,7 +24,8 @@
         <div class="searchbar">
             <input type="text" id="searchInput" placeholder="Search Item Description...." oninput="searchTable()">
         </div>
-        <button type="button" class="convertbtn" name="convert_excel" id="convert_excel"  onclick="exportTableToExcel('table')">Convert To Excel</button>    
+        <button type="button" class="convertbtn" name="convert_excel" id="convert_excel"  onclick="exportTableToExcel('table')">Convert To Excel</button>  
+        <button type="button" class="deletebtn" name="delete_item" onclick="openDelete()">DELETE</button>  
     </header>
     <h2>ITEM INVENTORY</h2>
     <input class ="menu_checkbox" type="checkbox" name="" id="check">
@@ -35,12 +36,11 @@
         </label>
         <div class="head">Menu</div>
         <ol>
-            <li><a href="superadmin_inventory.php"><i class='bx bx-table'></i>Item Inventory</a></li>
             <li><a href="Accounts_inventory.php"><i class='bx bxs-user-account'></i>Accounts</a></li>
+            <li><a href="superadmin_inventory.php"><i class='bx bx-table'></i>Item Inventory</a></li>
             <li><a href="request_logs.php"><i class='bx bx-git-pull-request' ></i>Request Logs</a></li>
             <li><a href="usermanager_logs.php"><i class='bx bxs-user-detail' ></i>User Manager</a></li>
-            <li><a href="usage_logs.php"><i class='bx bx-bar-chart-alt-2'></i>Usage Logs</a></li>
-            <li><a href="logout.php"><i class='bx bx-exit'></i>Logout</a></li>
+            <li><a href="#"><i class='bx bx-exit'></i>Logout</a></li>
         </ol>
     </div>
     
@@ -78,7 +78,34 @@
                 </div>
         </table>
     </div>
+    <!-----Delete Prompt------->
+    <div class="popup3" id="popup3">
+        <form method="POST" action="superadmin_deleteinventory.php">
+            <h2>DELETE INVENTORY</h2>
+            <?php //To connect Dropdownlist to database
+                $sql = "SELECT item_description FROM inventory ORDER BY item_description ASC";
+                $result = $con->query($sql);
+                ?>
+
+                <select name="item" class="dropdowndelete"> 
+                    <?php //Dropdownlist Delete
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()){
+                            echo "<option value='" . $row['item_description'] . "'>" . $row['item_description'] . "</option>";
+                        }
+                    } else {
+                        echo "<option value=''>No items available</option>";
+                    }
+                    ?>
+                </select>
+                <div class="buttons3">
+                    <button type="submit" class="Delete" name="delete_item">DELETE</button>
+                    <button type="button" class="Close3" onclick="closeDelete()">Close</button>
+                </div>
+        </form>   
+    </div>
+    <!-----Delete Prompt------->
+
     <script src="superadmin_inventory.js"></script>
-    <script src="disableBackButton.js"></script>
 </body>
 </html>
