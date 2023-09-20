@@ -1,7 +1,3 @@
-<?php
-  include("login.php");
-?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -19,7 +15,7 @@
     <div class="login_form">
       <div class="wrapper">
         <div class="title"><span>CHANGE YOUR PASSWORD <br> <div class="title_two">HERE</div></span></div>
-        <form name="form" action="" method="POST">
+        <form name="form" action="update_password.php" method="POST">
           <div class="row">
             <i class="fas fa-lock"></i>
             <input type="text" placeholder="Current Password" name="accountPass" required>

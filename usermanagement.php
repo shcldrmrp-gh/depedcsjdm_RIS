@@ -114,9 +114,9 @@
                     <ul class="dropdown">
                         <li><a href="#" onclick="openAdd()">Add Inventory</a></li>
                         <li><a href="#" onclick="openEdit()">Add Quantity</a></li>
-                        <li><a href="#" onclick="openDelete()">Delete</a></li>
                     </ul>
                 </li>
+                <li><a href="changePasswordForm.php">CHANGE PASSWORD</a></li>
                 <li><a href="logout.php">LOGOUT</a></li>
             </ul>
         </nav>
@@ -247,35 +247,6 @@
     </div>
 
     <!-----Edit Prompt------->
-
-    <!-----Delete Prompt------->
-    <div class="popup3" id="popup3">
-        <form method="POST" action="delete_inventory.php">
-            <h2>DELETE INVENTORY</h2>
-            <?php //To connect Dropdownlist to database
-                $sql = "SELECT stock_number, item_description FROM inventory ORDER BY item_description ASC";
-                $result = $con->query($sql);
-                ?>
-
-                <select name="item" class="dropdowndelete"> 
-                    <?php //Dropdownlist Delete
-                    if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()){
-                            echo "<option value='" . $row['item_description'] . "'>" . $row['item_description'] . "</option>";
-                        }
-                    } else {
-                        echo "<option value=''>No items available</option>";
-                    }
-                    ?>
-                </select>
-                <div class="buttons3">
-                    <button type="submit" class="Delete" name="delete_item">DELETE</button>
-                    <button type="button" class="Close3" onclick="closeDelete()">Close</button>
-                </div>
-        </form>   
-    </div>
-    <!-----Delete Prompt------->
-
 
     <script src="usermanagementscript.js"></script>
     

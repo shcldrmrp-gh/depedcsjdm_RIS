@@ -26,6 +26,7 @@
             $_SESSION['userPosition'] = $row['userPosition'];
             $_SESSION['centerCode'] = $row['centerCode'];
             $_SESSION['userOffice'] = $row['userOffice'];
+            $_SESSION['depedEmail'] = $row['depedEmail'];
             
             // check account type so user will access webpage based on their account type
             $accountType = $row['accountType'];
