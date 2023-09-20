@@ -1,4 +1,6 @@
-/*$(document).ready(function() {
+//code still for testing
+
+$(document).ready(function() {
     // Fetch the last series number and year from cookies
     let lastSeriesNumber = parseInt(getCookie("lastSeriesNumber"));
     let lastYear = getCookie("lastYear");
@@ -57,10 +59,12 @@ function getCookie(name) {
         }
     }
     return "";
-}*/
+}
 
 
-$(document).ready(function() {
+/* ORIGINAL CODE*/
+
+/*$(document).ready(function() {
     // Fetch the last series number from the server
     $.ajax({
         url: 'get_last_series_number.php', // Create this PHP file to fetch the last series number
@@ -100,4 +104,4 @@ $(document).ready(function() {
             console.error("Error fetching last series number.");
         }
     });
-});
+});*/

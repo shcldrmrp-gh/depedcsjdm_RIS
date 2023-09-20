@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
     $confirmPassword = $_POST['confirmNewAccountPass'];
 
     // Retrieve the current password from the database
-    $sql = "SELECT accountPass FROM ris_accounts WHERE depedEmail = '$loginEmail'";
+    $sql = "SELECT * FROM ris_accounts WHERE depedEmail = '$loginEmail'";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
@@ -30,12 +30,27 @@ if (isset($_POST['submit'])) {
 
                 if ($updateResult) {
                     // Password updated successfully
-                    // Display success message and redirect to endUser_webpage.php
-                    echo '<script>
+                    // Redirect user based on their account type
+                    $accountType = $row['accountType'];
+                    if ($accountType == 'End User') {
+                        echo '<script>
                             alert("Password updated successfully!");
-                            window.location.href = "logout.php";
+                            window.location.href = "endUser_webpage.php";
                           </script>';
-                    exit;
+                        exit;
+                    } elseif ($accountType == 'User Manager'){
+                        echo '<script>
+                            alert("Password updated successfully!");
+                            window.location.href = "usermanagement.php";
+                          </script>';
+                        exit;
+                    } elseif ($accountType == 'Super Admin'){
+                        echo '<script>
+                            alert("Password updated successfully!");
+                            window.location.href = "Accounts_inventory.php";
+                          </script>';
+                        exit;
+                    }
                 } else {
                     // Handle database update error
                     echo '<script>
