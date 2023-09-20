@@ -28,9 +28,9 @@
             <i class="fas fa-lock"></i>
             <input type="password" placeholder="Password" name="loginPass" required>
           </div>
-          <div class="row">
+          <!--<div class="row">
             <a class="forgot-password" href="#">Forgot Password?</a>
-          </div>
+          </div>-->
           <div class="row button">
             <input type="submit" value="Login" name="login">
           </div>
