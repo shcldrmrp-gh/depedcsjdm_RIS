@@ -81,11 +81,26 @@
                 <option value="">All</option>
                 <?php
                 // Query the unique item descriptions from your database
-                $itemQuery = "SELECT DISTINCT item_description FROM request_logs";
+                $itemQuery = "SELECT DISTINCT item_description FROM inventory";
                 $itemResult = mysqli_query($con, $itemQuery);
 
                 while ($itemRow = mysqli_fetch_assoc($itemResult)) {
                     echo '<option value="' . $itemRow["item_description"] . '">' . $itemRow["item_description"] . '</option>';
+                }
+                ?>
+            </select>
+        </div>
+        <div class="select_name">
+            <label for="filterName">Name:</label>
+            <select id="filterName" onchange="filterTable2()">
+                <option value="">All</option>
+                <?php
+                // Query the unique item descriptions from your database
+                $itemQuery = "SELECT DISTINCT accountName FROM ris_accounts";
+                $itemResult = mysqli_query($con, $itemQuery);
+
+                while ($itemRow = mysqli_fetch_assoc($itemResult)) {
+                    echo '<option value="' . $itemRow["accountName"] . '">' . $itemRow["accountName"] . '</option>';
                 }
                 ?>
             </select>
