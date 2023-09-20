@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usage Logs</title>
     <link rel="stylesheet" href="usage_logs.css">
-    <link rel="website icon" type="png" href="logo/depedlogo.png">
+    <link rel="website icon" type="png" href="logo/depedcsjdmlogo.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>

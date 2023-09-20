@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="website icon" type="png" href="logo/depedlogo.png">
+    <link rel="website icon" type="png" href="logo/depedcsjdmlogo.png">
     <link rel="stylesheet" href="request_logs.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="table2excel.js"></script>

@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="usermanager_logs.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="website icon" type="png" href="logo/depedlogo.png">
+    <link rel="website icon" type="png" href="logo/depedcsjdmlogo.png">
     <title>User Manager Logs</title>
 </head>
 <body>
