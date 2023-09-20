@@ -70,7 +70,7 @@
                     <th class="user-position">Position</th>
                     <th class="user-office">Office</th>
                     <th class="center-code">Code</th>
-                    <th class="deped-email">Deped Email</th>
+                    <th class="deped-email">DepEd Email</th>
                     <th class="account-pass">Password</th>
                 </div>
             </tr>

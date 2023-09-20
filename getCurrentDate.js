@@ -32,7 +32,7 @@ $(document).ready(function() {
 
     function displayDateMismatchError() {
         // Display an error message to the user
-        alert("Your device's date is not the same as the World Time API. You will be logged out.");
+        alert("Your device's date is not the same as the World Time API. You will be logged out. Please sync your device's time.");
         
         // Redirect the user to logout.php
         window.location.href = 'logout.php';
