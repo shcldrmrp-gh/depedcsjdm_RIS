@@ -106,6 +106,11 @@
                 ?>
             </select>
         </div>
+        <div class="total-quantity">
+            <label for="totalQuantity">Total Quantity Requested:</label>
+            <input type="text" id="totalQuantity" readonly>
+        </div>
+
     </div>
 
 

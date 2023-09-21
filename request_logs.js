@@ -136,6 +136,52 @@ function filterTable2() {
     }
 }
 
+// Function to calculate and display the total quantity
+function updateTotal() {
+    const filterFrom = document.getElementById("filterFrom").value;
+    const filterTo = document.getElementById("filterTo").value;
+    const filterItem = document.getElementById("filterBy").value;
+    const filterName = document.getElementById("filterName").value;
+
+    let total = 0;
+
+    // Loop through the table rows and calculate the total based on the selected filters
+    const table = document.getElementById("table");
+    const rows = table.getElementsByTagName("tr");
+
+    for (let i = 1; i < rows.length; i++) { // Start from 1 to skip the header row
+        const row = rows[i];
+        const rowData = row.getElementsByTagName("td");
+
+        const formDate = rowData[8].textContent;
+        const itemDescription = rowData[5].textContent;
+        const accountName = rowData[1].textContent;
+
+        if ((filterFrom === "" || formDate >= filterFrom) &&
+            (filterTo === "" || formDate <= filterTo) &&
+            (filterItem === "" || itemDescription === filterItem) &&
+            (filterName === "" || accountName === filterName)) {
+            // If the row matches the selected filters, add its quantity to the total
+            const quantity = parseInt(rowData[7].textContent);
+            if (!isNaN(quantity)) {
+                total += quantity;
+            }
+        }
+    }
+
+    // Update the total input field
+    document.getElementById("totalQuantity").value = total;
+}
+
+// Attach the updateTotal function to filter change events
+document.getElementById("filterFrom").addEventListener("change", updateTotal);
+document.getElementById("filterTo").addEventListener("change", updateTotal);
+document.getElementById("filterBy").addEventListener("change", updateTotal);
+document.getElementById("filterName").addEventListener("change", updateTotal);
+
+// Initial update
+updateTotal();
+
 
 
 
