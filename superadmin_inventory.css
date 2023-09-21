@@ -148,7 +148,16 @@ h2{
 
 /* Delete Drescription*/
 
+.sorting{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0px 0px 0px 80%;
+}
 
+.sorting select{
+    border: 2px solid black;
+    font-size: 15px;
+}
 /* MENU BAR*/
 
 .container{

@@ -110,15 +110,23 @@ h2{
     margin-left: 590px;
 }
 
+.sorting{
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0px 0px 83%;
+}
 
-
+.sorting select{
+    border: 2px solid black;
+    font-size: 15px;
+}
 
 
 /* TABLE */
 table{
     font-size: 25px;
-    margin-top: 50px;
-    margin-left: 180px;
+    margin-left: 185px;
     width: 87%;
     border: 2px solid black;
     border-collapse: collapse; 
@@ -164,9 +172,9 @@ table tr td{
 }
 
 .scroll{
-   
-    width: 1400px;
-    height: 500px;
+   margin-top: 50px;
+    width: 95%;
+    height: 450px;
     overflow-y: scroll;
     
 }

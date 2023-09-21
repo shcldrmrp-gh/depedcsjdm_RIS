@@ -44,7 +44,17 @@
             <li><a href="logout.php"><i class='bx bx-exit'></i>Logout</a></li>
         </ol>
     </div>
-    
+    <form action="" method="get">
+        <div class="sorting">
+            <label for="sort_option">Sort:</label>
+            <select name="sort_option" id="sort_option" onchange="sortTable()">
+                <option value="">All</option>
+                <option value="low-high">Low - High</option>
+                <option value="high-low">High - Low</option>
+            </select>
+        </div>
+    </form>
+
   
     <div class="scroll">
         <table id="table" border="1">

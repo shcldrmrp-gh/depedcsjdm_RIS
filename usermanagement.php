@@ -95,7 +95,6 @@
                 }
             }
         }
-    
     </script>
 </head>
 <body>
@@ -125,9 +124,19 @@
     <h1>DEPARTMENT OF EDUCATION <br> REGION III <br> SCHOOLS DIVISION OF SAN JOSE DEL MONTE </h1>
     <h2>ITEM INVENTORY UNIT</h2>
 
+    <form action="" method="get">
+        <div class="sorting">
+            <label for="sort_option">Sort:</label>
+            <select name="sort_option" id="sort_option" onchange="sortTable()">
+                <option value="">All</option>
+                <option value="low-high">Low - High</option>
+                <option value="high-low">High - Low</option>
+            </select>
+        </div>
+    </form>
 
     <div class="scroll">
-    <table>
+    <table id="table">
         <tr>
             <div class="headrow">
                 <th class="table-number">No.</th>
@@ -161,6 +170,7 @@
     </div>
 
     <input type="hidden" name="accountName" class="accountName" value="<?php if (isset($_SESSION['accountName'])) {echo $_SESSION['accountName'];}?>">
+    
     <!-----Add Propmpt------->
     <div class="popup" id="popup">
         <form class="insert_form" id="insert_form" method="post" action="" onsubmit="return validateForm();">
