@@ -82,7 +82,7 @@
                 <option value="">All</option>
                 <?php
                 // Query the unique item descriptions from your database
-                $itemQuery = "SELECT DISTINCT item_description FROM inventory ORDER BY item_description ASC";
+                $itemQuery = "SELECT DISTINCT item_description FROM request_logs ORDER BY item_description ASC";
                 $itemResult = mysqli_query($con, $itemQuery);
 
                 while ($itemRow = mysqli_fetch_assoc($itemResult)) {
