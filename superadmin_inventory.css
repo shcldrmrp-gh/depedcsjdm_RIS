@@ -184,7 +184,7 @@ ol li{
 
 ol li a{
     color: white;
-    padding: 20px 15px 0px 0px;
+    padding: 20px 20px 0px 0px;
     text-decoration: none;
     display: block;
     font-size: 20px;
@@ -195,10 +195,10 @@ ol li a{
     text-transform: capitalize;
 }
 ol li a i{
+    margin-left: -10px;
     width: 70px;
     font-size: 25px;
     text-align: center;
-    
 }
 
 ol li:hover a{
@@ -206,6 +206,8 @@ ol li:hover a{
     color: #00eaff;
     letter-spacing: 3px;
 }
+
+
 
 .menu_checkbox{
     visibility: hidden;
@@ -239,7 +241,6 @@ span #times{
 }
 
 /* MENU BAR END */
-
 
 
 /* Search Bar*/
