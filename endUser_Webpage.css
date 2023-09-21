@@ -8,7 +8,7 @@ body {
 }
 
 .stock_number {
-    width: 60px;
+    width: 80px;
     text-align: center;
     font-family: "Bookman Old Style";
     font-weight: bold;
@@ -32,10 +32,12 @@ body {
     text-align: center;
     font-family: "Bookman Old Style";
     font-weight: bold;
+    width: 10px;
 }
 
 .quantityInputUser {
-    width: 145px;
+    width: 115px;
+    text-align: center;
 }
 
 .quantityTitle {
@@ -47,7 +49,7 @@ body {
 }
 
 .noInputCheck {
-    width: 10px;
+    width: 15px;
 }
 
 nav{
@@ -194,10 +196,6 @@ nav ul{
     font-weight: bold;
     text-align: center;
     width: 225px;
-}
-
-.stock_number {
-    text-align: center;
 }
 
 .accountName{
