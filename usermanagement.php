@@ -24,51 +24,59 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript">
-  
-
-
         // Alert for stock number and item description
+        function showErrorMessage(message) {
+            swal.fire({
+                title: "OOPPSS!!",
+                text: message,
+                icon: "error",
+            });
+        }
+
+        function showSuccessMessage(message) {
+            swal.fire({
+                title: "Success",
+                text: message,
+                icon: "success",
+            });
+        }
+
         function validateForm() {
             var ItemInput = document.getElementsByName('item_description[]')[0].value.toLowerCase();
             var StockInput = document.getElementsByName('stock_number[]')[0].value.toLowerCase();
-            var ItemOptions = document.getElementsByName('item')[0].options;
-            var StockOptions = document.getElementsByName('selected_item')[0].options;
+            var ItemOptions = document.querySelectorAll('.align-item-description'); // Get all item descriptions in the table
+            var StockOptions = document.getElementsByName('selected_item');
             var itemExists = false;
             var stockExists = false;
-            
+
+            // Check for duplicate item descriptions
             for (var i = 0; i < ItemOptions.length; i++) {
-                if (ItemOptions[i].value.toLowerCase() === ItemInput) {
+                if (ItemOptions[i].textContent.toLowerCase() === ItemInput) {
                     itemExists = true;
                     break;
-                }   
-            } 
-                
-            for (var i = 0; i < StockOptions.length; i++){  
+                }
+            }
+
+            // Check for duplicate stock numbers
+            for (var i = 0; i < StockOptions.length; i++) {
                 if (StockOptions[i].value.toLowerCase() === StockInput) {
                     stockExists = true;
                     break;
                 }
             }
-            
+
             if (itemExists || stockExists) {
                 showErrorMessage("This Item Description or Stock Number already exists! Please input another.");
                 return false; // Prevent form submission
             } else {
                 // Form submission successful, show success message
-                showSuccessMessage("Item added successfully!", 10);
+                showSuccessMessage("Item added successfully!");
                 return true; // Allow form submission
-                
             }
-            function showErrorMessage(message) {
-                swal.fire({
-                    title: "OOPPSS!!",
-                    text: message,
-                    icon: "error",
-                });
-            }
-            
-            }
-        
+        }
+
+
+
 
 
         // Search bar funtion
