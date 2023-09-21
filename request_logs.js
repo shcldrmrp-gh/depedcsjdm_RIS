@@ -1,6 +1,6 @@
 // Function for SearchBar
 function searchTable() {
-    var input, filter, table, tr, td1, td2, td3, td4, td5, td6, td7, i, txtValue1, txtValue2, txtValue3 ,txtValue4 ,txtValue5, txtValue6, txtValue7;
+    var input, filter, table, tr, td1, td2, td3, td4, td5, td6, td7, td8, i, txtValue1, txtValue2, txtValue3 ,txtValue4 ,txtValue5, txtValue6, txtValue7, txtValue8;
     input = document.getElementById("searchInput");
     filter = input.value.toLowerCase();
     table = document.querySelector("table");
@@ -12,11 +12,13 @@ function searchTable() {
         td3 = tr[i].getElementsByTagName("td")[2]; // User Office column
         td4 = tr[i].getElementsByTagName("td")[3]; // Stock No. column
         td5 = tr[i].getElementsByTagName("td")[4]; // Item Description column
-        td6 = tr[i].getElementsByTagName("td")[7]; // Date column
         td7 = tr[i].getElementsByTagName("td")[5]; // Date column
+        td8 = tr[i].getElementsByTagName("td")[6]; // Date column
+        td6 = tr[i].getElementsByTagName("td")[7]; // Date column
+        
         
 
-    if (td1 && td2 && td3 && td4 && td5 && td6 && td7) {
+    if (td1 && td2 && td3 && td4 && td5 && td6 && td7 && td8) {
         txtValue1 = td1.textContent || td1.innerText;
                 txtValue2 = td2.textContent || td2.innerText;
                 txtValue3 = td3.textContent || td3.innerText;
@@ -24,8 +26,9 @@ function searchTable() {
                 txtValue5 = td5.textContent || td5.innerText;
                 txtValue6 = td6.textContent || td6.innerText;
                 txtValue7 = td7.textContent || td7.innerText;
+                txtValue8 = td8.textContent || td8.innerText;
 
-        if (txtValue1.toLowerCase().indexOf(filter) > -1 || txtValue2.toLowerCase().indexOf(filter) > -1 || txtValue3.toLowerCase().indexOf(filter) > -1 || txtValue4.toLowerCase().indexOf(filter) > -1 || txtValue5.toLowerCase().indexOf(filter) > -1 || txtValue6.toLowerCase().indexOf(filter) > -1 || txtValue7.toLowerCase().indexOf(filter) > -1) {
+        if (txtValue1.toLowerCase().indexOf(filter) > -1 || txtValue2.toLowerCase().indexOf(filter) > -1 || txtValue3.toLowerCase().indexOf(filter) > -1 || txtValue4.toLowerCase().indexOf(filter) > -1 || txtValue5.toLowerCase().indexOf(filter) > -1 || txtValue6.toLowerCase().indexOf(filter) > -1 || txtValue7.toLowerCase().indexOf(filter) > -1 || txtValue8.toLowerCase().indexOf(filter) > -1) {
             tr[i].style.display = "";
         } else {
             tr[i].style.display = "none";
