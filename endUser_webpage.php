@@ -30,6 +30,10 @@
        
         <form class="risFORM "action="insert_data.php" method="POST">
             <table id="forRIS1" border="1" width="950px">
+                
+                <input type="hidden" name="yearRequested" class="yearRequested">
+                <script src="getCurrentYear.js"></script>
+
                 <tr>
                     <div class="formHeader">
                         <th width="100px"colspan="8">

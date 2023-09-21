@@ -26,6 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $quantities = $_POST['quantity'];
     $formDate = $_POST['formDate'];
     $risNoDate = $_POST['risNoDate'];
+    
+    // Get the yearRequested value from the POST data
+    $yearRequested = intval($_POST['yearRequested']);
 
     // Assuming you have a database connection, insert data into the database
     $servername = "localhost";
@@ -58,8 +61,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Check if the itemDescription is not equal to "noValue" before inserting
         if ($itemDescription != "noValue") {
             // SQL query to insert data into the request_logs table
-            $sql = "INSERT INTO request_logs (accountName, item_description, stock_number, stock_unit, quantityInput, formDate, seriesNumber, risNoDate, userOffice, centerCode)
-                    VALUES ('$accountName', '$itemDescription', '$stockNumber', '$stockUnit', '$quantity', '$formDate', '$formattedSeriesNumber', '$risNoDate', '$userOffice', '$centerCode')";
+            $sql = "INSERT INTO request_logs (accountName, item_description, stock_number, stock_unit, quantityInput, formDate, seriesNumber, risNoDate, userOffice, centerCode, yearRequested)
+                VALUES ('$accountName', '$itemDescription', '$stockNumber', '$stockUnit', '$quantity', '$formDate', '$formattedSeriesNumber', '$risNoDate', '$userOffice', '$centerCode', '$yearRequested')";
 
             if ($conn->query($sql) === TRUE) {
                 // Data inserted successfully
