@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get user inputs from the form
     $accountName = $_SESSION['accountName'];
     $userOffice = $_SESSION['userOffice'];
+    $centerCode = $_SESSION['centerCode'];
     $itemDescriptions = $_POST['item_description'];
     $stockNumbers = $_POST['stock_number'];
     $stockUnits = $_POST['stock_unit'];
@@ -57,8 +58,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Check if the itemDescription is not equal to "noValue" before inserting
         if ($itemDescription != "noValue") {
             // SQL query to insert data into the request_logs table
-            $sql = "INSERT INTO request_logs (accountName, item_description, stock_number, stock_unit, quantityInput, formDate, seriesNumber, risNoDate, userOffice)
-                    VALUES ('$accountName', '$itemDescription', '$stockNumber', '$stockUnit', '$quantity', '$formDate', '$formattedSeriesNumber', '$risNoDate', '$userOffice')";
+            $sql = "INSERT INTO request_logs (accountName, item_description, stock_number, stock_unit, quantityInput, formDate, seriesNumber, risNoDate, userOffice, centerCode)
+                    VALUES ('$accountName', '$itemDescription', '$stockNumber', '$stockUnit', '$quantity', '$formDate', '$formattedSeriesNumber', '$risNoDate', '$userOffice', '$centerCode')";
 
             if ($conn->query($sql) === TRUE) {
                 // Data inserted successfully

@@ -115,13 +115,14 @@
             <tr>
                 <div class="headrow">
                     <th class="RIS-number">RIS No.</th>
-                    <th class="account-name">Account Name</th>
-                    <th class="user-office">User Office</th>
+                    <th class="account-name">Name</th>
+                    <th class="center-code">Center Code</th>
+                    <th class="user-office">Office</th>
                     <th class="stock-no">Stock No.</th>
                     <th class="item-description">Item Description</th>
                     <th class="stock-unit">Stock Unit</th>
-                    <th class="quantity-input">Quantity Input</th>
-                    <th class="form-date">Form Date</th>
+                    <th class="quantity-input">Quantity Requested</th>
+                    <th class="form-date">Date of Request</th>
                 </div>
             </tr>
             <tr>
@@ -137,6 +138,7 @@
                         
                         <td class ="RISno"><?php echo $row["risNoDate"];?></td>
                         <td class ="align-account-name"><?php echo $row["accountName"];?></td>
+                        <td class ="align-center-code"><?php echo $row["centerCode"];?></td>
                         <td class ="align-user-office"><?php echo $row["userOffice"];?></td>
                         <td class="align-stock-no"><?php echo $row["stock_number"];?></td>
                         <td class="align-item-description"><?php echo $row["item_description"];?></td>

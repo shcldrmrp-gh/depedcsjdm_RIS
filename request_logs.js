@@ -93,7 +93,6 @@ function filterTable() {
         }
     }
 }
-
 function filterTable2() {
     var descriptionSelect = document.getElementById("filterBy");
     var descriptionFilterValue = descriptionSelect.value.toLowerCase();
@@ -101,28 +100,37 @@ function filterTable2() {
     var nameSelect = document.getElementById("filterName");
     var nameFilterValue = nameSelect.value.toLowerCase();
 
+    var filterFrom = document.getElementById("filterFrom").value;
+    var filterTo = document.getElementById("filterTo").value;
+
     var table = document.getElementById("table");
     var rows = table.getElementsByTagName("tr");
 
     for (var i = 1; i < rows.length; i++) { // Start from 1 to skip the header row
         var descriptionCell = rows[i].querySelector(".align-item-description");
         var nameCell = rows[i].querySelector(".align-account-name");
+        var formDateCell = rows[i].querySelector(".align-form-date");
 
-        if (!descriptionCell || !nameCell) continue; // Skip rows without either cell
+        if (!descriptionCell || !nameCell || !formDateCell) continue; // Skip rows without any of the cells
 
         var description = descriptionCell.textContent.toLowerCase();
         var name = nameCell.textContent.toLowerCase();
+        var formDate = formDateCell.textContent;
+
         var row = rows[i];
 
-        // Check if either filter matches, and show/hide accordingly
+        // Check if all filters match, and show/hide accordingly
         if ((descriptionFilterValue === "" || description.indexOf(descriptionFilterValue) > -1) &&
-            (nameFilterValue === "" || name.indexOf(nameFilterValue) > -1)) {
+            (nameFilterValue === "" || name.indexOf(nameFilterValue) > -1) &&
+            ((filterFrom === "" || formDate >= filterFrom) &&
+            (filterTo === "" || formDate <= filterTo))) {
             row.style.display = "";
         } else {
             row.style.display = "none";
         }
     }
 }
+
 
 
 
