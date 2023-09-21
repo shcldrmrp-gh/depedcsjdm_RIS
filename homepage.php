@@ -22,11 +22,11 @@
         <form name="form" action="login.php" method="POST">
           <div class="row">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="abc@deped.gov.ph" name="loginEmail" required>
+            <input type="text" placeholder="abc@deped.gov.ph" name="loginEmail" autocomplete="off" required>
           </div>
           <div class="row">
             <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" name="loginPass" required>
+            <input type="password" placeholder="Password" name="loginPass" autocomplete="off" required>
           </div>
           <!--<div class="row">
             <a class="forgot-password" href="#">Forgot Password?</a>
