@@ -22,7 +22,7 @@ body {
     font-weight: bold;
 }
 .stock_unit {
-    width: 60px;
+    width: 40px;
     text-align: center;
     font-family: "Bookman Old Style";
     font-weight: bold;
@@ -36,7 +36,7 @@ body {
 }
 
 .quantityInputUser {
-    width: 115px;
+    width: 95px;
     text-align: center;
 }
 
@@ -147,14 +147,12 @@ nav ul{
     text-align: center;
     font-size: 12px;
     width: 150px;
-    margin-left: 30px;
 }
 
 .issuedByName {
     text-align: center;
     font-size: 12px;
     width: 150px;
-    margin-left: 10px;
 }
 
 #designationID {
@@ -187,7 +185,7 @@ nav ul{
     font-size: 12px;
     font-weight: bold;
     text-align: left;
-    width: 225px;
+    width: 300px;
 }
 
 .itemDescription_title {
