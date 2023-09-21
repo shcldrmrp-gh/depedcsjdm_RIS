@@ -10,7 +10,7 @@ body {
 .stock_number {
     width: 60px;
     text-align: center;
-    font-family: "Bookman Old Style", sans-serif;
+    font-family: "Bookman Old Style";
     font-weight: bold;
 }
 
@@ -18,19 +18,19 @@ body {
     margin-top: 60px;
     width: 1000px;
     height: 80px;
-    font-family: "Bookman Old Style", sans-serif;
+    font-family: "Bookman Old Style";
     font-weight: bold;
 }
 .stock_unit {
     width: 60px;
     text-align: center;
-    font-family: "Bookman Old Style", sans-serif;
+    font-family: "Bookman Old Style";
     font-weight: bold;
 }
 
 .quantityInput {
     text-align: center;
-    font-family: "Bookman Old Style", sans-serif;
+    font-family: "Bookman Old Style";
     font-weight: bold;
 }
 
@@ -60,7 +60,7 @@ nav ul{
 }
 
 #forRIS1 {
-    font-family: "Bookman Old Style", sans-serif;
+    font-family: "Bookman Old Style";
     border: solid;
 }
 
@@ -177,7 +177,7 @@ nav ul{
 }
 
 .item_description {
-    font-family: "Bookman Old Style", sans-serif;
+    font-family: "Bookman Old Style";
     font-size: 12px;
     font-weight: bold;
     text-align: left;
@@ -185,7 +185,7 @@ nav ul{
 }
 
 .itemDescription_title {
-    font-family: "Bookman Old Style", sans-serif;
+    font-family: "Bookman Old Style";
     font-size: 17px;
     font-weight: bold;
     text-align: center;
@@ -219,7 +219,7 @@ nav ul{
     width: 100px;
     height: 50px;
     border-radius: 13px;
-    font-family: "Bookman Old Style", sans-serif;
+    font-family: "Bookman Old Style";
     font-size: 13px;
     font-weight: bold;
     background-color: #162fa0; /* Set the initial background color to #162fa0 */
@@ -242,7 +242,7 @@ nav ul{
     width: 100px;
     height: 50px;
     border-radius: 13px;
-    font-family: "Bookman Old Style", sans-serif;
+    font-family: "Bookman Old Style";
     font-size: 13px;
     font-weight: bold;
     background-color: #162fa0; /* Set the initial background color to #162fa0 */
@@ -268,7 +268,7 @@ nav ul{
     width: 100px;
     height: 50px;
     border-radius: 13px;
-    font-family: "Bookman Old Style", sans-serif;
+    font-family: "Bookman Old Style";
     font-size: 13px;
     font-weight: bold;
     background-color: #162fa0; /* Set the initial background color to #162fa0 */
@@ -295,7 +295,7 @@ nav ul{
     .stock_number {
         width: 60px;
         text-align: center;
-        font-family: "Bookman Old Style", sans-serif;
+        font-family: "Bookman Old Style";
         font-weight: bold;
     }
     
@@ -303,19 +303,19 @@ nav ul{
         margin-top: 60px;
         width: 1000px;
         height: 80px;
-        font-family: "Bookman Old Style", sans-serif;
+        font-family: "Bookman Old Style";
         font-weight: bold;
     }
     .stock_unit {
         width: 60px;
         text-align: center;
-        font-family: "Bookman Old Style", sans-serif;
+        font-family: "Bookman Old Style";
         font-weight: bold;
     }
     
     .quantityInput {
         text-align: center;
-        font-family: "Bookman Old Style", sans-serif;
+        font-family: "Bookman Old Style";
         font-weight: bold;
     }
     
@@ -345,7 +345,7 @@ nav ul{
     }
     
     #forRIS1 {
-        font-family: "Bookman Old Style", sans-serif;
+        font-family: "Bookman Old Style";
         border: solid;
     }
     
@@ -458,7 +458,7 @@ nav ul{
     }
     
     .item_description {
-        font-family: "Bookman Old Style", sans-serif;
+        font-family: "Bookman Old Style";
         font-size: 12px;
         font-weight: bold;
         text-align: left;
@@ -466,7 +466,7 @@ nav ul{
     }
     
     .itemDescription_title {
-        font-family: "Bookman Old Style", sans-serif;
+        font-family: "Bookman Old Style";
         font-size: 17px;
         font-weight: bold;
         text-align: center;
@@ -491,7 +491,7 @@ nav ul{
         width: 100px;
         height: 50px;
         border-radius: 13px;
-        font-family: "Bookman Old Style", sans-serif;
+        font-family: "Bookman Old Style";
         font-size: 13px;
         font-weight: bold;
         background-color: #162fa0; /* Set the initial background color to #162fa0 */
@@ -513,7 +513,7 @@ nav ul{
         width: 100px;
         height: 50px;
         border-radius: 13px;
-        font-family: "Bookman Old Style", sans-serif;
+        font-family: "Bookman Old Style";
         font-size: 13px;
         font-weight: bold;
         background-color: #162fa0; /* Set the initial background color to #162fa0 */
@@ -534,7 +534,7 @@ nav ul{
         width: 100px;
         height: 50px;
         border-radius: 13px;
-        font-family: "Bookman Old Style", sans-serif;
+        font-family: "Bookman Old Style";
         font-size: 13px;
         font-weight: bold;
         background-color: #162fa0; /* Set the initial background color to #162fa0 */
@@ -560,7 +560,7 @@ nav ul{
         width: 100px;
         height: 50px;
         border-radius: 13px;
-        font-family: "Bookman Old Style", sans-serif;
+        font-family: "Bookman Old Style";
         font-size: 13px;
         font-weight: bold;
         background-color: #162fa0; /* Set the initial background color to #162fa0 */
