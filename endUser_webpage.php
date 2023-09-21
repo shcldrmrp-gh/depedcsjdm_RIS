@@ -85,9 +85,9 @@
                 </tr>
 
                 <tr colspan="8">
-                    <th colspan="4">Requisition</th>
-                    <th colspan="2">Stock Available?</th>
-                    <th colspan="2">Issuance</th>
+                    <th colspan="4"><i>Requisition</i></th>
+                    <th colspan="2"><i>Stock Available?<i></th>
+                    <th colspan="2"><i>Issuance<i></th>
                 </tr>
 
                 <tr colspan="8">
