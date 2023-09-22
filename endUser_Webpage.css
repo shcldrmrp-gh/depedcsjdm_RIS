@@ -1,10 +1,15 @@
 body {
     overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 #forRIS1{
     margin-left: 200px;
+}
+
+.risFORM{
+    margin-left: 50px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .stock_number {
@@ -50,11 +55,6 @@ body {
 
 .noInputCheck {
     width: 15px;
-}
-
-nav{
-    background-color: #162fa0;
-    width: 100%;
 }
 
 #endUserHeaderLogo {
@@ -215,7 +215,9 @@ nav ul{
 }
 
 #generatePDF {
-    margin-left: 1200px;
+    margin-left: 1100px;
+    margin-top: 200px;
+    margin-bottom: 10px;
     width: 100px;
     height: 50px;
     border-radius: 13px;
@@ -231,8 +233,7 @@ nav ul{
 
 
 #generatePDF:hover {
-    background-color: #000000; /* Darken the background color on hover */
-    border: #000000;
+    background-color: grey; /* Darken the background color on hover */
 }
 
 
@@ -281,4 +282,89 @@ nav ul{
 #sendToDatabase:hover{
     background-color: #000000; /* Darken the background color on hover */
     border: #000000;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'bookman old style';
+}
+
+header{
+    height: 150px;
+    background-color: #162fa0;  
+    position: sticky;
+}
+
+
+header img{
+    margin-top: 10px;
+    width: 120px;
+    position: sticky;
+}
+
+
+/* NAV DROPDOWN LIST*/
+nav{
+    float: right;
+    margin-right: 0px;
+    padding-top: 85px;
+    
+}
+
+ul{
+    list-style: none;
+    
+
+}
+ul li{
+    display: inline-block;
+    position: relative;
+    
+}
+ul li a{
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+    outline: 2px solid darkblue;
+    box-shadow: 2px darkblue;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+ul li ul.dropdown li{
+     display: block;
+}
+ul li ul.dropdown{
+    width: 100%;
+    background:#162fa0;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li a:hover{
+    background: grey;
+}
+ul li:hover ul.dropdown{
+    display:block;
+}
+
+/* NAV DROPDOWN LIST*/
+
+h1{
+    font-size: 32px;
+    color: white;
+    position: absolute;
+    margin-top: -130px;
+    margin-left: 120px;
+    
+
+}
+h2{
+    font-size: 40px;
+    margin-left: 590px;
 }

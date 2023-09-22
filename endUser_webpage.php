@@ -26,11 +26,24 @@
 </head>
 
 <body>
+<header>
+        <img src="pictures/deped logo.png" alt="">  
+        <nav>
+            <ul>
+                <li><a href="changePasswordForm.php">CHANGE PASSWORD</a></li>
+                <li><a href="logout.php">LOGOUT</a></li>
+            </ul>
+            <br>
+        </nav>
+    </header>
+    
+    <h1>Department of Education <br> Region III <br> SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</h1>
+
+    <br>
+    <br>
     <div id="formContainer">
-       
         <form class="risFORM "action="insert_data.php" method="POST">
             <table id="forRIS1" border="1" width="950px">
-                
                 <input type="hidden" name="yearRequested" class="yearRequested">
                 <script src="getCurrentYear.js"></script>
 
@@ -515,18 +528,6 @@
                 GENERATE PDF
             </button>
         </div>
-
-        <a href="changePasswordForm.php">
-            <button id="logoutButton">
-                CHANGE PASSWORD
-            </button>
-        </a>
-   
-        <form action="logout.php">
-            <button id="logoutButton">
-                LOGOUT
-            </button>
-        </form>
     </div>
         
     <!-- AUTO FILL UP FOR STOCK NUMBER AND UNIT -->
