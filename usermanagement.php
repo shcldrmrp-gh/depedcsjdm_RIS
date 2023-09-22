@@ -25,54 +25,52 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript">
         // Alert for stock number and item description
-        function showErrorMessage(message) {
-            swal.fire({
-                title: "OOPPSS!!",
-                text: message,
-                icon: "error",
-            });
-        }
-
-        function showSuccessMessage(message) {
-            swal.fire({
-                title: "Success",
-                text: message,
-                icon: "success",
-            });
-        }
-
         function validateForm() {
             var ItemInput = document.getElementsByName('item_description[]')[0].value.toLowerCase();
             var StockInput = document.getElementsByName('stock_number[]')[0].value.toLowerCase();
-            var ItemOptions = document.querySelectorAll('.align-item-description'); // Get all item descriptions in the table
-            var StockOptions = document.getElementsByName('selected_item');
+            var ItemOptions = document.getElementsByName('item')[0].options;
+            var StockOptions = document.getElementsByName('selected_item')[0].options;
             var itemExists = false;
             var stockExists = false;
-
-            // Check for duplicate item descriptions
+            
             for (var i = 0; i < ItemOptions.length; i++) {
-                if (ItemOptions[i].textContent.toLowerCase() === ItemInput) {
+                if (ItemOptions[i].value.toLowerCase() === ItemInput) {
                     itemExists = true;
                     break;
-                }
-            }
-
-            // Check for duplicate stock numbers
-            for (var i = 0; i < StockOptions.length; i++) {
+                }   
+            } 
+                
+            for (var i = 0; i < StockOptions.length; i++){  
                 if (StockOptions[i].value.toLowerCase() === StockInput) {
                     stockExists = true;
                     break;
                 }
             }
-
+            
             if (itemExists || stockExists) {
                 showErrorMessage("This Item Description or Stock Number already exists! Please input another.");
                 return false; // Prevent form submission
             } else {
                 // Form submission successful, show success message
-                showSuccessMessage("Item added successfully!");
+                showSuccessMessage("Item added successfully!", 10);
                 return true; // Allow form submission
+                
             }
+            function showErrorMessage(message) {
+                swal.fire({
+                    title: "OOPPSS!!",
+                    text: message,
+                    icon: "error",
+                });
+            }
+            function showSuccessMessage(message) {
+                swal.fire({
+                    title: "SUCCESS!!",
+                    text: message,
+                    icon: "success",
+                });
+            }
+            
         }
 
 
@@ -119,8 +117,8 @@
                 <li>
                     <a href="#">UPDATE</a>
                     <ul class="dropdown">
-                        <li><a href="#" onclick="openAdd()">Add Inventory</a></li>
-                        <li><a href="#" onclick="openEdit()">Add Quantity</a></li>
+                        <li><a href="#" onclick="openAdd()">Update Inventory</a></li>
+                        <li><a href="#" onclick="openEdit()">Update Quantity</a></li>
                     </ul>
                 </li>
                 <li><a href="changePasswordForm.php">CHANGE PASSWORD</a></li>
@@ -129,16 +127,16 @@
         </nav>
     </header>
     
-    <h1>DEPARTMENT OF EDUCATION <br> REGION III <br> SCHOOLS DIVISION OF SAN JOSE DEL MONTE </h1>
+    <h1>Department of Education <br> Region III <br> SCHOOLS DIVISION OF SAN JOSE DEL MONTE </h1>
     <h2>ITEM INVENTORY UNIT</h2>
 
     <form action="" method="get">
         <div class="sorting">
             <label for="sort_option">Sort:</label>
             <select name="sort_option" id="sort_option" onchange="sortTable()">
-                <option value="">All</option>
-                <option value="low-high">Low - High</option>
-                <option value="high-low">High - Low</option>
+                <option value="">Alphabetical</option>
+                <option value="low-high">Ascending</option>
+                <option value="high-low"> Descending</option>
             </select>
         </div>
     </form>
@@ -164,7 +162,7 @@
                     {
                 ?>
                     <td><?php echo $rowNumber;?></td>
-                    <td><?php echo $row["stock_number"];?></td>
+                    <td class = "align-stock-number"><?php echo $row["stock_number"];?></td>
                     <td><?php echo $row["stock_unit"];?></td>
                     <td class="align-item-description"><?php echo $row["item_description"];?></td>
                     <td><?php echo $row["item_quantity"];?></td>
@@ -182,7 +180,7 @@
     <!-----Add Propmpt------->
     <div class="popup" id="popup">
         <form class="insert_form" id="insert_form" method="post" action="" onsubmit="return validateForm();">
-            <h2>ADD ITEMS</h2> 
+            <h2>UPDATE INVENTORY</h2> 
             <div class="Stock">
                 <label>Stock No.:</label>
                 <input type="text" name="stock_number[]" required><br>
@@ -230,7 +228,7 @@
     <!-----Edit Prompt------->
     <div class="popup2" id="popup2">
         <form method="POST" action="edit_inventory.php">
-            <h2>ADD QUANTITY</h2>
+            <h2>UPDATE QUANTITY</h2>
             <?php //To connect Dropdown to database
                 $sql = "SELECT stock_number, item_description FROM inventory ORDER BY item_description ASC";
                 $result = $con->query($sql);
@@ -266,6 +264,24 @@
 
     <!-----Edit Prompt------->
 
+    <!---FOR ALERT!!---->
+    <?php //To connect Dropdownlist to database
+                $sql = "SELECT stock_number, item_description FROM inventory ORDER BY item_description ASC";
+                $result = $con->query($sql);
+                ?>
+
+                <select name="item" class="dropdowndelete"> 
+                    <?php //Dropdownlist Delete
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()){
+                            echo "<option value='" . $row['item_description'] . "'>" . $row['item_description'] . "</option>";
+                        }
+                    } else {
+                        echo "<option value=''>No items available</option>";
+                    }
+                    ?>
+                </select>
+    <!---FOR ALERT!!---->
     <script src="usermanagementscript.js"></script>
     
     <!-- DISABLED BACK BUTTON -->

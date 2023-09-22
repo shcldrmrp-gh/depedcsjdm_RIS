@@ -1,10 +1,10 @@
-
 //Add Popup animation//
 
 let popup = document.getElementById("popup");
 
 function openAdd(){
     popup.classList.add("open-popup");
+    closeEdit();
 }
 function closeAdd(){
     popup.classList.remove("open-popup");
@@ -14,11 +14,54 @@ function closeAdd(){
 
 
 
+// Draggable Div Element for add inventory
+const popup1 = document.querySelector(".popup");
+const h2 = popup1.querySelector("h2");
+let isDragging = false;
+let initialX, initialY;
+
+function onDragStart(e) {
+    isDragging = true;
+    initialX = e.clientX;
+    initialY = e.clientY;
+}
+
+function onDrag(e) {
+    if (!isDragging) return;
+
+    const deltaX = e.clientX - initialX;
+    const deltaY = e.clientY - initialY;
+    initialX = e.clientX;
+    initialY = e.clientY;
+
+    let getStyle = window.getComputedStyle(popup1);
+    let left = parseInt(getStyle.left);
+    let top = parseInt(getStyle.top);
+
+    const newLeft = left + deltaX;
+    const newTop = top + deltaY;
+
+    popup1.style.left = `${newLeft}px`;
+    popup1.style.top = `${newTop}px`;
+}
+
+function onDragEnd() {
+    isDragging = false;
+}
+
+h2.addEventListener("mousedown", onDragStart);
+document.addEventListener("mousemove", onDrag);
+document.addEventListener("mouseup", onDragEnd);
+// Draggable Div Element END
+
+
+
 //Edit Popup animation//
 let popup2 = document.getElementById("popup2");
 
 function openEdit(){
     popup2.classList.add("open-popup2");
+    closeAdd();
 }
 function closeEdit(){
     popup2.classList.remove("open-popup2");
@@ -27,17 +70,49 @@ function closeEdit(){
 
 
 
+// Draggable Div Element for edit inventory
+const popupedit = document.querySelector(".popup2");
+const edit = popupedit.querySelector("h2");
+let isDragging1 = false;
+let initialx, initialy;
 
-//Delete Popup animation//
-let popup3 = document.getElementById("popup3");
+function onDragStart1(e) {
+    isDragging1 = true;
+    initialx = e.clientX;
+    initialy = e.clientY;
+}
 
-function openDelete(){
-    popup3.classList.add("open-popup3");
+function onDrag1(e) {
+    if (!isDragging1) return;
+
+    const deltaX = e.clientX - initialx;
+    const deltaY = e.clientY - initialy;
+    initialx = e.clientX;
+    initialy = e.clientY;
+
+    let getStyle = window.getComputedStyle(popupedit);
+    let left = parseInt(getStyle.left);
+    let top = parseInt(getStyle.top);
+
+    const newLeft = left + deltaX;
+    const newTop = top + deltaY;
+
+    popupedit.style.left = `${newLeft}px`;
+    popupedit.style.top = `${newTop}px`;
 }
-function closeDelete(){
-    popup3.classList.remove("open-popup3");
+
+function onDragEnd1() {
+    isDragging1 = false;
 }
-//Delete Popup animation//
+
+edit.addEventListener("mousedown", onDragStart1);
+document.addEventListener("mousemove", onDrag1);
+document.addEventListener("mouseup", onDragEnd1);
+// Draggable Div Element edit inventory END
+
+
+
+
 
 
 // Function for sorting
