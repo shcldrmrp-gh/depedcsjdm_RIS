@@ -5,7 +5,7 @@ let form = document.querySelector("#formContainer");
             margin:         [-30, -40, 0, -100],
             filename:       'ris-form.pdf',
             image:          { type: 'jpeg', quality: .95},
-            html2canvas:  { scale: 2, allowMagnification: false, width: 1850, height: 1650},
+            html2canvas:  { scale: 2, allowMagnification: false, width: 1850, height: 1720},
             jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
         };
 
