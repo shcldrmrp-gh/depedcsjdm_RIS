@@ -6,7 +6,7 @@ function updateMaxQuantity(selectElement) {
     quantityInputs.forEach(function (quantityInput) {
         quantityInput.addEventListener('keydown', function (e) {
             // Allow the backspace key (keyCode 8) and delete key (keyCode 46)
-            if (e.key !== 'Backspace' && e.key !== 'Delete' && e.keyCode !== 8 && e.keyCode !== 46) {
+            if (e.key !== 'Backspace' && e.key !== 'Delete' && e.keyCode !== 8 && e.keyCode !== 46 && e.key !== 'ArrowDown' && e.key !== 'ArrowUp' && e.key !== 'Tab') {
                 e.preventDefault();
             }
         });
