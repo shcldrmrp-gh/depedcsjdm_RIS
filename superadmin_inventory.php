@@ -48,9 +48,9 @@
         <div class="sorting">
             <label for="sort_option">Sort:</label>
             <select name="sort_option" id="sort_option" onchange="sortTable()">
-                <option value="">All</option>
-                <option value="low-high">Low - High</option>
-                <option value="high-low">High - Low</option>
+                <option value="">Alphabetical</option>
+                <option value="low-high">Ascending</option>
+                <option value="high-low">Descending</option>
             </select>
         </div>
     </form>
