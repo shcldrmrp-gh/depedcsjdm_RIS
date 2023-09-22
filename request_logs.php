@@ -134,7 +134,7 @@
                 <div class="row2">
                     <?php
                         
-                        $selectQuery = "SELECT * FROM request_logs";
+                        $selectQuery = "SELECT * FROM request_logs ORDER BY risNoDate DESC";
                         $result = mysqli_query($con, $selectQuery);
                         $rowNumber = 1;
                         while($row = mysqli_fetch_assoc($result))
