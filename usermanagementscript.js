@@ -153,5 +153,81 @@ function sortTable() {
 }
 
 
+// Alert for stock number and item description
+function validateForm() {
+    var ItemInput = document.getElementsByName('item_description[]')[0].value.toLowerCase();
+    var StockInput = document.getElementsByName('stock_number[]')[0].value.toLowerCase();
+    var ItemOptions = document.getElementsByName('item')[0].options;
+    var StockOptions = document.getElementsByName('selected_item')[0].options;
+    var itemExists = false;
+    var stockExists = false;
+    
+    for (var i = 0; i < ItemOptions.length; i++) {
+        if (ItemOptions[i].value.toLowerCase() === ItemInput) {
+            itemExists = true;
+            break;
+        }   
+    } 
+        
+    for (var i = 0; i < StockOptions.length; i++){  
+        if (StockOptions[i].value.toLowerCase() === StockInput) {
+            stockExists = true;
+            break;
+        }
+    }
+    
+    if (itemExists || stockExists) {
+        showErrorMessage("This Item Description or Stock Number already exists! Please input another.");
+        return false; // Prevent form submission
+    } else {
+        // Form submission successful, show success message
+        showSuccessMessage("Item added successfully!", 10);
+        return true; // Allow form submission
+        
+    }
+    function showErrorMessage(message) {
+        swal.fire({
+            title: "OOPPSS!!",
+            text: message,
+            icon: "error",
+        });
+    }
+    function showSuccessMessage(message) {
+        swal.fire({
+            title: "SUCCESS!!",
+            text: message,
+            icon: "success",
+        });
+    }
+    
+}
 
+
+
+
+
+// Search bar funtion
+function searchTable() {
+    var input, filter, table, tr, td1, td2, i, txtValue1, txtValue2;
+    input = document.getElementById("searchInput");
+    filter = input.value.toLowerCase();
+    table = document.querySelector("table");
+    tr = table.getElementsByTagName("tr");
+
+    for (i = 0; i < tr.length; i++) {
+        td1 = tr[i].getElementsByTagName("td")[1]; // Stock No. column
+        td2 = tr[i].getElementsByTagName("td")[3]; // Item Description column
+
+        if (td1 && td2) {
+            txtValue1 = td1.textContent || td1.innerText;
+            txtValue2 = td2.textContent || td2.innerText;
+
+        if (txtValue1.toLowerCase().indexOf(filter) > -1 || txtValue2.toLowerCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+        } else {
+            tr[i].style.display = "none";
+        }
+        }
+    }
+}
 
