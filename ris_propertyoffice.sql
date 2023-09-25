@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 22, 2023 at 03:10 AM
+-- Generation Time: Sep 25, 2023 at 08:39 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -39,14 +39,14 @@ CREATE TABLE `inventory` (
 --
 
 INSERT INTO `inventory` (`item_description`, `stock_number`, `stock_unit`, `item_quantity`) VALUES
-('Chloride Power', 'OS 255', 'piece', 94),
+('Chloride Powder', 'OS 255', 'piece', 80),
 ('Mouse Pad', 'OS 290', 'piece', 85),
 ('Battery D Alkaline', 'OS 156', 'piece', 64),
 ('Photo Paper', 'OS 146', 'piece', 92),
 ('BROOM, soft (tambo)', 'OS 202', 'piece', 70),
-('EPSON, INK CART, (001) Black', 'OS 238', 'bottle', 95),
-('AIR FRESHENER, aerosol, 280ml/150g min', 'OS 154', 'can', 313),
-('CALCULATOR, compact, 12 digits', 'OS 054', 'unit', 78),
+('EPSON, INK CART, (001) Black', 'OS 238', 'bottle', 90),
+('AIR FRESHENER, aerosol, 280ml/150g min', 'OS 154', 'can', 310),
+('CALCULATOR, compact, 12 digits', 'OS 054', 'unit', 74),
 ('ENVELOPE, EXPANDING legal size doc', 'OS 117', 'piece', 93),
 ('Extension Cord', 'OS 092', 'piece', 97),
 ('Frame A4 Size', 'OS 271', 'piece', 96),
@@ -58,8 +58,29 @@ INSERT INTO `inventory` (`item_description`, `stock_number`, `stock_unit`, `item
 ('MOPHANDLE, heavy duty, aluminum, screw type', 'OS 361', 'Book', 79),
 ('Gestener toner MP2014', 'OS 232', 'Piece', 100),
 ('Liquid Hand Soap with Pump', 'OS 228', 'Book', 83),
-('Keyboard', 'OS 299', 'Piece', 96),
+('Keyboard', 'OS 299', 'Piece', 0),
 ('Ring Binder 1/4', 'OS 642', 'Piece', 76);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `queue_logs`
+--
+
+CREATE TABLE `queue_logs` (
+  `accountName` varchar(50) NOT NULL,
+  `item_description` varchar(100) NOT NULL,
+  `quantityInput` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `queue_logs`
+--
+
+INSERT INTO `queue_logs` (`accountName`, `item_description`, `quantityInput`) VALUES
+('Jaime T. Tugade PhD, CESE', 'AIR FRESHENER, aerosol, 280ml/150g min', 3),
+('Jaime T. Tugade PhD, CESE', 'CALCULATOR, compact, 12 digits', 4),
+('Jaime T. Tugade PhD, CESE', 'EPSON, INK CART, (001) Black', 5);
 
 -- --------------------------------------------------------
 
@@ -137,7 +158,15 @@ INSERT INTO `request_logs` (`risNoDate`, `yearRequested`, `seriesNumber`, `accou
 ('2023-09-000033', 2023, 33, 'Kaila R. Diaz', 'A3', 'Assistant Schools Division Superintendent', 'OS 361', 'MOPHANDLE, heavy duty, aluminum, screw type', 'Book', 3, '09/21/2023'),
 ('2023-09-000033', 2023, 33, 'Kaila R. Diaz', 'A3', 'Assistant Schools Division Superintendent', 'OS 228', 'Liquid Hand Soap with Pump', 'Book', 2, '09/21/2023'),
 ('2023-09-000033', 2023, 33, 'Kaila R. Diaz', 'A3', 'Assistant Schools Division Superintendent', 'OS 033', 'PAPER, MULTICOPY, 80gsm, size: A4', 'Reams', 3, '09/21/2023'),
-('2023-09-000034', 2023, 34, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 4, '09/22/2023');
+('2023-09-000034', 2023, 34, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 4, '09/22/2023'),
+('2023-09-000035', 2023, 35, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 255', 'Chloride Power', 'piece', 5, '09/25/2023'),
+('2023-09-000036', 2023, 36, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 255', 'Chloride Power', 'piece', 5, '09/25/2023'),
+('2023-09-000037', 2023, 37, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 255', 'Chloride Power', 'piece', 5, '09/25/2023'),
+('2023-09-000038', 2023, 38, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 299', 'Keyboard', 'Piece', 5, '09/25/2023'),
+('2023-09-000039', 2023, 39, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 292', 'Manila Paper', 'Piece', 5, '09/25/2023'),
+('2023-09-000039', 2023, 40, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 292', 'Manila Paper', 'Piece', 5, '09/25/2023'),
+('2023-09-000041', 2023, 41, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 299', 'Keyboard', 'Piece', 5, '09/25/2023'),
+('2023-09-000042', 2023, 42, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 299', 'Keyboard', 'Piece', 5, '09/25/2023');
 
 -- --------------------------------------------------------
 
@@ -205,43 +234,6 @@ INSERT INTO `ris_accounts` (`accountType`, `accountName`, `userPosition`, `userO
 ('End User', 'Merlita D. Ynciong', 'SEP SOC. MOB.', 'School Governance and Operations Division', 'SGOD7', 'merlita.ynciong@deped.gov.ph', '1234'),
 ('End User', 'Margie M. Duro', 'PDO I', 'School Governance and Operations Division', 'SGOD16', 'margie.duro@deped.gov.ph', '1234'),
 ('End User', 'Marlon P. Daclis', 'EPS I - English', 'Curriculum Implementation Division', 'CID6', 'marlon.daclis@deped.gov.ph', '1234');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `usage_logs`
---
-
-CREATE TABLE `usage_logs` (
-  `stock_number` varchar(10) NOT NULL,
-  `item_description` varchar(50) NOT NULL,
-  `total_usage` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `usage_logs`
---
-
-INSERT INTO `usage_logs` (`stock_number`, `item_description`, `total_usage`) VALUES
-('OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 42),
-('OS 370', 'MOUSE, WIRELESS, USB', 13),
-('OS 228', 'Liquid Hand Soap with Pump', 17),
-('OS 271', 'Frame A4 Size', 4),
-('OS 125', 'Toner MP2000LE', 11),
-('OS 156', 'Battery D Alkaline', 24),
-('', 'noValue', 0),
-('OS 202', 'BROOM, soft (tambo)', 14),
-('OS 361', 'MOPHANDLE, heavy duty, aluminum, screw type', 14),
-('OS 317', 'NOTE PAD, stick on, (2in x 3in) min', 13),
-('OS 290', 'Mouse Pad', 8),
-('OS 033', 'PAPER, MULTICOPY, 80gsm, size: A4', 8),
-('OS 154', 'Array', 8),
-('OS 117', 'ENVELOPE, EXPANDING legal size doc', 4),
-('OS 054', 'CALCULATOR, compact, 12 digits', 9),
-('OS 292', 'Manila Paper', 14),
-('OS 146', 'Photo Paper', 3),
-('OS 642', 'Ring Binder 1/4', 3),
-('OS 299', 'Keyboard', 4);
 
 -- --------------------------------------------------------
 
