@@ -208,6 +208,17 @@ h2{
     margin: 0px 0px 0px 30px;
 }
 
+.total-quantity{
+    position: absolute;
+    margin: 450px 0px 0px 70%;
+}
+.total-quantity input{
+    border: 2px solid black;
+    font-size: 15px;
+}
+.sorting{
+    margin-left: 130px;
+}
 /* TABLE */
 table{
     

@@ -182,7 +182,38 @@ document.getElementById("filterName").addEventListener("change", updateTotal);
 // Initial update
 updateTotal();
 
+// Function for sorting
+function sortTable() {
+    var table = document.getElementById("table");
+    var rows = table.rows;
+    var sortOption = document.getElementById("sort_option").value;
 
+    // Convert rows to an array for sorting
+    var rowsArray = Array.from(rows).slice(1); // Exclude the header row
+
+    // Sort the array based on the selected option
+    if (sortOption === "low-high") {
+        rowsArray.sort(function (a, b) {
+            var quantityA = parseInt(a.cells[7].textContent);
+            var quantityB = parseInt(b.cells[7].textContent);
+            return quantityA - quantityB;
+        });
+    } else if (sortOption === "high-low") {
+        rowsArray.sort(function (a, b) {
+            var quantityA = parseInt(a.cells[7].textContent);
+            var quantityB = parseInt(b.cells[7].textContent);
+            return quantityB - quantityA;
+        });
+    } else {
+        window.location.reload();
+
+    }
+
+    // Reinsert sorted rows into the table
+    for (var i = 0; i < rowsArray.length; i++) {
+        table.appendChild(rowsArray[i]);
+    }
+}
 
 
 

@@ -106,6 +106,16 @@
                 ?>
             </select>
         </div>
+        <form action="" method="get">
+            <div class="sorting">
+                <label for="sort_option">Sort:</label>
+                <select name="sort_option" id="sort_option" onchange="sortTable()">
+                    <option value="">By RIS No.</option>
+                    <option value="low-high">Ascending</option>
+                    <option value="high-low">Descending</option>
+                </select>
+            </div>
+        </form>
         <div class="total-quantity">
             <label for="totalQuantity">Total Quantity Requested:</label>
             <input type="text" id="totalQuantity" readonly>
