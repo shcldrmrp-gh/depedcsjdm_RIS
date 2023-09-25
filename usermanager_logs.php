@@ -53,7 +53,7 @@
             <tr>
                 <div class="row2">
                     <?php
-                        $selectQuery = "SELECT * FROM usermanager_logs";
+                        $selectQuery = "SELECT * FROM usermanager_logs ORDER BY formDate DESC";
                         $result = mysqli_query($con, $selectQuery);
                         $rowNumber = 1;
                         while($row = mysqli_fetch_assoc($result))
