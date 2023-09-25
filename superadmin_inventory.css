@@ -32,7 +32,7 @@ h2{
 .convertbtn{
     float: right;
     text-decoration: none;
-    margin: 135px -210px 0px 0px;
+    margin: 135px -520px 0px 0px;
     height: 25%;
     width: 10%;
     border-radius: 15px;
@@ -128,7 +128,7 @@ h2{
 .deletebtn{
     float: right;
     text-decoration: none;
-    margin: 135px -50px 0px 0px;
+    margin: 135px -360px 0px 0px;
     height: 25%;
     width: 10%;
     border-radius: 15px;
@@ -212,7 +212,7 @@ ol li a i{
 
 ol li:hover a{
     background: #162fa0;
-    color: #00eaff;
+    color: grey;
     letter-spacing: 3px;
 }
 
@@ -256,7 +256,7 @@ span #times{
 
 .searchbar{
     float: right;
-    margin: 85px 20px 0px 0px;  
+    margin: 140px 320px 0px 0px;  
     
 }
 
