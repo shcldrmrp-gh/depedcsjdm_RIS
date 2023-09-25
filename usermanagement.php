@@ -43,10 +43,16 @@
                         <li><a href="#" onclick="openEdit()">Update Quantity</a></li>
                     </ul>
                 </li>
-                <li><a href="changePasswordForm.php">CHANGE PASSWORD</a></li>
-                <li><a href="logout.php">LOGOUT</a></li>
+                <li>
+                    <a href="#">SETTINGS</a>
+                    <ul class="settings">
+                        <li><a href="changePasswordForm.php">CHANGE PASSWORD</a></li>
+                        <li><a href="logout.php">LOGOUT</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
+       <button class="queuing" type="button">QUEUING</button>
     </header>
     
     <h1>Department of Education <br> Region III <br> SCHOOLS DIVISION OF SAN JOSE DEL MONTE </h1>
