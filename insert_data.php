@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $accountName = $_SESSION['accountName'];
     $userOffice = $_SESSION['userOffice'];
     $centerCode = $_SESSION['centerCode'];
-    $itemDescriptions = $_POST['item_description'];
+    $item_descriptions = $_POST['item_description'];
     $stockNumbers = $_POST['stock_number'];
     $stockUnits = $_POST['stock_unit'];
     $quantities = $_POST['quantity'];
@@ -52,17 +52,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $formattedSeriesNumber = str_pad($nextSeriesNumber, 6, '0', STR_PAD_LEFT);
 
     // Loop through the submitted data and insert it into the database
-    for ($i = 0; $i < count($itemDescriptions); $i++) {
-        $itemDescription = $itemDescriptions[$i];
+    for ($i = 0; $i < count($item_descriptions); $i++) {
+        $item_description = $item_descriptions[$i];
         $stockNumber = $stockNumbers[$i];
         $stockUnit = $stockUnits[$i];
         $quantity = $quantities[$i];
 
-        // Check if the itemDescription is not equal to "noValue" before inserting
-        if ($itemDescription != "noValue") {
+        // Check if the item_description is not equal to "noValue" before inserting
+        if ($item_description != "noValue") {
             // SQL query to insert data into the request_logs table
             $sql = "INSERT INTO request_logs (accountName, item_description, stock_number, stock_unit, quantityInput, formDate, seriesNumber, risNoDate, userOffice, centerCode, yearRequested)
-                VALUES ('$accountName', '$itemDescription', '$stockNumber', '$stockUnit', '$quantity', '$formDate', '$formattedSeriesNumber', '$risNoDate', '$userOffice', '$centerCode', '$yearRequested')";
+                VALUES ('$accountName', '$item_description', '$stockNumber', '$stockUnit', '$quantity', '$formDate', '$formattedSeriesNumber', '$risNoDate', '$userOffice', '$centerCode', '$yearRequested')";
 
             if ($conn->query($sql) === TRUE) {
                 // Data inserted successfully
@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Retrieve the data sent via POST
         
             // Check if the item_description already exists in the usage_logs table
-            $sql = "SELECT * FROM usage_logs WHERE item_description = '$itemDescription'";
+            $sql = "SELECT * FROM usage_logs WHERE item_description = '$item_description'";
             $result = $conn->query($sql);
         
             if ($result->num_rows > 0) {
@@ -85,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $current_total_usage = $row["total_usage"];
                 $new_total_usage = $current_total_usage + $quantity;
         
-                $update_sql = "UPDATE usage_logs SET total_usage = '$new_total_usage' WHERE item_description = '$itemDescription'";
+                $update_sql = "UPDATE usage_logs SET total_usage = '$new_total_usage' WHERE item_description = '$item_description'";
                 if ($conn->query($update_sql) === TRUE) {
                     echo "Quantity updated successfully.";
                 } else {
@@ -93,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
             } else {
                 // If the item_description doesn't exist, insert a new row
-                $insert_sql = "INSERT INTO usage_logs (stock_number, item_description, total_usage) VALUES ('$stockNumber', '$itemDescription', '$quantity')";
+                $insert_sql = "INSERT INTO usage_logs (stock_number, item_description, total_usage) VALUES ('$stockNumber', '$item_description', '$quantity')";
                 if ($conn->query($insert_sql) === TRUE) {
                     echo "Quantity inserted successfully.";
                 } else {
