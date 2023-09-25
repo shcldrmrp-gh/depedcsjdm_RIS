@@ -14,11 +14,11 @@
     }
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $itemDescription = $_POST['item_description'];
+        $item_description = $_POST['item_description'];
         $quantity = $_POST['quantity'];
         $stock_number = $_POST["stock_number"];
 
-        $sql = "UPDATE inventory SET item_quantity = item_quantity - $quantity WHERE item_description = '$itemDescription'";
+        $sql = "UPDATE inventory SET item_quantity = item_quantity - $quantity WHERE item_description = '$item_description'";
 
         if ($conn->query($sql) === TRUE) {
             echo "Quantity updated successfully.";
