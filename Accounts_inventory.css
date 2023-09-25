@@ -87,8 +87,8 @@ ol li a i{
 
 ol li:hover a{
     background: #162fa0;
-    color: #00eaff;
-    letter-spacing: 3px;
+    color: grey;
+    letter-spacing: 1.5px;
 }
 
 
@@ -155,7 +155,7 @@ ul li a{
     text-decoration: none;
     text-align: center;
     font-size: 20px;
-    outline: 2px solid darkblue;
+    outline: 2px solid black;
     box-shadow: 2px darkblue;
     border-radius: 15px;
 }
@@ -588,7 +588,7 @@ ul li:hover ul.dropdown{
 
 .searchbar{
     float: right;
-    margin: 130px 170px 0px 0px;   
+    margin: 130px 160px 0px 0px;   
 }
 
 
@@ -601,7 +601,7 @@ ul li:hover ul.dropdown{
     color: black;
     text-align: center;
     outline: none;
-    
+    margin-left: 30px;
 }
 
 /* Search Bar END */
