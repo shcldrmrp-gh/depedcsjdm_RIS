@@ -522,7 +522,6 @@
     </div>
 
     <div class="endUserButtons">
-
         <div class="generatePDFplacement">
             <button type="submit" onclick="sendDataToDatabase()" id="generatePDF">
                 GENERATE PDF
