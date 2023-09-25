@@ -15,7 +15,7 @@
     <link rel="website icon" type="png" href="logo/depedlogo.png">  
     <link rel="stylesheet" href="request_logs.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Request Logs Inventory</title>
+    <title>Request Logs Inventory new</title>
 </head>
 <body>
     <header>
