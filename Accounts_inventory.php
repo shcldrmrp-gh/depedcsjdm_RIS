@@ -20,7 +20,7 @@
 <body>
     <header>
         <img src="logo/depedlogo.png" alt="">
-        <h1>DEPARTMENT OF EDUCATION <br> REGION III <br> SCHOOLS DIVISION OF SAN JOSE DEL MONTE </h1>
+        <h1>Department of Education <br> Region III <br> SCHOOLS DIVISION OF SAN JOSE DEL MONTE </h1>
         <div class="searchbar">
             <input type="text" id="searchInput" placeholder="Search Account Name...." oninput="searchTable()">
         </div>
@@ -28,7 +28,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="#">ACCOUNT</a>
+                    <a href="#">Account</a>
                     <ul class="dropdown">
                         <li><a href="#" onclick="openAdd()">Add</a></li>
                         <li><a href="#" onclick="openEdit()">Edit</a></li>
