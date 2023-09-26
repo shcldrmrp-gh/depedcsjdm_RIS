@@ -213,48 +213,35 @@
      });
   
 //verify code 
-    $(document).ready(function(){
-            $('#verify-code').click(function(){
-                var code = document.getElementById('code_input').value;
-                $.ajax({
-                    type: "POST",
-                    url: "VerifyCode.php",
-                    data:{code: code,},
-                    success: function(response){
-                        if (response == "code not match"){
-                           swal("Please provide a valid code", "", "error");
-                           $("#code_input").val("");
-                        }else if (response =="code field is empty"){
-                            $("#code_input").val("");
-                            swal("Field is empty", "", "warning");
-                        }else if(response == "error fetching code"){
-                            swal("code error", "", "error");
-                            $("#code_input").val("");
-                        }
-                        else{
-                            swal({
-								title: "Code Verified",
-								text: "",
-								icon: "success",
-								closeOnEsc: false,
-								closeOnClickOutside: false,	
-							})
-							.then((confirm) => {
-								if (confirm) {
-								$('#centerdiv').css('display', 'none');
-                                $('#centerdiv2').css('display', 'none');
-                                $('#centerdiv3').css('display', 'block')
-								}
-							});
-                            
-                        }
-                    },
-                    error: function(xhr, status, error) {
-                             alert("Connection ErRor");
-                        }
-                });
+$(document).ready(function () {
+        $('#verify-code').click(function () {
+            var code = document.getElementById('code_input').value;
+            $.ajax({
+                type: "POST",
+                url: "VerifyCode.php",
+                data: { code: code },
+                success: function (response) {
+                    if (response == "code not match") {
+                        alert("Please provide a valid code.");
+                        $("#code_input").val("");
+                    } else if (response == "code field is empty") {
+                        alert("Code field is empty. Please enter the code.");
+                    } else if (response == "error fetching code") {
+                        alert("Error fetching code.");
+                        $("#code_input").val("");
+                    } else {
+                        alert("Code Verified");
+                        $('#centerdiv').css('display', 'none');
+                        $('#centerdiv2').css('display', 'none');
+                        $('#centerdiv3').css('display', 'block');
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert("Connection Error");
+                }
             });
         });
+    });
 
         $(document).ready(function(){
         $('#re-send').click(function(){
@@ -322,7 +309,7 @@
 							})
 							.then((confirm) => {
 								if (confirm) {
-                                    window.location.href = "../../index.php";
+                                    window.location.href = "homepage.php";
 								}
 							});
                        

@@ -28,9 +28,9 @@
             <i class="fas fa-lock"></i>
             <input type="password" placeholder="Password" name="loginPass" autocomplete="off" required>
           </div>
-          <!--<div class="row">
-            <a class="forgot-password" href="#">Forgot Password?</a>
-          </div>-->
+          <div class="row">
+            <a class="forgot-password" href="ForgotPassword.php">Forgot Password?</a>
+          </div>
           <div class="row button">
             <input type="submit" value="Login" name="login">
           </div>

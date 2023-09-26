@@ -19,7 +19,6 @@ if(!empty($email)){
             $admin_email  = $row['depedEmail'];           
         }
         
-   
         $_SESSION['email_data'] = $admin_email;
         $mail = new PHPMailer(true);
         $mail->isSMTP();
