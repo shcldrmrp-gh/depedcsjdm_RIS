@@ -35,7 +35,6 @@ table{
     font-size: 20px;
     margin-left: 293px;
     width: 75%;
-    height: 40%;
     border: 2px solid black;
     border-collapse: collapse; 
 }
@@ -88,6 +87,7 @@ table tr {
 }
 
 table tr th{
+    height: 30px;
     background: #162fa0;
     color: white;
     font-style: italic;
@@ -98,6 +98,7 @@ table tr th{
     
 }
 table tr td{
+    height: 50px;
     font-size: 18px;
     border: 2px solid black;
     
@@ -110,7 +111,7 @@ table tr td{
 .scroll{
    
     width: 1200px;
-    height: 350px;
+    height: 500px;
     margin-top: 10px;
     overflow-y: scroll;
     margin-left: 50px;

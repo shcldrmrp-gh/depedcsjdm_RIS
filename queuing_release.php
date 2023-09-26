@@ -69,21 +69,13 @@
                             Responsibility Code: 
                         </div>
                             <div class="centerCodePHP">
-                                <?php
-                                    if (isset($_SESSION['centerCode'])) {
-                                        echo $_SESSION['centerCode'];
-                                    }
-                                ?>
+                                
                             </div>
                         </div>
                         <div class="userOffice">
                             Office: 
                             <div class="userOfficePHP">
-                                <?php
-                                    if (isset($_SESSION['userOffice'])) {
-                                        echo $_SESSION['userOffice'];
-                                    }
-                                ?>
+                                
                             </div>
                         </div>
                         <div class="risNo">
@@ -113,23 +105,18 @@
                 
                 <tr colspan="8">
                       <th colspan="1" height="18px" class="stock_number">
-                          <input class="stock_number" name="stock_number[]" type="text" readonly>
+                          
                       </th>
                       <th colspan="1" class="stock_unit">
-                          <input class="stock_unit" name="stock_unit[]" type="text" readonly>
+                         
                       </th>  
 
                     <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
-                            <?php
-                                include('getItemDescriptionFromDatabase.php');
-                            ?>
-                        </select>
+                        
                     </th>
                     <th class="quantityInput">
                         <div class="quantityInput">
-                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                           
                         </div>
                     </th>
                     <th class="yesInputCheck"></th>
@@ -140,22 +127,17 @@
                 
                 <tr colspan="8">
                   <th colspan="1" height="18px" class="stock_number">
-                      <input class="stock_number" name="stock_number[]" type="text" readonly>
+                      
                   </th>
                   <th colspan="1" class="stock_unit">
-                      <input class="stock_unit" name="stock_unit[]" type="text" readonly>
+                     
                   </th>
                   <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
-                            <?php
-                                include('getItemDescriptionFromDatabase.php');
-                            ?>
-                        </select>
+                       
                     </th>
                     <th class="quantityInput">
                         <div class="quantityInput">
-                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                           
                         </div>
                     </th>
                   <th class="yesInputCheck"></th>
@@ -166,22 +148,17 @@
 
               <tr colspan="8">
                   <th colspan="1" height="18px" class="stock_number">
-                      <input class="stock_number" name="stock_number[]" type="text" readonly>
+                      
                   </th>
                   <th colspan="1" class="stock_unit">
-                      <input class="stock_unit" name="stock_unit[]" type="text" readonly>
+                     
                   </th>
                   <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
-                            <?php
-                                include('getItemDescriptionFromDatabase.php');
-                            ?>
-                        </select>
+                       
                     </th>
                     <th class="quantityInput">
                         <div class="quantityInput">
-                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                           
                         </div>
                     </th>
                   <th class="yesInputCheck"></th>
@@ -192,22 +169,17 @@
 
               <tr colspan="8">
                   <th colspan="1" height="18px" class="stock_number">
-                      <input class="stock_number" name="stock_number[]" type="text" readonly>
+                      
                   </th>
                   <th colspan="1" class="stock_unit">
-                      <input class="stock_unit" name="stock_unit[]" type="text" readonly>
+                      
                   </th>
                   <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
-                            <?php
-                                include('getItemDescriptionFromDatabase.php');
-                            ?>
-                        </select>
+                        
                     </th>
                     <th class="quantityInput">
                         <div class="quantityInput">
-                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                          
                         </div>
                     </th>
                   <th class="yesInputCheck"></th>
@@ -218,22 +190,17 @@
 
               <tr colspan="8">
                   <th colspan="1" height="18px" class="stock_number">
-                      <input class="stock_number" name="stock_number[]" type="text" readonly>
+                    
                   </th>
                   <th colspan="1" class="stock_unit">
-                      <input class="stock_unit" name="stock_unit[]" type="text" readonly>
+                     
                   </th>
                   <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
-                            <?php
-                                include('getItemDescriptionFromDatabase.php');
-                            ?>
-                        </select>
+                       
                     </th>
                     <th class="quantityInput">
                         <div class="quantityInput">
-                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                           
                         </div>
                     </th>
                   <th class="yesInputCheck"></th>
@@ -244,22 +211,17 @@
 
               <tr colspan="8">
                   <th colspan="1" height="18px" class="stock_number">
-                      <input class="stock_number" name="stock_number[]" type="text" readonly>
+                    
                   </th>
                   <th colspan="1" class="stock_unit">
-                      <input class="stock_unit" name="stock_unit[]" type="text" readonly>
+                     
                   </th>
                   <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
-                            <?php
-                                include('getItemDescriptionFromDatabase.php');
-                            ?>
-                        </select>
+                       
                     </th>
                     <th class="quantityInput">
                         <div class="quantityInput">
-                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                          
                         </div>
                     </th>
                   <th class="yesInputCheck"></th>
@@ -270,22 +232,17 @@
 
               <tr colspan="8">
                   <th colspan="1" height="18px" class="stock_number">
-                      <input class="stock_number" name="stock_number[]" type="text" readonly>
+                      
                   </th>
                   <th colspan="1" class="stock_unit">
-                      <input class="stock_unit" name="stock_unit[]" type="text" readonly>
+                     
                   </th>
                   <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
-                            <?php
-                                include('getItemDescriptionFromDatabase.php');
-                            ?>
-                        </select>
+                        
                     </th>
                     <th class="quantityInput">
                         <div class="quantityInput">
-                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                           
                         </div>
                     </th>
                   <th class="yesInputCheck"></th>
@@ -296,22 +253,17 @@
 
               <tr colspan="8">
                   <th colspan="1" height="18px" class="stock_number">
-                      <input class="stock_number" name="stock_number[]" type="text" readonly>
+                     
                   </th>
                   <th colspan="1" class="stock_unit">
-                      <input class="stock_unit" name="stock_unit[]" type="text" readonly>
+                     
                   </th>
                   <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
-                            <?php
-                                include('getItemDescriptionFromDatabase.php');
-                            ?>
-                        </select>
+                       
                     </th>
                     <th class="quantityInput">
                         <div class="quantityInput">
-                            <input type="number" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                           
                         </div>
                     </th>
                   <th class="yesInputCheck"></th>
@@ -322,22 +274,17 @@
 
               <tr colspan="8">
                   <th colspan="1" height="18px" class="stock_number">
-                      <input class="stock_number stockNumberInput" name="stock_number[]" type="text" readonly>
+                      
                   </th>
                   <th colspan="1" class="stock_unit">
-                      <input class="stock_unit" name="stock_unit[]" type="text" readonly>
+                      
                   </th>
                   <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
-                            <?php
-                                include('getItemDescriptionFromDatabase.php');
-                            ?>
-                        </select>
+                        
                     </th>
                     <th class="quantityInput">
                         <div class="quantityInput">
-                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                            
                         </div>
                     </th>
                   <th class="yesInputCheck"></th>
@@ -348,22 +295,17 @@
 
               <tr colspan="8">
                   <th colspan="1" height="18px" class="stock_number">
-                      <input class="stock_number" name="stock_number[]" type="text" readonly>
+                     
                   </th>
                   <th colspan="1" class="stock_unit">
-                      <input class="stock_unit" name="stock_unit[]" type="text" readonly>
+                    
                   </th>
                   <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
-                            <option value="noValue"></option>
-                            <?php
-                                include('getItemDescriptionFromDatabase.php');
-                            ?>
-                        </select>
+                        
                     </th>
                     <th class="quantityInput">
                         <div class="quantityInput">
-                            <input type="number" max="" pattern="[0-9]*" min="1" name="quantity[]" class="quantityInputUser" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                           
                         </div>
                     </th>
                   <th class="yesInputCheck"></th>
@@ -378,7 +320,7 @@
                           Purpose:
                       </div>
                       <div>
-                        <input class="purposeInput" type="text" name="" id="" required>
+                        
                       </div>
                   </th>
               </tr>
@@ -420,12 +362,7 @@
                     </th>
                     <th class="accountName" colspan="2">
                         <div class="accountName">
-                             <!-- AUTOMATIC NAME FILL-UP -->
-                            <?php
-                                if (isset($_SESSION['accountName'])) {
-                                    echo $_SESSION['accountName'];
-                                }
-                            ?>
+                            
                         </div>
                     </th>
                     <th class="approvedByName" colspan="2">
@@ -440,11 +377,7 @@
                     </th>
                     <th class="accountName"colspan="1">
                       <div class="accountName">
-                            <?php
-                                    if (isset($_SESSION['accountName'])) {
-                                        echo $_SESSION['accountName'];
-                                    }
-                            ?>
+                            
                       </div>
                     </th>
                 </tr>
@@ -457,11 +390,7 @@
                     </th>
                     <th colspan="2">
                         <div class="userPosition">
-                            <?php
-                                if (isset($_SESSION['userPosition'])) {
-                                    echo $_SESSION['userPosition'];
-                                }
-                            ?>
+                            
                         </div>
                     </th>
                     <th colspan="2">
@@ -476,12 +405,7 @@
                     </th>
                     <th colspan="1">
                         <div class="userPosition">
-                             <!-- AUTOMATIC POSITION FILL-UP -->
-                            <?php
-                                if (isset($_SESSION['userPosition'])) {
-                                    echo $_SESSION['userPosition'];
-                                }
-                            ?>
+                            
                         </div>
                     </th>
                 </tr>
@@ -493,9 +417,7 @@
                         </div>    
                     </th>
                     <th colspan="2">
-                        <input type="text" class="formDate" name="formDate" readonly>
-                        <!-- GET CURRENT FORMATTED DATE -->
-                        <script type="text/javascript" src="getCurrentDate.js">
+
                             
                         </script>
                     </th>
@@ -521,18 +443,7 @@
             </button>
         </div>
     </div>
-    <?php
-// Retrieve data from URL query parameters.
-if (isset($_GET['accountName']) && isset($_GET['referenceCode'])) {
-    $accountName = urldecode($_GET['accountName']);
-    $referenceCode = urldecode($_GET['referenceCode']);
-    
-    // You can now use $accountName and $referenceCode to pre-fill your form fields.
-    // For example, if you have an input field for accountName and referenceCode, you can set their values like this:
-    
 
-}
-?>
 
 </body>
 </html>

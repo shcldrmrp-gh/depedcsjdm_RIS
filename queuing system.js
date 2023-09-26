@@ -3,7 +3,7 @@ function deleteRow(button) {
     var referenceCode = button.parentElement.parentElement.getAttribute("data-reference-code");
 
     // Confirm with the user before deleting
-    if (confirm("Are you sure you want to delete the Request?")) {
+    if (confirm("Are you sure you want to delete the request?")) {
         // Send an AJAX request to the server to delete the record
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "queuing-delete_row.php", true);

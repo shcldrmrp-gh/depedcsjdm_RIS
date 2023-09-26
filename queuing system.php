@@ -10,7 +10,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="queuing system.css">
-    <link rel="icon" type="image/x-icon" href="logos/depedcsjdmlogo.png">
     <title>Queuing System</title>
 </head>
 <body>
@@ -26,12 +25,12 @@
                 <div class="headrow">
                     <th class="table-number">No.</th>
                     <th class="table-name">Name</th>
-                    <th class="table-button-release">Actions</th>
+                    <th class="table-button-release">Release</th>
                 </div>
             </tr>
             <div class="row2">
                 <?php
-                    $sql = "SELECT accountName, referenceCode FROM queue_logs ORDER BY accountName, referenceCode";
+                    $sql = "SELECT accountName, referenceCode FROM queue_logs";
                     $result = mysqli_query($con, $sql);
                     $rowNumber = 1;
                     $previousAccountName = null;
@@ -47,8 +46,8 @@
                     <td><?php echo $rowNumber; ?></td>
                     <td><?php echo $currentAccountName; ?></td>
                     <td>
-                    <button class="buttonRelease" data-account-name="<?php echo $currentAccountName; ?>" data-reference-code="<?php echo $currentreferenceCode; ?>" onclick="openForm(this)">Open</button>
-                    <button class="buttonCancel" onclick="deleteRow(this)">Cancel</button>
+                        <button class="buttonRelease" data-account-name="<?php echo $currentAccountName; ?>" data-reference-code="<?php echo $currentreferenceCode; ?>" onclick="openForm(this)">Open</button>
+                        <button class="buttonCancel" onclick="deleteRow(this)">Cancel</button>
                     </td>
                 
                 </tr>
