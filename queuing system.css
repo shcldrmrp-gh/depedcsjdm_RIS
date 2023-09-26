@@ -27,33 +27,53 @@ header h1{
 
 h2{
     font-size: 40px;
-    margin-left: 590px;
+    margin-left: 595px;
 }
 
 /* TABLE */
 table{
     font-size: 20px;
-    margin-left: 180px;
-    width: 87%;
-   
+    margin-left: 293px;
+    width: 75%;
     border: 2px solid black;
     border-collapse: collapse; 
 }
 
 
 .table-number{
-    width: 60px;
+    width: 9%;
 }
 
-.table-stock{
-    width: 150px;
+.table-name{
+    width: 72%;
+}
+.table-button-release{
+    width: 30%;
 }
 
-
-.table-quantity{
-    width: 150px;
+.buttonRelease{
+    width: 30%;
+    height: 30px;
+    border-radius: 9px;
+    background: transparent;
+    cursor: pointer;
+}
+.buttonRelease:hover{
+    background: #162fa0;
+    color: white;
 }
 
+.buttonCancel{
+    width: 30%;
+    height: 30px;
+    border-radius: 9px;
+    background: transparent;
+    cursor: pointer;
+}
+.buttonCancel:hover{
+    background: #162fa0;
+    color: white;
+}
 
 table tr {
     text-align: center;
@@ -82,11 +102,11 @@ table tr td{
 
 .scroll{
    
-    width: 1400px;
+    width: 1200px;
     height: 350px;
     margin-top: 10px;
     overflow-y: scroll;
-    
+    margin-left: 50px;
 }
 
 

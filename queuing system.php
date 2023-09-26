@@ -1,6 +1,7 @@
 <?php
     session_start();
     require_once("queuing system_connection.php");
+    
 ?>
 
 <!DOCTYPE html>
@@ -17,32 +18,51 @@
         <h1>Department of Education <br> Region III <br> SCHOOLS DIVISION OF SAN JOSE DEL MONTE </h1>
     </header>
     <h2>QUEUING SYSTEM</h2>
+    <form action="queuing-delete_row.php" method="post">
     <div class="scroll">
         <table id="table" border="1">
             <tr>
                 <div class="headrow">
                     <th class="table-number">No.</th>
-                    <th class="table-stock">Name:</th>
+                    <th class="table-name">Name:</th>
+                    <th class="table-button-release">Release</th>
                 </div>
             </tr>
             <div class="row2">
                 <?php
-                    $sql = "SELECT DISTINCT accountName FROM queue_logs";
+                    $sql = "SELECT accountName, referenceCode FROM queue_logs ORDER BY accountName, referenceCode";
                     $result = mysqli_query($con, $sql);
                     $rowNumber = 1;
-                    while($row = mysqli_fetch_assoc($result))
-                    {
+                    $previousAccountName = null;
+                    $previousreferenceCode = null;
+
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $currentAccountName = $row["accountName"];
+                        $currentreferenceCode = $row["referenceCode"];
+
+                        if ($currentAccountName !== $previousAccountName || $currentreferenceCode !== $previousreferenceCode) {
                 ?>
-                <tr>
-                    <td><?php echo $rowNumber;?></td>
-                    <td><?php echo $row["accountName"];?></td>
+                <tr data-reference-code="<?php echo $currentreferenceCode; ?>">
+                    <td><?php echo $rowNumber; ?></td>
+                    <td><?php echo $currentAccountName; ?></td>
+                    <td><button class="buttonRelease">Open</button>
+                    <button class="buttonRelease" onclick="deleteRow(this)">Cancel</button>
+                    </td>
+                
                 </tr>
                 <?php
-                    $rowNumber++;
+                            $previousAccountName = $currentAccountName;
+                            $previousreferenceCode = $currentreferenceCode;
+                            $rowNumber++;
+                        }
                     }
                 ?>
             </div>
         </table>
     </div>
+    </form>
+<script src="queuing system.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>

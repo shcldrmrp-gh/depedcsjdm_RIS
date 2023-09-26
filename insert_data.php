@@ -26,6 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $quantities = $_POST['quantity'];
     $formDate = $_POST['formDate'];
     $risNoDate = $_POST['risNoDate'];
+    $referenceCode = rand(100000, 999999);
+    $finalReferenceCode = $referenceCode;
     
     // Get the yearRequested value from the POST data
     $yearRequested = intval($_POST['yearRequested']);
@@ -75,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($item_description != "noValue") {
             // SQL query to insert data into the request_logs table
-            $sql = "INSERT INTO queue_logs VALUES ('$accountName', '$item_description', '$quantity')";
+            $sql = "INSERT INTO queue_logs VALUES ('$finalReferenceCode','$accountName', '$item_description', '$quantity', '$formDate')";
 
             if ($conn->query($sql) === TRUE) {
                 // Data inserted successfully
