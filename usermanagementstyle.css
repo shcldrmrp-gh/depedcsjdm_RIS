@@ -141,15 +141,17 @@ ul li:hover ul.settings{
 
 .queuing{
     position: absolute;
-    margin: 89px 0px 0px 69.7%; 
+    margin: 89px 0px 0px 69.5%; 
+    padding: 15px 0px 0px 0px;
     width: 7%;
-    height: 6.5%;
+    height: 4%;
     border-radius: 7px;
     background-color: #162fa0;
     border: 2px solid black;
     color: white;
+    text-decoration: none;
+    text-align: center;
     font-size: 13px;
-    cursor: pointer;
 }
 .queuing:hover{
     background: grey;

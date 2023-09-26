@@ -230,4 +230,11 @@ function searchTable() {
         }
     }
 }
+// go to queuing system
+function redirectToQueuingPage() {
+    // Specify the URL of the PHP file you want to redirect to
+    var queuingPageUrl = "queuing system.php"; // Change this to the actual URL
 
+    // Redirect to the queuing page
+    window.location.href = queuingPageUrl;
+}

@@ -52,7 +52,8 @@
                 </li>
             </ul>
         </nav>
-       <button class="queuing" type="button">QUEUING</button>
+        <a href="queuing system.php" class="queuing">QUEUING</a>
+
     </header>
     
     <h1>Department of Education <br> Region III <br> SCHOOLS DIVISION OF SAN JOSE DEL MONTE </h1>
