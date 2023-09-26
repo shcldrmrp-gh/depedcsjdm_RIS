@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="queuing system.css">
+    <link rel="icon" type="image/x-icon" href="logos/depedcsjdmlogo.png">
     <title>Queuing System</title>
 </head>
 <body>
@@ -24,8 +25,8 @@
             <tr>
                 <div class="headrow">
                     <th class="table-number">No.</th>
-                    <th class="table-name">Name:</th>
-                    <th class="table-button-release">Release</th>
+                    <th class="table-name">Name</th>
+                    <th class="table-button-release">Actions</th>
                 </div>
             </tr>
             <div class="row2">
@@ -45,8 +46,9 @@
                 <tr data-reference-code="<?php echo $currentreferenceCode; ?>">
                     <td><?php echo $rowNumber; ?></td>
                     <td><?php echo $currentAccountName; ?></td>
-                    <td><button class="buttonRelease">Open</button>
-                    <button class="buttonRelease" onclick="deleteRow(this)">Cancel</button>
+                    <td>
+                    <button class="buttonRelease" data-account-name="<?php echo $currentAccountName; ?>" data-reference-code="<?php echo $currentreferenceCode; ?>" onclick="openForm(this)">Open</button>
+                    <button class="buttonCancel" onclick="deleteRow(this)">Cancel</button>
                     </td>
                 
                 </tr>
@@ -63,6 +65,5 @@
     </form>
 <script src="queuing system.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 </body>
 </html>

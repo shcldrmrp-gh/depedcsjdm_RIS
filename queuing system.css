@@ -35,6 +35,7 @@ table{
     font-size: 20px;
     margin-left: 293px;
     width: 75%;
+    height: 40%;
     border: 2px solid black;
     border-collapse: collapse; 
 }
@@ -52,26 +53,32 @@ table{
 }
 
 .buttonRelease{
-    width: 30%;
+    width: 40%;
     height: 30px;
     border-radius: 9px;
     background: transparent;
     cursor: pointer;
+    background: green;
+    color: white;
+    margin-left: 10px;
 }
 .buttonRelease:hover{
-    background: #162fa0;
+    background: blue;
     color: white;
 }
 
 .buttonCancel{
-    width: 30%;
+    width: 40%;
     height: 30px;
     border-radius: 9px;
     background: transparent;
     cursor: pointer;
+    background: red;
+    color: white;
+    margin-left: 5px;
 }
 .buttonCancel:hover{
-    background: #162fa0;
+    background: blue;
     color: white;
 }
 
