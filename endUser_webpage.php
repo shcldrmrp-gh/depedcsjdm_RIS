@@ -385,7 +385,7 @@
                           Purpose:
                       </div>
                       <div>
-                        <input class="purposeInput" type="text" name="" id="" required>
+                        <input class="purposeInput" type="text" name="purpose" id="" required>
                       </div>
                   </th>
               </tr>
