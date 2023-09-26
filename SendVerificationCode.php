@@ -22,8 +22,15 @@ if(!empty($email)){
         $_SESSION['email_data'] = $admin_email;
         $mail = new PHPMailer(true);
         $mail->isSMTP();
-        $code = rand(100000, 999999);
-        $finalcode = $code;
+
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $code_length = 6; // You can change the length as needed
+        $finalcode = '';
+        for ($i = 0; $i < $code_length; $i++) {
+            $random_index = mt_rand(0, strlen($characters) - 1);
+            $finalcode .= $characters[$random_index];
+        }
+
         $mail->Host='smtp.gmail.com';
         $mail->SMTPAuth=true;
         //sender username
@@ -37,10 +44,10 @@ if(!empty($email)){
         //receiver
         $mail -> addAddress($admin_email);
         $mail->isHTML(true);
-        $mail->Subject='Verification Code';
-        $mail->Body="Your Verification code is: ".$finalcode;
+        $mail->Subject='Forgot Password';
+        $mail->Body="Your New Password Is: ".$finalcode;
         
-        $sendcode = "INSERT INTO verificationcode (`code`,`email`) VALUES ('$finalcode','$admin_email')";
+        $sendcode = "UPDATE `ris_accounts` SET `accountPass`= '$finalcode' WHERE depedEmail = '$admin_email'";
         $conn->query($sendcode);
         $mail->send();
         $status = "success";

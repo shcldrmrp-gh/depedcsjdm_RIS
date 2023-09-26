@@ -23,7 +23,7 @@
             </div>
 
             <div class = "message">
-                <p>Enter your email associated with your account. Verification code will be sent to your email.</p>
+                <p>Enter your email associated with your account. Your temporary password will be sent to your e-mail.</p>
             </div>
 
             <div>
@@ -32,7 +32,7 @@
 
             
              <div class="button-div">    
-                    <button type="submit" class="sendcodebtn" id="send_code">Send Code</button>
+                    <button type="submit" class="sendcodebtn" id="send_code">Submit</button>
                     <button class="cancelforgotbtn" onclick= "window.location.href='homepage.php'">Cancel</button>
             </div>
          
@@ -49,17 +49,20 @@
             <h1>CHECK YOUR EMAIL</h1>
             </div>
             <div class = "message">
-            <p class="msg-div2">Verification code has been sent to your email, Enter the code below to verify.
-            <br><br>
-            NOTE: Your code will be expire in 1 minute, you can resend the code again.
+            <p class="msg-div2">Your new password is sent to your e-mail. 
+            <br>You may update your password immediately after logging in.
             </p>
             </div>
-        
-            <div class="code-div">
-            <input class="entercode"type="text" name="code_input" id="code_input" placeholder="Enter Code here"></input>
-            </div>
 
-            <div class = "codebtn-div">
+            <div class="button-div">    
+                    <button class="cancelforgotbtn" onclick= "window.location.href='homepage.php'">Back</button>
+            </div>
+        
+            <!--<div class="code-div">
+            <input class="entercode"type="text" name="code_input" id="code_input" placeholder="Enter Code here"></input>
+            </div>-->
+
+            <!--<div class = "codebtn-div">
             <button class="verify-code" id="verify-code">Verify</button>
             <button class="re-send" id="re-send">Resend</button>
             <div id="timer" class="timer"></div>
@@ -70,7 +73,7 @@
              <div class="button-div">    
             <button class="backtoemail" id="backtoemail" >back</button>      
             </div>
-            </div>
+            </div>-->
            
 
         </div>
@@ -222,22 +225,22 @@ $(document).ready(function () {
                 data: { code: code },
                 success: function (response) {
                     if (response == "code not match") {
-                        alert("Please provide a valid code.");
+                        swal("Please provide a valid code.");
                         $("#code_input").val("");
                     } else if (response == "code field is empty") {
-                        alert("Code field is empty. Please enter the code.");
+                        swal("Code field is empty. Please enter the code.");
                     } else if (response == "error fetching code") {
-                        alert("Error fetching code.");
+                        swal("Error fetching code.");
                         $("#code_input").val("");
                     } else {
-                        alert("Code Verified");
+                        swal("Code Verified");
                         $('#centerdiv').css('display', 'none');
                         $('#centerdiv2').css('display', 'none');
                         $('#centerdiv3').css('display', 'block');
                     }
                 },
                 error: function (xhr, status, error) {
-                    alert("Connection Error");
+                    swal("Connection Error");
                 }
             });
         });
