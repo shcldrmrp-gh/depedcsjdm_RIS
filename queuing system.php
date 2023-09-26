@@ -1,11 +1,6 @@
 <?php
     session_start();
     require_once("queuing system_connection.php");
-
-    // Fetch a distinct accountName from the queue_logs table
-    $sql = "SELECT DISTINCT accountName FROM queue_logs";
-    $result = mysqli_query($con, $sql);
-    $row = mysqli_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html>
@@ -30,12 +25,23 @@
                     <th class="table-stock">Name:</th>
                 </div>
             </tr>
-            <tr>
-                <div class="row2">
-                    <td>1</td>
-                    <td><?php echo $row["accountName"]; ?></td>
-                </div>
-            </tr>
+            <div class="row2">
+                <?php
+                    $sql = "SELECT DISTINCT accountName FROM queue_logs";
+                    $result = mysqli_query($con, $sql);
+                    $rowNumber = 1;
+                    while($row = mysqli_fetch_assoc($result))
+                    {
+                ?>
+                <tr>
+                    <td><?php echo $rowNumber;?></td>
+                    <td><?php echo $row["accountName"];?></td>
+                </tr>
+                <?php
+                    $rowNumber++;
+                    }
+                ?>
+            </div>
         </table>
     </div>
 </body>
