@@ -385,7 +385,7 @@
                           Purpose:
                       </div>
                       <div>
-                        <input class="purposeInput" type="text" name="purpose" id="" required>
+                        <input autocomplete="off" class="purposeInput" type="text" name="purpose" id="" required>
                       </div>
                   </th>
               </tr>
@@ -546,11 +546,9 @@
     <!-- AUTO-LOGOUT FUNCTION -->
     <script type="text/javascript" src="autoLogoutFunction.js"></script>
 
-    <!-- SEND DATA TO DATABASE
-    <script type="text/javascript" src="sendDataToDatabase.js"></script>-->
+    <!-- SWEET ALERT AFTER SUBMIT -->
+    <script src="sweetAlert_submitButton.js"></script>
 
-    <!-- PREVENT SUBMISSION WHEN A QUANTITY INPUT FIELD WITH ITEM DESCRIPTION SELECTED IS EMPTY -->
-    <script src="preventSubmission.js"></script>
 
 </body>
 </html>
