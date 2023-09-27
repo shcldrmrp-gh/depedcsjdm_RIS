@@ -96,7 +96,6 @@
                         <div class="risNo">
                             RIS No.:
                             <input type="text" name="risNoDate" class="risNoDate" readonly>
-                            <script src="getrisNoDate.js"></script>
                         </div>
                     </th>
                 </tr>
@@ -524,7 +523,7 @@
     <div class="endUserButtons">
         <div class="generatePDFplacement">
             <button type="submit" onclick="sendDataToDatabase()" id="generatePDF">
-                GENERATE PDF
+                SUBMIT
             </button>
         </div>
     </div>
@@ -536,7 +535,7 @@
     <script type="text/javascript" src="autoStockAvailabilityInput.js"></script>
 
     <!-- GENERATE PDF FUNCTION -->
-    <script type="text/javascript" src="generatePdf.js"></script>
+    <script type="text/javascript" src="submit_updateQuantity.js"></script>
 
     <!-- AUTO UPDATE MAX QUANTITY -->
     <script type="text/javascript" src="autoUpdateMaxQuantity.js"></script>
