@@ -27,5 +27,5 @@ function openForm(button) {
     const url = `queuing_release.php?accountName=${encodeURIComponent(accountName)}&referenceCode=${encodeURIComponent(referenceCode)}`;
 
     // Open the second code in a new window or tab.
-    window.open(url, '_blank');
+    window.open(url, '_blank'); 
 }
