@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    // Store interval IDs in an object for each row
+    var intervalIds = {};
+
     function updateCheckSymbols(selectedRow, itemQuantity) {
         var yesInputCheck = selectedRow.find(".yesInputCheck");
         var noInputCheck = selectedRow.find(".noInputCheck");
@@ -6,16 +9,15 @@ $(document).ready(function () {
         if (itemQuantity > 0) {
             yesInputCheck.text("✓");
             noInputCheck.text("");
-        } else if (itemQuantity == 0) {
+        } else if (itemQuantity === 0) {
             yesInputCheck.text("");
             noInputCheck.text("✓");
-        } else if (itemQuantity == -1) {
+        } else if (itemQuantity === -1) {
             yesInputCheck.text("");
             noInputCheck.text("");
-        } 
+        }
     }
 
-    // Function to periodically update stock availability based on item quantity
     function periodicallyUpdateStockAvailability(selectedRow, itemDescription) {
         $.ajax({
             type: "POST",
@@ -35,20 +37,29 @@ $(document).ready(function () {
         var selectedRow = $(this).closest("tr");
         var selectedItemOption = $(this).find("option:selected");
         var itemDescription = selectedItemOption.val();
-        
+        var intervalId = intervalIds[selectedRow.index()];
+
         if (itemDescription === "noValue") {
-            // If "noValue" is selected, clear both "yesInputCheck" and "noInputCheck"
+            // Clear the interval for this row
+            clearInterval(intervalId);
             selectedRow.find(".yesInputCheck").text("");
             selectedRow.find(".noInputCheck").text("");
         } else {
-            // If not "noValue," update the stock availability and item quantity periodically
-            periodicallyUpdateStockAvailability(selectedRow, itemDescription);
-            // Set an interval to periodically update these elements (e.g., every 5 seconds)
-            var intervalId = setInterval(function () {
+            // Clear the previous interval, if it exists
+            if (intervalId) {
+                clearInterval(intervalId);
+            }
+
+            // Set a new interval to periodically update the elements
+            intervalId = setInterval(function () {
                 periodicallyUpdateStockAvailability(selectedRow, itemDescription);
-            }, 3000); // Adjust the interval as needed (in milliseconds)
-            // Store the interval ID so you can clear it when needed
-            selectedRow.data('intervalId', intervalId);
+            }, 3000);
+
+            // Store the new interval ID for this row
+            intervalIds[selectedRow.index()] = intervalId;
+
+            // Trigger an immediate update
+            periodicallyUpdateStockAvailability(selectedRow, itemDescription);
         }
     });
 
@@ -59,33 +70,11 @@ $(document).ready(function () {
         var itemDescription = selectedItemOption.val();
 
         if (itemDescription !== "noValue") {
-            periodicallyUpdateStockAvailability(selectedRow, itemDescription);
-            // Set an interval to periodically update these elements (e.g., every 5 seconds)
             var intervalId = setInterval(function () {
                 periodicallyUpdateStockAvailability(selectedRow, itemDescription);
-            }, 3000); // Adjust the interval as needed (in milliseconds)
-            // Store the interval ID so you can clear it when needed
-            selectedRow.data('intervalId', intervalId);
-        }
-    });
+            }, 3000);
 
-    // Function to clear the interval when the item_description changes to "noValue"
-    function clearIntervalForRow(selectedRow) {
-        var intervalId = selectedRow.data('intervalId');
-        if (intervalId) {
-            clearInterval(intervalId);
-        }
-    }
-
-    // Clear the interval when the item_description changes to "noValue"
-    $(".item_description").change(function () {
-        var selectedRow = $(this).closest("tr");
-        var selectedItemOption = $(this).find("option:selected");
-        var itemDescription = selectedItemOption.val();
-
-        if (itemDescription === "noValue") {
-            // Clear the interval for this row
-            clearIntervalForRow(selectedRow);
+            intervalIds[selectedRow.index()] = intervalId;
         }
     });
 });
