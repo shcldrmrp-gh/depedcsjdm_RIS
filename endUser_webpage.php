@@ -514,18 +514,17 @@
                     </th>
                 </tr>
             </table>
+            <div class="endUserButtons">
+                <div class="submitButtonplacement">
+                    <button type="submit" id="submitButton">
+                        SUBMIT
+                    </button>
+                </div>
+            </div>
         </form>
        <br>
        <br>
        <br>
-    </div>
-
-    <div class="endUserButtons">
-        <div class="submitButtonplacement">
-            <button type="submit" onclick="sendDataToDatabase()" id="submitButton">
-                SUBMIT
-            </button>
-        </div>
     </div>
         
     <!-- AUTO FILL UP FOR STOCK NUMBER AND UNIT -->
@@ -546,7 +545,8 @@
     <!-- AUTO-LOGOUT FUNCTION -->
     <script type="text/javascript" src="autoLogoutFunction.js"></script>
 
-    <!-- SEND DATA TO DATABASE -->
-    <script type="text/javascript" src="sendDataToDatabase.js"></script>
+    <!-- SEND DATA TO DATABASE
+    <script type="text/javascript" src="sendDataToDatabase.js"></script>-->
+
 </body>
 </html>
