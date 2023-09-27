@@ -1,5 +1,5 @@
 let form = document.querySelector("#formContainer");
-let btn = document.querySelector("#generatePDF");
+let btn = document.querySelector("#submitButton");
         
         btn.addEventListener('click', () => {
 
@@ -30,5 +30,4 @@ let btn = document.querySelector("#generatePDF");
                     },
                 });
             });
-            
         });

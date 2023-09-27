@@ -214,7 +214,7 @@ nav ul{
     font-size: 12px;
 }
 
-#generatePDF {
+#submitButton {
     margin-left: 1100px;
     margin-top: 200px;
     margin-bottom: 10px;
@@ -232,7 +232,7 @@ nav ul{
 }
 
 
-#generatePDF:hover {
+#submitButton:hover {
     background-color: grey; /* Darken the background color on hover */
 }
 
