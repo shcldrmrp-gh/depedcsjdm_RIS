@@ -8,8 +8,7 @@ function sendDataToDatabase() {
       url: 'insert_data.php', // Replace with your PHP script URL
       data: formData,
       success: function (response) {
-          // Handle the response from the server (e.g., show a success message)
-          alert('Data sent to the database successfully');
+          window.location.reload();
       },
       error: function () {
           // Handle any errors that occur during the AJAX request
