@@ -41,7 +41,7 @@ body {
 }
 
 .quantityInputUser {
-    width: 95px;
+    width: 100px;
     text-align: center;
 }
 
@@ -215,9 +215,8 @@ nav ul{
 }
 
 #submitButton {
-    margin-left: 1100px;
-    margin-top: 200px;
-    margin-bottom: 10px;
+    margin-left: 1085px;
+    margin-top: 275px;
     width: 100px;
     height: 50px;
     border-radius: 13px;
