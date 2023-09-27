@@ -46,7 +46,7 @@ $(document).ready(function () {
             // Set an interval to periodically update these elements (e.g., every 5 seconds)
             var intervalId = setInterval(function () {
                 periodicallyUpdateStockAvailability(selectedRow, itemDescription);
-            }, 5000); // Adjust the interval as needed (in milliseconds)
+            }, 2000); // Adjust the interval as needed (in milliseconds)
             // Store the interval ID so you can clear it when needed
             selectedRow.data('intervalId', intervalId);
         }
