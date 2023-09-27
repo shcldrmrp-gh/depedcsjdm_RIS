@@ -536,7 +536,7 @@
     <script type="text/javascript" src="autoStockAvailabilityInput.js"></script>
 
     <!-- GENERATE PDF FUNCTION -->
-    <script type="text/javascript" src="generatePdf.js"></script>
+    <script type="text/javascript" src="submit_updateQuantity.js"></script>
 
     <!-- AUTO UPDATE MAX QUANTITY -->
     <script type="text/javascript" src="autoUpdateMaxQuantity.js"></script>
@@ -546,5 +546,6 @@
 
     <!-- SEND DATA TO DATABASE -->
     <script type="text/javascript" src="sendDataToDatabase.js"></script>
+    
 </body>
 </html>
