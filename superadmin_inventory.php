@@ -117,7 +117,8 @@
         </form>   
     </div>
     <!-----Delete Prompt------->
-
+    
+    <script src="autoLogoutFunction.js"></script>
     <script src="superadmin_inventory.js"></script>
 </body>
 </html>

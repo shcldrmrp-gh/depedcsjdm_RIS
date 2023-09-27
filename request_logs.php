@@ -174,7 +174,7 @@
 
 
   
-
+<script src="autoLogoutFunction.js"></script>
 <script src="request_logs.js"></script>
 <script src="table2excel.js"></script>
 </body>

@@ -73,5 +73,6 @@
                     ?>
                 </div>
         </table>
+        <script src="autoLogoutFunction.js"></script>
 </body>
 </html>

@@ -34,5 +34,6 @@
         </form>
       </div>
     </div>
+    <script src="autoLogoutFunction.js"></script>
   </body>
 </html>
