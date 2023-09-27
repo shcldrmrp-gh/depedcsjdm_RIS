@@ -54,6 +54,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Format the next series number as a 6-digit string
     $formattedSeriesNumber = str_pad($nextSeriesNumber, 6, '0', STR_PAD_LEFT);
 
+    $insertedSuccessfully = true;
+
     // Loop through the submitted data and insert it into the database
     for ($i = 0; $i < count($item_descriptions); $i++) {
         $item_description = $item_descriptions[$i];
@@ -79,18 +81,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($item_description != "noValue") {
             // SQL query to insert data into the request_logs table
             $sql = "INSERT INTO queue_logs VALUES ('$finalReferenceCode','$accountName', '$centerCode', '$userOffice', '$stockNumber', '$item_description', '$stockUnit','$quantity','$purpose','$formDate')";
-
-            if ($conn->query($sql) === TRUE) {
-                // Data inserted successfully
-                header("endUser_webpage.php");
-            } else {
+            if ($conn->query($sql) !== TRUE) {
                 // Error occurred while inserting data
+                $insertedSuccessfully = false;
                 echo "Error: " . $sql . "<br>" . $conn->error;
-            }
         }
+    }
     }
 
     // Close the database connection
+    
     $conn->close();
+
+// Check if data was inserted successfully before redirection
+    if ($insertedSuccessfully) {
+        // Redirect the user to endUser_webpage.php
+        header("Location: endUser_webpage.php");
+        exit();
+    } else {
+        echo "Data was not inserted successfully. Please check the errors above.";
+    }
 }
 ?>
