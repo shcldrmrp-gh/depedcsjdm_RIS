@@ -17,7 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="admin_risform.css">
+    <link rel="stylesheet" href="endUser_Webpage.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="icon" type="image/x-icon" href="logos/depedcsjdmlogo.png">
     
@@ -96,7 +96,6 @@
                         <div class="risNo">
                             RIS No.:
                             <input type="text" name="risNoDate" class="risNoDate" readonly>
-                            <script src="getrisNoDate.js"></script>
                         </div>
                     </th>
                 </tr>
@@ -385,7 +384,7 @@
                           Purpose:
                       </div>
                       <div>
-                        <input class="purposeInput" type="text" name="" id="" required>
+                        <input class="purposeInput" type="text" name="purpose" id="" required>
                       </div>
                   </th>
               </tr>
@@ -522,9 +521,9 @@
     </div>
 
     <div class="endUserButtons">
-        <div class="generatePDFplacement">
-            <button type="submit" onclick="sendDataToDatabase()" id="generatePDF">
-                GENERATE PDF
+        <div class="submitButtonplacement">
+            <button type="submit" onclick="sendDataToDatabase()" id="submitButton">
+                SUBMIT
             </button>
         </div>
     </div>
@@ -546,6 +545,5 @@
 
     <!-- SEND DATA TO DATABASE -->
     <script type="text/javascript" src="sendDataToDatabase.js"></script>
-    
 </body>
 </html>
