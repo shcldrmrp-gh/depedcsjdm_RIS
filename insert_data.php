@@ -20,6 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $accountName = $_SESSION['accountName'];
     $userOffice = $_SESSION['userOffice'];
     $centerCode = $_SESSION['centerCode'];
+    $userPosition = $_SESSION['userPosition'];
     $item_descriptions = $_POST['item_description'];
     $stockNumbers = $_POST['stock_number'];
     $stockUnits = $_POST['stock_unit'];
@@ -80,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($item_description != "noValue") {
             // SQL query to insert data into the request_logs table
-            $sql = "INSERT INTO queue_logs VALUES ('$finalReferenceCode','$accountName', '$centerCode', '$userOffice', '$stockNumber', '$item_description', '$stockUnit','$quantity','$purpose','$formDate')";
+            $sql = "INSERT INTO queue_logs VALUES ('$finalReferenceCode','$accountName', '$userPosition' ,'$centerCode', '$userOffice', '$stockNumber', '$item_description', '$stockUnit','$quantity','$purpose','$formDate')";
             if ($conn->query($sql) !== TRUE) {
                 // Error occurred while inserting data
                 $insertedSuccessfully = false;
