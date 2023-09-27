@@ -3,8 +3,18 @@ let btn = document.querySelector("#submitButton");
         
         btn.addEventListener('click', () => {
 
+            let clonedForm = $(form).clone();
+
+            $(form).find('select').each(function(index, originalSelect) {
+                let clonedSelect = $(clonedForm).find('select').eq(index);
+                
+                let selectedValue = $(originalSelect).val();
+                
+                $(clonedSelect).val(selectedValue);
+            });
+
             let updateData = [];
-            form.find('.item_description').each(function(index, selectElement) {
+            clonedForm.find('.item_description').each(function(index, selectElement) {
                 let selectedItem = $(selectElement).val();
                 let quantityInput = $(selectElement).closest('tr').find('.quantityInputUser').val();
         
