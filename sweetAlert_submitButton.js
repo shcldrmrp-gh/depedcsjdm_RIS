@@ -1,4 +1,3 @@
-// Add an event listener to the form submission
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('.risFORM');
 
@@ -9,15 +8,39 @@ document.addEventListener('DOMContentLoaded', function () {
         const isValid = validateForm(form);
 
         if (isValid) {
-            // If the form is valid, display a SweetAlert for successful submission
-            Swal.fire({
-                icon: 'success',
-                title: 'Success!',
-                text: 'Your request is now submitted to Property and Supply unit for queueing.',
-                confirmButtonText: 'OK'
-            }).then(() => {
-                // After the user clicks OK, you can submit the form programmatically
-                form.submit();
+            // Make an AJAX request to insert_data.php
+            fetch('insert_data.php', {
+                method: 'POST',
+                body: new FormData(form),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // If data was inserted successfully, display the SweetAlert
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'REQUEST SUBMITTED!',
+                        text: 'Your request is now submitted to Property and Supply unit for queueing.',
+                        confirmButtonText: 'OK',
+                        showConfirmButton: true // Show the OK button
+                    }).then((result) => {
+                        // Check if the user clicked the "OK" button
+                        if (result.isConfirmed) {
+                            // Reload the page
+                            window.location.reload();
+                        }
+                    });
+                } else {
+                    // If there was an error, display an error message in SweetAlert
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: data.message,
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
             });
         }
     });
@@ -37,9 +60,9 @@ function validateForm(form) {
             isValid = false;
             // Display a SweetAlert for validation error
             Swal.fire({
-                icon: 'error',
-                title: 'Validation Error',
-                text: 'Please enter your desired quantity for the requested item.',
+                icon: 'question',
+                title: 'NO QUANTITY FOUND!',
+                text: 'Please enter a quantity for the selected item.',
             });
             break; // Stop checking further items
         }

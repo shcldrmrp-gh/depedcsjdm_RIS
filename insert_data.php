@@ -91,16 +91,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Close the database connection
-    
-    $conn->close();
-
-// Check if data was inserted successfully before redirection
-    if ($insertedSuccessfully) {
-        // Redirect the user to endUser_webpage.php
-        header("Location: endUser_webpage.php");
-        exit();
+     if ($insertedSuccessfully) {
+        // Return a JSON response indicating success
+        echo json_encode(array('success' => true));
     } else {
-        echo "Data was not inserted successfully. Please check the errors above.";
+        // Return a JSON response indicating failure
+        echo json_encode(array('success' => false, 'message' => 'Data was not inserted successfully.'));
     }
+    $conn->close();
+   
 }
 ?>
