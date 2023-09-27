@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
             Swal.fire({
                 icon: 'success',
                 title: 'Success!',
-                text: 'Your request is now submitted for queueing',
+                text: 'Your request is now submitted to Property and Supply unit for queueing.',
                 confirmButtonText: 'OK'
             }).then(() => {
                 // After the user clicks OK, you can submit the form programmatically
@@ -39,7 +39,7 @@ function validateForm(form) {
             Swal.fire({
                 icon: 'error',
                 title: 'Validation Error',
-                text: 'Please enter a quantity for the selected item.',
+                text: 'Please enter your desired quantity for the requested item.',
             });
             break; // Stop checking further items
         }
