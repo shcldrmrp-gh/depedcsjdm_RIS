@@ -385,7 +385,7 @@
                           Purpose:
                       </div>
                       <div>
-                        <input autocomplete="off" class="purposeInput" type="text" name="purpose" id="" required>
+                        <input autocomplete="off" class="purposeInput" type="text" name="purpose" id="">
                       </div>
                   </th>
               </tr>
@@ -517,7 +517,7 @@
             </table>
             <div class="endUserButtons">
                 <div class="submitButtonplacement">
-                    <button type="submit" id="submitButton">
+                    <button type="submit" id="submitButton" disabled>
                         SUBMIT
                     </button>
                 </div>
