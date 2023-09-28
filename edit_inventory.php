@@ -1,6 +1,6 @@
 <?php
 session_start();
-$con = mysqli_connect('localhost', 'user', '', 'ris_propertyoffice');
+$con = mysqli_connect('localhost', 'root', 'root', 'ris_propertyoffice');
 
 // Check the connection
 if (!$con) {

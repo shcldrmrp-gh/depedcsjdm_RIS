@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect('localhost', 'user', '', 'ris_propertyoffice');
+$con = mysqli_connect('localhost', 'root', 'root', 'ris_propertyoffice');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userOffice = $_POST["useroffice"];
     $userPosition = $_POST["userposition"];

@@ -1,6 +1,6 @@
 <?php
 //connect to table
-$con = mysqli_connect("localhost", "root", "", "ris_propertyoffice");
+$con = mysqli_connect("localhost", "root", "root", "ris_propertyoffice");
 
 if (isset($_POST['save'])) {
     $accountType = $_POST['accountType'];
