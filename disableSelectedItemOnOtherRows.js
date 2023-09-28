@@ -93,7 +93,7 @@ function validateForm(form) {
             isValid = false;
             // Display a SweetAlert for validation error
             Swal.fire({
-                icon: 'question',
+                icon: 'warning',
                 title: 'NO QUANTITY FOUND!',
                 text: 'Please enter a quantity for the selected item.',
             });
