@@ -127,7 +127,7 @@
                       </th>  
 
                     <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity(); toggleQuantityRequired(this);'>
+                        <select class="item_description item-description-select" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
                             <option value="noValue"></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
@@ -153,7 +153,7 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity(); toggleQuantityRequired(this);'>
+                        <select class="item_description item-description-select" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
                             <option value="noValue"></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
@@ -179,7 +179,7 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity(); toggleQuantityRequired(this);'>
+                        <select class="item_description item-description-select" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
                             <option value="noValue"></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
@@ -205,7 +205,7 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity(); toggleQuantityRequired(this);'>
+                        <select class="item_description item-description-select" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
                             <option value="noValue"></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
@@ -231,7 +231,7 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity(); toggleQuantityRequired(this);'>
+                        <select class="item_description item-description-select" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
                             <option value="noValue"></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
@@ -257,7 +257,7 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity(); toggleQuantityRequired(this);'>
+                        <select class="item_description item-description-select" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
                             <option value="noValue"></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
@@ -283,7 +283,7 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity(); toggleQuantityRequired(this);'>
+                        <select class="item_description item-description-select" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
                             <option value="noValue"></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
@@ -309,7 +309,7 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity(); toggleQuantityRequired(this);'>
+                        <select class="item_description item-description-select" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
                             <option value="noValue"></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
@@ -335,7 +335,7 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity(); toggleQuantityRequired(this);'>
+                        <select class="item_description item-description-select" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
                             <option value="noValue"></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
@@ -361,7 +361,7 @@
                       <input class="stock_unit" name="stock_unit[]" type="text" readonly>
                   </th>
                   <th>
-                        <select class="item_description" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity(); toggleQuantityRequired(this);'>
+                        <select class="item_description item-description-select" name="item_description[]" onfocus='this.size=5;' onblur='this.size=1;' onchange='updateMaxQuantity();'>
                             <option value="noValue"></option>
                             <?php
                                 include('getItemDescriptionFromDatabase.php');
@@ -527,7 +527,13 @@
        <br>
        <br>
     </div>
-        
+    
+    <!-- DISABLE A SELECTED ITEM IN ANY OF THE ROWS IF IT IS SELECTED ON ONE ROW-->
+    <script src="disableSelectedItemOnOtherRows.js"></script>
+
+    <!-- DISABLE QUANTITY INPUT USER FIELD BY DEFAULT AND ENABLE IT WHEN AN ITEM DESCRIPTION IS SELECTED -->
+    <script src="disableQuantityInputUser.js"></script>
+    
     <!-- AUTO FILL UP FOR STOCK NUMBER AND UNIT -->
     <script type="text/javascript" src="getStuckNumberUnit.js"></script>
 
@@ -548,7 +554,6 @@
 
     <!-- SWEET ALERT AFTER SUBMIT -->
     <script src="sweetAlert_submitButton.js"></script>
-
 
 </body>
 </html>
