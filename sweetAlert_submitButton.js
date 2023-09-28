@@ -60,7 +60,7 @@ function validateForm(form) {
             isValid = false;
             // Display a SweetAlert for validation error
             Swal.fire({
-                icon: 'question',
+                icon: 'warning',
                 title: 'NO QUANTITY FOUND!',
                 text: 'Please enter a quantity for the selected item.',
             });
@@ -71,3 +71,19 @@ function validateForm(form) {
     // Return whether the form is valid or not
     return isValid;
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const itemDescriptions = document.querySelectorAll('.item_description');
+    const submitButton = document.getElementById('submitButton');
+
+    // Add onchange event handlers to all item_description select elements
+    itemDescriptions.forEach(itemDescription => {
+        itemDescription.addEventListener('change', function () {
+            // Check if any item_description has a value other than 'noValue'
+            const isAnyItemSelected = Array.from(itemDescriptions).some(item => item.value !== 'noValue');
+            
+            // Enable or disable the submit button based on selection
+            submitButton.disabled = !isAnyItemSelected;
+        });
+    });
+});
