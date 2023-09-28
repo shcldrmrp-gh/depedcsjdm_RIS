@@ -43,7 +43,7 @@
     <br>
     <br>
     <div id="formContainer">
-        <form class="risFORM "action="insert_data.php" method="POST" onsubmit="return validateForm(this);">
+        <form class="risFORM" id="risFORM" action="insert_update.php" method="POST" onsubmit="return validateForm(this);">
             <table id="forRIS1" border="1" width="950px">
                 <input type="hidden" name="yearRequested" class="yearRequested">
                 <script src="getCurrentYear.js"></script>
@@ -528,10 +528,10 @@
        <br>
     </div>
 
-    <!-- DISABLED QUANTITY INPUT FIELD UNLESS AN ITEM IS SELECTED ON THE SAME ROW -->
+    <!-- DISABLE QUANTITY INPUT UNLESS AN ITEM IS SELECTED -->
     <script src="disableQuantityInputUser.js"></script>
-
-    <!-- SWEET ALERT INCLUDED, INSERT AND UPDATE PHP COMBINED, OTHER ITEMS CANNOT BE SELECTED IF ALREADY SELECTED IN ONE ROW-->
+    
+    <!-- DISABLED AN ITEM IF IT IS ALREADY SELECTED IN ONE ROW -->
     <script src="disableSelectedItemOnOtherRows.js"></script>
         
     <!-- AUTO FILL UP FOR STOCK NUMBER AND UNIT -->
@@ -539,9 +539,6 @@
 
     <!-- AUTO INPUT FOR STOCK AVAILABILITY -->
     <script type="text/javascript" src="autoStockAvailabilityInput.js"></script>
-
-    <!-- GENERATE PDF FUNCTION -->
-    <script type="text/javascript" src="submit_updateQuantity.js"></script>
 
     <!-- AUTO UPDATE MAX QUANTITY -->
     <script type="text/javascript" src="autoUpdateMaxQuantity.js"></script>

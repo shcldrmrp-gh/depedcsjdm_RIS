@@ -1,5 +1,6 @@
 <?php
-// Ensure proper error handling and database connection establishment here.
+
+include("login.php");
 
 $servername = "localhost";
 $username = "root";
@@ -13,31 +14,64 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $item_description = $_POST['item_description'];
-    $quantity = $_POST['quantity'];
-    $stock_number = $_POST["stock_number"];
+    $accountName = $_SESSION['accountName'];
+    $userOffice = $_SESSION['userOffice'];
+    $centerCode = $_SESSION['centerCode'];
+    $userPosition = $_SESSION['userPosition'];
+    $item_descriptions = $_POST['item_description'];
+    $stockNumbers = $_POST['stock_number'];
+    $stockUnits = $_POST['stock_unit'];
+    $quantities = $_POST['quantity'];
+    $formDate = $_POST['formDate'];
+    $risNoDate = $_POST['risNoDate'];
+    $purpose = $_POST['purpose'];
+    $referenceCode = rand(100000, 999999);
+    $finalReferenceCode = $referenceCode;
 
-    // Ensure quantity doesn't go below 0
-    $sql = "UPDATE inventory SET item_quantity = CASE
-            WHEN item_quantity >= $quantity THEN item_quantity - $quantity
-            ELSE 0
-            END
-            WHERE item_description = '$item_description'";
+    $success = true;
+    $errorMessage = "";
 
-    if ($conn->query($sql) === TRUE) {
-        // Now, insert data into the queue logs
-        $insert_sql = "INSERT INTO queue_logs (item_description, quantity, stock_number) 
-                      VALUES ('$item_description', $quantity, '$stock_number')";
+    // Start a transaction
+    $conn->begin_transaction();
 
-        if ($conn->query($insert_sql) === TRUE) {
-            echo json_encode(array("success" => true));
-        } else {
-            echo json_encode(array("success" => false, "message" => "Error inserting data into queue logs: " . $conn->error));
+    for ($i = 0; $i < count($item_descriptions); $i++) {
+        // Check if the array key exists before accessing it
+        $item_description = isset($item_descriptions[$i]) ? $item_descriptions[$i] : '';
+        $stockNumber = isset($stockNumbers[$i]) ? $stockNumbers[$i] : '';
+        $stockUnit = isset($stockUnits[$i]) ? $stockUnits[$i] : '';
+        $quantity = isset($quantities[$i]) ? $quantities[$i] : '';
+
+        // Check if the item_description is not empty and not equal to "noValue"
+        if (!empty($item_description) && $item_description !== 'noValue') {
+            // Insert data into the queue logs
+            $insert_sql = "INSERT INTO queue_logs VALUES ('$finalReferenceCode', '$accountName', '$userPosition', '$centerCode', '$userOffice', '$stockNumber', '$item_description', '$stockUnit', '$quantity', '$purpose', '$formDate')";
+
+            if (!$conn->query($insert_sql)) {
+                $success = false;
+                $errorMessage = "Error inserting data into queue logs: " . $conn->error;
+                break; // Exit the loop on error
+            }
+
+            // Update item_quantity in the inventory table
+            $update_sql = "UPDATE inventory SET item_quantity = item_quantity - $quantity WHERE item_description = '$item_description'";
+
+            if (!$conn->query($update_sql)) {
+                $success = false;
+                $errorMessage = "Error updating item_quantity in inventory: " . $conn->error;
+                break; // Exit the loop on error
+            }
         }
-    } else {
-        echo json_encode(array("success" => false, "message" => "Error updating quantity: " . $conn->error));
     }
-}
 
-$conn->close();
+    // Commit or rollback the transaction
+    if ($success) {
+        $conn->commit();
+        echo json_encode(array("success" => true));
+    } else {
+        $conn->rollback();
+        echo json_encode(array("success" => false, "message" => $errorMessage));
+    }
+
+    $conn->close();
+}
 ?>

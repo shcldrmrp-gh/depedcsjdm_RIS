@@ -59,11 +59,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Loop through the submitted data and insert it into the database
     for ($i = 0; $i < count($item_descriptions); $i++) {
-        // Check if the array key exists before accessing it
-        $item_description = isset($item_descriptions[$i]) ? $item_descriptions[$i] : '';
-        $stockNumber = isset($stockNumbers[$i]) ? $stockNumbers[$i] : '';
-        $stockUnit = isset($stockUnits[$i]) ? $stockUnits[$i] : '';
-        $quantity = isset($quantities[$i]) ? $quantities[$i] : '';
+        $item_description = $item_descriptions[$i];
+        $stockNumber = $stockNumbers[$i];
+        $stockUnit = $stockUnits[$i];
+        $quantity = $quantities[$i];
     
         // Check if the item_description is not equal to "noValue" before inserting
         if ($item_description != "noValue") {

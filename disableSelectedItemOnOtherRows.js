@@ -1,112 +1,46 @@
-// Function to update available options
-function updateAvailableOptions(selectElement) {
-    const selectedDescriptions = new Set();
-    const selects = document.querySelectorAll('.item-description-select');
+// Function to handle item selection
+function toggleItemAvailability(select) {
+    var itemDescriptionDropdowns = document.querySelectorAll('.item-description-select');
+    
+    // Create an object to keep track of selected items in each dropdown
+    var selectedItems = {};
 
-    selects.forEach((select) => {
-        const selectedOption = select.querySelector('option:checked');
-        const selectedValue = selectedOption.value;
+    select.addEventListener('change', function () {
+        var selectedItem = this.value;
 
-        if (selectedValue !== 'noValue') {
-            selectedDescriptions.add(selectedValue);
-        }
-    });
+        // Disable the previously selected item in all dropdowns
+        itemDescriptionDropdowns.forEach(function (dropdown) {
+            var options = dropdown.getElementsByTagName('option');
+            for (var i = 0; i < options.length; i++) {
+                var option = options[i];
+                if (option.value !== 'noValue') {
+                    if (selectedItems[dropdown.id] === option.value) {
+                        option.disabled = false;
+                    }
+                }
+            }
+        });
 
-    selects.forEach((select) => {
-        const options = select.querySelectorAll('option');
-        options.forEach((option) => {
-            if (option.value !== 'noValue') {
-                if (selectedDescriptions.has(option.value)) {
-                    option.disabled = true;
-                } else {
-                    option.disabled = false;
+        // Update the selected item for the current dropdown
+        selectedItems[this.id] = selectedItem;
+
+        // Disable the selected item in other dropdowns
+        itemDescriptionDropdowns.forEach(function (dropdown) {
+            if (dropdown !== select) {
+                var otherOptions = dropdown.getElementsByTagName('option');
+                for (var j = 0; j < otherOptions.length; j++) {
+                    var otherOption = otherOptions[j];
+                    if (otherOption.value !== 'noValue' && otherOption.value === selectedItem) {
+                        otherOption.disabled = true;
+                    }
                 }
             }
         });
     });
 }
 
-// Event delegation to handle select change
-document.body.addEventListener('change', (event) => {
-    if (event.target.classList.contains('item-description-select')) {
-        updateAvailableOptions(event.target);
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('.risFORM');
-
-    form.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent the default form submission
-
-        // Validate the form
-        const isValid = validateForm(form);
-
-        if (isValid) {
-            // Make an AJAX request to insert_data.php
-            fetch('insert_data.php', {
-                method: 'POST',
-                body: new FormData(form),
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    // If data was inserted successfully, display the SweetAlert
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'REQUEST SUBMITTED!',
-                        text: 'Your request is now submitted to Property and Supply unit for queueing.',
-                        confirmButtonText: 'OK',
-                        showConfirmButton: true // Show the OK button
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            window.location.reload();
-                        }
-                    });
-                } else {
-                    // If there was an error, display an error message in SweetAlert
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: data.message,
-                    });
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        }
-    });
-});
-
-function validateForm(form) {
-    const itemDescriptions = form.querySelectorAll('.item_description');
-    const quantityInputs = form.querySelectorAll('.quantityInputUser');
-    let isValid = true;
-
-    for (let i = 0; i < itemDescriptions.length; i++) {
-        const itemDescription = itemDescriptions[i];
-        const quantityInput = quantityInputs[i];
-
-        // Check if an item_description is selected and the quantityInput is empty
-        if (itemDescription.value !== 'noValue' && quantityInput.value === '') {
-            isValid = false;
-            // Display a SweetAlert for validation error
-            Swal.fire({
-                icon: 'warning',
-                title: 'NO QUANTITY FOUND!',
-                text: 'Please enter a quantity for the selected item.',
-            });
-            break; // Stop checking further items
-        }
-    }
-
-    // Return whether the form is valid or not
-    return isValid;
-}
-
-// Initialize available options
-const selects = document.querySelectorAll('.item-description-select');
-selects.forEach((select) => {
-    updateAvailableOptions(select);
+// Attach the toggleItemAvailability function to all item_description dropdowns
+var itemDescriptionDropdowns = document.querySelectorAll('.item-description-select');
+itemDescriptionDropdowns.forEach(function (select) {
+    toggleItemAvailability(select); // Initial setup
 });
