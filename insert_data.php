@@ -99,6 +99,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo json_encode(array('success' => false, 'message' => 'Data was not inserted successfully.'));
     }
     $conn->close();
-   
 }
 ?>
