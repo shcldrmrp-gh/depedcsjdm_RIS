@@ -2,9 +2,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'C:\xampp\htdocs\depedcsjdm_RIS\PHPMailer-master\src\Exception.php';
-require 'C:\xampp\htdocs\depedcsjdm_RIS\PHPMailer-master\src\PHPMailer.php';
-require 'C:\xampp\htdocs\depedcsjdm_RIS\PHPMailer-master\src\SMTP.php';
+require 'D:\xampp\htdocs\depedcsjdm_RIS\PHPMailer-master\src\Exception.php';
+require 'D:\xampp\htdocs\depedcsjdm_RIS\PHPMailer-master\src\PHPMailer.php';
+require 'D:\xampp\htdocs\depedcsjdm_RIS\PHPMailer-master\src\SMTP.php';
 include('login.php');
 session_start();
 
