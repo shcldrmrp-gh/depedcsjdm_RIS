@@ -16,7 +16,7 @@ function updateMaxQuantity(selectElement) {
             }
         });
     });
-    
+
     // Create a new XMLHttpRequest
     var xhr = new XMLHttpRequest();
 

@@ -59,10 +59,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Loop through the submitted data and insert it into the database
     for ($i = 0; $i < count($item_descriptions); $i++) {
-        $item_description = $item_descriptions[$i];
-        $stockNumber = $stockNumbers[$i];
-        $stockUnit = $stockUnits[$i];
-        $quantity = $quantities[$i];
+        // Check if the array key exists before accessing it
+        $item_description = isset($item_descriptions[$i]) ? $item_descriptions[$i] : '';
+        $stockNumber = isset($stockNumbers[$i]) ? $stockNumbers[$i] : '';
+        $stockUnit = isset($stockUnits[$i]) ? $stockUnits[$i] : '';
+        $quantity = isset($quantities[$i]) ? $quantities[$i] : '';
+    
+        // Check if the item_description is not equal to "noValue" before inserting
+        if ($item_description != "noValue") {
+            // SQL query to insert data into the queue_logs table
+            $sql = "INSERT INTO queue_logs VALUES ('$finalReferenceCode','$accountName', '$userPosition' ,'$centerCode', '$userOffice', '$stockNumber', '$item_description', '$stockUnit','$quantity','$purpose','$formDate')";
+            if ($conn->query($sql) !== TRUE) {
+                // Error occurred while inserting data
+                $insertedSuccessfully = false;
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+        }
+    }
 
         // Check if the item_description is not equal to "noValue" before inserting
         /*if ($item_description != "noValue") {
@@ -78,17 +91,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }
         }*/
+    }
 
-        if ($item_description != "noValue") {
-            // SQL query to insert data into the request_logs table
-            $sql = "INSERT INTO queue_logs VALUES ('$finalReferenceCode','$accountName', '$userPosition' ,'$centerCode', '$userOffice', '$stockNumber', '$item_description', '$stockUnit','$quantity','$purpose','$formDate')";
-            if ($conn->query($sql) !== TRUE) {
-                // Error occurred while inserting data
-                $insertedSuccessfully = false;
-                echo "Error: " . $sql . "<br>" . $conn->error;
-        }
-    }
-    }
 
     // Close the database connection
      if ($insertedSuccessfully) {
@@ -99,5 +103,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo json_encode(array('success' => false, 'message' => 'Data was not inserted successfully.'));
     }
     $conn->close();
-}
 ?>
