@@ -528,8 +528,10 @@
        <br>
     </div>
 
+    <!-- DISABLED QUANTITY INPUT FIELD UNLESS AN ITEM IS SELECTED ON THE SAME ROW -->
     <script src="disableQuantityInputUser.js"></script>
-    
+
+    <!-- SWEET ALERT INCLUDED, INSERT AND UPDATE PHP COMBINED, OTHER ITEMS CANNOT BE SELECTED IF ALREADY SELECTED IN ONE ROW-->
     <script src="disableSelectedItemOnOtherRows.js"></script>
         
     <!-- AUTO FILL UP FOR STOCK NUMBER AND UNIT -->
@@ -549,9 +551,6 @@
 
     <!-- AUTO-LOGOUT FUNCTION -->
     <script type="text/javascript" src="autoLogoutFunction.js"></script>
-
-    <!-- SWEET ALERT AFTER SUBMIT
-    <script src="sweetAlert_submitButton.js"></script>-->
 
 </body>
 </html>
