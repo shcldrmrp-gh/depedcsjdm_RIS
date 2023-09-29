@@ -181,11 +181,11 @@ $(document).ready(function() {
                 success: function(data) {
                     const onlineDate = new Date(data.utc_datetime);
                     //const currentYear = onlineDate.getUTCFullYear();
-                    const currentYear = 2024;
+                    const year = onlineDate.getUTCFullYear();
                     const month = (onlineDate.getUTCMonth() + 1).toString().padStart(2, '0');
 
                     if (lastYear !== currentYear) {
-                        lastSeriesNumber = 0; // Reset the series number to 1
+                        lastSeriesNumber = 1; // Reset the series number to 1
                         lastYear = currentYear; // Update the last year
                     } else if (lastYear === currentYear){
                         lastSeriesNumber++;
