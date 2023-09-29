@@ -289,7 +289,7 @@ require_once("queuing_release_autofillup.php");
         
   
     <!-- GENERATE PDF FUNCTION -->
-    <script src="generate_pdf.js"></script>
+    <script src="generatePdf.js"></script>
 
     <!-- SEND DATA TO DATABASE -->
     <script type="text/javascript" src="sendDataToDatabase.js"></script>
