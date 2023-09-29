@@ -37,7 +37,6 @@ body {
     text-align: center;
     font-family: "Bookman Old Style";
     font-weight: bold;
-    width: 10px;
 }
 
 .quantityInputUser {
@@ -54,7 +53,7 @@ body {
 }
 
 .noInputCheck {
-    width: 15px;
+    width: 10px;
 }
 
 #endUserHeaderLogo {
@@ -210,7 +209,7 @@ nav ul{
     font-size: 17px;
     font-weight: bold;
     text-align: center;
-    width: 225px;
+    width: 550px;
 }
 
 .accountName{
@@ -223,7 +222,7 @@ nav ul{
 }
 
 .issuedRemarks {
-    width: 700px;
+    width: 400px;
 }
 
 .userPosition {
@@ -378,6 +377,8 @@ h2{
     font-size: 15px;
     font-weight: normal;
     font-family: 'Bookman Old Style';
+    text-align: left;
+    padding: 0px 0px 0px 10px;
 }
 
 .quantity-Input{
