@@ -34,6 +34,7 @@ if (isset($_GET['referenceCode'])) {
 
         // Now, you can work with the $data array, which contains all matching rows
         foreach ($data as $row) {
+            $yearRequested = $row['yearRequested'];
             $accountName = $row['accountName'];
             $stock_number = $row['stock_number'];
             $stock_unit = $row['stock_unit'];

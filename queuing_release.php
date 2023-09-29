@@ -44,7 +44,7 @@ require_once("queuing_release_autofillup.php");
         <form class="risFORM "action="queuing-delete_row.php" method="POST">
             <table id="forRIS1" border="1" width="950px">
             <tr reference-data-code = "referenceCode">
-                <input type="hidden" name="yearRequested" class="yearRequested">
+                <input type="hidden" name="yearRequested" class="yearRequested" <?php echo $yearRequested; ?>>
                 <script src="getCurrentYear.js"></script>
 
                 <tr>
@@ -128,6 +128,7 @@ require_once("queuing_release_autofillup.php");
                             $stock_unit = $data[$i]['stock_unit'];
                             $item_description = $data[$i]['item_description'];
                             $quantityInput = $data[$i]['quantityInput'];
+                            $yearRequested = $data[$i]['yearRequested'];
                             echo "<th colspan='1' height='18px' class='stock-number'>$stock_number</th>";
                             echo "<th colspan='1' class='stock-unit'>$stock_unit</th>";
                             echo "<th colspan='1' class='item-description'>$item_description</th>";
