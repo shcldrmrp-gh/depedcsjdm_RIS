@@ -63,21 +63,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stockNumber = $stockNumbers[$i];
         $stockUnit = $stockUnits[$i];
         $quantity = $quantities[$i];
-    
-        // Check if the item_description is not equal to "noValue" before inserting
-        if ($item_description != "noValue") {
-            // SQL query to insert data into the queue_logs table
-            $sql = "INSERT INTO queue_logs VALUES ('$finalReferenceCode','$accountName', '$userPosition' ,'$centerCode', '$userOffice', '$stockNumber', '$item_description', '$stockUnit','$quantity','$purpose','$formDate')";
-            if ($conn->query($sql) !== TRUE) {
-                // Error occurred while inserting data
-                $insertedSuccessfully = false;
-                echo "Error: " . $sql . "<br>" . $conn->error;
-            }
-        }
-    }
 
         // Check if the item_description is not equal to "noValue" before inserting
-        /*if ($item_description != "noValue") {
+        if ($item_description != "noValue") {
             // SQL query to insert data into the request_logs table
             $sql = "INSERT INTO request_logs (accountName, item_description, stock_number, stock_unit, quantityInput, formDate, seriesNumber, risNoDate, userOffice, centerCode, yearRequested)
                 VALUES ('$accountName', '$item_description', '$stockNumber', '$stockUnit', '$quantity', '$formDate', '$formattedSeriesNumber', '$risNoDate', '$userOffice', '$centerCode', '$yearRequested')";
@@ -89,7 +77,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Error occurred while inserting data
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }
+        }
+    
+        // Check if the item_description is not equal to "noValue" before inserting
+        /*if ($item_description != "noValue") {
+            // SQL query to insert data into the queue_logs table
+            $sql = "INSERT INTO queue_logs VALUES ('$finalReferenceCode','$accountName', '$userPosition' ,'$centerCode', '$userOffice', '$stockNumber', '$item_description', '$stockUnit','$quantity','$purpose','$formDate')";
+            if ($conn->query($sql) !== TRUE) {
+                // Error occurred while inserting data
+                $insertedSuccessfully = false;
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
         }*/
+    }
+
+        
     }
 
 

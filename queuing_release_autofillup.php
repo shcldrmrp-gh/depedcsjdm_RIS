@@ -2,7 +2,7 @@
 // Connect to the database (replace with your actual database connection code)
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "root";
 $dbname = "ris_propertyoffice";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
