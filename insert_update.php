@@ -27,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $purpose = $_POST['purpose'];
     $referenceCode = rand(100000, 999999);
     $finalReferenceCode = $referenceCode;
+    $yearRequested = intval($_POST['yearRequested']);
 
     $success = true;
     $errorMessage = "";
@@ -44,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Check if the item_description is not empty and not equal to "noValue"
         if (!empty($item_description) && $item_description !== 'noValue') {
             // Insert data into the queue logs
-            $insert_sql = "INSERT INTO queue_logs VALUES ('$finalReferenceCode', '$accountName', '$userPosition', '$centerCode', '$userOffice', '$stockNumber', '$item_description', '$stockUnit', '$quantity', '$purpose', '$formDate')";
+            $insert_sql = "INSERT INTO queue_logs VALUES ('$finalReferenceCode', '$yearRequested','$accountName', '$userPosition', '$centerCode', '$userOffice', '$stockNumber', '$item_description', '$stockUnit', '$quantity', '$purpose', '$formDate')";
 
             if (!$conn->query($insert_sql)) {
                 $success = false;
