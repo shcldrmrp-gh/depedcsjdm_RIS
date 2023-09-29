@@ -1,5 +1,9 @@
 <?php
-    session_start();
+session_start();
+require_once("queuing_release_autofillup.php");
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -21,22 +25,25 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="icon" type="image/x-icon" href="logos/depedcsjdmlogo.png">
     
-    <title>RELEASE</title>
+    <title>DepEd CSJDM Requisition and Issue Slip Form</title>
 
 </head>
 
 <body>
 <header>
         <img src="pictures/deped logo.png" alt="">  
+        <a href="queuing system.php" class="backbtn">BACK</a>
+        <h1>Department of Education <br> Region III <br> SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</h1>
     </header>
     
-    <h1>Department of Education <br> Region III <br> SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</h1>
+    
 
     <br>
     <br>
     <div id="formContainer">
-        <form class="risFORM "action="insert_data.php" method="POST">
+        <form class="risFORM "action="queuing-delete_row.php" method="POST">
             <table id="forRIS1" border="1" width="950px">
+            <tr reference-data-code = "referenceCode">
                 <input type="hidden" name="yearRequested" class="yearRequested">
                 <script src="getCurrentYear.js"></script>
 
@@ -69,13 +76,13 @@
                             Responsibility Code: 
                         </div>
                             <div class="centerCodePHP">
-                                
+                                <?php echo $centerCode; ?>
                             </div>
                         </div>
                         <div class="userOffice">
                             Office: 
                             <div class="userOfficePHP">
-                                
+                                <?php echo $userOffice; ?>
                             </div>
                         </div>
                         <div class="risNo">
@@ -103,239 +110,74 @@
                     <th class="issuedRemarks">Remarks</th>
                 </tr>
                 
-                <tr colspan="8">
-                      <th colspan="1" height="18px" class="stock_number">
-                          
-                      </th>
-                      <th colspan="1" class="stock_unit">
-                         
-                      </th>  
 
-                    <th>
-                        
-                    </th>
-                    <th class="quantityInput">
-                        <div class="quantityInput">
-                           
-                        </div>
-                    </th>
-                    <th class="yesInputCheck"></th>
-                    <th class="noInputCheck"></th>
-                    <th class="quantityInput"></th>
-                    <th class="issuedRemarks"></th>
-                </tr>
-                
-                <tr colspan="8">
-                  <th colspan="1" height="18px" class="stock_number">
-                      
-                  </th>
-                  <th colspan="1" class="stock_unit">
-                     
-                  </th>
-                  <th>
-                       
-                    </th>
-                    <th class="quantityInput">
-                        <div class="quantityInput">
-                           
-                        </div>
-                    </th>
-                  <th class="yesInputCheck"></th>
-                  <th class="noInputCheck"></th>
-                  <th class="quantityInput"></th>
-                  <th class="issuedRemarks"></th>
-              </tr>
-
-              <tr colspan="8">
-                  <th colspan="1" height="18px" class="stock_number">
-                      
-                  </th>
-                  <th colspan="1" class="stock_unit">
-                     
-                  </th>
-                  <th>
-                       
-                    </th>
-                    <th class="quantityInput">
-                        <div class="quantityInput">
-                           
-                        </div>
-                    </th>
-                  <th class="yesInputCheck"></th>
-                  <th class="noInputCheck"></th>
-                  <th class="quantityInput"></th>
-                  <th class="issuedRemarks"></th>
-              </tr>
-
-              <tr colspan="8">
-                  <th colspan="1" height="18px" class="stock_number">
-                      
-                  </th>
-                  <th colspan="1" class="stock_unit">
-                      
-                  </th>
-                  <th>
-                        
-                    </th>
-                    <th class="quantityInput">
-                        <div class="quantityInput">
-                          
-                        </div>
-                    </th>
-                  <th class="yesInputCheck"></th>
-                  <th class="noInputCheck"></th>
-                  <th class="quantityInput"></th>
-                  <th class="issuedRemarks"></th>
-              </tr>
-
-              <tr colspan="8">
-                  <th colspan="1" height="18px" class="stock_number">
+                <!---------FOR EACH --------->
+            
+                <?php
+                    $rowCount = count($data);
+                    $maxRows = 10; // Define the maximum number of rows you want to display
                     
-                  </th>
-                  <th colspan="1" class="stock_unit">
-                     
-                  </th>
-                  <th>
-                       
-                    </th>
-                    <th class="quantityInput">
-                        <div class="quantityInput">
-                           
-                        </div>
-                    </th>
-                  <th class="yesInputCheck"></th>
-                  <th class="noInputCheck"></th>
-                  <th class="quantityInput"></th>
-                  <th class="issuedRemarks"></th>
-              </tr>
 
-              <tr colspan="8">
-                  <th colspan="1" height="18px" class="stock_number">
-                    
-                  </th>
-                  <th colspan="1" class="stock_unit">
-                     
-                  </th>
-                  <th>
-                       
-                    </th>
-                    <th class="quantityInput">
-                        <div class="quantityInput">
-                          
-                        </div>
-                    </th>
-                  <th class="yesInputCheck"></th>
-                  <th class="noInputCheck"></th>
-                  <th class="quantityInput"></th>
-                  <th class="issuedRemarks"></th>
-              </tr>
-
-              <tr colspan="8">
-                  <th colspan="1" height="18px" class="stock_number">
-                      
-                  </th>
-                  <th colspan="1" class="stock_unit">
-                     
-                  </th>
-                  <th>
-                        
-                    </th>
-                    <th class="quantityInput">
-                        <div class="quantityInput">
-                           
-                        </div>
-                    </th>
-                  <th class="yesInputCheck"></th>
-                  <th class="noInputCheck"></th>
-                  <th class="quantityInput"></th>
-                  <th class="issuedRemarks"></th>
-              </tr>
-
-              <tr colspan="8">
-                  <th colspan="1" height="18px" class="stock_number">
-                     
-                  </th>
-                  <th colspan="1" class="stock_unit">
-                     
-                  </th>
-                  <th>
-                       
-                    </th>
-                    <th class="quantityInput">
-                        <div class="quantityInput">
-                           
-                        </div>
-                    </th>
-                  <th class="yesInputCheck"></th>
-                  <th class="noInputCheck"></th>
-                  <th class="quantityInput"></th>
-                  <th class="issuedRemarks"></th>
-              </tr>
-
-              <tr colspan="8">
-                  <th colspan="1" height="18px" class="stock_number">
-                      
-                  </th>
-                  <th colspan="1" class="stock_unit">
-                      
-                  </th>
-                  <th>
-                        
-                    </th>
-                    <th class="quantityInput">
-                        <div class="quantityInput">
+                    // Loop to create 10 rows and display data independently
+                    for ($i = 0; $i < $maxRows; $i++) {
+                        echo "<tr colspan='8'>";
+                        if ($i < $rowCount) {
+                            // If there is data available, populate the cells
+                            echo "<tr data-reference-code='$referenceCode'>";
+                            $stock_number = $data[$i]['stock_number'];
+                            $stock_unit = $data[$i]['stock_unit'];
+                            $item_description = $data[$i]['item_description'];
+                            $quantityInput = $data[$i]['quantityInput'];
+                            echo "<th colspan='1' height='18px' class='stock-number'>$stock_number</th>";
+                            echo "<th colspan='1' class='stock-unit'>$stock_unit</th>";
+                            echo "<th colspan='1' class='item-description'>$item_description</th>";
+                            echo "<th colspan='1' class='quantity-Input'>$quantityInput</th>";
                             
-                        </div>
-                    </th>
-                  <th class="yesInputCheck"></th>
-                  <th class="noInputCheck"></th>
-                  <th class="quantityInput"></th>
-                  <th class="issuedRemarks"></th>
-              </tr>
+                        } else {
+                            // If there is no data, create empty cells
+                            echo "<th colspan='1' height='18px' class='stock_number'></th>";
+                            echo "<th colspan='1' class='stock_unit'></th>";
+                            echo "<th></th>";
+                            echo "<th class='quantityInput'></th>";
+                        }
+                            echo "<th class='yesInputCheck'></th>";
+                            echo "<th class='noInputCheck'></th>";
+                            echo "<th class='quantityInput'></th>";
+                            echo "<th class='issuedRemarks'></th>";
+                            echo "</tr>";
+                    }
+                ?>
 
-              <tr colspan="8">
-                  <th colspan="1" height="18px" class="stock_number">
-                     
-                  </th>
-                  <th colspan="1" class="stock_unit">
+                <!---------FOR EACH END--------->
+                 
+            
                     
-                  </th>
-                  <th>
-                        
-                    </th>
-                    <th class="quantityInput">
-                        <div class="quantityInput">
-                           
+                    
+                    
+                
+
+                <tr height="100px">
+                    <th class="purposeSection" colspan="8">
+                        <div class="purposeTitle">
+                            Purpose:
+                        </div>
+                        <div>
+                            <input class="purposeInput" type="text" name="purpose" id="" readonly value=" <?php echo $purpose; ?>">
                         </div>
                     </th>
-                  <th class="yesInputCheck"></th>
-                  <th class="noInputCheck"></th>
-                  <th class="quantityInput"></th>
-                  <th class="issuedRemarks"></th>
-              </tr>
+                </tr>
 
-              <tr height="100px">
-                  <th class="purposeSection" colspan="8">
-                      <div class="purposeTitle">
-                          Purpose:
-                      </div>
-                      <div>
-                        
-                      </div>
-                  </th>
-              </tr>
-
-              <tr>
-                  <th colspan="1" height="50px">
-                      <div id="signature">
-                          Signature
-                      </div>
-                  </th>
-                  <th class="requestedBy" colspan="2">
-                      <div class="requestedBy">
-                          Requested by:
-                      </div?>
-                  </th>
+                <tr>
+                    <th colspan="1" height="50px">
+                        <div id="signature">
+                            Signature
+                        </div>
+                    </th>
+                    <th class="requestedBy" colspan="2">
+                        <div class="requestedBy">
+                            Requested by:
+                        </div?>
+                    </th>
 
                     <th colspan="2">
                         <div class="approvalDiv">
@@ -352,9 +194,9 @@
                             Received by: 
                         </div>
                     </th>
-              </tr>
+                </tr>
 
-              <tr height="20px">
+                <tr height="20px">
                     <th colspan="1" class="firstcolumn_Approval">
                         <div class="firstcolumn_Approval">
                             Printed Name
@@ -362,7 +204,7 @@
                     </th>
                     <th class="accountName" colspan="2">
                         <div class="accountName">
-                            
+                            <?php echo $accountName; ?>
                         </div>
                     </th>
                     <th class="approvedByName" colspan="2">
@@ -377,7 +219,7 @@
                     </th>
                     <th class="accountName"colspan="1">
                       <div class="accountName">
-                            
+                        <?php echo $accountName; ?>
                       </div>
                     </th>
                 </tr>
@@ -390,7 +232,7 @@
                     </th>
                     <th colspan="2">
                         <div class="userPosition">
-                            
+                            <?php echo $userPosition; ?>
                         </div>
                     </th>
                     <th colspan="2">
@@ -405,7 +247,7 @@
                     </th>
                     <th colspan="1">
                         <div class="userPosition">
-                            
+                            <?php echo $userPosition; ?>
                         </div>
                     </th>
                 </tr>
@@ -417,9 +259,7 @@
                         </div>    
                     </th>
                     <th colspan="2">
-
-                            
-                        </script>
+                        <input type="text" class="formDate" name="formDate" readonly value="<?php echo $dateRequested; ?>">
                     </th>
                     <th colspan="2"></th>
                     <th colspan="2"></th>
@@ -429,21 +269,28 @@
                         </div>
                     </th>
                 </tr>
+            </tr>
             </table>
+            
         </form>
        <br>
        <br>
        <br>
     </div>
 
-    <div class="endUserButtons">
-        <div class="generatePDFplacement">
-            <button type="submit" onclick="sendDataToDatabase()" id="generatePDF">
-                RELEASE
-            </button>
-        </div>
-    </div>
+    <button type="submit" class="btnCancel" name="btnCancel" id="btnCancel" onclick="cancelRequest(this)">CANCEL</button>
+    <button type="submit" class="btnRelease" name="btnRelease" id="btnRelease">RELEASE</button>
 
 
+
+
+        
+  
+    <!-- GENERATE PDF FUNCTION -->
+    <script src="generate_pdf.js"></script>
+
+    <!-- SEND DATA TO DATABASE -->
+    <script type="text/javascript" src="sendDataToDatabase.js"></script>
+    <script src="queuing_release.js"></script>
 </body>
 </html>
