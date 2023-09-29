@@ -180,8 +180,7 @@ $(document).ready(function() {
                 dataType: 'json',
                 success: function(data) {
                     const onlineDate = new Date(data.utc_datetime);
-                    //const currentYear = onlineDate.getUTCFullYear();
-                    const year = onlineDate.getUTCFullYear();
+                    const currentYear = onlineDate.getUTCFullYear();
                     const month = (onlineDate.getUTCMonth() + 1).toString().padStart(2, '0');
 
                     if (lastYear !== currentYear) {
