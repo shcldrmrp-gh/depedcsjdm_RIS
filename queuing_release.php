@@ -16,14 +16,15 @@ require_once("queuing_release_autofillup.php");
     <script type="text/javascript" src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="queuing_release.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="icon" type="image/x-icon" href="logos/depedcsjdmlogo.png">
+    <link rel="icon" type="png" href="logos/depedcsjdmlogo.png">
     
     <title>DepEd CSJDM Requisition and Issue Slip Form</title>
 
@@ -279,7 +280,7 @@ require_once("queuing_release_autofillup.php");
        <br>
     </div>
 
-    <button type="submit" class="btnCancel" name="btnCancel" id="btnCancel" onclick="cancelRequest(this)">CANCEL</button>
+    <button type="submit" class="btnCancel" name="btnCancel" id="btnCancel">CANCEL</button>
     <button type="submit" class="btnRelease" name="btnRelease" id="btnRelease">RELEASE</button>
 
 
