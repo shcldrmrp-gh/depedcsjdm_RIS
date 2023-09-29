@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 25, 2023 at 08:39 AM
+-- Generation Time: Sep 29, 2023 at 07:07 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -39,27 +39,27 @@ CREATE TABLE `inventory` (
 --
 
 INSERT INTO `inventory` (`item_description`, `stock_number`, `stock_unit`, `item_quantity`) VALUES
-('Chloride Powder', 'OS 255', 'piece', 80),
-('Mouse Pad', 'OS 290', 'piece', 85),
-('Battery D Alkaline', 'OS 156', 'piece', 64),
-('Photo Paper', 'OS 146', 'piece', 92),
-('BROOM, soft (tambo)', 'OS 202', 'piece', 70),
+('Chloride Powder', 'OS 255', 'piece', 78),
+('Mouse Pad', 'OS 290', 'piece', 84),
+('Battery D Alkaline', 'OS 156', 'piece', 27),
+('Photo Paper', 'OS 146', 'piece', 91),
+('BROOM, soft (tambo)', 'OS 202', 'piece', 47),
 ('EPSON, INK CART, (001) Black', 'OS 238', 'bottle', 90),
-('AIR FRESHENER, aerosol, 280ml/150g min', 'OS 154', 'can', 310),
-('CALCULATOR, compact, 12 digits', 'OS 054', 'unit', 74),
+('AIR FRESHENER, aerosol, 280ml/150g min', 'OS 154', 'can', 270),
+('CALCULATOR, compact, 12 digits', 'OS 054', 'unit', 64),
 ('ENVELOPE, EXPANDING legal size doc', 'OS 117', 'piece', 93),
 ('Extension Cord', 'OS 092', 'piece', 97),
 ('Frame A4 Size', 'OS 271', 'piece', 96),
 ('PAPER, MULTICOPY, 80gsm, size: A4', 'OS 033', 'Reams', 87),
 ('NOTE PAD, stick on, (2in x 3in) min', 'OS 317', 'Book', 82),
-('MOUSE, WIRELESS, USB', 'OS 370', 'Unit', 100),
+('MOUSE, WIRELESS, USB', 'OS 370', 'Unit', 99),
 ('Manila Paper', 'OS 292', 'Piece', 74),
 ('MARKER, PERMANENT,blue', 'OS 213', 'Piece', 92),
 ('MOPHANDLE, heavy duty, aluminum, screw type', 'OS 361', 'Book', 79),
 ('Gestener toner MP2014', 'OS 232', 'Piece', 100),
 ('Liquid Hand Soap with Pump', 'OS 228', 'Book', 83),
 ('Keyboard', 'OS 299', 'Piece', 0),
-('Ring Binder 1/4', 'OS 642', 'Piece', 76);
+('Ring Binder 1/4', 'OS 642', 'Piece', 75);
 
 -- --------------------------------------------------------
 
@@ -68,19 +68,43 @@ INSERT INTO `inventory` (`item_description`, `stock_number`, `stock_unit`, `item
 --
 
 CREATE TABLE `queue_logs` (
+  `referenceCode` int(6) NOT NULL,
+  `yearRequested` int(5) NOT NULL,
   `accountName` varchar(50) NOT NULL,
+  `userPosition` varchar(50) NOT NULL,
+  `centerCode` varchar(50) NOT NULL,
+  `userOffice` varchar(50) NOT NULL,
+  `stock_number` varchar(10) NOT NULL,
   `item_description` varchar(100) NOT NULL,
-  `quantityInput` int(100) NOT NULL
+  `stock_unit` varchar(10) NOT NULL,
+  `quantityInput` int(100) NOT NULL,
+  `purpose` text NOT NULL,
+  `dateRequested` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `queue_logs`
 --
 
-INSERT INTO `queue_logs` (`accountName`, `item_description`, `quantityInput`) VALUES
-('Jaime T. Tugade PhD, CESE', 'AIR FRESHENER, aerosol, 280ml/150g min', 3),
-('Jaime T. Tugade PhD, CESE', 'CALCULATOR, compact, 12 digits', 4),
-('Jaime T. Tugade PhD, CESE', 'EPSON, INK CART, (001) Black', 5);
+INSERT INTO `queue_logs` (`referenceCode`, `yearRequested`, `accountName`, `userPosition`, `centerCode`, `userOffice`, `stock_number`, `item_description`, `stock_unit`, `quantityInput`, `purpose`, `dateRequested`) VALUES
+(857843, 0, 'Ericson S. Sabacan, EdD, CESO V', '', 'S1', 'Schools Division Superintendent', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 1, '', '09/26/2023'),
+(857843, 0, 'Ericson S. Sabacan, EdD, CESO V', '', 'S1', 'Schools Division Superintendent', 'OS 054', 'CALCULATOR, compact, 12 digits', 'unit', 1, '', '09/26/2023'),
+(262688, 0, 'Janette Sta. Maria', '', 'S2', 'Schools Division Superintendent', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 1, '', ''),
+(262688, 0, 'Janette Sta. Maria', '', 'S2', 'Schools Division Superintendent', 'OS 202', 'BROOM, soft (tambo)', 'piece', 1, '', ''),
+(262688, 0, 'Janette Sta. Maria', '', 'S2', 'Schools Division Superintendent', 'OS 156', 'Battery D Alkaline', 'piece', 1, '', ''),
+(890909, 0, 'Orsely Joyce Gonzales', '', 'S3', 'Schools Division Superintendent', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 1, '', ''),
+(890909, 0, 'Orsely Joyce Gonzales', '', 'S3', 'Schools Division Superintendent', 'OS 156', 'Battery D Alkaline', 'piece', 1, '', ''),
+(511166, 0, 'Orsely Joyce Gonzales', '', 'S3', 'Schools Division Superintendent', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 1, 'asdasdasdsad', ''),
+(511166, 0, 'Orsely Joyce Gonzales', '', 'S3', 'Schools Division Superintendent', 'OS 202', 'BROOM, soft (tambo)', 'piece', 1, 'asdasdasdsad', ''),
+(941432, 0, 'Ericson S. Sabacan, EdD, CESO V', '', 'S1', 'Schools Division Superintendent', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 1, 'asdsadada', '09/27/2023'),
+(941432, 0, 'Ericson S. Sabacan, EdD, CESO V', '', 'S1', 'Schools Division Superintendent', 'OS 202', 'BROOM, soft (tambo)', 'piece', 1, 'asdsadada', '09/27/2023'),
+(137381, 0, 'Kristine Joy D. Quezada', '', 'AC1', 'Accounting', 'OS 202', 'BROOM, soft (tambo)', 'piece', 1, 'asdsadsada', '09/27/2023'),
+(137381, 0, 'Kristine Joy D. Quezada', '', 'AC1', 'Accounting', 'OS 054', 'CALCULATOR, compact, 12 digits', 'unit', 1, 'asdsadsada', '09/27/2023'),
+(137381, 0, 'Kristine Joy D. Quezada', '', 'AC1', 'Accounting', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 1, 'asdsadsada', '09/27/2023'),
+(692335, 0, 'Jomel V. Policarpio', 'ADAS II', 'AC4', 'Accounting', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 1, 'asdasdsadsad', '09/27/2023'),
+(692335, 0, 'Jomel V. Policarpio', 'ADAS II', 'AC4', 'Accounting', 'OS 156', 'Battery D Alkaline', 'piece', 1, 'asdasdsadsad', '09/27/2023'),
+(122269, 0, 'Janette Sta. Maria', 'ADAS III', 'S2', 'Schools Division Superintendent', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 4, '', '09/27/2023'),
+(122269, 0, 'Janette Sta. Maria', 'ADAS III', 'S2', 'Schools Division Superintendent', 'OS 202', 'BROOM, soft (tambo)', 'piece', 4, '', '09/27/2023');
 
 -- --------------------------------------------------------
 
@@ -166,7 +190,9 @@ INSERT INTO `request_logs` (`risNoDate`, `yearRequested`, `seriesNumber`, `accou
 ('2023-09-000039', 2023, 39, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 292', 'Manila Paper', 'Piece', 5, '09/25/2023'),
 ('2023-09-000039', 2023, 40, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 292', 'Manila Paper', 'Piece', 5, '09/25/2023'),
 ('2023-09-000041', 2023, 41, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 299', 'Keyboard', 'Piece', 5, '09/25/2023'),
-('2023-09-000042', 2023, 42, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 299', 'Keyboard', 'Piece', 5, '09/25/2023');
+('2023-09-000042', 2023, 42, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 299', 'Keyboard', 'Piece', 5, '09/25/2023'),
+('2023-09-000043', 2023, 43, 'Janette Sta. Maria', 'S2', 'Schools Division Superintendent', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 2, '09/25/2023'),
+('2023-09-000043', 2023, 43, 'Janette Sta. Maria', 'S2', 'Schools Division Superintendent', 'OS 156', 'Battery D Alkaline', 'piece', 1, '09/25/2023');
 
 -- --------------------------------------------------------
 
