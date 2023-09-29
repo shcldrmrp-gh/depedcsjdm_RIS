@@ -25,6 +25,20 @@ header h1{
     margin: -120px 0px 0px 140px;
 }
 
+.backbtn{
+    float: right;
+    margin-top: 90px;
+    margin-right: 30px;
+    padding: 15px 15px 15px 15px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.backbtn:hover{
+    background: grey;
+}
+
 h2{
     font-size: 40px;
     margin-left: 595px;
@@ -49,36 +63,6 @@ table{
 }
 .table-button-release{
     width: 30%;
-}
-
-.buttonRelease{
-    width: 40%;
-    height: 30px;
-    border-radius: 9px;
-    background: transparent;
-    cursor: pointer;
-    background: green;
-    color: white;
-    margin-left: 10px;
-}
-.buttonRelease:hover{
-    background: blue;
-    color: white;
-}
-
-.buttonCancel{
-    width: 40%;
-    height: 30px;
-    border-radius: 9px;
-    background: transparent;
-    cursor: pointer;
-    background: red;
-    color: white;
-    margin-left: 5px;
-}
-.buttonCancel:hover{
-    background: blue;
-    color: white;
 }
 
 table tr {
