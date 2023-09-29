@@ -21,13 +21,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         icon: 'success',
                         title: 'REQUEST SUBMITTED!',
                         text: 'Your request is now submitted to Property and Supply unit for queueing.',
-                        confirmButtonText: 'OK',
-                        showConfirmButton: true // Show the OK button
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            window.location.reload();
-                        }
+                        showConfirmButton: false // Hide the OK button
                     });
+                    // Automatically reload the page after 10 seconds
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 5500); // 10000 milliseconds = 10 seconds                    
                 } else {
                     // If there was an error, display an error message in SweetAlert
                     Swal.fire({

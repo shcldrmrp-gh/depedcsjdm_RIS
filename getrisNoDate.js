@@ -61,10 +61,61 @@ function getCookie(name) {
     return "";
 }*/
 
+/* FOR TESTING 
+
+$(document).ready(function() {
+    // Fetch the last series number from the server
+    $.ajax({
+        url: 'get_last_series_number.php', // Create this PHP file to fetch the last series number
+        method: 'GET',
+        success: function(response) {
+            let lastSeriesNumber = parseInt(response);
+            if (isNaN(lastSeriesNumber)) {
+                lastSeriesNumber = 0; // If no data is available, start from 0
+            }
+            
+            // Get the year and month from worldtimeapi
+            $.ajax({
+                url: 'https://worldtimeapi.org/api/ip',
+                dataType: 'json',
+                success: function(data) {
+                    const onlineDate = new Date(data.utc_datetime);
+                    const year = onlineDate.getUTCFullYear();
+                    const month = (onlineDate.getUTCMonth() + 1).toString().padStart(2, '0');
+                    
+                    // Check if the year has changed
+                    if (year !== parseInt($(".lastYear").val())) {
+                        lastSeriesNumber = 0; // Reset the series number to 0
+                    }
+                    
+                    lastSeriesNumber++;
+                   
+                    // Format the series number
+                    const formattedSeriesNumber = String(lastSeriesNumber).padStart(6, '0');
+                    
+                    // Combine the year, month, and series number
+                    const risNoDate = year + '-' + month + '-' + formattedSeriesNumber;
+                    
+                    // Set the formatted date as the value of the input element
+                    $(".lastYear").val(year); // Store the current year
+                    $(".risNoDate").val(risNoDate);
+                },
+                error: function(error) {
+                    console.error('Error fetching online date:', error);
+                }
+            });
+        },
+        error: function() {
+            console.error("Error fetching last series number.");
+        }
+    });
+});
+*/
+
 
 /* ORIGINAL CODE*/
 
-$(document).ready(function() {
+/*$(document).ready(function() {
     // Fetch the last series number from the server
     $.ajax({
         url: 'get_last_series_number.php', // Create this PHP file to fetch the last series number
@@ -102,6 +153,60 @@ $(document).ready(function() {
         },
         error: function() {
             console.error("Error fetching last series number.");
+        }
+    });
+});*/
+
+$(document).ready(function() {
+    // Fetch the last series number and year from the server
+    $.ajax({
+        url: 'get_last_series_year.php', // Create this PHP file to fetch the last series number and year
+        method: 'GET',
+        success: function(response) {
+            const data = JSON.parse(response);
+            let lastSeriesNumber = parseInt(data.lastSeriesNumber);
+            let lastYear = parseInt(data.lastYear);
+
+            if (isNaN(lastSeriesNumber)) {
+                lastSeriesNumber = 0; // If no data is available, start from 0
+            }
+            if (isNaN(lastYear)) {
+                lastYear = 0; // If no data is available, set to 0
+            }
+
+            // Get the year and month from worldtimeapi
+            $.ajax({
+                url: 'https://worldtimeapi.org/api/ip',
+                dataType: 'json',
+                success: function(data) {
+                    const onlineDate = new Date(data.utc_datetime);
+                    //const currentYear = onlineDate.getUTCFullYear();
+                    const currentYear = 2024;
+                    const month = (onlineDate.getUTCMonth() + 1).toString().padStart(2, '0');
+
+                    if (lastYear !== currentYear) {
+                        lastSeriesNumber = 0; // Reset the series number to 1
+                        lastYear = currentYear; // Update the last year
+                    } else if (lastYear === currentYear){
+                        lastSeriesNumber++;
+                    }
+
+                    // Format the series number
+                    const formattedSeriesNumber = String(lastSeriesNumber).padStart(6, '0');
+
+                    // Combine the year, month, and series number
+                    const risNoDate = currentYear + '-' + month + '-' + formattedSeriesNumber;
+
+                    // Set the formatted date as the value of the input element
+                    $(".risNoDate").val(risNoDate);
+                },
+                error: function(error) {
+                    console.error('Error fetching online date:', error);
+                }
+            });
+        },
+        error: function() {
+            console.error("Error fetching last series number and year.");
         }
     });
 });
