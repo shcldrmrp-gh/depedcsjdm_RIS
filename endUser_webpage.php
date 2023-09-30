@@ -499,18 +499,10 @@
                     </th>
                     <th colspan="2">
                         <input type="text" class="formDate" name="formDate" readonly>
-                        <!-- GET CURRENT FORMATTED DATE -->
-                        <script type="text/javascript" src="getCurrentDate.js">
-                            
-                        </script>
                     </th>
                     <th colspan="2"></th>
                     <th colspan="2"></th>
-                    <th colspan="1">
-                        <div>
-                        
-                        </div>
-                    </th>
+                    <th colspan="1"></th>
                 </tr>
             </table>
             <div class="endUserButtons">
@@ -526,6 +518,9 @@
         <br>
     </div>
 
+    <!-- GET CURRENT FORMATTED DATE -->
+    <script src="getCurrentDate.js"></script>
+
     <!-- DISABLE QUANTITY INPUT UNLESS AN ITEM IS SELECTED -->
     <script src="disableQuantityInputUser.js"></script>
     
@@ -533,19 +528,19 @@
     <script src="disableSelectedItemOnOtherRows.js"></script>
         
     <!-- AUTO FILL UP FOR STOCK NUMBER AND UNIT -->
-    <script type="text/javascript" src="getStuckNumberUnit.js"></script>
+    <script src="getStuckNumberUnit.js"></script>
 
     <!-- AUTO INPUT FOR STOCK AVAILABILITY -->
-    <script type="text/javascript" src="autoStockAvailabilityInput.js"></script>
+    <script src="autoStockAvailabilityInput.js"></script>
 
     <!-- AUTO UPDATE MAX QUANTITY -->
-    <script type="text/javascript" src="autoUpdateMaxQuantity.js"></script>
+    <script src="autoUpdateMaxQuantity.js"></script>
 
     <!-- DISABLED BACK BUTTON -->
-    <script type="text/javascript" src="disableBackButton.js"></script>
+    <script src="disableBackButton.js"></script>
 
     <!-- AUTO-LOGOUT FUNCTION -->
-    <script type="text/javascript" src="autoLogoutFunction.js"></script>
+    <script src="autoLogoutFunction.js"></script>
 
     <!-- SWEET ALERT FOR SUBMIT BUTTON-->
     <script src="sweetAlert_submitButton.js"></script>
