@@ -138,7 +138,8 @@
                     <th class="item-description">Item Description</th>
                     <th class="stock-unit">Stock Unit</th>
                     <th class="quantity-input">Quantity Requested</th>
-                    <th class="form-date">Date of Request</th>
+                    <th class="form-date">Date Requested</th>
+                    <th class="form-date">Date Released</th>
                 </div>
             </tr>
             <tr>
@@ -161,6 +162,7 @@
                         <td class ="align-stock-unit"><?php echo $row["stock_unit"];?></td>
                         <td class="align-quantity-input"><?php echo $row["quantityInput"];?></td>
                         <td class="align-form-date"><?php echo $row["formDate"];?></td>
+                        <td class="align-release-date"><?php echo $row["releaseDate"];?></td>
             </tr>
                     <?php
                        

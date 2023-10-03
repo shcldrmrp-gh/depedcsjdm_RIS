@@ -46,6 +46,7 @@ if (isset($_POST['btnRelease'])) {
         // Loop through the result set to fetch all rows
         while ($row = mysqli_fetch_assoc($result)) {
             $yearRequested = intval($_POST['yearRequested']); // Assuming yearRequested is in POST data
+            $releaseDate = $_POST['releaseDate'];
             $risNoDate = $_POST['risNoDate'];
             $accountName = $row['accountName'];
             $centerCode = $row['centerCode'];
@@ -57,7 +58,8 @@ if (isset($_POST['btnRelease'])) {
             $userOffice = $row['userOffice'];
 
             // Construct the INSERT query for request_logs with interpolated values
-            $insertSql = "INSERT INTO request_logs (userOffice, risNoDate, seriesNumber, yearRequested, accountName, centerCode, stock_number, item_description, stock_unit, quantityInput, formDate) VALUES (
+            $insertSql = "INSERT INTO request_logs (releaseDate ,userOffice, risNoDate, seriesNumber, yearRequested, accountName, centerCode, stock_number, item_description, stock_unit, quantityInput, formDate) VALUES (
+                '$releaseDate',
                 '$userOffice',
                 '$risNoDate',
                 '$formattedSeriesNumber',

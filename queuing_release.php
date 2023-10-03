@@ -75,18 +75,18 @@ require_once("queuing_release_autofillup.php");
                             Responsibility Code: 
                         </div>
                             <div class="centerCodePHP">
-                                <input type="text" name="centerCode" id="" value="<?php echo isset($centerCode) ? $centerCode : ''; ?>">
+                                <input readonly type="text" name="centerCode" id="" value="<?php echo isset($centerCode) ? $centerCode : ''; ?>">
                             </div>
                         </div>
                         <div class="userOffice">
                             Office: 
                             <div class="userOfficePHP">
-                                <input type="text" name="userOffice" value="<?php echo isset($userOffice) ? $userOffice : ''; ?>" id="">
+                                <input readonly type="text" name="userOffice" value="<?php echo isset($userOffice) ? $userOffice : ''; ?>" id="">
                             </div>
                         </div>
                         <div class="risNo">
                             RIS No.:
-                            <input type="text" name="risNoDate" class="risNoDate" readonly>
+                            <input readonly type="text" name="risNoDate" class="risNoDate" readonly>
                             <script src="getrisNoDate.js"></script>
                         </div>
                     </th>
@@ -161,7 +161,7 @@ require_once("queuing_release_autofillup.php");
                             Purpose:
                         </div>
                         <div>
-                            <input class="purposeInput" type="text" name="purpose" id="" readonly value="<?php echo isset($purpose) ? $purpose : ''; ?>">
+                            <input readonly class="purposeInput" type="text" name="purpose" id="" readonly value="<?php echo isset($purpose) ? $purpose : ''; ?>">
                         </div>
                     </th>
                 </tr>
@@ -203,7 +203,7 @@ require_once("queuing_release_autofillup.php");
                     </th>
                     <th class="accountName" colspan="2">
                         <div class="accountName">
-                            <input type="text" name="accountName" value="<?php echo isset($accountName) ? $accountName : ''; ?>" readonly>
+                            <input readonly type="text" name="accountName" value="<?php echo isset($accountName) ? $accountName : ''; ?>" readonly>
                         </div>
                     </th>
                     <th class="approvedByName" colspan="2">
@@ -218,7 +218,7 @@ require_once("queuing_release_autofillup.php");
                     </th>
                     <th class="accountName"colspan="1">
                       <div class="accountName">
-                        <input type="text" name="accountName" value="<?php echo isset($accountName) ? $accountName : ''; ?>" readonly>
+                        <input readonly type="text" name="accountName" value="<?php echo isset($accountName) ? $accountName : ''; ?>" readonly>
                       </div>
                     </th>
                 </tr>
@@ -231,7 +231,7 @@ require_once("queuing_release_autofillup.php");
                     </th>
                     <th colspan="2">
                         <div class="userPosition">
-                            <input type="text" name="userPosition" value="<?php echo isset($userPosition) ? $userPosition : ''; ?>" readonly>
+                            <input readonly type="text" name="userPosition" value="<?php echo isset($userPosition) ? $userPosition : ''; ?>" readonly>
                         </div>
                     </th>
                     <th colspan="2">
@@ -246,7 +246,7 @@ require_once("queuing_release_autofillup.php");
                     </th>
                     <th colspan="1">
                         <div class="userPosition">
-                            <input type="text" name="userPosition" value="<?php echo isset($userPosition) ? $userPosition : ''; ?>" readonly>
+                            <input readonly type="text" name="userPosition" value="<?php echo isset($userPosition) ? $userPosition : ''; ?>" readonly>
                         </div>
                     </th>
                 </tr>
@@ -258,14 +258,12 @@ require_once("queuing_release_autofillup.php");
                         </div>    
                     </th>
                     <th colspan="2">
-                        <input type="text" class="formDate" name="formDate" readonly value="<?php echo isset($dateRequested) ? $dateRequested : ''; ?>">
+                        <input readonly type="text" class="formDate" name="formDate" readonly value="<?php echo isset($dateRequested) ? $dateRequested : ''; ?>">
                     </th>
                     <th colspan="2"></th>
                     <th colspan="2"></th>
                     <th colspan="1">
-                        <div>
-                        
-                        </div>
+                        <input readonly type="text" class="releaseDate" name="releaseDate">
                     </th>
                 </tr>
             </tr>
@@ -285,5 +283,8 @@ require_once("queuing_release_autofillup.php");
     <!-- SEND DATA TO DATABASE -->
     <script type="text/javascript" src="sendDataToDatabase.js"></script>
     <script src="queuing_release.js"></script>
+
+    <!-- GET RELEASE DATE -->
+    <script src="getCurrentDateForRelease.js"></script>
 </body>
 </html>
