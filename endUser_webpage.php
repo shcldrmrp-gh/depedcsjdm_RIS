@@ -39,7 +39,18 @@
     </nav>
 </header>
 
-<h1>Republic of the Philippines <br>Department of Education <br> Region III <br> <b>SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</b></h1>
+<div class="headerTitles">
+    <h3>Republic of the Philippines</h3>
+    <br>
+    <h2>Department of Education</h2>
+    <br>
+    <h3>Region III</h3>
+    <br>
+    <h1>SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</h1>
+</div>
+
+
+<!--<h1>Republic of the Philippines <br>Department of Education <br> Region III <br> <b>SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</b></h1>-->
 
 <br>
 <br>
@@ -380,16 +391,16 @@
                 </tr>
 
                 <tr>
-                    <th class="purposeSection" colspan="8">
-                        <div class="purposeTitle">
-                            Purpose:
-                        </div>
-                        <div>
+                    <tr>
+                        <th class="purposeSection" colspan="8">
+                            <div class="purposeTitle">
+                                Purpose:
+                            </div>
                             <input autocomplete="off" class="purposeInput" type="text" name="purpose" id="" required>
-                        </div>
-                    </th>
+                        </th>
+                    </tr>
                 </tr>
-
+                
                 <tr>
                     <th colspan="1">
                         <div id="signature">
@@ -507,9 +518,7 @@
                 </tr>
             </table>
             <div class="submitButtonplacement">
-                <button type="submit" id="submitButton">
-                    SUBMIT
-                </button>
+                <button type="submit" id="submitButton">SUBMIT</button>
             </div>
         </form>
     </div>
