@@ -18,7 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="endUser_Webpage.css">
+    <link rel="stylesheet" href="endUser_webpage.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="icon" type="image/x-icon" href="logos/depedcsjdmlogo.png">
     
@@ -37,20 +37,20 @@
             <br>
         </nav>
     </header>
-    
-    <h1>Department of Education <br> Region III <br> SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</h1>
 
-    <br>
-    <br>
+<h1>Republic of the Philippines <br>Department of Education <br> Region III <br> <b>SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</b></h1>
+
+<br>
+<br>
     <div id="formContainer">
         <form class="risFORM" id="risFORM" action="insert_update.php" method="POST" onsubmit="return validateForm(this);">
-            <table id="forRIS1" border="1" width="950px">
+            <table id="forRIS1" border="1">
                 <input type="hidden" name="yearRequested" class="yearRequested">
                 <script src="getCurrentYear.js"></script>
 
                 <tr>
                     <div class="formHeader">
-                        <th width="100px"colspan="8">
+                        <th colspan="8">
                             Division of City Schools
                             <br>
                             City of San Jose del Monte
@@ -119,7 +119,7 @@
                 </tr>
                 
                 <tr colspan="8">
-                    <th colspan="1" height="18px" class="stock_number">
+                    <th colspan="1" class="stock_number">
                         <input class="stock_number" name="stock_number[]" type="text" readonly>
                     </th>
                     <th colspan="1" class="stock_unit">
@@ -145,7 +145,7 @@
                 </tr>
                 
                 <tr colspan="8">
-                    <th colspan="1" height="18px" class="stock_number">
+                    <th colspan="1" class="stock_number">
                         <input class="stock_number" name="stock_number[]" type="text" readonly>
                     </th>
                     <th colspan="1" class="stock_unit">
@@ -171,7 +171,7 @@
                 </tr>
 
                 <tr colspan="8">
-                    <th colspan="1" height="18px" class="stock_number">
+                    <th colspan="1" class="stock_number">
                         <input class="stock_number" name="stock_number[]" type="text" readonly>
                     </th>
                     <th colspan="1" class="stock_unit">
@@ -197,7 +197,7 @@
                 </tr>
 
                 <tr colspan="8">
-                    <th colspan="1" height="18px" class="stock_number">
+                    <th colspan="1" class="stock_number">
                         <input class="stock_number" name="stock_number[]" type="text" readonly>
                     </th>
                     <th colspan="1" class="stock_unit">
@@ -223,7 +223,7 @@
                 </tr>
 
                 <tr colspan="8">
-                    <th colspan="1" height="18px" class="stock_number">
+                    <th colspan="1" class="stock_number">
                         <input class="stock_number" name="stock_number[]" type="text" readonly>
                     </th>
                     <th colspan="1" class="stock_unit">
@@ -249,7 +249,7 @@
                 </tr>
 
                 <tr colspan="8">
-                    <th colspan="1" height="18px" class="stock_number">
+                    <th colspan="1" class="stock_number">
                         <input class="stock_number" name="stock_number[]" type="text" readonly>
                     </th>
                     <th colspan="1" class="stock_unit">
@@ -275,7 +275,7 @@
                 </tr>
 
                 <tr colspan="8">
-                    <th colspan="1" height="18px" class="stock_number">
+                    <th colspan="1" class="stock_number">
                         <input class="stock_number" name="stock_number[]" type="text" readonly>
                     </th>
                     <th colspan="1" class="stock_unit">
@@ -301,7 +301,7 @@
                 </tr>
 
                 <tr colspan="8">
-                    <th colspan="1" height="18px" class="stock_number">
+                    <th colspan="1" class="stock_number">
                         <input class="stock_number" name="stock_number[]" type="text" readonly>
                     </th>
                     <th colspan="1" class="stock_unit">
@@ -327,7 +327,7 @@
                 </tr>
 
                 <tr colspan="8">
-                    <th colspan="1" height="18px" class="stock_number">
+                    <th colspan="1" class="stock_number">
                         <input class="stock_number stockNumberInput" name="stock_number[]" type="text" readonly>
                     </th>
                     <th colspan="1" class="stock_unit">
@@ -353,7 +353,7 @@
                 </tr>
 
                 <tr colspan="8">
-                    <th colspan="1" height="18px" class="stock_number">
+                    <th colspan="1" class="stock_number">
                         <input class="stock_number" name="stock_number[]" type="text" readonly>
                     </th>
                     <th colspan="1" class="stock_unit">
@@ -378,7 +378,7 @@
                     <th class="issuedRemarks"></th>
                 </tr>
 
-                <tr height="100px">
+                <tr>
                     <th class="purposeSection" colspan="8">
                         <div class="purposeTitle">
                             Purpose:
@@ -390,7 +390,7 @@
                 </tr>
 
                 <tr>
-                    <th colspan="1" height="50px">
+                    <th colspan="1">
                         <div id="signature">
                             Signature
                         </div>
@@ -417,7 +417,7 @@
                     </th>
                 </tr>
 
-                <tr height="20px">
+                <tr>
                     <th colspan="1" class="firstcolumn_Approval">
                         <div class="firstcolumn_Approval">
                             Printed Name
@@ -513,17 +513,12 @@
                     </th>
                 </tr>
             </table>
-            <div class="endUserButtons">
-                <div class="submitButtonplacement">
-                    <button type="submit" id="submitButton">
-                        SUBMIT
-                    </button>
-                </div>
+            <div class="submitButtonplacement">
+                <button type="submit" id="submitButton">
+                    SUBMIT
+                </button>
             </div>
         </form>
-        <br>
-        <br>
-        <br>
     </div>
 
     <!-- DISABLE QUANTITY INPUT UNLESS AN ITEM IS SELECTED -->

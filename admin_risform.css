@@ -1,15 +1,24 @@
-body {
-    overflow-x: hidden;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'bookman old style';
 }
 
-#forRIS1{
-    margin-left: 200px;
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#forRIS1 {
+    margin: auto;
+    max-width: 50%;
+    border: solid;
 }
 
 .risFORM{
-    margin-left: 50px;
-    overflow-y: auto;
     overflow-x: hidden;
+    margin-bottom: 1.5%;
 }
 
 .stock_number {
@@ -22,7 +31,7 @@ body {
 .purposeInput {
     margin-top: 60px;
     width: 1000px;
-    height: 80px;
+    height: 25px;
     font-family: "Bookman Old Style";
     font-weight: bold;
 }
@@ -57,17 +66,8 @@ body {
     width: 15px;
 }
 
-#endUserHeaderLogo {
-    height: 110px;
-}
-
 nav ul{
     float: right;
-}
-
-#forRIS1 {
-    font-family: "Bookman Old Style";
-    border: solid;
 }
 
 .entityDeped {
@@ -215,13 +215,13 @@ nav ul{
 }
 
 #submitButton {
-    margin-left: 1085px;
-    margin-top: 275px;
-    margin-bottom: 10px;
+    margin: auto;
+    float: right;
+    margin-top: .8%;
+    margin-right: 18%;
     width: 100px;
     height: 50px;
     border-radius: 13px;
-    font-family: "Bookman Old Style";
     font-size: 13px;
     font-weight: bold;
     background-color: #162fa0; /* Set the initial background color to #162fa0 */
@@ -231,33 +231,20 @@ nav ul{
     cursor: pointer; /* Change the cursor to a pointer on hover */
 }
 
-
 #submitButton:hover {
     background-color: grey; /* Darken the background color on hover */
 }
 
-.endUserButtons {
-    margin-left: 30px;
-    margin-top: -250px;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'bookman old style';
-}
-
 header{
-    height: 150px;
+    height: 90%;
     background-color: #162fa0;  
     position: sticky;
+    width: 100%;
 }
 
 
 header img{
-    margin-top: 10px;
+    margin-top: 5px;
     width: 120px;
     position: sticky;
 }
@@ -267,42 +254,34 @@ header img{
 nav{
     float: right;
     margin-right: 0px;
-    padding-top: 85px;
+    padding-top: 4%;
+    margin-bottom: 5px;
     
 }
 
 ul{
     list-style: none;
-    
-
+    margin-bottom: 5px;
 }
+
 ul li{
     display: inline-block;
     position: relative;
-    
 }
+
 ul li a{
     display: block;
     padding: 15px 25px;
     color: white;
     text-decoration: none;
     text-align: center;
-    font-size: 15px;
+    font-size: 100%;
     outline: 2px solid darkblue;
     box-shadow: 2px darkblue;
     border-radius: 10px;
     margin-right: 20px;
 }
-ul li ul.dropdown li{
-     display: block;
-}
-ul li ul.dropdown{
-    width: 100%;
-    background:#162fa0;
-    position: absolute;
-    z-index: 999;
-    display: none;
-}
+
 ul li a:hover{
     background: grey;
 }
@@ -313,15 +292,9 @@ ul li:hover ul.dropdown{
 /* NAV DROPDOWN LIST*/
 
 h1{
-    font-size: 32px;
+    font-size: 130%;
     color: white;
     position: absolute;
-    margin-top: -130px;
+    margin-top: -120px;
     margin-left: 120px;
-    
-
-}
-h2{
-    font-size: 40px;
-    margin-left: 590px;
 }

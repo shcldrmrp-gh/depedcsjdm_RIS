@@ -46,6 +46,7 @@
                 <li>
                     <a href="#">SETTINGS</a>
                     <ul class="settings">
+                        <li><a href="admin_risform.php">RIS FORM</a></li>
                         <li><a href="changePasswordForm.php">CHANGE PASSWORD</a></li>
                         <li><a href="logout.php">LOGOUT</a></li>
                     </ul>

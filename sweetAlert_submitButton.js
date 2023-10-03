@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     // Automatically reload the page after 10 seconds
                     setTimeout(function () {
                         window.location.reload();
-                    }, 5500); // 10000 milliseconds = 10 seconds                    
+                    }, 3000); // 10000 milliseconds = 10 seconds                    
                 } else {
                     // If there was an error, display an error message in SweetAlert
                     Swal.fire({
@@ -57,7 +57,7 @@ function validateForm(form) {
             isValid = false;
             // Display a SweetAlert for validation error
             Swal.fire({
-                icon: 'question',
+                icon: 'warning',
                 title: 'NO QUANTITY FOUND!',
                 text: 'Please enter a quantity for the selected item.',
             });

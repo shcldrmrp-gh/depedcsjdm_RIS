@@ -540,8 +540,8 @@
     <!-- DISABLED BACK BUTTON -->
     <script type="text/javascript" src="disableBackButton.js"></script>
 
-    <!-- AUTO-LOGOUT FUNCTION 
-    <script type="text/javascript" src="autoLogoutFunction.js"></script>-->
+    <!-- AUTO-LOGOUT FUNCTION -->
+    <script type="text/javascript" src="autoLogoutFunction.js"></script>
 
     <!-- SWEET ALERT FOR SUBMIT BUTTON-->
     <script src="sweetAlert_submitButton.js"></script>
