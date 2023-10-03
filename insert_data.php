@@ -1,6 +1,20 @@
 <?php
 session_start();
 
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "ris_propertyoffice";
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$success = false;
+$errors = array();
+
 // Function to get the last series number from the database
 function getLastSeriesNumber($conn) {
     $sql = "SELECT MAX(seriesNumber) AS lastSeriesNumber FROM request_logs";
@@ -14,94 +28,88 @@ function getLastSeriesNumber($conn) {
     }
 }
 
-// Check if the form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get user inputs from the form
-    $accountName = $_SESSION['accountName'];
-    $userOffice = $_SESSION['userOffice'];
-    $centerCode = $_SESSION['centerCode'];
-    $userPosition = $_SESSION['userPosition'];
-    $item_descriptions = $_POST['item_description'];
-    $stockNumbers = $_POST['stock_number'];
-    $stockUnits = $_POST['stock_unit'];
-    $quantities = $_POST['quantity'];
-    $formDate = $_POST['formDate'];
-    $risNoDate = $_POST['risNoDate'];
-    $purpose = $_POST['purpose'];
-    $referenceCode = rand(100000, 999999);
-    $finalReferenceCode = $referenceCode;
-    
-    // Get the yearRequested value from the POST data
-    $yearRequested = intval($_POST['yearRequested']);
+if (isset($_POST['btnRelease'])) {
+    // Get the reference code and yearRequested from the form
+    $referenceCode = $_POST['referenceCode'];
+    $yearRequested = intval($_POST['yearRequested']); // Assuming yearRequested is in POST data
 
-    // Assuming you have a database connection, insert data into the database
-    $servername = "localhost";
-    $username = "root";
-    $password = "root";
-    $dbname = "ris_propertyoffice";
-
-    // Create a database connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check if the connection is successful
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Get the last series number and increment it
+    // Increment the seriesNumber only once per request
     $lastSeriesNumber = getLastSeriesNumber($conn);
     $nextSeriesNumber = $lastSeriesNumber + 1;
-    
-    // Format the next series number as a 6-digit string
     $formattedSeriesNumber = str_pad($nextSeriesNumber, 6, '0', STR_PAD_LEFT);
 
-    $insertedSuccessfully = true;
+    // Retrieve data from the queue_logs table for the specific reference code
+    $selectSql = "SELECT * FROM queue_logs WHERE referenceCode = '$referenceCode'";
+    $result = mysqli_query($conn, $selectSql);
 
-    // Loop through the submitted data and insert it into the database
-    for ($i = 0; $i < count($item_descriptions); $i++) {
-        $item_description = $item_descriptions[$i];
-        $stockNumber = $stockNumbers[$i];
-        $stockUnit = $stockUnits[$i];
-        $quantity = $quantities[$i];
+    if ($result) {
+        // Loop through the result set to fetch all rows
+        while ($row = mysqli_fetch_assoc($result)) {
+            $yearRequested = intval($_POST['yearRequested']); // Assuming yearRequested is in POST data
+            $risNoDate = $_POST['risNoDate'];
+            $accountName = $row['accountName'];
+            $centerCode = $row['centerCode'];
+            $stock_number = $row['stock_number'];
+            $item_description = $row['item_description'];
+            $stock_unit = $row['stock_unit'];
+            $quantityInput = $row['quantityInput'];
+            $dateRequested = $row['dateRequested'];
+            $userOffice = $row['userOffice'];
 
-        // Check if the item_description is not equal to "noValue" before inserting
-        if ($item_description != "noValue") {
-            // SQL query to insert data into the request_logs table
-            $sql = "INSERT INTO request_logs (accountName, item_description, stock_number, stock_unit, quantityInput, formDate, seriesNumber, risNoDate, userOffice, centerCode, yearRequested)
-                VALUES ('$accountName', '$item_description', '$stockNumber', '$stockUnit', '$quantity', '$formDate', '$formattedSeriesNumber', '$risNoDate', '$userOffice', '$centerCode', '$yearRequested')";
+            // Construct the INSERT query for request_logs with interpolated values
+            $insertSql = "INSERT INTO request_logs (userOffice, risNoDate, seriesNumber, yearRequested, accountName, centerCode, stock_number, item_description, stock_unit, quantityInput, formDate) VALUES (
+                '$userOffice',
+                '$risNoDate',
+                '$formattedSeriesNumber',
+                '$yearRequested',
+                '$accountName',
+                '$centerCode',
+                '$stock_number',
+                '$item_description',
+                '$stock_unit',
+                '$quantityInput',
+                '$dateRequested'
+            )";
 
-            if ($conn->query($sql) === TRUE) {
-                // Data inserted successfully
-                header("endUser_webpage.php");
+            // Execute the INSERT query
+            $insertResult = mysqli_query($conn, $insertSql);
+
+            if ($insertResult) {
+                // Data inserted into request_logs successfully
+
+                // Delete data from the queue_logs table
+                $deleteSql = "DELETE FROM queue_logs WHERE referenceCode = '$referenceCode'";
+                $deleteResult = mysqli_query($conn, $deleteSql);
+
+                if ($deleteResult) {
+                    // Data deleted from queue_logs successfully
+                    $success = true;
+                } else {
+                    $errors[] = 'Error deleting data from the database for referenceCode: ' . $referenceCode;
+                }
             } else {
-                // Error occurred while inserting data
-                echo "Error: " . $sql . "<br>" . $conn->error;
+                $errors[] = 'Error inserting data into request_logs for referenceCode: ' . $referenceCode;
             }
         }
-    
-        // Check if the item_description is not equal to "noValue" before inserting
-        /*if ($item_description != "noValue") {
-            // SQL query to insert data into the queue_logs table
-            $sql = "INSERT INTO queue_logs VALUES ('$finalReferenceCode','$accountName', '$userPosition' ,'$centerCode', '$userOffice', '$stockNumber', '$item_description', '$stockUnit','$quantity','$purpose','$formDate')";
-            if ($conn->query($sql) !== TRUE) {
-                // Error occurred while inserting data
-                $insertedSuccessfully = false;
-                echo "Error: " . $sql . "<br>" . $conn->error;
-            }
-        }*/
-    }
-
-        
-    }
-
-
-    // Close the database connection
-     if ($insertedSuccessfully) {
-        // Return a JSON response indicating success
-        echo json_encode(array('success' => true));
     } else {
-        // Return a JSON response indicating failure
-        echo json_encode(array('success' => false, 'message' => 'Data was not inserted successfully.'));
+        $errors[] = 'Error executing SELECT statement for referenceCode: ' . $referenceCode;
     }
-    $conn->close();
+} else {
+    $errors[] = 'The button was not clicked.';
+}
+
+// Close the database connection
+mysqli_close($conn);
+
+if ($success && empty($errors)) {
+    // Redirect to queueing_system.php
+    header("Location: queuing system.php");
+    exit(); // Terminate the script
+}
+// Return the response with success and errors
+$response = [
+    'success' => $success,
+    'errors' => $errors,
+];
+echo json_encode($response);
 ?>

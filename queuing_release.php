@@ -2,8 +2,6 @@
 session_start();
 require_once("queuing_release_autofillup.php");
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -42,11 +40,11 @@ require_once("queuing_release_autofillup.php");
     <br>
     <br>
     <div id="formContainer">
-        <form class="risFORM "action="queuing-delete_row.php" method="POST">
+        <form class="risFORM "action="insert_data.php" method="POST">
             <table id="forRIS1" border="1" width="950px">
             <tr reference-data-code = "referenceCode">
-                <input type="hidden" name="yearRequested" class="yearRequested" <?php echo $yearRequested; ?>>
-                <script src="getCurrentYear.js"></script>
+                <input type="hidden" name="referenceCode" value="<?php echo isset($referenceCode) ? $referenceCode : ''; ?>">
+                <input type="hidden" name="yearRequested" class="yearRequested" value="<?php echo isset($yearRequested) ? $yearRequested : ''; ?>">
 
                 <tr>
                     <div class="formHeader">
@@ -77,13 +75,13 @@ require_once("queuing_release_autofillup.php");
                             Responsibility Code: 
                         </div>
                             <div class="centerCodePHP">
-                                <?php echo $centerCode; ?>
+                                <input type="text" name="centerCode" id="" value="<?php echo isset($centerCode) ? $centerCode : ''; ?>">
                             </div>
                         </div>
                         <div class="userOffice">
                             Office: 
                             <div class="userOfficePHP">
-                                <?php echo $userOffice; ?>
+                                <input type="text" name="userOffice" value="<?php echo isset($userOffice) ? $userOffice : ''; ?>" id="">
                             </div>
                         </div>
                         <div class="risNo">
@@ -115,7 +113,7 @@ require_once("queuing_release_autofillup.php");
                 <!---------FOR EACH --------->
             
                 <?php
-                    $rowCount = count($data);
+                    $rowCount = isset($data) ? count($data) : 0;
                     $maxRows = 10; // Define the maximum number of rows you want to display
                     
 
@@ -129,7 +127,6 @@ require_once("queuing_release_autofillup.php");
                             $stock_unit = $data[$i]['stock_unit'];
                             $item_description = $data[$i]['item_description'];
                             $quantityInput = $data[$i]['quantityInput'];
-                            $yearRequested = $data[$i]['yearRequested'];
                             echo "<th colspan='1' height='18px' class='stock-number'>$stock_number</th>";
                             echo "<th colspan='1' class='stock-unit'>$stock_unit</th>";
                             echo "<th colspan='1' class='item-description'>$item_description</th>";
@@ -164,7 +161,7 @@ require_once("queuing_release_autofillup.php");
                             Purpose:
                         </div>
                         <div>
-                            <input class="purposeInput" type="text" name="purpose" id="" readonly value=" <?php echo $purpose; ?>">
+                            <input class="purposeInput" type="text" name="purpose" id="" readonly value="<?php echo isset($purpose) ? $purpose : ''; ?>">
                         </div>
                     </th>
                 </tr>
@@ -206,7 +203,7 @@ require_once("queuing_release_autofillup.php");
                     </th>
                     <th class="accountName" colspan="2">
                         <div class="accountName">
-                            <?php echo $accountName; ?>
+                            <input type="text" name="accountName" value="<?php echo isset($accountName) ? $accountName : ''; ?>" readonly>
                         </div>
                     </th>
                     <th class="approvedByName" colspan="2">
@@ -221,7 +218,7 @@ require_once("queuing_release_autofillup.php");
                     </th>
                     <th class="accountName"colspan="1">
                       <div class="accountName">
-                        <?php echo $accountName; ?>
+                        <input type="text" name="accountName" value="<?php echo isset($accountName) ? $accountName : ''; ?>" readonly>
                       </div>
                     </th>
                 </tr>
@@ -234,7 +231,7 @@ require_once("queuing_release_autofillup.php");
                     </th>
                     <th colspan="2">
                         <div class="userPosition">
-                            <?php echo $userPosition; ?>
+                            <input type="text" name="userPosition" value="<?php echo isset($userPosition) ? $userPosition : ''; ?>" readonly>
                         </div>
                     </th>
                     <th colspan="2">
@@ -249,7 +246,7 @@ require_once("queuing_release_autofillup.php");
                     </th>
                     <th colspan="1">
                         <div class="userPosition">
-                            <?php echo $userPosition; ?>
+                            <input type="text" name="userPosition" value="<?php echo isset($userPosition) ? $userPosition : ''; ?>" readonly>
                         </div>
                     </th>
                 </tr>
@@ -261,7 +258,7 @@ require_once("queuing_release_autofillup.php");
                         </div>    
                     </th>
                     <th colspan="2">
-                        <input type="text" class="formDate" name="formDate" readonly value="<?php echo $dateRequested; ?>">
+                        <input type="text" class="formDate" name="formDate" readonly value="<?php echo isset($dateRequested) ? $dateRequested : ''; ?>">
                     </th>
                     <th colspan="2"></th>
                     <th colspan="2"></th>
@@ -273,7 +270,7 @@ require_once("queuing_release_autofillup.php");
                 </tr>
             </tr>
             </table>
-            
+            <button type="submit" class="btnRelease" name="btnRelease" id="btnRelease">RELEASE</button>
         </form>
        <br>
        <br>
@@ -281,13 +278,7 @@ require_once("queuing_release_autofillup.php");
     </div>
 
     <button type="submit" class="btnCancel" name="btnCancel" id="btnCancel">CANCEL</button>
-    <button type="submit" class="btnRelease" name="btnRelease" id="btnRelease">RELEASE</button>
-
-
-
-
-        
-  
+    
     <!-- GENERATE PDF FUNCTION -->
     <script src="generatePdf.js"></script>
 
