@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'bookman old style';
+    font-family: 'Bookman Old Style';
 }
 
 body {
@@ -10,10 +10,63 @@ body {
     max-height: 100%;
 }
 
+header{
+    height: 90%;
+    background-color: #162fa0;  
+    position: sticky;
+    width: 100%;
+    z-index: 998;
+    margin-bottom: -5%;
+}
+
+
+header img{
+    margin-top: 5px;
+    width: 120px;
+    position: sticky;
+    z-index: 998;
+}
+
+
+h1{
+    font-size: 130%;
+    color: white;
+    position: absolute;
+    margin-top: -125px;
+    margin-left: 118px;
+    z-index: 998;
+}
+
+h2{
+    font-size: 120%;
+    color: white;
+    position: absolute;
+    margin-top: -120px;
+    margin-left: 120px;
+    font-weight: 100;
+    z-index: 998;
+}
+
+h3{
+    font-size: 95%;
+    color: white;
+    position: absolute;
+    margin-top: -120px;
+    margin-left: 120px;
+    font-weight: 100;
+    z-index: 998;
+}
+
+.headerTitles {
+    margin-top: 6%;
+    z-index: 998;
+}
+
 #forRIS1 {
     margin: auto;
     max-width: 50%;
     border: solid;
+    z-index: 999;
 }
 
 .risFORM{
@@ -29,12 +82,17 @@ body {
 }
 
 .purposeInput {
-    margin-top: 60px;
     width: 1000px;
     height: 25px;
     font-family: "Bookman Old Style";
     font-weight: bold;
 }
+
+.purposeTitle {
+    text-align: left;
+    margin-left: 5px;
+}
+
 .stock_unit {
     width: 40px;
     text-align: center;
@@ -112,12 +170,6 @@ nav ul{
     margin-left: 710px;
 }
 
-.purposeTitle {
-    text-align: left;
-    margin-top: 2px;
-    margin-left: 5px;
-    margin-bottom: -50px;
-}
 
 #signature {
     text-align: left;
@@ -216,9 +268,10 @@ nav ul{
 
 #submitButton {
     margin: auto;
-    float: right;
+    display: grid;
+    text-align: center;
+    align-items: center;
     margin-top: .8%;
-    margin-right: 18%;
     width: 100px;
     height: 50px;
     border-radius: 13px;
@@ -235,33 +288,17 @@ nav ul{
     background-color: grey; /* Darken the background color on hover */
 }
 
-header{
-    height: 90%;
-    background-color: #162fa0;  
-    position: sticky;
-    width: 100%;
-}
-
-
-header img{
-    margin-top: 5px;
-    width: 120px;
-    position: sticky;
-}
-
-
 /* NAV DROPDOWN LIST*/
 nav{
     float: right;
     margin-right: 0px;
-    padding-top: 4%;
-    margin-bottom: 5px;
+    padding-top: 3%;
     
 }
 
 ul{
     list-style: none;
-    margin-bottom: 5px;
+    margin-bottom: 5%;
 }
 
 ul li{
@@ -290,11 +327,3 @@ ul li:hover ul.dropdown{
 }
 
 /* NAV DROPDOWN LIST*/
-
-h1{
-    font-size: 130%;
-    color: white;
-    position: absolute;
-    margin-top: -120px;
-    margin-left: 120px;
-}

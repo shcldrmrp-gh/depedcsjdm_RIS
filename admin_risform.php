@@ -27,6 +27,7 @@
 </head>
 
 <body>
+    
     <header>
         <img src="pictures/deped logo.png" alt="">  
         <nav>
@@ -38,7 +39,18 @@
         </nav>
     </header>
 
-<h1>Republic of the Philippines <br>Department of Education <br> Region III <br> <b>SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</b></h1>
+<div class="headerTitles">
+    <h3>Republic of the Philippines</h3>
+    <br>
+    <h2>Department of Education</h2>
+    <br>
+    <h3>Region III</h3>
+    <br>
+    <h1>SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</h1>
+</div>
+
+
+<!--<h1>Republic of the Philippines <br>Department of Education <br> Region III <br> <b>SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</b></h1>-->
 
 <br>
 <br>
@@ -379,16 +391,16 @@
                 </tr>
 
                 <tr>
-                    <th class="purposeSection" colspan="8">
-                        <div class="purposeTitle">
-                            Purpose:
-                        </div>
-                        <div>
+                    <tr>
+                        <th class="purposeSection" colspan="8">
+                            <div class="purposeTitle">
+                                Purpose:
+                            </div>
                             <input autocomplete="off" class="purposeInput" type="text" name="purpose" id="" required>
-                        </div>
-                    </th>
+                        </th>
+                    </tr>
                 </tr>
-
+                
                 <tr>
                     <th colspan="1">
                         <div id="signature">
@@ -499,27 +511,20 @@
                     </th>
                     <th colspan="2">
                         <input type="text" class="formDate" name="formDate" readonly>
-                        <!-- GET CURRENT FORMATTED DATE -->
-                        <script type="text/javascript" src="getCurrentDate.js">
-                            
-                        </script>
                     </th>
                     <th colspan="2"></th>
                     <th colspan="2"></th>
-                    <th colspan="1">
-                        <div>
-                        
-                        </div>
-                    </th>
+                    <th colspan="1"></th>
                 </tr>
             </table>
             <div class="submitButtonplacement">
-                <button type="submit" id="submitButton">
-                    SUBMIT
-                </button>
+                <button type="submit" id="submitButton">SUBMIT</button>
             </div>
         </form>
     </div>
+
+    <!-- GET CURRENT FORMATTED DATE -->
+    <script src="getCurrentDate.js"></script>
 
     <!-- DISABLE QUANTITY INPUT UNLESS AN ITEM IS SELECTED -->
     <script src="disableQuantityInputUser.js"></script>
@@ -528,16 +533,16 @@
     <script src="disableSelectedItemOnOtherRows.js"></script>
         
     <!-- AUTO FILL UP FOR STOCK NUMBER AND UNIT -->
-    <script type="text/javascript" src="getStuckNumberUnit.js"></script>
+    <script src="getStuckNumberUnit.js"></script>
 
     <!-- AUTO INPUT FOR STOCK AVAILABILITY -->
-    <script type="text/javascript" src="autoStockAvailabilityInput.js"></script>
+    <script src="autoStockAvailabilityInput.js"></script>
 
     <!-- AUTO UPDATE MAX QUANTITY -->
-    <script type="text/javascript" src="autoUpdateMaxQuantity.js"></script>
+    <script src="autoUpdateMaxQuantity.js"></script>
 
     <!-- AUTO-LOGOUT FUNCTION -->
-    <script type="text/javascript" src="autoLogoutFunction.js"></script>
+    <script src="autoLogoutFunction.js"></script>
 
     <!-- SWEET ALERT FOR SUBMIT BUTTON-->
     <script src="sweetAlert_submitButton.js"></script>
