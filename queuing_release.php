@@ -286,5 +286,7 @@ require_once("queuing_release_autofillup.php");
 
     <!-- GET RELEASE DATE -->
     <script src="getCurrentDateForRelease.js"></script>
+
+    <script src="autoLogoutFunction.js"></script>
 </body>
 </html>
