@@ -1,6 +1,6 @@
 async function getCurrentYear() {
     try {
-        const response = await fetch('http://worldtimeapi.org/api/ip');
+        const response = await fetch('https://worldtimeapi.org/api/ip');
         const data = await response.json();
         if (data && data.datetime) {
             const datetime = new Date(data.datetime);
