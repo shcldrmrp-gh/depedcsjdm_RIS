@@ -22,7 +22,7 @@ body {
 .purposeInput {
     margin-top: 60px;
     width: 1000px;
-    height: 80px;
+    height: 50px;
     font-family: "Bookman Old Style";
     font-weight: bold;
 }
@@ -110,22 +110,34 @@ nav ul{
 }
 
 .userOfficePHP {
+    width: 15%;
+    text-align: center;
+}
+.userOfficePHP1{
     margin-top: -20px;
-    margin-left: 410px;
+    margin-left: 390px;
 }
 
 .centerCode {
     margin-top: -18px;
-    margin-right: -672px;
+    margin-right: -620px;
 }
 
 .centerCodePHP {
-    margin-top: -20px;
-    margin-left: 890px;
+    margin-top: -17px;
+    margin-left: 870px;
+}
+.centerCodePHP1 {
+   width: 75%;
+   text-align: center;
 }
 
 .risNo {
-    margin-left: 760px;
+    margin-left: 805px;
+}
+.risNoDate{
+    width: 50%;
+    text-align: center;
 }
 
 .purposeTitle {
@@ -195,6 +207,9 @@ nav ul{
     text-align: center;
     font-size: 12px;
 }
+.releaseDate{
+    text-align: center;
+}
 
 .item_description {
     font-family: "Bookman Old Style";
@@ -230,47 +245,8 @@ nav ul{
     font-size: 12px;
 }
 
-#generatePDF {
-    margin-left: 550px;
-    margin-top: 200px;
-    margin-bottom: 10px;
-    width: 100px;
-    height: 50px;
-    border-radius: 13px;
-    font-family: "Bookman Old Style";
-    font-size: 13px;
-    font-weight: bold;
-    background-color: #162fa0; /* Set the initial background color to #162fa0 */
-    color: #fff; /* Set the initial font color to white */
-    border: 2px solid #162fa0; /* Add a border */
-    transition: background-color .3s; /* Add a smooth transition for background-color */
-    cursor: pointer; /* Change the cursor to a pointer on hover */
-}
 
 
-#generatePDF:hover {
-    background-color: grey; /* Darken the background color on hover */
-}
-
-.buttonCancel{
-    margin-left: 100px;
-    margin-top: 0px;
-    width: 100px;
-    height: 50px;
-    border-radius: 13px;
-    font-family: "Bookman Old Style";
-    font-size: 13px;
-    font-weight: bold;
-    background-color: #162fa0; 
-    color: #fff;
-    border: 2px solid #162fa0;
-    transition: background-color .3s; 
-    cursor: pointer;
-}
-
-.buttonCancel:hover{
-    background-color: grey;
-}
 
 #logoutButton {
     margin-left: 1200px;
@@ -357,6 +333,9 @@ h2{
     font-size: 40px;
     margin-left: 590px;
 }
+table{
+    width: 60%;
+}
 .table_head{
     border: 5px solid black;
 }
@@ -388,31 +367,15 @@ h2{
 }
 
 .btnRelease{
-    display: block;
-    margin-left: 40%;
-    margin-top: -70px;
-    margin-bottom: 20px;
-    width: 100px;
-    height: 50px;
-    border-radius: 13px;
-    font-family: "Bookman Old Style";
-    font-size: 13px;
-    font-weight: bold;
-    background-color: #162fa0; 
-    color: #fff; 
-    border: 2px solid #162fa0;
-    transition: background-color .3s;
-    cursor: pointer; 
+    display: none;
 }
 
-.btnRelease:hover{
-    background-color: grey;
-}
+
 
 .btnCancel{
     display: block;
     margin-left: 50%;
-    margin-top: -30px;
+    margin-top: -70px;
     margin-bottom: 20px;
     width: 100px;
     height: 50px;
@@ -429,4 +392,26 @@ h2{
 
 .btnCancel:hover{
     background-color: grey;
+}
+
+.generatePDF {
+    display: block;
+    margin-left: 40%;
+    margin-top: -30px;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 50px;
+    border-radius: 13px;
+    font-family: "Bookman Old Style";
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #162fa0; 
+    color: #fff; 
+    border: 2px solid #162fa0;
+    transition: background-color .3s;
+    cursor: pointer; 
+}
+
+.generatePDF:hover {
+    background-color: grey; 
 }

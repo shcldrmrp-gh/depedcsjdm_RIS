@@ -46,6 +46,7 @@
                 <li>
                     <a href="#">SETTINGS</a>
                     <ul class="settings">
+                        <li><a href="queuing system.php">QUEUING</a></li>
                         <li><a href="admin_risform.php">RIS FORM</a></li>
                         <li><a href="changePasswordForm.php">CHANGE PASSWORD</a></li>
                         <li><a href="logout.php">LOGOUT</a></li>
@@ -53,13 +54,22 @@
                 </li>
             </ul>
         </nav>
-        <a href="queuing system.php" class="queuing">QUEUING</a>
+        
 
     </header>
     
-    <h1>Department of Education <br> Region III <br> SCHOOLS DIVISION OF SAN JOSE DEL MONTE </h1>
-    <h2>ITEM INVENTORY UNIT</h2>
-
+    <div class="headerTitles">
+        <h3>Republic of the Philippines</h3>
+        <br>
+        <h2>Department of Education</h2>
+        <br>
+        <h3>Region III</h3>
+        <br>
+        <h1>SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</h1>
+    </div>
+    <div class="title">
+        <h2>ITEM INVENTORY UNIT</h2>
+    </div>
     <form action="" method="get">
         <div class="sorting">
             <label for="sort_option">Sort:</label>
