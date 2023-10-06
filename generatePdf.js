@@ -3,10 +3,10 @@ let form = document.querySelector("#formContainer");
         
         
         var opt = {
-            margin:         [-20, -40, 0, -100],
+            margin:         [-20, -3 , 0, -80],
             filename:       'ris-form.pdf',
             image:          { type: 'jpeg', quality: .95},
-            html2canvas:  { scale: 2, allowMagnification: false, width: 1850, height: 1500},
+            html2canvas:  { scale: 2, allowMagnification: false, width: 1500, height: 1600},
             jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
         };
 

@@ -1,15 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bookman Old Style';
+}
+
 body {
     overflow-x: hidden;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+header{
+    height: 90%;
+    background-color: #162fa0;  
+    position: sticky;
+    width: 100%;
+    z-index: 998;
+    margin-bottom: -5%;
+}
+
+
+header img{
+    margin-top: 5px;
+    width: 120px;
+    position: sticky;
+    z-index: 998;
+}
+
+h1{
+    font-size: 130%;
+    color: white;
+    position: absolute;
+    margin-top: -125px;
+    margin-left: 118px;
+    z-index: 998;
+}
+
+h2{
+    font-size: 120%;
+    color: white;
+    position: absolute;
+    margin-top: -120px;
+    margin-left: 120px;
+    font-weight: 100;
+    z-index: 998;
+}
+
+h3{
+    font-size: 95%;
+    color: white;
+    position: absolute;
+    margin-top: -120px;
+    margin-left: 120px;
+    font-weight: 100;
+    z-index: 998;
+}
+
+.headerTitles {
+    margin-top: 6%;
+    z-index: 998;
 }
 
 #forRIS1{
-    margin-left: 200px;
+    margin: auto;
+    max-width: 50%;
+    border: solid;
+    z-index: 999;
+    padding-top: -5%;
 }
 
 .risFORM{
-    margin-left: 50px;
-    overflow-y: auto;
     overflow-x: hidden;
+    margin-bottom: 1.5%;
 }
 
 .stock_number {
@@ -20,14 +82,20 @@ body {
 }
 
 .purposeInput {
-    margin-top: 60px;
     width: 1000px;
-    height: 50px;
+    height: 25px;
     font-family: "Bookman Old Style";
     font-weight: bold;
 }
+
+.purposeTitle {
+    text-align: left;
+    margin-left: 5px;
+}
+
+
 .stock_unit {
-    width: 60px;
+    width: 5.5%;
     text-align: center;
     font-family: "Bookman Old Style";
     font-weight: bold;
@@ -35,8 +103,8 @@ body {
 
 .quantityInput {
     text-align: center;
-    font-family: "Bookman Old Style";
     font-weight: bold;
+    width: 7%;
 }
 
 .quantityInputUser {
@@ -44,16 +112,12 @@ body {
     text-align: center;
 }
 
-.quantityTitle {
-    width: 10px;
-}
-
 .yesInputCheck {
-    width: 10px;
+    width: 2%;
 }
 
 .noInputCheck {
-    width: 10px;
+    width: 2%;
 }
 
 #endUserHeaderLogo {
@@ -62,89 +126,70 @@ body {
 
 .backbtn{
     float: right;
-    margin-top: 90px;
-    margin-right: 30px;
+    margin-top: 5%;
+    margin-right: 1%;
     padding: 15px 15px 15px 15px;
     color: white;
     text-decoration: none;
     border: 2px solid black;
     border-radius: 10px;
 }
+
 .backbtn:hover{
     background: grey;
 }
-
 
 nav ul{
     float: right;
 }
 
-#forRIS1 {
-    font-family: "Bookman Old Style";
-    border: solid;
-}
-
 .entityDeped {
-    margin-bottom: -17.5px;
-    margin-left: -840px;
+    margin-bottom: -2%;
+    margin-right: 80%;
 }
 
 .fundCluster {
-    margin-right: -820px;
+    margin-left: 77%;
 }
 
 .cityDivision {
-    margin-top: 10px;
-    margin-left: -895px;
+    margin-right: 89.7%;
 }
 
 .locationDivision {
     margin-top: -20px;
-    margin-left: -510px;
+    margin-left: -525px;
 }
 
 .userOffice {
-    margin-top: 10px;
-    margin-bottom: -17.5px;
-    margin-left: -910px;
+    margin-top: .5%;
+    margin-bottom: -2.5%;
+    margin-left: -91.7%;
 }
 
 .userOfficePHP {
-    width: 15%;
-    text-align: center;
-}
-.userOfficePHP1{
     margin-top: -20px;
-    margin-left: 390px;
+    margin-left: 440px;
 }
 
 .centerCode {
     margin-top: -18px;
-    margin-right: -620px;
+    margin-right: -61.7%;
 }
 
 .centerCodePHP {
-    margin-top: -17px;
-    margin-left: 870px;
-}
-.centerCodePHP1 {
-   width: 75%;
-   text-align: center;
+    margin-top: -2%;
+    margin-left: 87%;
 }
 
 .risNo {
-    margin-left: 805px;
+    margin-top: .5%;
+    margin-left: 68%;
 }
+
 .risNoDate{
     width: 50%;
     text-align: center;
-}
-
-.purposeTitle {
-    text-align: left;
-    margin-top: 2px;
-    margin-left: 5px;
-    margin-bottom: -50px;
 }
 
 #signature {
@@ -174,7 +219,6 @@ nav ul{
 .approvedByName {
     text-align: center;
     font-size: 12px;
-    width: 150px;
 }
 
 .issuedByName {
@@ -203,10 +247,16 @@ nav ul{
     font-size: 12px;
 }
 
+.dateRequested {
+    text-align: center;
+    font-size: 12px;
+}
+
 .formDate {
     text-align: center;
     font-size: 12px;
 }
+
 .releaseDate{
     text-align: center;
 }
@@ -224,7 +274,7 @@ nav ul{
     font-size: 17px;
     font-weight: bold;
     text-align: center;
-    width: 550px;
+    width: 10000px;
 }
 
 .accountName{
@@ -245,94 +295,11 @@ nav ul{
     font-size: 12px;
 }
 
-
-
-
-#logoutButton {
-    margin-left: 1200px;
-    margin-top: 10px;
-    width: 100px;
-    height: 50px;
-    border-radius: 13px;
-    font-family: "Bookman Old Style";
-    font-size: 13px;
-    font-weight: bold;
-    background-color: #162fa0; /* Set the initial background color to #162fa0 */
-    color: #fff; /* Set the initial font color to white */
-    border: 2px solid #162fa0; /* Add a border */
-    transition: background-color 0.3s; /* Add a smooth transition for background-color */
-    cursor: pointer; /* Change the cursor to a pointer on hover */
-}
-
-#logoutButton:hover {
-    background-color: #000000; /* Darken the background color on hover */
-    border: #000000;
-}
-
 .endUserButtons {
     margin-left: 30px;
     margin-top: -250px;
 }
 
-#sendToDatabase {
-    margin-left: 500px;
-    margin-top: -2000px;
-    width: 100px;
-    height: 50px;
-    border-radius: 13px;
-    font-family: "Bookman Old Style";
-    font-size: 13px;
-    font-weight: bold;
-    background-color: #162fa0; /* Set the initial background color to #162fa0 */
-    color: #fff; /* Set the initial font color to white */
-    border: 2px solid #162fa0; /* Add a border */
-    transition: background-color 0.3s; /* Add a smooth transition for background-color */
-    cursor: pointer; /* Change the cursor to a pointer on hover */
-}
-
-#sendToDatabase:hover{
-    background-color: #000000; /* Darken the background color on hover */
-    border: #000000;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'bookman old style';
-}
-
-header{
-    height: 150px;
-    background-color: #162fa0;  
-   
-}
-
-
-header img{
-    margin-top: 10px;
-    width: 120px;
-   
-}
-
-
-
-h1{
-    font-size: 32px;
-    color: white;
-    position: absolute;
-    margin-top: -130px;
-    margin-left: 120px;
-   
-    
-    
-
-}
-h2{
-    font-size: 40px;
-    margin-left: 590px;
-}
 table{
     width: 60%;
 }
@@ -370,22 +337,16 @@ table{
     display: none;
 }
 
-
-
 .btnCancel{
-    display: block;
-    margin-left: 50%;
-    margin-top: -70px;
-    margin-bottom: 20px;
-    width: 100px;
+    width: 8.5%;
     height: 50px;
     border-radius: 13px;
     font-family: "Bookman Old Style";
-    font-size: 13px;
+    font-size: 100%;
     font-weight: bold;
-    background-color: #162fa0; 
+    background-color: red; 
     color: #fff; 
-    border: 2px solid #162fa0;
+    border: 2px solid red;
     transition: background-color .3s;
     cursor: pointer; 
 }
@@ -395,15 +356,11 @@ table{
 }
 
 .generatePDF {
-    display: block;
-    margin-left: 40%;
-    margin-top: -30px;
-    margin-bottom: 20px;
-    width: 100px;
+    width: 8.5%;
     height: 50px;
     border-radius: 13px;
     font-family: "Bookman Old Style";
-    font-size: 13px;
+    font-size: 100%;
     font-weight: bold;
     background-color: #162fa0; 
     color: #fff; 
@@ -414,4 +371,21 @@ table{
 
 .generatePDF:hover {
     background-color: grey; 
+}
+
+.buttonContainer {
+    margin-top: -4%;
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+
+.forRelease {
+    margin-top: -5%;
+    text-align: center;
+}
+
+.forCancel {
+    margin-top: -5%;
+    text-align: center;
 }
