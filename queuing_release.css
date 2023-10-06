@@ -82,12 +82,18 @@ h3{
 }
 
 .purposeInput {
-    margin-top: 60px;
     width: 1000px;
-    height: 50px;
+    height: 25px;
     font-family: "Bookman Old Style";
     font-weight: bold;
 }
+
+.purposeTitle {
+    text-align: left;
+    margin-left: 5px;
+}
+
+
 .stock_unit {
     width: 60px;
     text-align: center;
@@ -124,8 +130,8 @@ h3{
 
 .backbtn{
     float: right;
-    margin-top: 3%;
-    margin-right: 3%;
+    margin-top: 5%;
+    margin-right: 1%;
     padding: 15px 15px 15px 15px;
     color: white;
     text-decoration: none;
@@ -160,7 +166,8 @@ nav ul{
 }
 
 .userOffice {
-    margin-bottom: -2%;
+    margin-top: .5%;
+    margin-bottom: -2.5%;
     margin-left: -91.7%;
 }
 
@@ -180,19 +187,13 @@ nav ul{
 }
 
 .risNo {
+    margin-top: .5%;
     margin-left: 68%;
 }
 
 .risNoDate{
     width: 50%;
     text-align: center;
-}
-
-.purposeTitle {
-    text-align: left;
-    margin-top: 2px;
-    margin-left: 5px;
-    margin-bottom: -50px;
 }
 
 #signature {
@@ -260,6 +261,7 @@ nav ul{
     text-align: center;
     font-size: 12px;
 }
+
 .releaseDate{
     text-align: center;
 }
@@ -386,11 +388,9 @@ table{
 .forRelease {
     margin-top: -5%;
     text-align: center;
-
 }
 
 .forCancel {
     margin-top: -5%;
     text-align: center;
-
 }
