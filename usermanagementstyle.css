@@ -531,15 +531,15 @@ table tr td{
     }
     .searchbar{
         position: absolute;
-        margin-left: 68%;
+        margin-left: 67%;
         margin-top: -38px; 
     }
 }
 
-@media screen and (max-width: 1360px){
+@media screen and (max-width: 1366px){
     .searchbar{
         position: absolute;
-        margin-left: 67%;
+        margin-left: 66%;
         margin-top: -38px; 
     }
     table{
@@ -554,7 +554,7 @@ table tr td{
 @media screen and (max-width: 1326px){
     .searchbar{
         position: absolute;
-        margin-left: 865px;
+        margin-left: 845px;
         margin-top: -38px; 
     }
     table{
