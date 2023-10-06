@@ -10,11 +10,43 @@ header{
     
 }
 
-
-
 header img{
     margin-top: 10px;
     width: 120px;
+}
+
+.headerTitles{
+    margin-top: -2.5%;
+    margin-left: .5%;
+}
+
+.headerTitles h1{
+    font-size: 130%;
+    color: white;
+    position: absolute;
+    margin-top: -125px;
+    margin-left: 118px;
+    
+}
+
+.headerTitles h2{
+    font-size: 120%;
+    color: white;
+    position: absolute;
+    margin-top: -120px;
+    margin-left: 120px;
+    font-weight: 100;
+    
+}
+
+.headerTitles h3{
+    font-size: 95%;
+    color: white;
+    position: absolute;
+    margin-top: -120px;
+    margin-left: 120px;
+    font-weight: 100;
+    
 }
 
 header h1{
@@ -164,7 +196,7 @@ h2{
     height: 81.7%;
     width: 270px;
     position: absolute;
-    margin-top: -100px;
+    margin-top: -120px;
     background: #162fa0;
     z-index: 1;
     transition: transform 0.5s;

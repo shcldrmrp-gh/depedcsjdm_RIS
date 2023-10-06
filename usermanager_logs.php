@@ -20,7 +20,6 @@
 <body>
     <header>
         <img src="logo/depedlogo.png" alt="">
-        <h1>DEPARTMENT OF EDUCATION <br> REGION III <br> SCHOOLS DIVISION OF SAN JOSE DEL MONTE </h1>
         <input class ="menu_checkbox" type="checkbox" name="" id="check">
         <div class="container">
             <label for="check">
@@ -39,6 +38,17 @@
             </ol>
         </div>         
     </header>
+    
+    <div class="headerTitles">
+        <h3>Republic of the Philippines</h3>
+        <br>
+        <h2>Department of Education</h2>
+        <br>
+        <h3>Region III</h3>
+        <br>
+        <h1>SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</h1>
+    </div>
+
     <h2>USER MANAGER LOGS</h2>
     <div class="scroll">
         <table id="table">

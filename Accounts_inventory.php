@@ -20,7 +20,6 @@
 <body>
     <header>
         <img src="logo/depedlogo.png" alt="">
-        <h1>Department of Education <br> Region III <br> SCHOOLS DIVISION OF SAN JOSE DEL MONTE </h1>
         <div class="searchbar">
             <input type="text" id="searchInput" placeholder="Search Account Name...." oninput="searchTable()">
         </div>
@@ -37,10 +36,18 @@
                 </li>
             </ul>
         </nav>
-
-
-    
     </header>
+
+    <div class="headerTitles">
+        <h3>Republic of the Philippines</h3>
+        <br>
+        <h2>Department of Education</h2>
+        <br>
+        <h3>Region III</h3>
+        <br>
+        <h1>SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</h1>
+    </div>
+
     <h2>USER ACCOUNTS</h2>
     <input class ="menu_checkbox" type="checkbox" name="" id="check">
     <div class="container">
