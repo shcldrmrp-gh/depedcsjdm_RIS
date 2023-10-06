@@ -543,7 +543,7 @@ table tr td{
     }
 }
 
-@media screen and (max-width: 1366px){
+@media screen and (max-width: 1367px){
     .searchbar{
         position: absolute;
         margin-left: 66%;
@@ -556,6 +556,12 @@ table tr td{
         border: 2px solid black;
         border-collapse: collapse; 
     }
+
+    .title h2{
+        margin-top: -30px;
+        font-size: 40px;
+        margin-left: 450px;
+    }    
 }
 
 @media screen and (max-width: 1326px){
