@@ -51,10 +51,9 @@ header img{
 }
 
 .title h2{
-    margin: auto;
-    font-size: 40px;
     text-align: center;
-    justify-content: center;
+    font-size: 200%;
+    margin-bottom: 1%;
 }
 
 .backbtn{
@@ -67,11 +66,10 @@ header img{
     border: 2px solid black;
     border-radius: 10px;
 }
+
 .backbtn:hover{
     background: grey;
 }
-
-
 
 /* TABLE */
 table{
@@ -81,7 +79,6 @@ table{
     border: 2px solid black;
     border-collapse: collapse; 
 }
-
 
 .table-number{
     width: 6.5%;
@@ -112,9 +109,8 @@ table tr th{
     border: 2px solid black;
     top: 0px;
     position: sticky;
-    
-    
 }
+
 table tr td{
     height: 50px;
     font-size: 18px;
@@ -128,14 +124,12 @@ table tr td{
 
 .scroll{
     width: 1200px;
-    height: 500px;
     margin: auto;
     overflow-y: scroll;
 }
 
 
 /* TABLE */
-
 .openRelease {
     text-decoration: none;
     color: black;
