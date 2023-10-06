@@ -1,6 +1,6 @@
 <?php
 //connect to table
-$con = mysqli_connect("localhost", "root", "root", "ris_propertyoffice");
+require("databaseConnection.php");
 
 if (isset($_POST['register'])) {
     $accountType = $_POST['account_Type'];
@@ -12,19 +12,19 @@ if (isset($_POST['register'])) {
     $accountPass = $_POST['account_Pass'];
 
     foreach ($depedEmail as $key => $value) {
-        $existingdepedEmailNumQuery = "SELECT COUNT(*) FROM ris_accounts WHERE depedEmail = '" . mysqli_real_escape_string($con, $value) . "'";
-        $existingdepedEmailResult = mysqli_query($con, $existingdepedEmailNumQuery);
+        $existingdepedEmailNumQuery = "SELECT COUNT(*) FROM ris_accounts WHERE depedEmail = '" . mysqli_real_escape_string($conn, $value) . "'";
+        $existingdepedEmailResult = mysqli_query($conn, $existingdepedEmailNumQuery);
         $depedEmailCount = mysqli_fetch_array($existingdepedEmailResult)[0];
 
         if ($depedEmailCount == 0) { // Fix the variable name here
             $insertQuery = "INSERT INTO ris_accounts (accountType, accountName, userPosition, userOffice, centerCode, depedEmail, accountPass) VALUES (
-                '" . mysqli_real_escape_string($con, $accountType[$key]) . "','" . mysqli_real_escape_string($con, $accountName[$key]) . "','" . mysqli_real_escape_string($con, $userPosition[$key]) . "','" . mysqli_real_escape_string($con, $userOffice[$key]) . "','" . mysqli_real_escape_string($con, $centerCode[$key]) . "','" . mysqli_real_escape_string($con, $depedEmail[$key]) . "','" . mysqli_real_escape_string($con, $accountPass[$key]) . "')";
-            $query = mysqli_query($con, $insertQuery);
+                '" . mysqli_real_escape_string($conn, $accountType[$key]) . "','" . mysqli_real_escape_string($conn, $accountName[$key]) . "','" . mysqli_real_escape_string($conn, $userPosition[$key]) . "','" . mysqli_real_escape_string($conn, $userOffice[$key]) . "','" . mysqli_real_escape_string($conn, $centerCode[$key]) . "','" . mysqli_real_escape_string($conn, $depedEmail[$key]) . "','" . mysqli_real_escape_string($conn, $accountPass[$key]) . "')";
+            $query = mysqli_query($conn, $insertQuery);
                 
         }
     }
        
-    mysqli_close($con);
+    mysqli_close($conn);
     header("Location: Accounts_inventory.php");
 }
 

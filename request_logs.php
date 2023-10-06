@@ -1,8 +1,8 @@
 <?php
     session_start();
-    require_once("requestlogs_connection.php");
+    require("databaseConnection.php");
     $query = "select * from request_logs";
-    $result = mysqli_query($con,$query);
+    $result = mysqli_query($conn,$query);
 
 
 ?>
@@ -56,7 +56,7 @@
             <?php
             // Query distinct date values from your database
             $dateQuery = "SELECT DISTINCT formDate FROM request_logs";
-            $dateResult = mysqli_query($con, $dateQuery);
+            $dateResult = mysqli_query($conn, $dateQuery);
 
             while ($dateRow = mysqli_fetch_assoc($dateResult)) {
                 echo '<option value="' . $dateRow["formDate"] . '">' . $dateRow["formDate"] . '</option>';
@@ -70,7 +70,7 @@
             <?php
             // Query distinct date values from your database
             $dateQuery = "SELECT DISTINCT formDate FROM request_logs";
-            $dateResult = mysqli_query($con, $dateQuery);
+            $dateResult = mysqli_query($conn, $dateQuery);
 
             while ($dateRow = mysqli_fetch_assoc($dateResult)) {
                 echo '<option value="' . $dateRow["formDate"] . '">' . $dateRow["formDate"] . '</option>';
@@ -84,7 +84,7 @@
                 <?php
                 // Query the unique item descriptions from your database
                 $itemQuery = "SELECT DISTINCT item_description FROM request_logs ORDER BY item_description ASC";
-                $itemResult = mysqli_query($con, $itemQuery);
+                $itemResult = mysqli_query($conn, $itemQuery);
 
                 while ($itemRow = mysqli_fetch_assoc($itemResult)) {
                     echo '<option value="' . $itemRow["item_description"] . '">' . $itemRow["item_description"] . '</option>';
@@ -99,7 +99,7 @@
                 <?php
                 // Query the unique item descriptions from your database
                 $itemQuery = "SELECT DISTINCT accountName FROM ris_accounts ORDER BY accountName ASC";
-                $itemResult = mysqli_query($con, $itemQuery);
+                $itemResult = mysqli_query($conn, $itemQuery);
 
                 while ($itemRow = mysqli_fetch_assoc($itemResult)) {
                     echo '<option value="' . $itemRow["accountName"] . '">' . $itemRow["accountName"] . '</option>';
@@ -147,7 +147,7 @@
                     <?php
                         
                         $selectQuery = "SELECT * FROM request_logs ORDER BY risNoDate DESC";
-                        $result = mysqli_query($con, $selectQuery);
+                        $result = mysqli_query($conn, $selectQuery);
                         $rowNumber = 1;
                         while($row = mysqli_fetch_assoc($result))
                         {

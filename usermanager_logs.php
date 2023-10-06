@@ -1,8 +1,8 @@
 <?php
     session_start();
-    require_once("usermanager_logsconnection.php");
+    require("databaseConnection.php");
     $query = "select * from usermanager_logs";
-    $result = mysqli_query($con,$query);
+    $result = mysqli_query($conn,$query);
 
 ?>
 
@@ -55,7 +55,7 @@
                 <div class="row2">
                     <?php
                         $selectQuery = "SELECT * FROM usermanager_logs ORDER BY formDate DESC";
-                        $result = mysqli_query($con, $selectQuery);
+                        $result = mysqli_query($conn, $selectQuery);
                         $rowNumber = 1;
                         while($row = mysqli_fetch_assoc($result))
                         {

@@ -1,6 +1,6 @@
 <?php
 //connect to table
-$con = mysqli_connect("localhost", "root", "root", "ris_propertyoffice");
+require("databaseConnection.php");
 
 if (isset($_POST['save'])) {
     $accountType = $_POST['accountType'];
@@ -12,21 +12,21 @@ if (isset($_POST['save'])) {
     $accountPass = $_POST['accountPass'];
 
     foreach ($accountType as $key => $value) {
-        $existingaccountNumQuery = "SELECT COUNT(*) FROM ris_accounts WHERE accountType = '" . mysqli_real_escape_string($con, $value) . "'";
-        $existingaccountkNumResult = mysqli_query($con, $existingaccountNumQuery);
+        $existingaccountNumQuery = "SELECT COUNT(*) FROM ris_accounts WHERE accountType = '" . mysqli_real_escape_string($conn, $value) . "'";
+        $existingaccountkNumResult = mysqli_query($conn, $existingaccountNumQuery);
         $accountNumCount = mysqli_fetch_array($existingaccountNumResult)[0];
 
         if ($accountNumCount == 0) {
             $insertQuery = "INSERT INTO ris_accounts (accountType, accountName, userPosition, userOffice, centerCode, depedEmail, accountPass) VALUES (
-                '" . mysqli_real_escape_string($con, $accountType[$key]) . "','" . mysqli_real_escape_string($con, $accountName[$key]) . "','" . mysqli_real_escape_string($con, $userPosition[$key]) . "','" . mysqli_real_escape_string($con, $userOffice[$key]) . "','" . mysqli_real_escape_string($con, $centerCode[$key]) . "','" . mysqli_real_escape_string($con, $depedEmail[$key]) . "','" . mysqli_real_escape_string($con, $accountPass[$key]) . "')";
-            $query = mysqli_query($con, $insertQuery);
+                '" . mysqli_real_escape_string($conn, $accountType[$key]) . "','" . mysqli_real_escape_string($conn, $accountName[$key]) . "','" . mysqli_real_escape_string($conn, $userPosition[$key]) . "','" . mysqli_real_escape_string($conn, $userOffice[$key]) . "','" . mysqli_real_escape_string($conn, $centerCode[$key]) . "','" . mysqli_real_escape_string($conn, $depedEmail[$key]) . "','" . mysqli_real_escape_string($conn, $accountPass[$key]) . "')";
+            $query = mysqli_query($conn, $insertQuery);
                 
         }
     }
        
     
 
-    mysqli_close($con);
+    mysqli_close($conn);
     header("Location: superadmin_inventory.php");
 }
 ?>

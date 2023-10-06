@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect('localhost', 'root', 'root', 'ris_propertyoffice');
+require("databaseConnection.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userOffice = $_POST["useroffice"];
     $userPosition = $_POST["userposition"];
@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Update the database using the selectedId and other form data
     // You can use a prepared statement for better security
     $sql = "UPDATE ris_accounts SET userOffice = ?, userPosition = ?, centerCode = ? WHERE depedEmail = ?";
-    $stmt = $con->prepare($sql);
+    $stmt = $conn->prepare($sql);
     $stmt->bind_param("ssss", $userOffice, $userPosition, $centerCode, $depedEmail);
     
     if ($stmt->execute()) {
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error updating data: " . $stmt->error;
     }
     
-    mysqli_close($con);
+    mysqli_close($conn);
     header("Location: Accounts_inventory.php");
 }
 ?>

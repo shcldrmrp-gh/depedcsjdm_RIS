@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("queuing system_connection.php");
+require("databaseConnection.php");
 
 // Initialize variables
 $success = false;
@@ -12,7 +12,7 @@ if (isset($_POST['referenceCode'])) {
 
     // Retrieve all rows with the same referenceCode
     $select_sql = "SELECT item_description, quantityInput FROM queue_logs WHERE referenceCode = ?";
-    $stmt_select = mysqli_prepare($con, $select_sql);
+    $stmt_select = mysqli_prepare($conn, $select_sql);
 
     if ($stmt_select) {
         mysqli_stmt_bind_param($stmt_select, "s", $referenceCode);
@@ -26,7 +26,7 @@ if (isset($_POST['referenceCode'])) {
 
                 // Delete data from the queue_logs table
                 $delete_sql = "DELETE FROM queue_logs WHERE referenceCode = ?";
-                $stmt_delete = mysqli_prepare($con, $delete_sql);
+                $stmt_delete = mysqli_prepare($conn, $delete_sql);
 
                 if ($stmt_delete) {
                     mysqli_stmt_bind_param($stmt_delete, "s", $referenceCode);
@@ -35,7 +35,7 @@ if (isset($_POST['referenceCode'])) {
 
                         // Update item_quantity in the inventory table
                         $update_sql = "UPDATE inventory SET item_quantity = item_quantity + ? WHERE item_description = ?";
-                        $stmt_update = mysqli_prepare($con, $update_sql);
+                        $stmt_update = mysqli_prepare($conn, $update_sql);
 
                         if ($stmt_update) {
                             mysqli_stmt_bind_param($stmt_update, "ss", $quantityInput, $item_description);
@@ -69,7 +69,7 @@ if (isset($_POST['referenceCode'])) {
 }
 
 // Close the database connection
-mysqli_close($con);
+mysqli_close($conn);
 
 // Return the response
 $response = [

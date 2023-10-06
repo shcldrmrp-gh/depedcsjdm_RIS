@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once("queuing system_connection.php");
+    require("databaseConnection.php");
     
     
 ?>
@@ -45,7 +45,7 @@
                 <div class="row2">
                     <?php
                         $sql = "SELECT accountName, referenceCode, dateRequested FROM queue_logs";
-                        $result = mysqli_query($con, $sql);
+                        $result = mysqli_query($conn, $sql);
                         $rowNumber = 1;
                         $previousAccountName = null;
                         $previousreferenceCode = null;

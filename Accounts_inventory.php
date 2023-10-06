@@ -3,7 +3,7 @@
 
     require_once("add_accounts&connection_table.php");
     $query = "select * from inventory";
-    $result = mysqli_query($con,$query);
+    $result = mysqli_query($conn,$query);
 
 ?>
 
@@ -79,7 +79,7 @@
                 <div class="row2">
                     <?php
                         $selectQuery = "SELECT * FROM ris_accounts ORDER BY accountName ASC";
-                        $result = mysqli_query($con, $selectQuery);
+                        $result = mysqli_query($conn, $selectQuery);
                         $rowNumber = 1;
                         while($row = mysqli_fetch_assoc($result))
                         {
@@ -160,7 +160,7 @@
             <h2>EDIT ACCOUNT</h2>
             <?php //To connect Dropdown to database
                 $sql = "SELECT depedEmail FROM ris_accounts ORDER BY depedEmail ASC";
-                $result = $con->query($sql);
+                $result = $conn->query($sql);
             ?>
             <select name="selected_email" id="selectedEmail" class="dropdownedit"> 
                 <?php //Dropdownlist
@@ -205,7 +205,7 @@
             <h2>DELETE INVENTORY</h2>
             <?php //To connect Dropdownlist to database
                 $sql = "SELECT depedEmail FROM ris_accounts ORDER BY depedEmail ASC";
-                $result = $con->query($sql);
+                $result = $conn->query($sql);
                 ?>
 
                 <select name="selected_item_delete" class="dropdowndelete"> 

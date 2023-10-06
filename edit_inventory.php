@@ -1,11 +1,6 @@
 <?php
 session_start();
-$con = mysqli_connect('localhost', 'root', 'root', 'ris_propertyoffice');
-
-// Check the connection
-if (!$con) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+require("databaseConnection.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve data from the form
@@ -19,20 +14,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 
     $insert_sql = "SELECT item_description FROM inventory WHERE stock_number = '$stock_number'";
-    $insert_result = mysqli_query($con, $insert_sql);
+    $insert_result = mysqli_query($conn, $insert_sql);
 
     if ($insert_result) {
         $insert_row = mysqli_fetch_assoc($insert_result);
         $item_description = $insert_row["item_description"];
 
             $insertSql = "INSERT INTO usermanager_logs VALUES ('$accountName', '$stock_number','$item_description', '$addQuantity', '$formDate')";
-            if (mysqli_query($con, $insertSql)) {
+            if (mysqli_query($conn, $insertSql)) {
             }    
         } 
     } 
 
     $sql = "SELECT item_quantity FROM inventory WHERE stock_number = '$stock_number'";
-    $result = mysqli_query($con, $sql);
+    $result = mysqli_query($conn, $sql);
 
     if ($result) {
         $row = mysqli_fetch_assoc($result);
@@ -43,8 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Update the quantity in the database
         $updateSql = "UPDATE inventory SET item_quantity = $newQuantity WHERE stock_number = '$stock_number'";
-        if (mysqli_query($con, $updateSql)) {    
-            mysqli_close($con);
+        if (mysqli_query($conn, $updateSql)) {    
+            mysqli_close($conn);
             header("Location: usermanagement.php");
         } 
         

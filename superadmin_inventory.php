@@ -1,8 +1,8 @@
 <?php
     session_start();
-    require_once("superadmin_connecttable.php");
+    require("databaseConnection.php");
     $query = "select * from inventory";
-    $result = mysqli_query($con,$query);
+    $result = mysqli_query($conn,$query);
 
 ?>
 
@@ -72,7 +72,7 @@
                 <div class="row2">
                     <?php
                         $sql = "SELECT * FROM inventory ORDER BY item_description ASC";
-                        $result = mysqli_query($con, $sql);
+                        $result = mysqli_query($conn, $sql);
                         $rowNumber = 1;
                         while($row = mysqli_fetch_assoc($result))
                         {
@@ -96,7 +96,7 @@
             <h2>DELETE INVENTORY</h2>
             <?php //To connect Dropdownlist to database
                 $sql = "SELECT item_description FROM inventory ORDER BY item_description ASC";
-                $result = $con->query($sql);
+                $result = $conn->query($sql);
                 ?>
 
                 <select name="item" class="dropdowndelete"> 

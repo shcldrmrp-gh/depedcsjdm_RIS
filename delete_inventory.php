@@ -1,11 +1,7 @@
 <?php
 // Connect to the database
-$con = mysqli_connect('localhost', 'root', 'root', 'ris_propertyoffice');
+require("databaseConnection.php");
 
-// Check the connection
-if (!$con) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 // Check if the form has been deletion
 if (isset($_POST["delete_item"])) {
     // Get the selected item from the dropdown
@@ -14,8 +10,8 @@ if (isset($_POST["delete_item"])) {
     // Perform the deletion query
     $sql = "DELETE FROM inventory WHERE item_description = '$selectedItem'";
 
-    if (mysqli_query($con, $sql)) {
-        mysqli_close($con);
+    if (mysqli_query($conn, $sql)) {
+        mysqli_close($conn);
         header("Location: usermanagement.php");   
     }                             
 }

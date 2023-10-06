@@ -3,7 +3,7 @@
 
     require_once("add_inventory.php");
     $query = "select * from inventory";
-    $result = mysqli_query($con,$query);
+    $result = mysqli_query($conn,$query);
 
 ?>
 
@@ -96,7 +96,7 @@
             <div class="row2">
                 <?php
                     $sql = "SELECT * FROM inventory ORDER BY item_description ASC";
-                    $result = mysqli_query($con, $sql);
+                    $result = mysqli_query($conn, $sql);
                     $rowNumber = 1;
                     while($row = mysqli_fetch_assoc($result))
                     {
@@ -171,7 +171,7 @@
             <h2>UPDATE QUANTITY</h2>
             <?php //To connect Dropdown to database
                 $sql = "SELECT stock_number, item_description FROM inventory ORDER BY item_description ASC";
-                $result = $con->query($sql);
+                $result = $conn->query($sql);
             ?>
             <select name="selected_item" class="dropdownedit"> 
                 <?php //Dropdownlist
@@ -207,7 +207,7 @@
     <!---FOR ALERT!!---->
     <?php //To connect Dropdownlist to database
                 $sql = "SELECT stock_number, item_description FROM inventory ORDER BY item_description ASC";
-                $result = $con->query($sql);
+                $result = $conn->query($sql);
                 ?>
 
                 <select name="item" class="dropdowndelete"> 
