@@ -233,7 +233,7 @@
     </script>
 
     <!-- AUTO-LOGOUT FUNCTION -->
-    <script>
+   <!--- <script>
         let inactivityTimeout;
 
         function resetInactivityTimer() {
@@ -249,7 +249,7 @@
         }
 
         resetInactivityTimer();
-    </script>
+    </script>--->
 
 
 </body>
