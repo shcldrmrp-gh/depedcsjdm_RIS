@@ -58,11 +58,11 @@
                             if ($currentAccountName !== $previousAccountName || $currentreferenceCode !== $previousreferenceCode) {
                     ?>
                     <tr>
-                        <td><?php echo $rowNumber; ?></td>
-                        <td><?php echo $currentAccountName; ?></td>
-                        <td><?php echo $dateRequested; ?></td>
+                        <td class="rowNumber"><?php echo $rowNumber; ?></td>
+                        <td class="accountName"><?php echo $currentAccountName; ?></td>
+                        <td class="dateRequested"><?php echo $dateRequested; ?></td>
                         <td>
-                        <a href="queuing_release.php?referenceCode=<?php echo $currentreferenceCode; ?>" class="openRelease">Click to Open</a>
+                            <a href="queuing_release.php?referenceCode=<?php echo $currentreferenceCode; ?>" class="openRelease">Click to Open</a>
                         </td>
                 
                     </tr>

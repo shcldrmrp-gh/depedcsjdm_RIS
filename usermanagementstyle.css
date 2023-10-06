@@ -259,7 +259,6 @@ table tr td{
 /* Popup Add Animation*/
 
 .popup{
-
     position: absolute;
     background: #fff;
     height: 270px;
@@ -273,7 +272,6 @@ table tr td{
     transform: translate(-50%, -50%)scale(0.1);
     visibility: hidden;
     transition: transform 0.4s;
-   
 }
 
 .open-popup{
@@ -562,6 +560,12 @@ table tr td{
         font-size: 40px;
         margin-left: 450px;
     }    
+    .sorting{
+        position: absolute;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0px 0px 80%;
+    }
 }
 
 @media screen and (max-width: 1326px){
@@ -943,11 +947,226 @@ table tr td{
         border: 2px solid black;
         font-size: 12px;
     }
+    .popup{
+        position: absolute;
+        background: #fff;
+        height: 270px;
+        width: 350px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    
+    .open-popup{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup h2{
+        text-align: center;
+        font-size: 20px;
+        margin-left: 0px;
+        height: 11%;
+        background-color: #162fa0;
+        color: white;
+        cursor: pointer;
+        width: 350px;
+        
+    }
+    .Item label{
+        position: absolute;
+        margin-left: 15px;
+        margin-top: -10px;
+        
+    }
+    .Item input{
+        position: absolute;
+        margin-left: 150px;
+        margin-top: -10px;
+        border: 2px solid black;
+        margin-bottom: 20px;
+        width: 50%;
+    }
+    
+    
+    .Stock{
+        margin-bottom: 10px;
+    }
+    .Stock label{
+        position: absolute;
+        margin-top: 60px;
+        margin-left: 50px;
+    
+    }
+    .Stock input{
+        position: absolute;
+        margin-top: 60px;
+        border: 2px solid black;
+        margin-left: 150px;
+        width: 50%;
+    }
+    
+    .Unit label{
+        position: absolute;
+        margin-top: 50px;
+        margin-left: 70px;
+        
+    }
+    .Unit .dropdownunit{
+        position: absolute;
+        border: 2px solid black;
+        margin-top: 50px;
+        margin-left: 150px;
+        width: 50%;
+        margin-bottom: 20px;
+        font-size: 15px;
+        
+    }
+    .Quantity label{
+        position: absolute;
+        margin-top: 90px;
+        margin-left: 55px;
+    
+    }
+    .Quantity input{
+        position: absolute;
+        border: 2px solid black;
+        width: 50%;
+        margin-top: 90px;
+        margin-left: 150px
+    
+    }
+    
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        margin: 120px;
+    }
+    
+    .Save{
+        font-size: 15px;
+        margin-left: 0px;
+        width: 50%;
+        height: 25px;
+    
+    }
+    .Close{
+        font-size: 15px;
+        margin-right: -10px;
+        width: 50%;
+        height: 25px;
+    }
+
+
+
+    .popup2{
+        position: absolute;
+        background: #fff;
+        height: 200px;
+        width: 350px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    .open-popup2{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+    /* Popup Edit Animation*/
+    
+    
+    
+    /* Popup Edit Description*/
+    .popup2 h2{
+        text-align: center;
+        font-size: 25px;
+        margin-left: 0px;
+        height: 11%;
+        background-color: #162fa0;
+        color: white;
+        cursor: pointer;
+        width: 350px;
+    }
+    
+    
+    
+    
+    /* Popup Edit Dropdown*/
+    .dropdownedit{
+        width: 250px;
+        height: 40px;
+        position: relative;
+        margin-top: 20px;
+        margin-left: 53px;
+        margin-bottom: 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+        text-align: left;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+    .dropdownedit *{
+        box-sizing: border-box;
+    }
+    
+    /* Popup Edit Dropdown*/
+    
+    
+    
+    .Quantity2 label{
+        margin-left: 80px;
+        font-size: 15px;
+    
+    }
+    
+    .Quantity2 input{
+        border: 2px solid black;
+        width: 20%;
+        margin-left: 7px;
+        font-size: 15px;
+        
+        
+    
+    }
+    
+    .buttons2{
+        display: flex;
+        justify-content: space-between;
+        margin: 100px;
+        margin-top: 20px;
+          
+    }
+    
+    .Save2{
+        font-size: 15px;
+        margin-left: 0px;
+        width: 50%;
+        height: 25px;
+       
+    
+    }
+    .Close2{
+        font-size: 15px;
+        margin-right: -10px;
+        width: 50%;
+        height: 25px;
+       
+    }
+    
 }
-
-
-
-
-
-
 
