@@ -12,10 +12,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="website icon" type="png" href="logo/depedlogo.png">  
+    <link rel="icon" type="png" href="logos/depedcsjdmlogo.png"> 
     <link rel="stylesheet" href="request_logs.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Request Logs Inventory</title>
+    <title>DepEd CSJDM Electronic Requisition and Issue Slip (E-RIS) Form</title>
 </head>
 <body>
     <header>

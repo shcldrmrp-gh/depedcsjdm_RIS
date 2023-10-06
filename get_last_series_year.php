@@ -2,18 +2,7 @@
 session_start();
 
 // Assuming you have a database connection
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "ris_propertyoffice";
-
-// Create a database connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check if the connection is successful
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require("databaseConnection.php");
 
 // Query to get the latest data in the seriesNumber and yearRequested columns
 $sql = "SELECT MAX(seriesNumber) AS lastSeriesNumber, MAX(yearRequested) AS lastYear FROM request_logs";

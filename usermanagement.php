@@ -14,7 +14,7 @@
 <head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DepEd CSJDM Property Office Item Inventory</title>
+    <title>DepEd CSJDM Electronic Requisition and Issue Slip (E-RIS) Form</title>
     <link rel="icon" type="image/x-icon" href="logos/depedcsjdmlogo.png">
     <link rel="stylesheet" href="usermanagementstyle.css?v=<?php echo time(); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">

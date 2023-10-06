@@ -3,14 +3,16 @@
 ?>
 <!DOCTYPE html>
 <html>
-    <title>Forgot Password</title>
     <head>
-        
+        <title>DepEd CSJDM Electronic Requisition and Issue Slip (E-RIS) Form</title>
         <link rel="stylesheet" href="ForgotPassword.css">
+        <link rel="icon" type="png" href="logos/depedcsjdmlogo.png">
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
         <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+        
     </head>
+
     <body>
     <div class="loader" id="loader"></div>
     <div class="box"></div>
