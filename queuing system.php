@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="queuing system.css">
     <link rel="icon" type="png" href="logos/depedcsjdmlogo.png">
-    <title>Queuing System</title>
+    <title>DepEd CSJDM Electronic Requisition and Issue Slip (E-RIS) Form</title>
 </head>
 <body>
     <header>
@@ -29,7 +29,7 @@
         <a href="usermanagement.php" class="backbtn">BACK</a>
     </header>
     <div class="title">
-        <h2>QUEUING SYSTEM</h2>
+        <h2>QUEUEING SYSTEM</h2>
     </div>
     <form action="" method="post">
         <div class="scroll">

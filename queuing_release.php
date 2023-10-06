@@ -24,7 +24,7 @@ require_once("queuing_release_autofillup.php");
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="icon" type="png" href="logos/depedcsjdmlogo.png">
     
-    <title>DepEd CSJDM Requisition and Issue Slip Form</title>
+    <title>DepEd CSJDM Electronic Requisition and Issue Slip (E-RIS) Form</title>
 
 </head>
 
