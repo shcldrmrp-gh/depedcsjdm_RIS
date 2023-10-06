@@ -190,6 +190,7 @@ nav ul{
 .risNoDate{
     width: 50%;
     text-align: center;
+    font-weight: bold;
 }
 
 #signature {
@@ -259,6 +260,8 @@ nav ul{
 
 .releaseDate{
     text-align: center;
+    font-weight: bold;
+    font-size: 12px;
 }
 
 .item_description {

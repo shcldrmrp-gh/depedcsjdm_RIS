@@ -1,10 +1,5 @@
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "root";
-    $dbname = "ris_propertyoffice";
-
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    require("databaseConnection.php");
 
     $sql = "SELECT item_description FROM inventory ORDER BY item_description ASC";
     $result = $conn->query($sql);
