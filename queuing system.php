@@ -18,14 +18,14 @@
     <header>
         <img src="logo/depedlogo.png" alt="">
         <div class="headerTitles">
-        <h3>Republic of the Philippines</h3>
-        <br>
-        <h2>Department of Education</h2>
-        <br>
-        <h3>Region III</h3>
-        <br>
-        <h1>SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</h1>
-    </div>
+            <h3>Republic of the Philippines</h3>
+            <br>
+            <h2>Department of Education</h2>
+            <br>
+            <h3>Region III</h3>
+            <br>
+            <h1>SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</h1>
+        </div>
         <a href="usermanagement.php" class="backbtn">BACK</a>
     </header>
     <div class="title">
@@ -38,12 +38,13 @@
                     <div class="headrow">
                         <th class="table-number">No.</th>
                         <th class="table-name">Name</th>
+                        <th class="table-date">Date Requested</th>
                         <th class="table-button-release">Action</th>
                     </div>
                 </tr>
                 <div class="row2">
                     <?php
-                        $sql = "SELECT accountName,  referenceCode FROM queue_logs";
+                        $sql = "SELECT accountName, referenceCode, dateRequested FROM queue_logs";
                         $result = mysqli_query($con, $sql);
                         $rowNumber = 1;
                         $previousAccountName = null;
@@ -52,12 +53,14 @@
                         while ($row = mysqli_fetch_assoc($result)) {
                             $currentAccountName = $row["accountName"];
                             $currentreferenceCode = $row["referenceCode"];
+                            $dateRequested = $row['dateRequested'];
 
                             if ($currentAccountName !== $previousAccountName || $currentreferenceCode !== $previousreferenceCode) {
                     ?>
                     <tr>
                         <td><?php echo $rowNumber; ?></td>
                         <td><?php echo $currentAccountName; ?></td>
+                        <td><?php echo $dateRequested; ?></td>
                         <td>
                         <a href="queuing_release.php?referenceCode=<?php echo $currentreferenceCode; ?>" class="openRelease">Click to Open</a>
                         </td>
