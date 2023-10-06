@@ -29,14 +29,21 @@ require_once("queuing_release_autofillup.php");
 </head>
 
 <body>
-<header>
+    <header>
         <img src="pictures/deped logo.png" alt="">  
         <a href="queuing system.php" class="backbtn">BACK</a>
-        <h1>Department of Education <br> Region III <br> SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</h1>
     </header>
-    
-    
 
+    <div class="headerTitles">
+        <h3>Republic of the Philippines</h3>
+        <br>
+        <h2>Department of Education</h2>
+        <br>
+        <h3>Region III</h3>
+        <br>
+        <h1>SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</h1>
+    </div>
+    
     <br>
     <br>
     <div id="formContainer">
@@ -48,7 +55,7 @@ require_once("queuing_release_autofillup.php");
 
                 <tr>
                     <div class="formHeader">
-                        <th width="100px"colspan="8">
+                        <th colspan="8">
                             Division of City Schools
                             <br>
                             City of San Jose del Monte
@@ -80,7 +87,7 @@ require_once("queuing_release_autofillup.php");
                         </div>
                         <div class="userOffice">
                             Office: 
-                            <div class="userOfficePHP1">
+                            <div class="userOfficePHP">
                             <?php echo isset($userOffice) ? $userOffice : ''; ?>
                             </div>
                         </div>
@@ -155,7 +162,7 @@ require_once("queuing_release_autofillup.php");
                     
                 
 
-                <tr height="100px">
+                <tr>
                     <th class="purposeSection" colspan="8">
                         <div class="purposeTitle">
                             Purpose:
@@ -167,7 +174,7 @@ require_once("queuing_release_autofillup.php");
                 </tr>
 
                 <tr>
-                    <th colspan="1" height="50px">
+                    <th colspan="1">
                         <div id="signature">
                             Signature
                         </div>
@@ -195,7 +202,7 @@ require_once("queuing_release_autofillup.php");
                     </th>
                 </tr>
 
-                <tr height="20px">
+                <tr>
                     <th colspan="1" class="firstcolumn_Approval">
                         <div class="firstcolumn_Approval">
                             Printed Name
@@ -258,7 +265,9 @@ require_once("queuing_release_autofillup.php");
                         </div>    
                     </th>
                     <th colspan="2">
-                        <?php echo isset($dateRequested) ? $dateRequested : ''; ?>
+                        <div class="dateRequested">
+                            <?php echo isset($dateRequested) ? $dateRequested : ''; ?>
+                        </div>
                     </th>
                     <th colspan="2"></th>
                     <th colspan="2"></th>
@@ -274,9 +283,17 @@ require_once("queuing_release_autofillup.php");
        <br>
        <br>
     </div>
-
-    <button type="submit" class="generatePDF" name="generatePDF" id="generatePDF" onclick="enableReleaseButton()">RELEASE</button>
-    <button type="submit" class="btnCancel" name="btnCancel" id="btnCancel">CANCEL</button>
+    
+    <div class="buttonContainer">
+        <span class="forRelease">
+            <button type="submit" class="generatePDF" name="generatePDF" id="generatePDF" onclick="enableReleaseButton()">RELEASE</button>
+        </span>
+        
+        <span class="forCancel">
+            <button type="submit" class="btnCancel" name="btnCancel" id="btnCancel">CANCEL</button>
+        </span>
+    </div>
+    
     
     <!-- GENERATE PDF FUNCTION -->
     <script src="generatePdf.js"></script>
@@ -288,6 +305,6 @@ require_once("queuing_release_autofillup.php");
     <!-- GET RELEASE DATE -->
     <script src="getCurrentDateForRelease.js"></script>
 
-    <script src="autoLogoutFunction.js"></script>
+    <!--<script src="autoLogoutFunction.js"></script>-->
 </body>
 </html>
