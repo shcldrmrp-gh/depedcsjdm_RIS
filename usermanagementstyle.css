@@ -514,6 +514,13 @@ table tr td{
 
 
 /* RESPONSIVE WEBSITE */
+@media screen and (min-width: 2560px){
+    .searchbar{
+        position: absolute;
+        margin-left: 82%;
+        margin-top: -38px; 
+    }
+}
 @media screen and (max-width: 1440px){
     .queuing{
         position: absolute;
@@ -608,6 +615,38 @@ table tr td{
     }
 }
 
+@media screen and (max-width: 1024px){
+    .searchbar{
+        position: absolute;
+        margin-left: 63%;
+        margin-top: -25px; 
+    }
+    .searchbar input{
+        height: 25px;
+        width: 180px;
+     }
+     nav{
+        float: right;
+        margin-right: 10px;
+        padding-top: 85px ;
+
+    }
+
+    ul li a{
+        display: block;
+        margin: 15px 0px 0px 0px;
+        padding: 12px 15px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+}
+
 @media screen and (max-width: 992px){
     .searchbar{
         position: absolute;
@@ -698,6 +737,7 @@ table tr td{
 
 }
 
+
 @media screen and (max-width: 768px){
     header img{
         margin-top: 5px;
@@ -783,6 +823,7 @@ table tr td{
     }
 }
 
+
 @media screen and (max-width: 600px){
     header img{
         margin-top: 5px;
@@ -857,23 +898,24 @@ table tr td{
     }
 }
 
-@media screen and (max-width: 425px){
+
+@media screen and (max-width: 426px){
     header img{
         margin-top: 5px;
         width: 100px;
     }
     .searchbar{
         position: absolute;
-        margin-left: 90px;
+        margin-left: 5px;
     }
     .title h2{
         margin-top: -30px;
         font-size: 25px;
-        margin-left: 100px;
+        margin-left: 80px;
     }   
     table{
         font-size: 15px;
-        margin-left: 32px;
+        margin-left: 27px;
         width: 90%;
         border: 2px solid black;
         border-collapse: collapse; 
