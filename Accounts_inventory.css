@@ -182,7 +182,7 @@ ul li:hover ul.dropdown{
 /* Popup Add Animation*/
 
 .popup{
-    height: 450px;
+    height: 400px;
     border: 3px solid black;
     border-radius: 10px;
     padding: 20px;
@@ -192,9 +192,10 @@ ul li:hover ul.dropdown{
     position: absolute;
     top: 0;
     left: 50%;
+    display: grid;
     transform: translate(-50%, -50%)scale(0.1);
     visibility: hidden;
-    transition: transform 0.4s, top 0.4s;
+    transition: transform 0.4s;
 }
 
 .open-popup{
@@ -208,8 +209,15 @@ ul li:hover ul.dropdown{
 /* Popup Add Description*/
 
 .popup h2{
+    text-align: center;
     font-size: 25px;
-    margin-left: 160px;
+    margin-left: -20px;
+    margin-top: -20px;
+    padding-top: 10px;
+    width: 540px;
+    background-color: #162fa0;
+    color: white;
+    cursor: pointer;
     
 }
 
@@ -367,7 +375,7 @@ ul li:hover ul.dropdown{
     left: 50%;
     transform: translate(-50%, -50%)scale(0.1);
     visibility: hidden;
-    transition: transform 0.4s, top 0.4s;
+    transition: transform 0.4s;
 }
 .open-popup2{
     visibility: visible;
@@ -380,8 +388,15 @@ ul li:hover ul.dropdown{
 
 /* Popup Edit Description*/
 .popup2 h2{
+    text-align: center;
     font-size: 25px;
-    margin-left: 160px;
+    margin-left: 0px;
+    margin-top: 0px;
+    height: 40px;
+    width: 500px;
+    background-color: #162fa0;
+    color: white;
+    cursor: pointer;
     
 }
 
@@ -475,7 +490,7 @@ ul li:hover ul.dropdown{
 }
 
 .Save2{
-    font-size: 20px;
+    font-size: 15px;
     height: 30px;
     width: 70px;
     margin-left: 40px;
@@ -484,7 +499,7 @@ ul li:hover ul.dropdown{
 
 }
 .Close2{
-    font-size: 20px;
+    font-size: 15px;
     height: 30px;
     width: 70px;
     margin-right: 20px;
@@ -510,7 +525,7 @@ ul li:hover ul.dropdown{
     left: 50%;
     transform: translate(-50%, -50%)scale(0.1);
     visibility: hidden;
-    transition: transform 0.4s, top 0.4s;
+    transition: transform 0.4s;
 }
 .open-popup3{
     visibility: visible;
@@ -524,9 +539,15 @@ ul li:hover ul.dropdown{
 
 /* Delete Drescription*/
 .popup3 h2{
+    text-align: center;
     font-size: 25px;
-    margin-left: 120px;
-    margin-top: 20px;
+    margin-left: 0px;
+    margin-top: 0px;
+    height: 40px;
+    width: 500px;
+    background-color: #162fa0;
+    color: white;
+    cursor: pointer;
 }
 .buttons3{
     display: flex;
