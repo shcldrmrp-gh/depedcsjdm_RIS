@@ -14,8 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="usermanager_logs.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="website icon" type="png" href="logo/depedlogo.png">
-    <title>User Manager Logs</title>
+    <link rel="icon" type="png" href="logos/depedcsjdmlogo.png">
+    <title>DepEd CSJDM Electronic Requisition and Issue Slip (E-RIS) Form</title>
 </head>
 <body>
     <header>
