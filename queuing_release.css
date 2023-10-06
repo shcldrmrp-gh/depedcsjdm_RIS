@@ -95,7 +95,7 @@ h3{
 
 
 .stock_unit {
-    width: 60px;
+    width: 5.5%;
     text-align: center;
     font-family: "Bookman Old Style";
     font-weight: bold;
@@ -103,8 +103,8 @@ h3{
 
 .quantityInput {
     text-align: center;
-    font-family: "Bookman Old Style";
     font-weight: bold;
+    width: 7%;
 }
 
 .quantityInputUser {
@@ -112,16 +112,12 @@ h3{
     text-align: center;
 }
 
-.quantityTitle {
-    width: 10px;
-}
-
 .yesInputCheck {
-    width: 10px;
+    width: 2%;
 }
 
 .noInputCheck {
-    width: 10px;
+    width: 2%;
 }
 
 #endUserHeaderLogo {
@@ -223,7 +219,6 @@ nav ul{
 .approvedByName {
     text-align: center;
     font-size: 12px;
-    width: 150px;
 }
 
 .issuedByName {
@@ -279,7 +274,7 @@ nav ul{
     font-size: 17px;
     font-weight: bold;
     text-align: center;
-    width: 550px;
+    width: 10000px;
 }
 
 .accountName{
