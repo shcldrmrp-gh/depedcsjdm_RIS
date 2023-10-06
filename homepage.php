@@ -18,7 +18,7 @@
   <body>
     <div class="login_form">
       <div class="wrapper">
-        <div class="title"><span>Requisition and Issue Slip <br> <div class="title_two">Login</div></span></div>
+        <div class="title"><span>E-Requisition and Issue Slip <br> <div class="title_two">Login</div></span></div>
         <form name="form" action="login.php" method="POST">
           <div class="row">
             <i class="fas fa-user"></i>
