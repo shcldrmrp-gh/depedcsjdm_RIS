@@ -8,14 +8,31 @@ $errors = array();
 
 // Function to get the last series number from the database
 function getLastSeriesNumber($conn) {
-    $sql = "SELECT MAX(seriesNumber) AS lastSeriesNumber FROM request_logs";
+    $currentYear = date("Y");
+
+    // Query to get the latest data in the seriesNumber and yearRequested columns
+    $sql = "SELECT timeStamp, seriesNumber, yearRequested FROM request_logs ORDER BY timeStamp DESC LIMIT 1";
+        
     $result = $conn->query($sql);
-    
+        
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        return intval($row["lastSeriesNumber"]);
+        $lastTimeStamp = $row['timeStamp'];
+        $lastSeriesNumber = $row["seriesNumber"];
+        $lastYear = $row["yearRequested"];
+        
+        // Check if the last year in the database is the same as the current year
+        if ($lastYear == $currentYear) {
+            // If it's the same year, increment the seriesNumber
+            $lastSeriesNumber++;
+        } else {
+            // If it's a different year, reset the seriesNumber to 1
+            $lastSeriesNumber = 1;
+        }
+        return intval($lastSeriesNumber);
     } else {
-        return 0; // If no data is available, return 0
+        $lastSeriesNumber = 1;
+        return intval($lastSeriesNumber);
     }
 }
 
@@ -26,8 +43,7 @@ if (isset($_POST['btnRelease'])) {
 
     // Increment the seriesNumber only once per request
     $lastSeriesNumber = getLastSeriesNumber($conn);
-    $nextSeriesNumber = $lastSeriesNumber + 1;
-    $formattedSeriesNumber = str_pad($nextSeriesNumber, 6, '0', STR_PAD_LEFT);
+    $formattedSeriesNumber = str_pad($lastSeriesNumber, 6, '0', STR_PAD_LEFT);
 
     // Retrieve data from the queue_logs table for the specific reference code
     $selectSql = "SELECT * FROM queue_logs WHERE referenceCode = '$referenceCode'";

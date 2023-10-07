@@ -10,7 +10,9 @@ async function getCurrentYear() {
             const yearInput = document.querySelector('.yearRequested');
             yearInput.value = currentYear;
         } else {
-            console.error('Failed to fetch year data from World Time API.');
+            alert("Failed to fetch current year. You will be logged out. Please sync your device's time through settings.");
+            // Redirect the user to logout.php
+            window.location.href = 'logout.php';
         }
     } catch (error) {
         console.error('Error:', error);

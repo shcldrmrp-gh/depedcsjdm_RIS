@@ -160,7 +160,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     // Fetch the last series number and year from the server
     $.ajax({
-        url: 'get_last_series_year.php', // Create this PHP file to fetch the last series number and year
+        url: 'get_last_series_year.php',
         method: 'GET',
         success: function(response) {
             const data = JSON.parse(response);
@@ -168,10 +168,10 @@ $(document).ready(function() {
             let lastYear = parseInt(data.lastYear);
 
             if (isNaN(lastSeriesNumber)) {
-                lastSeriesNumber = 0; // If no data is available, start from 0
+                lastSeriesNumber = 0;
             }
             if (isNaN(lastYear)) {
-                lastYear = 0; // If no data is available, set to 0
+                lastYear = 0;
             }
 
             // Get the year and month from worldtimeapi
@@ -184,10 +184,10 @@ $(document).ready(function() {
                     const month = (onlineDate.getUTCMonth() + 1).toString().padStart(2, '0');
 
                     if (lastYear !== currentYear) {
-                        lastSeriesNumber = 1; // Reset the series number to 1
+                        lastSeriesNumber = 1; // Reset the series number to 1 for a new year
                         lastYear = currentYear; // Update the last year
-                    } else if (lastYear === currentYear){
-                        lastSeriesNumber++;
+                    } else {
+                        lastSeriesNumber++; // Increment the series number within the same year
                     }
 
                     // Format the series number
@@ -209,3 +209,4 @@ $(document).ready(function() {
         }
     });
 });
+
