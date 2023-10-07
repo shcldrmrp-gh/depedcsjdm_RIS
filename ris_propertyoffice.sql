@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2023 at 05:14 PM
+-- Generation Time: Oct 07, 2023 at 03:52 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -39,27 +39,26 @@ CREATE TABLE `inventory` (
 --
 
 INSERT INTO `inventory` (`item_description`, `stock_number`, `stock_unit`, `item_quantity`) VALUES
-('Chloride Powder', 'OS 255', 'piece', 72),
-('Mouse Pad', 'OS 290', 'piece', 74),
-('Battery D Alkaline', 'OS 156', 'piece', 10),
-('Photo Paper', 'OS 146', 'piece', 88),
-('BROOM, soft (tambo)', 'OS 202', 'piece', 37),
-('EPSON, INK CART, (001) Black', 'OS 238', 'bottle', 83),
-('AIR FRESHENER, aerosol, 280ml/150g min', 'OS 154', 'can', 245),
-('CALCULATOR, compact, 12 digits', 'OS 054', 'unit', 62),
-('ENVELOPE, EXPANDING legal size doc', 'OS 117', 'piece', 91),
-('Extension Cord', 'OS 092', 'piece', 95),
-('Frame A4 Size', 'OS 271', 'piece', 93),
-('PAPER, MULTICOPY, 80gsm, size: A4', 'OS 033', 'Reams', 87),
-('NOTE PAD, stick on, (2in x 3in) min', 'OS 317', 'Book', 82),
-('MOUSE, WIRELESS, USB', 'OS 370', 'Unit', 99),
-('Manila Paper', 'OS 292', 'Piece', 71),
-('MARKER, PERMANENT,blue', 'OS 213', 'Piece', 87),
-('MOPHANDLE, heavy duty, aluminum, screw type', 'OS 361', 'Book', 78),
-('Gestener toner MP2014', 'OS 232', 'Piece', 99),
-('Liquid Hand Soap with Pump', 'OS 228', 'Book', 81),
-('Keyboard', 'OS 299', 'Piece', 0),
-('Ring Binder 1/4', 'OS 642', 'Piece', 75);
+('Chloride Powder', 'OS 255', 'piece', 65),
+('Mouse Pad', 'OS 290', 'piece', 62),
+('Battery D Alkaline', 'OS 156', 'piece', 30),
+('Photo Paper', 'OS 146', 'piece', 79),
+('BROOM, soft (tambo)', 'OS 202', 'piece', 32),
+('EPSON, INK CART, (001) Black', 'OS 238', 'bottle', 75),
+('AIR FRESHENER, aerosol, 280ml/150g min', 'OS 154', 'can', 230),
+('CALCULATOR, compact, 12 digits', 'OS 054', 'unit', 70),
+('ENVELOPE, EXPANDING legal size doc', 'OS 117', 'piece', 84),
+('Extension Cord', 'OS 092', 'piece', 90),
+('Frame A4 Size', 'OS 271', 'piece', 85),
+('PAPER, MULTICOPY, 80gsm, size: A4', 'OS 033', 'Reams', 85),
+('NOTE PAD, stick on, (2in x 3in) min', 'OS 317', 'Book', 79),
+('MOUSE, WIRELESS, USB', 'OS 370', 'Unit', 93),
+('Manila Paper', 'OS 292', 'Piece', 58),
+('MARKER, PERMANENT,blue', 'OS 213', 'Piece', 83),
+('MOPHANDLE, heavy duty, aluminum, screw type', 'OS 361', 'Book', 80),
+('Gestener toner MP2014', 'OS 232', 'Piece', 96),
+('Liquid Hand Soap with Pump', 'OS 228', 'Book', 73),
+('Ring Binder 1/4', 'OS 642', 'Piece', 70);
 
 -- --------------------------------------------------------
 
@@ -82,25 +81,6 @@ CREATE TABLE `queue_logs` (
   `dateRequested` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `queue_logs`
---
-
-INSERT INTO `queue_logs` (`referenceCode`, `yearRequested`, `accountName`, `userPosition`, `centerCode`, `userOffice`, `stock_number`, `item_description`, `stock_unit`, `quantityInput`, `purpose`, `dateRequested`) VALUES
-(112000, 2023, 'Mark Austin B. Condalor', 'Intern (ICT Services)', 'I3', 'Information Communication Technology', 'OS 156', 'Battery D Alkaline', 'piece', 5, '8 05test', '10/03/2023'),
-(414908, 2023, 'Janette Sta. Maria', 'ADAS III', 'S2', 'Schools Division Superintendent', 'OS 290', 'Mouse Pad', 'piece', 3, 'test', '10/03/2023'),
-(603530, 2023, 'Emilio G. Bernardo Jr.', 'Admin Aide IV - Driver', 'S5', 'Schools Division Superintendent', 'OS 146', 'Photo Paper', 'piece', 2, 'for office supply', '10/03/2023'),
-(603530, 2023, 'Emilio G. Bernardo Jr.', 'Admin Aide IV - Driver', 'S5', 'Schools Division Superintendent', 'OS 271', 'Frame A4 Size', 'piece', 3, 'for office supply', '10/03/2023'),
-(114205, 2023, 'Jayson Fuller', 'ICT-AAI', 'I2', 'Information Communication Technology', 'OS 228', 'Liquid Hand Soap with Pump', 'Book', 2, 'for office use', '10/03/2023'),
-(114205, 2023, 'Jayson Fuller', 'ICT-AAI', 'I2', 'Information Communication Technology', 'OS 290', 'Mouse Pad', 'piece', 2, 'for office use', '10/03/2023'),
-(379271, 2023, 'Rowena R. Perez', 'AO I', 'PAY2', 'Payroll', 'OS 292', 'Manila Paper', 'Piece', 2, 'for seminar tomorrow', '10/03/2023'),
-(736964, 2023, 'Jaime T. Tugade PhD, CESE', 'Assistant Schools Division Superintendent', 'A1', 'Assistant Schools Division Superintendent', 'OS 117', 'ENVELOPE, EXPANDING legal size doc', 'piece', 2, 'for office use', '10/03/2023'),
-(949038, 2023, 'Gina E. Cape', 'ADAS II', 'AC13', 'Accounting', 'OS 054', 'CALCULATOR, compact, 12 digits', 'unit', 2, 'for office use', '10/03/2023'),
-(771012, 2023, 'Lalaine Bartolome', 'ADAS II', 'B2', 'Budget', 'OS 092', 'Extension Cord', 'piece', 2, 'for office use, new computer set', '10/03/2023'),
-(237207, 2023, 'John Mark A. Manguisi', 'Admin Aide I', 'P4', 'Property and Supply', 'OS 238', 'EPSON, INK CART, (001) Black', 'bottle', 2, 'for printer, new ink', '10/03/2023'),
-(472106, 2023, 'Margie M. Duro', 'PDO I', 'SGOD16', 'School Governance and Operations Division', 'OS 213', 'MARKER, PERMANENT,blue', 'Piece', 2, 'for seminar on monday', '10/03/2023'),
-(299567, 2023, 'Mary Lalaine Rachel T. Manguisi', 'Admin Aide I', 'P3', 'Property and Supply', 'OS 255', 'Chloride Powder', 'piece', 2, 'cleaning supply', '10/03/2023');
-
 -- --------------------------------------------------------
 
 --
@@ -111,6 +91,7 @@ CREATE TABLE `request_logs` (
   `risNoDate` text NOT NULL,
   `yearRequested` int(4) NOT NULL,
   `seriesNumber` int(255) NOT NULL,
+  `timeStamp` datetime NOT NULL DEFAULT current_timestamp(),
   `accountName` varchar(50) NOT NULL,
   `centerCode` varchar(50) NOT NULL,
   `userOffice` varchar(50) NOT NULL,
@@ -121,79 +102,6 @@ CREATE TABLE `request_logs` (
   `formDate` text NOT NULL,
   `releaseDate` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `request_logs`
---
-
-INSERT INTO `request_logs` (`risNoDate`, `yearRequested`, `seriesNumber`, `accountName`, `centerCode`, `userOffice`, `stock_number`, `item_description`, `stock_unit`, `quantityInput`, `formDate`, `releaseDate`) VALUES
-('2023-09-000001', 0, 1, 'Arthur F. Francisco', '', 'Information and Communication Technology', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 13, '09/19/2023', ''),
-('2023-09-000001', 0, 1, 'Arthur F. Francisco', '', 'Information and Communication Technology', 'OS 370', 'MOUSE, WIRELESS, USB', 'Unit', 7, '09/19/2023', ''),
-('2023-09-000001', 0, 1, 'Arthur F. Francisco', '', 'Information and Communication Technology', 'OS 228', 'Liquid Hand Soap with Pump', 'Book', 10, '09/19/2023', ''),
-('2023-09-000002', 0, 2, 'Ericson S. Sabacan, EdD, CESO V', '', 'Schools Division Superintendent', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 5, '09/19/2023', ''),
-('2023-09-000002', 0, 2, 'Ericson S. Sabacan, EdD, CESO V', '', 'Schools Division Superintendent', 'OS 271', 'Frame A4 Size', 'piece', 2, '09/19/2023', ''),
-('2023-09-000002', 0, 2, 'Ericson S. Sabacan, EdD, CESO V', '', 'Schools Division Superintendent', 'OS 125', 'Toner MP2000LE', 'piece', 3, '09/19/2023', ''),
-('2023-09-000003', 0, 3, 'Ericson S. Sabacan, EdD, CESO V', '', 'Schools Division Superintendent', 'OS 156', 'Battery D Alkaline', 'piece', 3, '09/19/2023', ''),
-('2023-09-000004', 0, 4, 'Ericson S. Sabacan, EdD, CESO V', '', 'Schools Division Superintendent', 'OS 156', 'Battery D Alkaline', 'piece', 3, '09/20/2023', ''),
-('2023-09-000004', 0, 4, 'Ericson S. Sabacan, EdD, CESO V', '', 'Schools Division Superintendent', 'OS 271', 'Frame A4 Size', 'piece', 2, '09/20/2023', ''),
-('2023-09-000005', 0, 5, 'Ivan Policarpio', '', 'Information and Communication Technology', 'OS 361', 'MOPHANDLE, heavy duty, aluminum, screw type', 'Book', 5, '09/20/2023', ''),
-('2023-09-000005', 0, 5, 'Ivan Policarpio', '', 'Information and Communication Technology', 'OS 317', 'NOTE PAD, stick on, (2in x 3in) min', 'Book', 2, '09/20/2023', ''),
-('2023-09-000006', 0, 6, 'Arthur F. Francisco', '', 'Information and Communication Technology', 'OS 228', 'Liquid Hand Soap with Pump', 'Book', 5, '09/20/2023', ''),
-('2023-09-000006', 0, 6, 'Arthur F. Francisco', '', 'Information and Communication Technology', 'OS 125', 'Toner MP2000LE', 'piece', 3, '09/20/2023', ''),
-('2023-09-000008', 0, 8, 'Marlon P. Daclis', '', 'Curriculum Implementation Division', 'OS 125', 'Toner MP2000LE', 'piece', 5, '09/20/2023', ''),
-('2023-09-000009', 0, 9, 'Jaime T. Tugade PhD, CESE', '', 'Assistant Schools Division Superintendent', 'OS 033', 'PAPER, MULTICOPY, 80gsm, size: A4', 'Reams', 3, '09/20/2023', ''),
-('2023-09-000010', 0, 10, 'Ma. Jima T. Cadiz', '', 'General Services', 'OS 202', 'BROOM, soft (tambo)', 'piece', 5, '09/20/2023', ''),
-('2023-09-000011', 0, 11, 'Ericson S. Sabacan, EdD, CESO V', '', 'Schools Division Superintendent', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 3, '09/20/2023', ''),
-('2023-09-000011', 0, 11, 'Ericson S. Sabacan, EdD, CESO V', '', 'Schools Division Superintendent', 'OS 054', 'CALCULATOR, compact, 12 digits', 'unit', 3, '09/20/2023', ''),
-('2023-09-000012', 0, 12, 'Ericson S. Sabacan, EdD, CESO V', '', 'Schools Division Superintendent', 'OS 156', 'Battery D Alkaline', 'piece', 4, '09/20/2023', ''),
-('2023-09-000013', 0, 13, 'Ericson S. Sabacan, EdD, CESO V', '', 'Schools Division Superintendent', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 5, '09/20/2023', ''),
-('2023-09-000013', 0, 13, 'Ericson S. Sabacan, EdD, CESO V', '', 'Schools Division Superintendent', 'OS 156', 'Battery D Alkaline', 'piece', 5, '09/20/2023', ''),
-('2023-09-000014', 0, 14, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 361', 'MOPHANDLE, heavy duty, aluminum, screw type', 'Book', 3, '09/21/2023', ''),
-('2023-09-000014', 0, 14, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 156', 'Battery D Alkaline', 'piece', 3, '09/21/2023', ''),
-('2023-09-000014', 0, 14, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 317', 'NOTE PAD, stick on, (2in x 3in) min', 'Book', 2, '09/21/2023', ''),
-('2023-09-000015', 0, 15, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 5, '09/21/2023', ''),
-('2023-09-000016', 0, 16, 'Jomel V. Policarpio', 'AC4', 'Accounting', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 3, '09/21/2023', ''),
-('2023-09-000016', 0, 16, 'Jomel V. Policarpio', 'AC4', 'Accounting', 'OS 117', 'ENVELOPE, EXPANDING legal size doc', 'piece', 4, '09/21/2023', ''),
-('2023-09-000017', 0, 17, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 156', 'Battery D Alkaline', 'piece', 3, '09/21/2023', ''),
-('2023-09-000017', 0, 17, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 054', 'CALCULATOR, compact, 12 digits', 'unit', 5, '09/21/2023', ''),
-('2023-09-000017', 0, 17, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 292', 'Manila Paper', 'Piece', 4, '09/21/2023', ''),
-('2023-09-000018', 0, 18, 'Yancy B. Razon', 'B4', 'Budget', 'OS 156', 'Battery D Alkaline', 'piece', 3, '09/21/2023', ''),
-('2023-09-000018', 0, 18, 'Yancy B. Razon', 'B4', 'Budget', 'OS 202', 'BROOM, soft (tambo)', 'piece', 4, '09/21/2023', ''),
-('2023-09-000019', 0, 19, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 4, '09/21/2023', ''),
-('2023-09-000019', 0, 19, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 202', 'BROOM, soft (tambo)', 'piece', 2, '09/21/2023', ''),
-('2023-09-000020', 0, 20, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 361', 'MOPHANDLE, heavy duty, aluminum, screw type', 'Book', 3, '09/21/2023', ''),
-('2023-09-000021', 0, 21, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 146', 'Photo Paper', 'piece', 3, '09/21/2023', ''),
-('2023-09-000022', 0, 22, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 033', 'PAPER, MULTICOPY, 80gsm, size: A4', 'Reams', 2, '09/21/2023', ''),
-('2023-09-000023', 0, 23, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 292', 'Manila Paper', 'Piece', 5, '09/21/2023', ''),
-('2023-09-000024', 0, 24, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 370', 'MOUSE, WIRELESS, USB', 'Unit', 2, '09/21/2023', ''),
-('2023-09-000025', 0, 25, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 642', 'Ring Binder 1/4', 'Piece', 3, '09/21/2023', ''),
-('2023-09-000026', 0, 26, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 299', 'Keyboard', 'Piece', 4, '09/21/2023', ''),
-('2023-09-000027', 0, 27, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 054', 'CALCULATOR, compact, 12 digits', 'unit', 4, '09/21/2023', ''),
-('2023-09-000028', 0, 28, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 317', 'NOTE PAD, stick on, (2in x 3in) min', 'Book', 4, '09/21/2023', ''),
-('2023-09-000029', 0, 29, 'Maxima L. Biglangawa', 'AC15', 'Accounting', 'OS 370', 'MOUSE, WIRELESS, USB', 'Unit', 4, '09/21/2023', ''),
-('2023-09-000030', 0, 30, 'Maxima L. Biglangawa', 'AC15', 'Accounting', 'OS 292', 'Manila Paper', 'Piece', 5, '09/21/2023', ''),
-('2023-09-000031', 2023, 31, 'Imelda Bijasa', 'AC6', 'Accounting', 'OS 317', 'NOTE PAD, stick on, (2in x 3in) min', 'Book', 5, '09/21/2023', ''),
-('2023-09-000032', 2023, 32, 'Imelda Bijasa', 'AC6', 'Accounting', 'OS 290', 'Mouse Pad', 'piece', 5, '09/21/2023', ''),
-('2023-09-000033', 2023, 33, 'Kaila R. Diaz', 'A3', 'Assistant Schools Division Superintendent', 'OS 361', 'MOPHANDLE, heavy duty, aluminum, screw type', 'Book', 3, '09/21/2023', ''),
-('2023-09-000033', 2023, 33, 'Kaila R. Diaz', 'A3', 'Assistant Schools Division Superintendent', 'OS 228', 'Liquid Hand Soap with Pump', 'Book', 2, '09/21/2023', ''),
-('2023-09-000033', 2023, 33, 'Kaila R. Diaz', 'A3', 'Assistant Schools Division Superintendent', 'OS 033', 'PAPER, MULTICOPY, 80gsm, size: A4', 'Reams', 3, '09/21/2023', ''),
-('2023-09-000034', 2023, 34, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 4, '09/22/2023', ''),
-('2023-09-000035', 2023, 35, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 255', 'Chloride Power', 'piece', 5, '09/25/2023', ''),
-('2023-09-000036', 2023, 36, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 255', 'Chloride Power', 'piece', 5, '09/25/2023', ''),
-('2023-09-000037', 2023, 37, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 255', 'Chloride Power', 'piece', 5, '09/25/2023', ''),
-('2023-09-000038', 2023, 38, 'Ericson S. Sabacan, EdD, CESO V', 'S1', 'Schools Division Superintendent', 'OS 299', 'Keyboard', 'Piece', 5, '09/25/2023', ''),
-('2023-10-000039', 2023, 39, 'Margie M. Duro', 'SGOD16', 'School Governance and Operations Division', 'OS 213', 'MARKER, PERMANENT,blue', 'Piece', 1, '10/03/2023', ''),
-('2023-10-000039', 2023, 39, 'Margie M. Duro', 'SGOD16', 'School Governance and Operations Division', 'OS 156', 'Battery D Alkaline', 'piece', 1, '10/03/2023', ''),
-('2023-10-000039', 2023, 39, 'Margie M. Duro', 'SGOD16', 'School Governance and Operations Division', 'OS 146', 'Photo Paper', 'piece', 1, '10/03/2023', ''),
-('2023-10-000040', 2023, 40, 'Mark Austin B. Condalor', 'I3', 'Information Communication Technology', 'OS 202', 'BROOM, soft (tambo)', 'piece', 2, '', ''),
-('2023-10-000041', 2023, 41, 'Mark Austin B. Condalor', 'I3', 'Information Communication Technology', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 1, '10/02/2023', ''),
-('2023-10-000041', 2023, 41, 'Mark Austin B. Condalor', 'I3', 'Information Communication Technology', 'OS 156', 'Battery D Alkaline', 'piece', 1, '10/02/2023', ''),
-('2023-10-000042', 0, 42, 'Jomel V. Policarpio', 'AC4', 'Accounting', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 1, '09/27/2023', ''),
-('2023-10-000042', 0, 42, 'Jomel V. Policarpio', 'AC4', 'Accounting', 'OS 156', 'Battery D Alkaline', 'piece', 1, '09/27/2023', ''),
-('2023-10-000043', 2023, 43, 'Mark Austin B. Condalor', 'I3', 'Information Communication Technology', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 5, '10/03/2023', ''),
-('2023-10-000043', 2023, 43, 'Mark Austin B. Condalor', 'I3', 'Information Communication Technology', 'OS 156', 'Battery D Alkaline', 'piece', 1, '10/03/2023', ''),
-('2023-10-000044', 2023, 44, 'Mark Austin B. Condalor', 'I3', 'Information Communication Technology', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 5, '10/03/2023', ''),
-('2023-10-000045', 2023, 45, 'Mark Austin B. Condalor', 'I3', 'Information Communication Technology', 'OS 238', 'EPSON, INK CART, (001) Black', 'bottle', 5, '10/03/2023', '10/03/2023');
 
 -- --------------------------------------------------------
 
@@ -255,14 +163,15 @@ INSERT INTO `ris_accounts` (`accountType`, `accountName`, `userPosition`, `userO
 ('End User', 'Glaiza P. Alejandro', 'ADAS III', 'Payroll', 'PAY4', 'glaiza.alejandro@deped.gov.ph', '1234'),
 ('End User', 'Mariz DR. Daluz', 'ADAS III', 'Payroll', 'PAY5', 'mariz.daluz@deped.gov.ph', '1234'),
 ('Super Admin', 'Super Admin', 'Super Admin', 'Super Admin', 'Super Admin', 'sa.erisformsystem@gmail.com', 'superAdminOnly'),
-('User Manager', 'User Manager', 'User Manager', 'User Manager', 'User Manager', 'um.erisformsystem@gmail.com', '1234'),
+('User Manager', 'User Manager', 'User Manager', 'User Manager', 'User Manager', 'um.erisformsystem@gmail.com', 'userManagerOnly'),
 ('End User', 'Arthur F. Francisco', 'ITO-I', 'Information Communication Technology', 'I1', 'arthur.francisco@deped.gov.ph', '1234'),
 ('End User', 'Jayson Fuller', 'ICT-AAI', 'Information Communication Technology', 'I2', 'jayson.fuller@deped.gov.ph', '1234'),
 ('End User', 'Merlita D. Ynciong', 'SEP SOC. MOB.', 'School Governance and Operations Division', 'SGOD7', 'merlita.ynciong@deped.gov.ph', '1234'),
 ('End User', 'Margie M. Duro', 'PDO I', 'School Governance and Operations Division', 'SGOD16', 'margie.duro@deped.gov.ph', '1234'),
 ('End User', 'Marlon P. Daclis', 'EPS I - English', 'Curriculum Implementation Division', 'CID6', 'marlon.daclis@deped.gov.ph', '1234'),
 ('End User', 'Mark Austin B. Condalor', 'Intern (ICT Services)', 'Information Communication Technology', 'I3', 'alex091301@gmail.com', '1234'),
-('End User', 'End User', 'End User', 'End User', 'End User', 'eu.erisformsystem@gmail.com', 'endUserOnly');
+('End User', 'End User', 'End User', 'End User', 'End User', 'eu.erisformsystem@gmail.com', '1234'),
+('End User', 'Angelo Y. Capa', 'OJT (Intern)', 'Information Communication Technology', 'I4', 'angelo.capa@deped.gov.ph', '1234');
 
 -- --------------------------------------------------------
 
@@ -283,10 +192,8 @@ CREATE TABLE `usermanager_logs` (
 --
 
 INSERT INTO `usermanager_logs` (`accountName`, `stock_number`, `item_description`, `add_quantity`, `formDate`) VALUES
-('Charlemagne Reporen', 'OS 255', 'Chloride Power', 5, '09/19/2023'),
-('Charlemagne Reporen', 'OS 290', 'Mouse Pad', 5, '09/20/2023'),
-('John Mark A. Manguisi', 'OS 370', 'MOUSE, WIRELESS, USB', 13, '09/20/2023'),
-('Jhon Artin Victoriano', 'OS 156', 'Battery D Alkaline', 50, '09/21/2023');
+('Mary Lalaine Rachel T. Manguisi', 'OS 054', 'CALCULATOR, compact, 12 digits', 8, '10/06/2023'),
+('Mary Lalaine Rachel T. Manguisi', 'OS 361', 'MOPHANDLE, heavy duty, aluminum, screw type', 3, '10/06/2023');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
