@@ -29,7 +29,7 @@
         <a href="usermanagement.php" class="backbtn">BACK</a>
     </header>
     <div class="title">
-        <h2>QUEUEING SYSTEM</h2>
+        <h2>QUEUE LOGS</h2>
     </div>
     <form action="" method="post">
         <div class="scroll">
