@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $purpose = $_POST['purpose'];
     $referenceCode = rand(100000, 999999);
     $finalReferenceCode = $referenceCode;
-    $yearRequested = intval($_POST['yearRequested']);
+    $yearRequested = intval(date("Y"));
 
     $success = true;
     $errorMessage = "";
