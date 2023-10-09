@@ -59,16 +59,16 @@
     
     <div class="select">
         <h4>Filter:</h4>
-        <label for="filterFrom">Date From:</label>
+        <label for="filterFrom">Date Release From:</label>
         <select id="filterFrom" onchange="filterTable()">
             <option value="">All</option>
             <?php
             // Query distinct date values from your database
-            $dateQuery = "SELECT DISTINCT formDate FROM request_logs";
+            $dateQuery = "SELECT DISTINCT releaseDate FROM request_logs";
             $dateResult = mysqli_query($conn, $dateQuery);
 
             while ($dateRow = mysqli_fetch_assoc($dateResult)) {
-                echo '<option value="' . $dateRow["formDate"] . '">' . $dateRow["formDate"] . '</option>';
+                echo '<option value="' . $dateRow["releaseDate"] . '">' . $dateRow["releaseDate"] . '</option>';
             }
             ?>
         </select>
@@ -78,11 +78,11 @@
             <option value="">All</option>
             <?php
             // Query distinct date values from your database
-            $dateQuery = "SELECT DISTINCT formDate FROM request_logs";
+            $dateQuery = "SELECT DISTINCT releaseDate FROM request_logs";
             $dateResult = mysqli_query($conn, $dateQuery);
 
             while ($dateRow = mysqli_fetch_assoc($dateResult)) {
-                echo '<option value="' . $dateRow["formDate"] . '">' . $dateRow["formDate"] . '</option>';
+                echo '<option value="' . $dateRow["releaseDate"] . '">' . $dateRow["releaseDate"] . '</option>';
             }
             ?>
         </select>

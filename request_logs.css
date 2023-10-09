@@ -157,8 +157,8 @@ ol li a i{
 
 ol li:hover a{
     background: #162fa0;
-    color: #00eaff;
-    letter-spacing: 3px;
+    color: grey;
+    letter-spacing: 1.5px;
 }
 
 .menu_checkbox{
@@ -227,16 +227,23 @@ h2{
     margin-left: 10px;
     font-size: 18px;
 }
+
 .select label{
     margin: 0px 0px 0px 5px;
 }
+
 .select select{
     border: 2px solid black;
-}
-.select_item{
-    margin: 0px 0px 0px 30px;
+    cursor: pointer;
 }
 
+.select_item{
+    margin: 0px 0px 0px 20px;
+}
+
+.select_name{
+    margin: 0px 0px 0px 20px;
+}
 .total-quantity{
     position: absolute;
     margin: 450px 0px 0px 70%;
@@ -246,17 +253,21 @@ h2{
     font-size: 15px;
 }
 .sorting{
-    margin-left: 130px;
+    margin-left: 180px;
 }
 /* TABLE */
 table{
-    
     font-size: 20px;
     width: 100%;
     border: 2px solid black;
     border-collapse: collapse; 
-    
-    
+}
+table tr:nth-child(even) {
+    background-color: lightgray; 
+}
+
+ table tr:nth-child(odd) {
+    background-color: #ffffff; 
 }
 
 .RIS-number{
@@ -337,6 +348,7 @@ table{
 table tr {
     text-align: left;
     border: 2px solid black;
+    height: 40px;
 }
 
 
@@ -355,7 +367,7 @@ table tr td{
     margin-left: 10px;
     font-size: 18px;
     border: 2px solid black;
-    
+    line-height: 20px;
     
 }
 

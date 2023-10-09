@@ -16,6 +16,8 @@
     <link rel="icon" type="png" href="logos/depedcsjdmlogo.png">
     <link rel="stylesheet" href="Accounts_inventory.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 <body>
     <header>
@@ -89,8 +91,8 @@
                         $result = mysqli_query($conn, $selectQuery);
                         $rowNumber = 1;
                         while($row = mysqli_fetch_assoc($result))
-                        {
-                    ?>
+                        {          
+                    ?>  
                         <td class="tableNo"><?php echo $rowNumber;?></td>
                         <td class ="align-account-type"><?php echo $row["accountType"];?></td>
                         <td class="align-account-name"><?php echo $row["accountName"];?></td>
@@ -103,9 +105,11 @@
             </tr>
                     <?php
                         $rowNumber++;
+
                         }
                     ?>
                 </div>
+                
         </table>
     </div>
     <!-----Add Propmpt------->
@@ -184,11 +188,11 @@
             </select>
 
             <div class="User_Office">
-                <label>User Office:</label>
+                <label for="useroffice">Office:</label>
                 <input type="text" name="useroffice" id="userOffice">
             </div>
             <div class="User_Position">
-                <label>User Position:</label>
+                <label>Position:</label>
                 <input type="text" name="userposition" id="userPosition">
             </div>
             <div class="Center_Code">
@@ -239,5 +243,6 @@
     <script src="Accounts_inventory.js"></script>
     <script src="disableBackButton.js"></script>
     <script src="autoLogoutFunction.js"></script>
+   
 </body>
 </html>

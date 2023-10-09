@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
-
 *{
     margin: 0;
     padding: 0;
@@ -24,7 +22,7 @@ header img{
 
 .searchbar{
     position: absolute;
-    margin-left: 70%;
+    margin-left: 68%;
     margin-top: -38px; 
 }
 
@@ -49,11 +47,20 @@ header img{
 nav{
     float: right;
     margin-right: 20px;
-    padding-top: 85px ;
-    
-    
+    padding-top: 85px;
 }
+
+
 /*  UPDATE  */
+.update{
+    margin-right: 20px;
+    width: 100%;
+}
+
+.update ul li a{
+    text-align: center;
+}
+
 ul{
     list-style: none;
     
@@ -66,11 +73,12 @@ ul li{
 }
 ul li a{
     display: block;
-    margin: 5px 10px 0px 0px;
+    margin: 5px 0px 0px 0px;
     padding: 15px 25px;
     color: white;
     text-decoration: none;
     text-align: center;
+    font-size: 13px;
     outline: 2px solid black;
     box-shadow: 2px darkblue;
     border-radius: 5px;
@@ -93,9 +101,20 @@ ul li a:hover{
 ul li:hover ul.dropdown{
     display:block;
 }
+/*  UPDATE  END*/
+
+
 
 
 /* SETTINGS  */
+.settings1{
+    margin-right: 20px;
+    width: 100%;
+}
+
+.settings1 ul li a{
+    text-align: center;
+}
 ul{
     list-style: none;
     
@@ -136,7 +155,6 @@ ul li:hover ul.settings{
     display:block;
 }
 /* NAV DROPDOWN LIST*/
-
 
 .headerTitles{
     margin-top: 0;
@@ -302,12 +320,12 @@ table tr td{
 .Item label{
     position: absolute;
     margin-left: 20px;
-    margin-top: -10px;
+    margin-top: 20px;
 }
 .Item input{
     position: absolute;
     margin-left: 150px;
-    margin-top: -10px;
+    margin-top: 20px;
     border: 2px solid black;
     margin-bottom: 20px;
     width: 50%;
@@ -319,13 +337,13 @@ table tr td{
 }
 .Stock label{
     position: absolute;
-    margin-top: 60px;
+    margin-top: 40px;
     margin-left: 50px;
 
 }
 .Stock input{
     position: absolute;
-    margin-top: 60px;
+    margin-top: 40px;
     border: 2px solid black;
     margin-left: 150px;
     width: 50%;
@@ -365,19 +383,20 @@ table tr td{
 .buttons{
     display: flex;
     justify-content: space-between;
-    margin: 120px;
+    margin: 135px;
 }
 
 .Save{
     margin-left: 50px;
     width: 25%;
     height: 30px;
-
+    cursor: pointer;
 }
 .Close{
     margin-right: 30px;
     width: 25%;
     height: 30px;
+    cursor: pointer;
 }
 
 
@@ -444,7 +463,7 @@ table tr td{
     border: 2px solid black;
     border-radius: 5px;
     text-align: left;
-    font-size: 20px;
+    font-size: 15px;
     cursor: pointer;
 }
 
@@ -466,7 +485,7 @@ table tr td{
     border: 2px solid black;
     width: 15%;
     margin-left: 7px;
-    font-size: 20px;
+    font-size: 15px;
     
     
 
@@ -481,21 +500,23 @@ table tr td{
 }
 
 .Save2{
-    font-size: 20px;
+    font-size: 15px;
     height: 30px;
     width: 70px;
     margin-left: 40px;
     width: 25%;
     height: 30px;
+    cursor: pointer;
 
 }
 .Close2{
-    font-size: 20px;
+    font-size: 15px;
     height: 30px;
     width: 70px;
     margin-right: 20px;
     width: 25%;
     height: 30px;
+    cursor: pointer;
 }
 /* Popup Edit Description*/
 
@@ -536,7 +557,7 @@ table tr td{
     }
     .searchbar{
         position: absolute;
-        margin-left: 67%;
+        margin-left: 66%;
         margin-top: -38px; 
     }
 }

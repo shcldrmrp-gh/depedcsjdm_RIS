@@ -117,8 +117,8 @@ ol li a i{
 
 ol li:hover a{
     background: #162fa0;
-    color: #00eaff;
-    letter-spacing: 3px;
+    color: grey;
+    letter-spacing: 1.5px;
 }
 
 .menu_checkbox{
@@ -185,8 +185,8 @@ table{
 }
 
 .align-item-description{
-    text-align: center;
-    
+    text-align: left;
+    padding: 0px 0px 0px 10px;
 }
 
 .added-quantity{
@@ -219,6 +219,7 @@ table{
 table tr {
     text-align: left;
     border: 2px solid black;
+    height: 40px;
 }
 
 
@@ -237,7 +238,7 @@ table tr td{
     margin-left: 10px;
     font-size: 18px;
     border: 2px solid black;
-    
+    line-height: 20px;
     
 }
 

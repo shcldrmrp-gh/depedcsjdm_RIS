@@ -94,7 +94,7 @@ h2{
     left: 50%;
     transform: translate(-50%, -50%)scale(0.1);
     visibility: hidden;
-    transition: transform 0.4s, top 0.4s;
+    transition: transform 0.4s;
 }
 .open-popup3{
     visibility: visible;
@@ -105,9 +105,15 @@ h2{
 
 /* Delete Drescription*/
 .popup3 h2{
+    text-align: center;
     font-size: 25px;
-    margin-left: 120px;
-    margin-top: 20px;
+    margin-left: 0px;
+    height: 15%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #162fa0;
+    color: white;
+    cursor: pointer;
 }
 .buttons3{
     display: flex;
@@ -115,8 +121,9 @@ h2{
 }
 .Delete{
     font-size: 20px;
-    width: 90px;
+    width: 100px;
     height: 50px;
+    border-radius: 15px;
     margin-top: 20px;
     margin-left: 210px;
     background: white;
@@ -133,6 +140,7 @@ h2{
     width: 70px;
     margin-top: 70px;
     margin-right: 30px;
+    cursor: pointer;
 }
 
 
@@ -140,16 +148,15 @@ h2{
 
 /* Delete Dropdownlist*/
 .dropdowndelete{
-    width: 400px;
+    width: 350px;
     height: 50px;
     position: relative;
     margin-top: 10px;
-    margin-left: 50px;
+    margin-left: 16%;
     margin-bottom: 20px;
     border: 2px solid black;
     border-radius: 5px;
-    text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     cursor: pointer;
 }
 
@@ -245,7 +252,7 @@ ol li a i{
 ol li:hover a{
     background: #162fa0;
     color: grey;
-    letter-spacing: 3px;
+    letter-spacing: 1.5px;
 }
 
 
@@ -317,10 +324,10 @@ table{
     font-size: 20px;
     margin-left: 180px;
     width: 87%;
-   
     border: 2px solid black;
     border-collapse: collapse; 
 }
+
 
 
 .table-number{

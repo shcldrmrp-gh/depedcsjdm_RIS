@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="superadmin_inventory.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="table2excel.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
+
 </head>
 <body>
     <header>
@@ -24,7 +27,7 @@
             <input type="text" id="searchInput" placeholder="Search Item Description...." oninput="searchTable()">
         </div>
         <button type="button" class="convertbtn" name="convert_excel" id="convert_excel"  onclick="exportTableToExcel('table')">Convert To Excel</button>  
-        <button type="button" class="deletebtn" name="delete_item" onclick="openDelete()">DELETE</button>  
+        <button type="button" class="deletebtn" name="delete_item1" onclick="openDelete()">DELETE</button>  
     </header>
 
     <div class="headerTitles">
@@ -122,9 +125,10 @@
                     ?>
                 </select>
                 <div class="buttons3">
-                    <button type="submit" class="Delete" name="delete_item">DELETE</button>
+                    <button type="submit" class="Delete" name="delete_item" id="delete_item">DELETE</button>
                     <button type="button" class="Close3" onclick="closeDelete()">Close</button>
                 </div>
+                
         </form>   
     </div>
     <!-----Delete Prompt------->

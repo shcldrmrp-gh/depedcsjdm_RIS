@@ -70,6 +70,45 @@ function closeDelete(){
     popup3.classList.remove("open-popup3");
 }
 //Delete Popup animation END//
+// Draggable Div Element for add inventory
+const popup1 = document.querySelector(".popup3");
+const h2 = popup1.querySelector("h2");
+let isDragging = false;
+let initialX, initialY;
+
+function onDragStart(e) {
+    isDragging = true;
+    initialX = e.clientX;
+    initialY = e.clientY;
+}
+
+function onDrag(e) {
+    if (!isDragging) return;
+
+    const deltaX = e.clientX - initialX;
+    const deltaY = e.clientY - initialY;
+    initialX = e.clientX;
+    initialY = e.clientY;
+
+    let getStyle = window.getComputedStyle(popup3);
+    let left = parseInt(getStyle.left);
+    let top = parseInt(getStyle.top);
+
+    const newLeft = left + deltaX;
+    const newTop = top + deltaY;
+
+    popup3.style.left = `${newLeft}px`;
+    popup3.style.top = `${newTop}px`;
+}
+
+function onDragEnd() {
+    isDragging = false;
+}
+
+h2.addEventListener("mousedown", onDragStart);
+document.addEventListener("mousemove", onDrag);
+document.addEventListener("mouseup", onDragEnd);
+// Draggable Div Element END
 
 
 // Function for sorting

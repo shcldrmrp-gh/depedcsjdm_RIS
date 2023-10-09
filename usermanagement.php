@@ -37,20 +37,24 @@
         <nav>
             <ul>
                 <li>
-                    <a href="#">UPDATE</a>
-                    <ul class="dropdown">
-                        <li><a href="#" onclick="openAdd()">Inventory</a></li>
-                        <li><a href="#" onclick="openEdit()">Quantity</a></li>
-                    </ul>
+                    <div class="update">
+                        <a href="#">UPDATE</a>
+                        <ul class="dropdown">
+                            <li><a href="#" onclick="openAdd()">INVENTORY</a></li>
+                            <li><a href="#" onclick="openEdit()">QUANTITY</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li>
-                    <a href="#">SETTINGS</a>
-                    <ul class="settings">
-                        <li><a href="queuing system.php">QUEUING</a></li>
-                        <li><a href="admin_risform.php">RIS FORM</a></li>
-                        <li><a href="changePasswordForm.php">CHANGE PASSWORD</a></li>
-                        <li><a href="logout.php">LOGOUT</a></li>
-                    </ul>
+                    <div class="settings1">
+                        <a href="#">SETTINGS</a>
+                        <ul class="settings">
+                            <li><a href="queuing system.php">QUEUING</a></li>
+                            <li><a href="admin_risform.php">RIS FORM</a></li>
+                            <li><a href="changePasswordForm.php">CHANGE PASSWORD</a></li>
+                            <li><a href="logout.php">LOGOUT</a></li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -121,13 +125,13 @@
     <div class="popup" id="popup">
         <form class="insert_form" id="insert_form" method="post" action="" onsubmit="return validateForm();">
             <h2>UPDATE INVENTORY</h2> 
+            <div class="Item">
+                <label for="item_description">Item Description:</label>
+                <input type="text" name="item_description[]" required><br>
+            </div>
             <div class="Stock">
                 <label>Stock No.:</label>
                 <input type="text" name="stock_number[]" required><br>
-            </div>
-            <div class="Item">
-                <label>Item Description:</label>
-                <input type="text" name="item_description[]" required><br>
             </div>
             <div class="Unit">
                 <label>Unit:</label>

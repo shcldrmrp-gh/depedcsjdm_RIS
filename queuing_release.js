@@ -49,7 +49,3 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-function enableReleaseButton() {
-    // Remove the 'disabled' attribute from the RELEASE button
-    document.getElementById("btnRelease").removeAttribute("disabled");
-  }

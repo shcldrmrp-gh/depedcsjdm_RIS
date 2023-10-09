@@ -83,7 +83,7 @@ function filterTable() {
     var rows = table.getElementsByTagName("tr");
 
     for (var i = 1; i < rows.length; i++) { // Start from 1 to skip the header row
-        var formDateCell = rows[i].querySelector(".align-form-date");
+        var formDateCell = rows[i].querySelector(".align-release-date");
         if (!formDateCell) continue; // Skip rows without the cell
 
         var formDate = formDateCell.textContent;
@@ -217,4 +217,17 @@ function sortTable() {
 
 
 
+// COLOR ALTERNATING FUNCTION
+function applyAlternateRowColors() {
+    $('tbody tr:visible:odd').css('background-color', 'lightgrey');
+    $('tbody tr:visible:even').css('background-color', 'white');
+  }
+  // Initial application of alternate row colors
+  applyAlternateRowColors();
 
+  // Event listener for the search input
+  $('#searchInput').on('input', function () {
+    // Reapply alternate row colors after filtering
+    applyAlternateRowColors();
+  });
+  

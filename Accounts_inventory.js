@@ -18,6 +18,7 @@ function searchTable() {
             }
         }
     }
+    
 }
 // Function for Search Bar END//
 
@@ -243,7 +244,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// COLOR ALTERNATING FUNCTION
+function applyAlternateRowColors() {
+    $('tbody tr:visible:odd').css('background-color', 'lightgrey');
+    $('tbody tr:visible:even').css('background-color', 'white');
+  }
+  // Initial application of alternate row colors
+  applyAlternateRowColors();
 
+  // Event listener for the search input
+  $('#searchInput').on('input', function () {
+    // Reapply alternate row colors after filtering
+    applyAlternateRowColors();
+  });
+  
 
 
 
