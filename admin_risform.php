@@ -32,7 +32,7 @@
         <img src="pictures/deped logo.png" alt="">  
         <nav>
             <ul>
-                <li><a href="https://drive.google.com/file/d/1FWGsxirhae-hqoREOf2w79bnjvN4JlAu/view?usp=sharing">CERT. OF NON-AVAILABILITY</a></li>
+                <li><a href="https://drive.google.com/file/d/1FWGsxirhae-hqoREOf2w79bnjvN4JlAu/view?usp=sharing">CNAS</a></li>
                 <li><a href="javascript:history.back()">BACK</a></li>
             </ul>
             <br>

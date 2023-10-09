@@ -104,8 +104,9 @@
     <div class="popup3" id="popup3">
         <form method="POST" action="superadmin_deleteinventory.php">
             <h2>DELETE INVENTORY</h2>
-            <?php //To connect Dropdownlist to database
-                $sql = "SELECT item_description FROM inventory ORDER BY item_description ASC";
+            <?php //To connect Dropdownlist to database, delete only items not on queue logs
+                $sql = "SELECT i.item_description FROM inventory i LEFT JOIN queue_logs q ON i.item_description = q.item_description WHERE q.item_description IS NULL ORDER BY i.item_description ASC";
+
                 $result = $conn->query($sql);
                 ?>
 
