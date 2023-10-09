@@ -39,8 +39,8 @@
                 <li>
                     <a href="#">UPDATE</a>
                     <ul class="dropdown">
-                        <li><a href="#" onclick="openAdd()">Update Inventory</a></li>
-                        <li><a href="#" onclick="openEdit()">Update Quantity</a></li>
+                        <li><a href="#" onclick="openAdd()">Inventory</a></li>
+                        <li><a href="#" onclick="openEdit()">Quantity</a></li>
                     </ul>
                 </li>
                 <li>
