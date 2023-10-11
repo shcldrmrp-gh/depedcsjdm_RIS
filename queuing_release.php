@@ -30,7 +30,7 @@ require_once("queuing_release_autofillup.php");
 
 <body>
     <header>
-        <img src="pictures/deped logo.png" alt="">  
+        <img src="logo/depedlogo.png" alt="">  
         <a href="queuing system.php" class="backbtn">BACK</a>
     </header>
 

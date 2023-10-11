@@ -28,7 +28,7 @@
 <body>
 
     <header>
-        <img src="pictures/deped logo.png" alt="">
+        <img src="logo/depedlogo.png" alt="">
         <div class="searchbar">
             <input type="text" id="searchInput" placeholder="Search Item Description...." oninput="searchTable()">
              
