@@ -49,9 +49,6 @@
     <h1>SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</h1>
 </div>
 
-
-<!--<h1>Republic of the Philippines <br>Department of Education <br> Region III <br> <b>SCHOOLS DIVISION OF CITY OF SAN JOSE DEL MONTE</b></h1>-->
-
 <br>
 <br>
     <div id="formContainer">
@@ -59,7 +56,6 @@
             <table id="forRIS1" border="1">
                 <input type="hidden" name="yearRequested" class="yearRequested">
                 <script src="getCurrentYear.js"></script>
-
                 <tr>
                     <div class="formHeader">
                         <th colspan="8">
@@ -130,7 +126,7 @@
                     <th class="issuedRemarks">Remarks</th>
                 </tr>
                 
-                <tr colspan="8">
+                <tr class="movable-row" colspan="8">
                     <th colspan="1" class="stock_number">
                         <input class="stock_number" name="stock_number[]" type="text" readonly>
                     </th>
@@ -156,7 +152,7 @@
                     <th class="issuedRemarks"></th>
                 </tr>
                 
-                <tr colspan="8">
+                <tr class="movable-row" colspan="8">
                     <th colspan="1" class="stock_number">
                         <input class="stock_number" name="stock_number[]" type="text" readonly>
                     </th>
@@ -182,7 +178,7 @@
                     <th class="issuedRemarks"></th>
                 </tr>
 
-                <tr colspan="8">
+                <tr class="movable-row" colspan="8">
                     <th colspan="1" class="stock_number">
                         <input class="stock_number" name="stock_number[]" type="text" readonly>
                     </th>
@@ -208,7 +204,7 @@
                     <th class="issuedRemarks"></th>
                 </tr>
 
-                <tr colspan="8">
+                <tr class="movable-row" colspan="8">
                     <th colspan="1" class="stock_number">
                         <input class="stock_number" name="stock_number[]" type="text" readonly>
                     </th>
@@ -234,7 +230,7 @@
                     <th class="issuedRemarks"></th>
                 </tr>
 
-                <tr colspan="8">
+                <tr class="movable-row" colspan="8">
                     <th colspan="1" class="stock_number">
                         <input class="stock_number" name="stock_number[]" type="text" readonly>
                     </th>
@@ -260,7 +256,7 @@
                     <th class="issuedRemarks"></th>
                 </tr>
 
-                <tr colspan="8">
+                <tr class="movable-row" colspan="8">
                     <th colspan="1" class="stock_number">
                         <input class="stock_number" name="stock_number[]" type="text" readonly>
                     </th>
@@ -286,7 +282,7 @@
                     <th class="issuedRemarks"></th>
                 </tr>
 
-                <tr colspan="8">
+                <tr class="movable-row" colspan="8">
                     <th colspan="1" class="stock_number">
                         <input class="stock_number" name="stock_number[]" type="text" readonly>
                     </th>
@@ -312,7 +308,7 @@
                     <th class="issuedRemarks"></th>
                 </tr>
 
-                <tr colspan="8">
+                <tr class="movable-row" colspan="8">
                     <th colspan="1" class="stock_number">
                         <input class="stock_number" name="stock_number[]" type="text" readonly>
                     </th>
@@ -338,7 +334,7 @@
                     <th class="issuedRemarks"></th>
                 </tr>
 
-                <tr colspan="8">
+                <tr class="movable-row" colspan="8">
                     <th colspan="1" class="stock_number">
                         <input class="stock_number stockNumberInput" name="stock_number[]" type="text" readonly>
                     </th>
@@ -364,7 +360,7 @@
                     <th class="issuedRemarks"></th>
                 </tr>
 
-                <tr colspan="8">
+                <tr class="movable-row" colspan="8">
                     <th colspan="1" class="stock_number">
                         <input class="stock_number" name="stock_number[]" type="text" readonly>
                     </th>
@@ -522,6 +518,35 @@
             </div>
         </form>
     </div>
+
+    <!--FOR POP-UP-->
+    <div class="successPopup" id="successPopup">
+        <img src="logo/success.png">
+        <h2>SUCCESS!</h2>
+        <p>Your request is now submitted to Property and Supply unit for queueing.</p>
+        <button onclick="closeSuccessPopup()" type="button">CLOSE</button>
+    </div>
+    <script>
+        let successPopup = document.getElementById("successPopup");
+
+        document.addEventListener("DOMContentLoaded", function () {
+            <?php
+                if (isset($_SESSION['displaySuccessPopup']) && $_SESSION['displaySuccessPopup']) {
+                    echo "openSuccessPopup();";
+                    // Reset the session variable to avoid displaying the popup on subsequent page loads
+                    unset($_SESSION['displaySuccessPopup']);
+                }
+            ?>
+        });
+        
+        function openSuccessPopup(){
+            successPopup.classList.add("openSuccessPopup");
+        }
+        function closeSuccessPopup(){
+            successPopup.classList.remove("openSuccessPopup");
+        }
+    </script>
+    <!--FOR POP-UP-->
 
     <!-- GET CURRENT FORMATTED DATE -->
     <script src="getCurrentDate.js"></script>

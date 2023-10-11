@@ -1,5 +1,4 @@
 <?php
-
 include("login.php");
 require("databaseConnection.php");
 
@@ -25,30 +24,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Start a transaction
     $conn->begin_transaction();
 
+    $quantityIndex = 0; // Index for tracking the quantities
+
     for ($i = 0; $i < count($item_descriptions); $i++) {
-        // Check if the array key exists before accessing it
         $item_description = isset($item_descriptions[$i]) ? $item_descriptions[$i] : '';
         $stockNumber = isset($stockNumbers[$i]) ? $stockNumbers[$i] : '';
         $stockUnit = isset($stockUnits[$i]) ? $stockUnits[$i] : '';
-        $quantity = isset($quantities[$i]) ? $quantities[$i] : '';
 
-        // Check if the item_description is not empty and not equal to "noValue"
         if (!empty($item_description) && $item_description !== 'noValue') {
-            // Insert data into the queue logs
-            $insert_sql = "INSERT INTO queue_logs VALUES ('$finalReferenceCode', '$yearRequested', '$accountName', '$userPosition', '$centerCode', '$userOffice', '$stockNumber', '$item_description', '$stockUnit', '$quantity', '$purpose', '$formDate')";
+            // Quantity to be used
+            $quantity = isset($quantities[$quantityIndex]) ? $quantities[$quantityIndex] : 0;
 
-            if (!$conn->query($insert_sql)) {
+            // Increase the quantity index only when an item is processed
+            $quantityIndex++;
+
+            // Insert data into the queue logs
+            $insert_sql = "INSERT INTO queue_logs (referenceCode, yearRequested, accountName, userPosition, centerCode, userOffice, stock_number, item_description, stock_unit, quantityInput, purpose, dateRequested) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            $stmt = $conn->prepare($insert_sql);
+            $stmt->bind_param('sisssssssiss', $finalReferenceCode, $yearRequested, $accountName, $userPosition, $centerCode, $userOffice, $stockNumber, $item_description, $stockUnit, $quantity, $purpose, $formDate);
+
+            if (!$stmt->execute()) {
                 $success = false;
-                $errorMessage = "Error inserting data into queue logs: " . $conn->error;
+                $errorMessage = "Error inserting data into queue logs: " . $stmt->error;
                 break; // Exit the loop on error
             }
 
             // Update item_quantity in the inventory table
-            $update_sql = "UPDATE inventory SET item_quantity = item_quantity - $quantity WHERE item_description = '$item_description'";
+            $update_sql = "UPDATE inventory SET item_quantity = item_quantity - ? WHERE item_description = ?";
+            $stmt = $conn->prepare($update_sql);
+            $stmt->bind_param('is', $quantity, $item_description);
 
-            if (!$conn->query($update_sql)) {
+            if (!$stmt->execute()) {
                 $success = false;
-                $errorMessage = "Error updating item_quantity in inventory: " . $conn->error;
+                $errorMessage = "Error updating item_quantity in inventory: " . $stmt->error;
                 break; // Exit the loop on error
             }
         }
@@ -57,11 +65,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Commit or rollback the transaction
     if ($success) {
         $conn->commit();
-        echo json_encode(array("success" => true));
+        // Redirect back to the referring page
+        $_SESSION['displaySuccessPopup'] = true;
+        header("Location: " . $_SERVER["HTTP_REFERER"]);
     } else {
         $conn->rollback();
-        echo json_encode(array("success" => false, "message" => $errorMessage));
+        // Redirect back to the referring page with an error message
+        header("Location: " . $_SERVER["HTTP_REFERER"] . "?error=" . urlencode($errorMessage));
     }
+    
+    exit();
 
     $conn->close();
 }

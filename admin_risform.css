@@ -37,7 +37,7 @@ h1{
     z-index: 998;
 }
 
-h2{
+.headerTitles h2{
     font-size: 120%;
     color: white;
     position: absolute;
@@ -67,6 +67,7 @@ h3{
     max-width: 50%;
     border: solid;
     z-index: 999;
+    padding-top: -5%;
 }
 
 .risFORM{
@@ -75,6 +76,7 @@ h3{
 }
 
 .stock_number {
+
     width: 80px;
     text-align: center;
     font-family: "Bookman Old Style";
@@ -129,16 +131,16 @@ nav ul{
 }
 
 .entityDeped {
-    margin-bottom: -17.5px;
-    margin-left: -800px;
+    margin-bottom: -2%;
+    margin-right: 80%;
 }
 
 .fundCluster {
-    margin-right: -770px;
+    margin-left: 77%;
 }
 
 .cityDivision {
-    margin-left: -895px;
+    margin-right: 89.7%;
 }
 
 .locationDivision {
@@ -147,8 +149,8 @@ nav ul{
 }
 
 .userOffice {
-    margin-bottom: -17.5px;
-    margin-left: -915px;
+    margin-bottom: -2%;
+    margin-left: -91.7%;
 }
 
 .userOfficePHP {
@@ -158,7 +160,7 @@ nav ul{
 
 .centerCode {
     margin-top: -18px;
-    margin-right: -650px;
+    margin-right: -61.7%;
 }
 
 .centerCodePHP {
@@ -167,7 +169,7 @@ nav ul{
 }
 
 .risNo {
-    margin-left: 710px;
+margin-left: 68%;
 }
 
 
@@ -327,3 +329,51 @@ ul li:hover ul.dropdown{
 }
 
 /* NAV DROPDOWN LIST*/
+
+.successPopup{
+    width: 400px;
+    background: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.openSuccessPopup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.successPopup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.successPopup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.successPopup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: white;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
