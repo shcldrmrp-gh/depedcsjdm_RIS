@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2023 at 03:52 PM
+-- Generation Time: Oct 11, 2023 at 08:04 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -39,26 +39,23 @@ CREATE TABLE `inventory` (
 --
 
 INSERT INTO `inventory` (`item_description`, `stock_number`, `stock_unit`, `item_quantity`) VALUES
-('Chloride Powder', 'OS 255', 'piece', 65),
-('Mouse Pad', 'OS 290', 'piece', 62),
-('Battery D Alkaline', 'OS 156', 'piece', 30),
-('Photo Paper', 'OS 146', 'piece', 79),
-('BROOM, soft (tambo)', 'OS 202', 'piece', 32),
-('EPSON, INK CART, (001) Black', 'OS 238', 'bottle', 75),
-('AIR FRESHENER, aerosol, 280ml/150g min', 'OS 154', 'can', 230),
-('CALCULATOR, compact, 12 digits', 'OS 054', 'unit', 70),
-('ENVELOPE, EXPANDING legal size doc', 'OS 117', 'piece', 84),
-('Extension Cord', 'OS 092', 'piece', 90),
-('Frame A4 Size', 'OS 271', 'piece', 85),
-('PAPER, MULTICOPY, 80gsm, size: A4', 'OS 033', 'Reams', 85),
-('NOTE PAD, stick on, (2in x 3in) min', 'OS 317', 'Book', 79),
-('MOUSE, WIRELESS, USB', 'OS 370', 'Unit', 93),
-('Manila Paper', 'OS 292', 'Piece', 58),
-('MARKER, PERMANENT,blue', 'OS 213', 'Piece', 83),
-('MOPHANDLE, heavy duty, aluminum, screw type', 'OS 361', 'Book', 80),
-('Gestener toner MP2014', 'OS 232', 'Piece', 96),
-('Liquid Hand Soap with Pump', 'OS 228', 'Book', 73),
-('Ring Binder 1/4', 'OS 642', 'Piece', 70);
+('Chloride Powder', 'OS 255', 'piece', 55),
+('Mouse Pad', 'OS 290', 'piece', 51),
+('Battery D Alkaline', 'OS 156', 'piece', 16),
+('Photo Paper', 'OS 146', 'piece', 59),
+('BROOM, soft (tambo)', 'OS 202', 'piece', 15),
+('EPSON, INK CART, (001) Black', 'OS 238', 'bottle', 69),
+('AIR FRESHENER, aerosol, 280ml/150g min', 'OS 154', 'can', 200),
+('CALCULATOR, compact, 12 digits', 'OS 054', 'unit', 50),
+('ENVELOPE, EXPANDING legal size doc', 'OS 117', 'piece', 72),
+('Frame A4 Size', 'OS 271', 'piece', 80),
+('PAPER, MULTICOPY, 80gsm, size: A4', 'OS 033', 'Reams', 68),
+('NOTE PAD, stick on, (2in x 3in) min', 'OS 317', 'Book', 74),
+('MOUSE, WIRELESS, USB', 'OS 370', 'Unit', 77),
+('Manila Paper', 'OS 292', 'Piece', 55),
+('MOPHANDLE, heavy duty, aluminum, screw type', 'OS 361', 'Book', 78),
+('Gestener toner MP2014', 'OS 232', 'Piece', 90),
+('Ring Binder 1/4', 'OS 642', 'Piece', 58);
 
 -- --------------------------------------------------------
 
@@ -80,6 +77,45 @@ CREATE TABLE `queue_logs` (
   `purpose` text NOT NULL,
   `dateRequested` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `queue_logs`
+--
+
+INSERT INTO `queue_logs` (`referenceCode`, `yearRequested`, `accountName`, `userPosition`, `centerCode`, `userOffice`, `stock_number`, `item_description`, `stock_unit`, `quantityInput`, `purpose`, `dateRequested`) VALUES
+(530267, 2023, 'Mark Austin B. Condalor', 'Intern (ICT Services)', 'I3', 'Information Communication Technology', 'OS 292', 'Manila Paper', 'Piece', 2, 'for office use', '09/13/2023'),
+(530267, 2023, 'Mark Austin B. Condalor', 'Intern (ICT Services)', 'I3', 'Information Communication Technology', 'OS 117', 'ENVELOPE, EXPANDING legal size doc', 'piece', 1, 'for office use', '09/13/2023'),
+(303194, 2023, 'Ma. Theresa M. Roxas', 'Supply Officer II', 'P1', 'Property and Supply', 'OS 255', 'Chloride Powder', 'piece', 2, 'office cleaning material', '09/20/2023'),
+(303194, 2023, 'Ma. Theresa M. Roxas', 'Supply Officer II', 'P1', 'Property and Supply', 'OS 202', 'BROOM, soft (tambo)', 'piece', 1, 'office cleaning material', '09/20/2023'),
+(629113, 2023, 'Mary Lalaine Rachel T. Manguisi', 'Admin Aide I', 'P3', 'Property and Supply', 'OS 370', 'MOUSE, WIRELESS, USB', 'Unit', 1, 'for office use', '09/27/2023'),
+(629113, 2023, 'Mary Lalaine Rachel T. Manguisi', 'Admin Aide I', 'P3', 'Property and Supply', 'OS 146', 'Photo Paper', 'piece', 1, 'for office use', '09/27/2023'),
+(800075, 2023, 'Ericson S. Sabacan, EdD, CESO V', 'Schools Division Superintendent', 'S1', 'Schools Division Superintendent', 'OS 271', 'Frame A4 Size', 'piece', 1, 'for osds office use', '10/02/2023'),
+(800075, 2023, 'Ericson S. Sabacan, EdD, CESO V', 'Schools Division Superintendent', 'S1', 'Schools Division Superintendent', 'OS 213', 'MARKER, PERMANENT,blue', 'Piece', 1, 'for osds office use', '10/02/2023'),
+(251077, 2023, 'Jaime T. Tugade PhD, CESE', 'Assistant Schools Division Superintendent', 'A1', 'Assistant Schools Division Superintendent', 'OS 213', 'MARKER, PERMANENT,blue', 'Piece', 1, 'for use of oasds', '10/04/2023'),
+(251077, 2023, 'Jaime T. Tugade PhD, CESE', 'Assistant Schools Division Superintendent', 'A1', 'Assistant Schools Division Superintendent', 'OS 370', 'MOUSE, WIRELESS, USB', 'Unit', 1, 'for use of oasds', '10/04/2023'),
+(885982, 2023, 'Anne Melfei Casas', 'ADAS III', 'AC9', 'Accounting', 'OS 092', 'Extension Cord', 'piece', 1, 'for new printer and computer set on accounting office', '10/06/2023'),
+(885982, 2023, 'Anne Melfei Casas', 'ADAS III', 'AC9', 'Accounting', 'OS 370', 'MOUSE, WIRELESS, USB', 'Unit', 1, 'for new printer and computer set on accounting office', '10/06/2023'),
+(885982, 2023, 'Anne Melfei Casas', 'ADAS III', 'AC9', 'Accounting', 'OS 290', 'Mouse Pad', 'piece', 1, 'for new printer and computer set on accounting office', '10/06/2023'),
+(885982, 2023, 'Anne Melfei Casas', 'ADAS III', 'AC9', 'Accounting', 'OS 238', 'EPSON, INK CART, (001) Black', 'bottle', 1, 'for new printer and computer set on accounting office', '10/06/2023'),
+(261269, 2023, 'Lalaine Bartolome', 'ADAS II', 'B2', 'Budget', 'OS 228', 'Liquid Hand Soap with Pump', 'Book', 1, 'hygiene use', '10/07/2023'),
+(174211, 2023, 'Marlon P. Daclis', 'EPS I - English', 'CID6', 'Curriculum Implementation Division', 'OS 117', 'ENVELOPE, EXPANDING legal size doc', 'piece', 2, 'for office use', '10/07/2023'),
+(174211, 2023, 'Marlon P. Daclis', 'EPS I - English', 'CID6', 'Curriculum Implementation Division', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 1, 'for office use', '10/07/2023'),
+(174211, 2023, 'Marlon P. Daclis', 'EPS I - English', 'CID6', 'Curriculum Implementation Division', 'OS 033', 'PAPER, MULTICOPY, 80gsm, size: A4', 'Reams', 2, 'for office use', '10/07/2023'),
+(174211, 2023, 'Marlon P. Daclis', 'EPS I - English', 'CID6', 'Curriculum Implementation Division', 'OS 317', 'NOTE PAD, stick on, (2in x 3in) min', 'Book', 2, 'for office use', '10/07/2023'),
+(948700, 2023, 'Mark Austin B. Condalor', 'Intern (ICT Services)', 'I3', 'Information Communication Technology', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 5, 'freshener 201 chloride 55 toner 90 wireless mouse 78 paper a4 70', '10/08/2023'),
+(948700, 2023, 'Mark Austin B. Condalor', 'Intern (ICT Services)', 'I3', 'Information Communication Technology', 'OS 255', 'Chloride Powder', 'piece', 5, 'freshener 201 chloride 55 toner 90 wireless mouse 78 paper a4 70', '10/08/2023'),
+(948700, 2023, 'Mark Austin B. Condalor', 'Intern (ICT Services)', 'I3', 'Information Communication Technology', 'OS 232', 'Gestener toner MP2014', 'Piece', 2, 'freshener 201 chloride 55 toner 90 wireless mouse 78 paper a4 70', '10/08/2023'),
+(948700, 2023, 'Mark Austin B. Condalor', 'Intern (ICT Services)', 'I3', 'Information Communication Technology', 'OS 370', 'MOUSE, WIRELESS, USB', 'Unit', 2, 'freshener 201 chloride 55 toner 90 wireless mouse 78 paper a4 70', '10/08/2023'),
+(948700, 2023, 'Mark Austin B. Condalor', 'Intern (ICT Services)', 'I3', 'Information Communication Technology', 'OS 033', 'PAPER, MULTICOPY, 80gsm, size: A4', 'Reams', 3, 'freshener 201 chloride 55 toner 90 wireless mouse 78 paper a4 70', '10/08/2023'),
+(711638, 2023, 'Mary Lalaine Rachel T. Manguisi', 'Admin Aide I', 'P3', 'Property and Supply', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 1, 'air freshener 200 alkaline 16 envelope 75 photopaper 61', '10/08/2023'),
+(711638, 2023, 'Mary Lalaine Rachel T. Manguisi', 'Admin Aide I', 'P3', 'Property and Supply', 'OS 156', 'Battery D Alkaline', 'piece', 1, 'air freshener 200 alkaline 16 envelope 75 photopaper 61', '10/08/2023'),
+(711638, 2023, 'Mary Lalaine Rachel T. Manguisi', 'Admin Aide I', 'P3', 'Property and Supply', 'OS 117', 'ENVELOPE, EXPANDING legal size doc', 'piece', 5, 'air freshener 200 alkaline 16 envelope 75 photopaper 61', '10/08/2023'),
+(711638, 2023, 'Mary Lalaine Rachel T. Manguisi', 'Admin Aide I', 'P3', 'Property and Supply', 'OS 146', 'Photo Paper', 'piece', 2, 'air freshener 200 alkaline 16 envelope 75 photopaper 61', '10/08/2023'),
+(646750, 2023, 'Eluisa L. Icang', 'ADAS III', 'PAY1', 'Payroll', 'OS 202', 'BROOM, soft (tambo)', 'piece', 1, 'for cleaning material', '10/09/2023'),
+(569428, 2023, 'Kristine Joy D. Quezada', 'Accountant III', 'AC1', 'Accounting', 'OS 146', 'Photo Paper', 'piece', 1, 'for Baguio Seminar on Tuesday', '10/10/2023'),
+(569428, 2023, 'Kristine Joy D. Quezada', 'Accountant III', 'AC1', 'Accounting', 'OS 117', 'ENVELOPE, EXPANDING legal size doc', 'piece', 1, 'for Baguio Seminar on Tuesday', '10/10/2023'),
+(569428, 2023, 'Kristine Joy D. Quezada', 'Accountant III', 'AC1', 'Accounting', 'OS 292', 'Manila Paper', 'Piece', 1, 'for Baguio Seminar on Tuesday', '10/10/2023'),
+(348023, 2023, 'End User', 'End User', 'End User', 'End User', 'OS 146', 'Photo Paper', 'piece', 1, 'testing', '10/11/2023');
 
 -- --------------------------------------------------------
 
@@ -103,6 +139,30 @@ CREATE TABLE `request_logs` (
   `releaseDate` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `request_logs`
+--
+
+INSERT INTO `request_logs` (`risNoDate`, `yearRequested`, `seriesNumber`, `timeStamp`, `accountName`, `centerCode`, `userOffice`, `stock_number`, `item_description`, `stock_unit`, `quantityInput`, `formDate`, `releaseDate`) VALUES
+('2023-10-000001', 2023, 1, '2023-10-09 09:03:29', 'End User', 'End User', 'End User', 'OS 154', 'AIR FRESHENER, aerosol, 280ml/150g min', 'can', 2, '10/09/2023', '10/09/2023'),
+('2023-10-000001', 2023, 1, '2023-10-09 09:03:29', 'End User', 'End User', 'End User', 'OS 202', 'BROOM, soft (tambo)', 'piece', 10, '10/09/2023', '10/09/2023'),
+('2023-10-000001', 2023, 1, '2023-10-09 09:03:29', 'End User', 'End User', 'End User', 'OS 054', 'CALCULATOR, compact, 12 digits', 'unit', 12, '10/09/2023', '10/09/2023'),
+('2023-10-000001', 2023, 1, '2023-10-09 09:03:29', 'End User', 'End User', 'End User', 'OS 092', 'Extension Cord', 'piece', 12, '10/09/2023', '10/09/2023'),
+('2023-10-000001', 2023, 1, '2023-10-09 09:03:29', 'End User', 'End User', 'End User', 'OS 290', 'Mouse Pad', 'piece', 8, '10/09/2023', '10/09/2023'),
+('2023-10-000001', 2023, 1, '2023-10-09 09:03:29', 'End User', 'End User', 'End User', 'OS 213', 'MARKER, PERMANENT,blue', 'Piece', 8, '10/09/2023', '10/09/2023'),
+('2023-10-000001', 2023, 1, '2023-10-09 09:03:29', 'End User', 'End User', 'End User', 'OS 146', 'Photo Paper', 'piece', 15, '10/09/2023', '10/09/2023'),
+('2023-10-000001', 2023, 1, '2023-10-09 09:03:29', 'End User', 'End User', 'End User', 'OS 317', 'Ring Binder 1/4', 'Book', 12, '10/09/2023', '10/09/2023'),
+('2023-10-000001', 2023, 1, '2023-10-09 09:03:29', 'End User', 'End User', 'End User', 'OS 317', 'PAPER, MULTICOPY, 80gsm, size: A4', 'Book', 8, '10/09/2023', '10/09/2023'),
+('2023-10-000001', 2023, 1, '2023-10-09 09:03:29', 'End User', 'End User', 'End User', 'OS 361', 'MOUSE, WIRELESS, USB', 'Book', 7, '10/09/2023', '10/09/2023'),
+('2023-10-000002', 2023, 2, '2023-10-09 09:44:43', 'Mark Austin B. Condalor', 'I3', 'Information Communication Technology', 'OS 228', 'Liquid Hand Soap with Pump', 'Book', 10, '10/09/2023', '10/09/2023'),
+('2023-10-000003', 2023, 3, '2023-10-11 12:58:56', 'Jayson Fuller', 'I2', 'Information Communication Technology', 'OS 202', 'BROOM, soft (tambo)', 'piece', 1, '10/08/2023', '10/11/2023'),
+('2023-10-000003', 2023, 3, '2023-10-11 12:58:56', 'Jayson Fuller', 'I2', 'Information Communication Technology', 'OS 092', 'Extension Cord', 'piece', 1, '10/08/2023', '10/11/2023'),
+('2023-10-000004', 2023, 4, '2023-10-11 13:59:49', 'Angelo Y. Capa', 'I4', 'Information Communication Technology', 'OS 055', 'Desktop Computer', 'Unit', 1, '10/10/2023', '10/11/2023'),
+('2023-10-000004', 2023, 4, '2023-10-11 13:59:49', 'Angelo Y. Capa', 'I4', 'Information Communication Technology', 'OS 370', 'MOUSE, WIRELESS, USB', 'Unit', 1, '10/10/2023', '10/11/2023'),
+('2023-10-000004', 2023, 4, '2023-10-11 13:59:49', 'Angelo Y. Capa', 'I4', 'Information Communication Technology', 'OS 290', 'Mouse Pad', 'piece', 1, '10/10/2023', '10/11/2023'),
+('2023-10-000004', 2023, 4, '2023-10-11 13:59:49', 'Angelo Y. Capa', 'I4', 'Information Communication Technology', 'OS 033', 'PAPER, MULTICOPY, 80gsm, size: A4', 'Reams', 2, '10/10/2023', '10/11/2023'),
+('2023-10-000004', 2023, 4, '2023-10-11 13:59:49', 'Angelo Y. Capa', 'I4', 'Information Communication Technology', 'OS 238', 'EPSON, INK CART, (001) Black', 'bottle', 2, '10/10/2023', '10/11/2023');
+
 -- --------------------------------------------------------
 
 --
@@ -124,54 +184,9 @@ CREATE TABLE `ris_accounts` (
 --
 
 INSERT INTO `ris_accounts` (`accountType`, `accountName`, `userPosition`, `userOffice`, `centerCode`, `depedEmail`, `accountPass`) VALUES
-('Super Admin', 'Ma. Theresa M. Roxas', 'Supply Officer II', 'Property and Supply', 'P1', 'mtheresa.roxas@deped.gov.ph', '1234'),
-('User Manager', 'Mary Lalaine Rachel T. Manguisi', 'Admin Aide I', 'Property and Supply', 'P3', 'marylalainemanguisi@deped.gov.ph', '1234'),
-('End User', 'Jhon Artin Victoriano', 'Admin Aide VI', 'Property and Supply', 'P2', 'jhonartin.victoriano@deped.gov.ph', '1234'),
-('End User', 'John Mark A. Manguisi', 'Admin Aide I', 'Property and Supply', 'P4', 'johnmark.manguisi@deped.gov.ph', '1234'),
-('End User', 'Ericson S. Sabacan, EdD, CESO V', 'Schools Division Superintendent', 'Schools Division Superintendent', 'S1', 'ericson.sabacan001@deped.gov.ph', '1234'),
-('End User', 'Jaime T. Tugade PhD, CESE', 'Assistant Schools Division Superintendent', 'Assistant Schools Division Superintendent', 'A1', 'jaime.tugade@deped.gov.ph', '1234'),
-('End User', 'Janette Sta. Maria', 'ADAS III', 'Schools Division Superintendent', 'S2', 'janette.stamaria@deped.gov.ph', '1234'),
-('End User', 'Orsely Joyce Gonzales', 'Admin Aide VI', 'Schools Division Superintendent', 'S3', 'orselyjoyce.gonzales@deped.gov.ph', '1234'),
-('End User', 'Rodelio Jimenez', 'Admin Aide IV - Driver', 'Schools Division Superintendent', 'S4', 'rodelio.jimenez001@deped.gov.ph', '1234'),
-('End User', 'Emilio G. Bernardo Jr.', 'Admin Aide IV - Driver', 'Schools Division Superintendent', 'S5', 'emilio.bernardo@deped.gov.ph', '1234'),
-('End User', 'Kelly Rose T. Zipagan', 'Admin Aide I', 'Assistant Schools Division Superintendent', 'A2', 'kelly.zipagan@deped.gov.ph', '1234'),
-('End User', 'Kaila R. Diaz', 'Admin Aide I', 'Assistant Schools Division Superintendent', 'A3', 'kaila.diaz@deped.gov.ph', '1234'),
-('End User', 'Kristine Joy D. Quezada', 'Accountant III', 'Accounting', 'AC1', 'kristinejoy.quezada@deped.gov.ph', '1234'),
-('End User', 'Rechie O. Labandria', 'ADAS II', 'Accounting', 'AC2', 'rechie.labandria@deped.gov.ph', '1234'),
-('End User', 'Mercedez M. Bijasa', 'ADAS III', 'Accounting', 'AC3', 'mercedez.bijasa@deped.gov.ph', '1234'),
-('End User', 'Jomel V. Policarpio', 'ADAS II', 'Accounting', 'AC4', 'jomel.policarpio@deped.gov.ph', '1234'),
-('End User', 'Rommel S. Pascual', 'ADAS III', 'Accounting', 'AC5', 'rommel.pascual002@deped.gov.ph', '1234'),
-('End User', 'Imelda Bijasa', 'ADAS II', 'Accounting', 'AC6', 'imelda.bijasa@deped.gov.ph', '1234'),
-('End User', 'Jinky O. Torres', 'ADAS III', 'Accounting', 'AC7', 'jinky.torres@deped.gov.ph', '1234'),
-('End User', 'Thelma C. Bajar', 'ADAS III', 'Accounting', 'AC8', 'thelma.bajar@deped.gov.ph', '1234'),
-('End User', 'Anne Melfei Casas', 'ADAS III', 'Accounting', 'AC9', 'annmelfei.casas@deped.gov.ph', '1234'),
-('End User', 'Laarnie I. Catahan', 'ADAS II', 'Accounting', 'AC10', 'laarnie.catahan@deped.gov.ph', '1234'),
-('End User', 'Ma. Beverlie J. Nolasco', 'ADAS II', 'Accounting', 'AC11', 'mabeverlie.jabat@deped.gov.ph', '1234'),
-('End User', 'Nenette M. Gomez', 'ADAS III', 'Accounting', 'AC12', 'nenette.gomez@deped.gov.ph', '1234'),
-('End User', 'Gina E. Cape', 'ADAS II', 'Accounting', 'AC13', 'gina.cape@deped.gov.ph', '1234'),
-('End User', 'Ravenn Tiu', 'Admin Aide I', 'Accounting', 'AC14', 'ravenn.tiu@deped.gov.ph', '1234'),
-('End User', 'Maxima L. Biglangawa', 'ADAS III', 'Accounting', 'AC15', 'maxima.biglangawa@deped.gov.ph', '1234'),
-('End User', 'Rosalinda F. Perfinan', 'ADAS II', 'Accounting', 'AC16', 'krosalinda.perfinan@deped.gov.ph', '1234'),
-('End User', 'Baby Ruth Pablo', 'ADAS II', 'Accounting', 'AC17', 'babyruth.pablo@deped.gov.ph', '1234'),
-('End User', 'Orlando D. Gonzales', 'Budget Officer', 'Budget', 'B1', 'orlando.gonzales002@deped.gov.ph', '1234'),
-('End User', 'Lalaine Bartolome', 'ADAS II', 'Budget', 'B2', 'lalaine.mendoza003@deped.gov.ph', '1234'),
-('End User', 'Ma. Carmela P. Hagosojos', 'ADAS I', 'Budget', 'B3', 'macarmela.hagosojos@deped.gov.ph', '1234'),
-('End User', 'Yancy B. Razon', 'ADAS II', 'Budget', 'B4', 'yancy.razon@deped.gov.ph', '1234'),
-('End User', 'Eluisa L. Icang', 'ADAS III', 'Payroll', 'PAY1', 'eluisa.icang@deped.gov.ph', '1234'),
-('End User', 'Rowena R. Perez', 'AO I', 'Payroll', 'PAY2', 'rowena.perez016@deped.gov.ph', '1234'),
-('End User', 'May L. Ladao', 'ADAS III', 'Payroll', 'PAY3', 'may.ladao@deped.gov.ph', '1234'),
-('End User', 'Glaiza P. Alejandro', 'ADAS III', 'Payroll', 'PAY4', 'glaiza.alejandro@deped.gov.ph', '1234'),
-('End User', 'Mariz DR. Daluz', 'ADAS III', 'Payroll', 'PAY5', 'mariz.daluz@deped.gov.ph', '1234'),
-('Super Admin', 'Super Admin', 'Super Admin', 'Super Admin', 'Super Admin', 'sa.erisformsystem@gmail.com', 'superAdminOnly'),
-('User Manager', 'User Manager', 'User Manager', 'User Manager', 'User Manager', 'um.erisformsystem@gmail.com', 'userManagerOnly'),
-('End User', 'Arthur F. Francisco', 'ITO-I', 'Information Communication Technology', 'I1', 'arthur.francisco@deped.gov.ph', '1234'),
-('End User', 'Jayson Fuller', 'ICT-AAI', 'Information Communication Technology', 'I2', 'jayson.fuller@deped.gov.ph', '1234'),
-('End User', 'Merlita D. Ynciong', 'SEP SOC. MOB.', 'School Governance and Operations Division', 'SGOD7', 'merlita.ynciong@deped.gov.ph', '1234'),
-('End User', 'Margie M. Duro', 'PDO I', 'School Governance and Operations Division', 'SGOD16', 'margie.duro@deped.gov.ph', '1234'),
-('End User', 'Marlon P. Daclis', 'EPS I - English', 'Curriculum Implementation Division', 'CID6', 'marlon.daclis@deped.gov.ph', '1234'),
-('End User', 'Mark Austin B. Condalor', 'Intern (ICT Services)', 'Information Communication Technology', 'I3', 'alex091301@gmail.com', '1234'),
-('End User', 'End User', 'End User', 'End User', 'End User', 'eu.erisformsystem@gmail.com', '1234'),
-('End User', 'Angelo Y. Capa', 'OJT (Intern)', 'Information Communication Technology', 'I4', 'angelo.capa@deped.gov.ph', '1234');
+('Super Admin', 'Super Admin', 'Super Admin', 'Super Admin', 'Super Admin', 'sa.erisformsystem@gmail.com', 'forsuperadmin'),
+('User Manager', 'User Manager', 'User Manager', 'User Manager', 'User Manager', 'um.erisformsystem@gmail.com', 'forusermanager'),
+('End User', 'End User', 'End User', 'End User', 'End User', 'eu.erisformsystem@gmail.com', 'forenduser');
 
 -- --------------------------------------------------------
 
@@ -193,7 +208,8 @@ CREATE TABLE `usermanager_logs` (
 
 INSERT INTO `usermanager_logs` (`accountName`, `stock_number`, `item_description`, `add_quantity`, `formDate`) VALUES
 ('Mary Lalaine Rachel T. Manguisi', 'OS 054', 'CALCULATOR, compact, 12 digits', 8, '10/06/2023'),
-('Mary Lalaine Rachel T. Manguisi', 'OS 361', 'MOPHANDLE, heavy duty, aluminum, screw type', 3, '10/06/2023');
+('Mary Lalaine Rachel T. Manguisi', 'OS 361', 'MOPHANDLE, heavy duty, aluminum, screw type', 3, '10/06/2023'),
+('User Manager', 'OS 228', 'Liquid Hand Soap with Pump', 50, '10/09/2023');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
