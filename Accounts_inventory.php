@@ -29,7 +29,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="#">Account</a>
+                    <a href="#" class ="account">Account</a>
                     <ul class="dropdown">
                         <li><a href="#" onclick="openAdd()">Add</a></li>
                         <li><a href="#" onclick="openEdit()">Edit</a></li>
@@ -242,7 +242,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="Accounts_inventory.js"></script>
     <script src="disableBackButton.js"></script>
-    <script src="autoLogoutFunction.js"></script>
+    <!--<script src="autoLogoutFunction.js"></script>-->
    
 </body>
 </html>

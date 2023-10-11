@@ -191,6 +191,7 @@ ul li a{
     box-shadow: 2px darkblue;
     border-radius: 15px;
 }
+
 ul li ul.dropdown li{
      display: block;
 }
@@ -669,13 +670,7 @@ table{
     width: 100%;
     border: 2px solid black;
     border-collapse: collapse; 
-    
-    
 }
-
-
-
-
 
 .table-number{
     width: 60px;
@@ -759,7 +754,6 @@ table tr {
     text-align: left;
     border: 2px solid black;
     height: 40px;
-    line-height: 20px;
 }
 
 
@@ -779,17 +773,1365 @@ table tr td{
     font-size: 18px;
     border: 2px solid black;
     line-height: 20px;
-    
 }
 
 
 .scroll{
     margin-left: 20px;
-    margin-top: 10px;
+    margin-top: 20px;
     width: 98%;
     height: 350px;
     overflow-y: scroll;
 }
 
-
 /* TABLE */
+
+/* RESPONSIVE */
+@media screen and (min-width: 768px) {
+    .container{
+        height: 81.7%;
+        width: 210px;
+        position: absolute;
+        margin-top: -16%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-210px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 15px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .searchbar{
+        float: right;
+        margin: 140px 18% 0px 0px;  
+    }
+
+    .searchbar input{
+        width: 90%;
+    }
+    
+    nav{
+        float: right;
+        margin-top: 2%;
+        margin-right: -41%;
+    }
+
+    ul li a{
+        display: block;
+        padding: 12px 22px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 17px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 15px;
+    }
+    
+    ul li ul.dropdown li{
+         display: block;
+    }
+    ul li ul.dropdown{
+        width: 100%;
+        background:#162fa0;
+        position: absolute;
+        z-index: 999;
+        display: none;
+    }
+    ul li a:hover{
+        background: grey;
+    }
+    ul li:hover ul.dropdown{
+        display:block;
+    }
+
+    h2{
+        font-size: 28px;
+        margin-left: 33%;
+    }
+
+    table{
+        font-size: 17px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    table tr td{
+        margin-left: 10px;
+        font-size: 15px;
+        border: 2px solid black;
+        line-height: 20px;
+    }
+    
+    .scroll{
+        width: 90%;
+        height: 350px;
+        margin-left: 5%;
+        margin-top: 20px;
+        overflow-y: scroll;
+    }
+
+}
+
+@media screen and (min-width: 848px) {
+    .container{
+        height: 81.7%;
+        width: 210px;
+        position: absolute;
+        margin-top: -15%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-210px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 15px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .searchbar{
+        float: right;
+        margin: 140px 17% 0px 0px;  
+    }
+
+    .searchbar input{
+        width: 90%;
+    }
+    
+    nav{
+        float: right;
+        margin-top: 2%;
+        margin-right: -38%;
+    }
+
+    ul li a{
+        display: block;
+        padding: 12px 22px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 17px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 15px;
+    }
+    
+    ul li ul.dropdown li{
+         display: block;
+    }
+    ul li ul.dropdown{
+        width: 100%;
+        background:#162fa0;
+        position: absolute;
+        z-index: 999;
+        display: none;
+    }
+    ul li a:hover{
+        background: grey;
+    }
+    ul li:hover ul.dropdown{
+        display:block;
+    }
+
+    h2{
+        font-size: 30px;
+        margin-left: 35%;
+    }
+
+    table{
+        font-size: 20px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    
+    .scroll{
+        width: 90%;
+        height: 350px;
+        margin-left: 5%;
+        margin-top: 20px;
+        overflow-y: scroll;
+    }
+    
+}
+
+@media screen and (min-width: 936px) {
+    .container{
+        height: 81.7%;
+        width: 210px;
+        position: absolute;
+        margin-top: -13%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-210px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 15px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .searchbar{
+        float: right;
+        margin: 140px 15% 0px 0px;  
+    }
+
+    .searchbar input{
+        width: 90%;
+    }
+    
+    nav{
+        float: right;
+        margin-top: 2%;
+        margin-right: -34%;
+    }
+
+    ul li a{
+        display: block;
+        padding: 12px 22px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 17px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 15px;
+    }
+    
+    ul li ul.dropdown li{
+         display: block;
+    }
+    ul li ul.dropdown{
+        width: 100%;
+        background:#162fa0;
+        position: absolute;
+        z-index: 999;
+        display: none;
+    }
+    ul li a:hover{
+        background: grey;
+    }
+    ul li:hover ul.dropdown{
+        display:block;
+    }
+
+    h2{
+        font-size: 30px;
+        margin-left: 35%;
+    }
+
+    table{
+        font-size: 20px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    
+    .scroll{
+        width: 90%;
+        height: 350px;
+        margin-left: 5%;
+        margin-top: 20px;
+        overflow-y: scroll;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .container{
+        height: 81.7%;
+        width: 270px;
+        position: absolute;
+        margin-top: -11.2%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-270px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 17px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .searchbar{
+        float: right;
+        margin: 140px 14% 0px 0px;  
+    }
+
+    .searchbar input{
+        width: 90%;
+    }
+    
+    nav{
+        float: right;
+        margin-top: 1.3%;
+        margin-right: -32%;
+    }
+
+    ul li a{
+        display: block;
+        padding: 12px 22px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 17px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 15px;
+    }
+    
+    ul li ul.dropdown li{
+         display: block;
+    }
+    ul li ul.dropdown{
+        width: 100%;
+        background:#162fa0;
+        position: absolute;
+        z-index: 999;
+        display: none;
+    }
+    ul li a:hover{
+        background: grey;
+    }
+    ul li:hover ul.dropdown{
+        display:block;
+    }
+
+    h2{
+        font-size: 30px;
+        margin-left: 40%;
+    }
+
+    table{
+        font-size: 20px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    table tr td{
+        margin-left: 10px;
+        font-size: 18px;
+        border: 2px solid black;
+        line-height: 20px;
+    }
+    
+    .scroll{
+        width: 92%;
+        height: 350px;
+        margin-left: 5%;
+        margin-top: 20px;
+        overflow-y: scroll;
+    }
+    
+}
+
+@media screen and (min-width: 1050px) {
+    .container{
+        height: 81.7%;
+        width: 250px;
+        position: absolute;
+        margin-top: -11%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-250px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 18px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .searchbar{
+        float: right;
+        margin: 140px 15% 0px 0px;  
+    }
+
+    .searchbar input{
+        width: 90%;
+    }
+    
+    nav{
+        float: right;
+        margin-top: 1.5%;
+        margin-right: -30.3%;
+    }
+
+    ul li a{
+        display: block;
+        padding: 12px 22px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 17px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 15px;
+    }
+    
+    ul li ul.dropdown li{
+         display: block;
+    }
+    ul li ul.dropdown{
+        width: 100%;
+        background:#162fa0;
+        position: absolute;
+        z-index: 999;
+        display: none;
+    }
+    ul li a:hover{
+        background: grey;
+    }
+    ul li:hover ul.dropdown{
+        display:block;
+    }
+
+    h2{
+        font-size: 30px;
+        margin-left: 40%;
+    }
+
+    table{
+        font-size: 20px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    
+    .scroll{
+        width: 92%;
+        height: 350px;
+        margin-left: 5%;
+        margin-top: 20px;
+        overflow-y: scroll;
+    }
+}
+
+
+
+
+@media screen and (min-width: 1168px) {
+    .container{
+        height: 81.7%;
+        width: 270px;
+        position: absolute;
+        margin-top: -9.5%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-270px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 18px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 21px;
+        text-align: center;
+    }
+
+    .searchbar{
+        float: right;
+        margin: 140px 13% 0px 0px;  
+    }
+
+    .searchbar input{
+        width: 90%;
+    }
+    
+    nav{
+        float: right;
+        margin-top: 1.3%;
+        margin-right: -27.5%;
+    }
+
+    ul li a{
+        display: block;
+        padding: 12px 22px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 17px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 15px;
+    }
+    
+    ul li ul.dropdown li{
+         display: block;
+    }
+    ul li ul.dropdown{
+        width: 100%;
+        background:#162fa0;
+        position: absolute;
+        z-index: 999;
+        display: none;
+    }
+    ul li a:hover{
+        background: grey;
+    }
+    ul li:hover ul.dropdown{
+        display:block;
+    }
+
+    h2{
+        font-size: 30px;
+        margin-left: 40%;
+    }
+
+    table{
+        font-size: 20px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    
+    .scroll{
+        width: 92%;
+        height: 350px;
+        margin-left: 5%;
+        margin-top: 20px;
+        overflow-y: scroll;
+    }
+    
+}
+
+
+@media screen and (min-width: 1257px) {
+    .container{
+        height: 81.7%;
+        width: 270px;
+        position: absolute;
+        margin-top: -9.1%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-270px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 19px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 23px;
+        text-align: center;
+    }
+    
+    .searchbar{
+        float: right;
+        margin: 140px 14% 0px 0px;  
+    }
+
+    .searchbar input{
+        width: 90%;
+    }
+    
+    nav{
+        float: right;
+        margin-top: 1.1%;
+        margin-right: -26.5%;
+    }
+
+    ul li a{
+        display: block;
+        padding: 12px 22px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 18px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 15px;
+    }
+    
+    ul li ul.dropdown li{
+         display: block;
+    }
+    ul li ul.dropdown{
+        width: 100%;
+        background:#162fa0;
+        position: absolute;
+        z-index: 999;
+        display: none;
+    }
+    ul li a:hover{
+        background: grey;
+    }
+    ul li:hover ul.dropdown{
+        display:block;
+    }
+
+    h2{
+        font-size: 33px;
+        margin-left: 40%;
+    }
+
+    table{
+        font-size: 20px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    
+    .scroll{
+        width: 92%;
+        height: 350px;
+        margin-left: 5%;
+        margin-top: 20px;
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .container{
+        height: 81.7%;
+        width: 270px;
+        position: absolute;
+        margin-top: -8.5%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-270px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 19px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .searchbar{
+        float: right;
+        margin: 140px 15% 0px 0px;  
+    }
+
+    .searchbar input{
+        width: 90%;
+    }
+    
+    nav{
+        float: right;
+        margin-top: 1.1%;
+        margin-right: -25%;
+    }
+
+    ul li a{
+        display: block;
+        padding: 12px 22px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 18px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 15px;
+    }
+    
+    ul li ul.dropdown li{
+         display: block;
+    }
+    ul li ul.dropdown{
+        width: 100%;
+        background:#162fa0;
+        position: absolute;
+        z-index: 999;
+        display: none;
+    }
+    ul li a:hover{
+        background: grey;
+    }
+    ul li:hover ul.dropdown{
+        display:block;
+    }
+
+    h2{
+        font-size: 33px;
+        margin-left: 40%;
+    }
+
+    table{
+        font-size: 20px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    
+    .scroll{
+        width: 92%;
+        height: 350px;
+        margin-left: 5%;
+        margin-top: 20px;
+        overflow-y: scroll;
+    }
+    
+}
+
+@media screen and (min-width: 1411px) {
+    .container{
+        height: 81.7%;
+        width: 270px;
+        position: absolute;
+        margin-top: -7%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-270px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 19px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .searchbar{
+        float: right;
+        margin: 140px 11% 0px 0px;  
+    }
+
+    .searchbar input{
+        width: 90%;
+    }
+    
+    nav{
+        float: right;
+        margin-top: 1.1%;
+        margin-right: -21.8%;
+    }
+
+    ul li a{
+        display: block;
+        padding: 12px 22px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 18px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 15px;
+    }
+    
+    ul li ul.dropdown li{
+         display: block;
+    }
+    ul li ul.dropdown{
+        width: 100%;
+        background:#162fa0;
+        position: absolute;
+        z-index: 999;
+        display: none;
+    }
+    ul li a:hover{
+        background: grey;
+    }
+    ul li:hover ul.dropdown{
+        display:block;
+    }
+
+    h2{
+        font-size: 33px;
+        margin-left: 40%;
+    }
+
+    table{
+        font-size: 20px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    
+    .scroll{
+        width: 92%;
+        height: 350px;
+        margin-left: 5%;
+        margin-top: 20px;
+        overflow-y: scroll;
+    }
+    
+}
+
+@media screen and (min-width: 1615px) {
+    .container{
+        height: 81.7%;
+        width: 270px;
+        position: absolute;
+        margin-top: -6.5%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-270px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 27px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 19px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .searchbar{
+        float: right;
+        margin: 140px 11% 0px 0px;  
+    }
+
+    .searchbar input{
+        width: 90%;
+    }
+    
+    nav{
+        float: right;
+        margin-top: 1%;
+        margin-right: -20%;
+    }
+
+    ul li a{
+        display: block;
+        padding: 12px 22px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 18px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 15px;
+    }
+    
+    ul li ul.dropdown li{
+         display: block;
+    }
+    ul li ul.dropdown{
+        width: 100%;
+        background:#162fa0;
+        position: absolute;
+        z-index: 999;
+        display: none;
+    }
+    ul li a:hover{
+        background: grey;
+    }
+    ul li:hover ul.dropdown{
+        display:block;
+    }
+
+    h2{
+        font-size: 33px;
+        margin-left: 40%;
+    }
+
+    table{
+        font-size: 20px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    
+    .scroll{
+        width: 92%;
+        height: 350px;
+        margin-left: 5%;
+        margin-top: 20px;
+        overflow-y: scroll;
+    }
+    
+    
+}
+
+@media screen and (min-width: 1771px) {
+    .container{
+        height: 81.7%;
+        width: 270px;
+        position: absolute;
+        margin-top: -5.7%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-270px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 20px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .searchbar{
+        float: right;
+        margin: 140px 11% 0px 0px;  
+    }
+
+    .searchbar input{
+        width: 90%;
+    }
+    
+    nav{
+        float: right;
+        margin-top: 0.8%;
+        margin-right: -18.5%;
+    }
+
+    ul li a{
+        display: block;
+        padding: 12px 22px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 18px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 15px;
+    }
+    
+    ul li ul.dropdown li{
+         display: block;
+    }
+    ul li ul.dropdown{
+        width: 100%;
+        background:#162fa0;
+        position: absolute;
+        z-index: 999;
+        display: none;
+    }
+    ul li a:hover{
+        background: grey;
+    }
+    ul li:hover ul.dropdown{
+        display:block;
+    }
+
+    h2{
+        font-size: 33px;
+        margin-left: 40%;
+    }
+
+    table{
+        font-size: 20px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    
+    .scroll{
+        width: 92%;
+        height: 350px;
+        margin-left: 5%;
+        margin-top: 20px;
+        overflow-y: scroll;
+    }
+    
+    
+}
+
+
+@media screen and (min-width: 1880px) {
+    .container{
+        height: 81.7%;
+        width: 270px;
+        position: absolute;
+        margin-top: -4.9%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-270px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 20px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .searchbar{
+        float: right;
+        margin: 140px 8% 0px 0px;  
+    }
+
+    .searchbar input{
+        width: 90%;
+    }
+    
+    nav{
+        float: right;
+        margin-top: 0.7%;
+        margin-right: -17.5%;
+    }
+
+    ul li a{
+        display: block;
+        padding: 12px 22px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 18px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 15px;
+    }
+    
+    ul li ul.dropdown li{
+         display: block;
+    }
+    ul li ul.dropdown{
+        width: 100%;
+        background:#162fa0;
+        position: absolute;
+        z-index: 999;
+        display: none;
+    }
+    ul li a:hover{
+        background: grey;
+    }
+    ul li:hover ul.dropdown{
+        display:block;
+    }
+
+    h2{
+        font-size: 33px;
+        margin-left: 40%;
+    }
+
+    table{
+        font-size: 20px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    
+    .scroll{
+        width: 92%;
+        height: 350px;
+        margin-left: 5%;
+        margin-top: 20px;
+        overflow-y: scroll;
+    }
+    
+}

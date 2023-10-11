@@ -18,7 +18,7 @@
     <script src="table2excel.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
@@ -49,7 +49,7 @@
         </label>
         <div class="head">Menu</div>
         <ol>
-        <li><a href="Accounts_inventory.php"><i class='bx bxs-user-account'></i>Accounts</a></li>
+            <li><a href="Accounts_inventory.php"><i class='bx bxs-user-account'></i>Accounts</a></li>
             <li><a href="superadmin_inventory.php"><i class='bx bx-table'></i>Item Inventory</a></li>
             <li><a href="request_logs.php"><i class='bx bx-git-pull-request' ></i>Request Logs</a></li>
             <li><a href="usermanager_logs.php"><i class='bx bxs-user-detail' ></i>User Manager</a></li>

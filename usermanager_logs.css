@@ -253,3 +253,63 @@ table tr td{
 
 
 /* TABLE */
+
+/* RESPONSIVE */
+@media screen and (min-width:1880px){
+    table{
+        font-size: 20px;
+        margin-left: 117px;
+        width: 93%;
+        border: 2px solid black;
+        border-collapse: collapse;  
+    }
+
+    .scroll{
+        margin-left: 5%;
+        margin-top: 10px;
+        width: 90%;
+        height: 350px;
+        overflow-y: scroll;
+    }
+    h2{
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    
+}
+
+@media screen and (max-width:1366px){
+    .container{
+        width: 300px;
+        transform: translateX(-300px);
+    }
+    table{
+        font-size: 20px;
+        margin-left: 0%;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse;  
+    }
+
+    .scroll{
+        margin-left: 5%;
+        margin-top: 10px;
+        width: 90%;
+        height: 350px;
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (max-width:1200px){
+    
+}
+
+@media screen and (max-width:1024px){
+    
+}
+
+@media screen and (max-width:768px){
+    
+    
+}
