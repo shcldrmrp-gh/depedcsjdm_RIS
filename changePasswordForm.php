@@ -21,15 +21,18 @@
             <input type="text" placeholder="Current Password" name="accountPass" required>
           </div>
           <div class="row">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="New Password" name="newAccountPass" required>
+              <i class="fas fa-lock"></i>
+              <input type="password" id="newAccountPass" placeholder="New Password" name="newAccountPass" required>
           </div>
           <div class="row">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Confirm New Password" name="confirmNewAccountPass" required>
+              <i class="fas fa-lock"></i>
+              <input type="password" id="confirmNewAccountPass" placeholder="Confirm New Password" name="confirmNewAccountPass" required>
           </div>
           <div class="row button">
-            <input type="submit" value="Change Password" name="submit">
+            <input type="submit" class="change-password-button" value="Change Password" name="submit">
+          </div>
+          <div class="row button">
+            <input type="button" class="cancel-button" value="Cancel" href="javascript:void(0);" onclick="window.history.back();">
           </div>
         </form>
       </div>

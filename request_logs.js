@@ -114,7 +114,7 @@ function filterTable2() {
     for (var i = 1; i < rows.length; i++) { // Start from 1 to skip the header row
         var descriptionCell = rows[i].querySelector(".align-item-description");
         var nameCell = rows[i].querySelector(".align-account-name");
-        var formDateCell = rows[i].querySelector(".align-form-date");
+        var formDateCell = rows[i].querySelector(".align-release-date");
 
         if (!descriptionCell || !nameCell || !formDateCell) continue; // Skip rows without any of the cells
 
@@ -153,7 +153,7 @@ function updateTotal() {
         const row = rows[i];
         const rowData = row.getElementsByTagName("td");
 
-        const formDate = rowData[8].textContent;
+        const formDate = rowData[9].textContent;
         const itemDescription = rowData[5].textContent;
         const accountName = rowData[1].textContent;
 
