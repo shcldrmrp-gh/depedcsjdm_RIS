@@ -23,17 +23,37 @@
           <div class="row">
             <i class="fas fa-lock"></i>
             <input type="password" placeholder="New Password" name="newAccountPass" required>
+            <button class="toggle-password" onclick="togglePassword('newAccountPass')">
+                <i class="far fa-eye"></i>
+            </button>
           </div>
           <div class="row">
             <i class="fas fa-lock"></i>
             <input type="password" placeholder="Confirm New Password" name="confirmNewAccountPass" required>
           </div>
           <div class="row button">
-            <input type="submit" value="Change Password" name="submit">
+            <input type="submit" class="change-password-button" value="Change Password" name="submit">
+          </div>
+          <div class="row button">
+            <input type="button" class="cancel-button" value="Cancel" href="javascript:void(0);" onclick="window.history.back();">
           </div>
         </form>
       </div>
     </div>
     <script src="autoLogoutFunction.js"></script>
+    <script>
+      function togglePassword(inputId) {
+          const passwordField = document.getElementById(inputId);
+          const toggleButton = document.querySelector(`button[onclick="togglePassword('${inputId}')"]`);
+          
+          if (passwordField.type === "password") {
+              passwordField.type = "text";
+              toggleButton.innerHTML = '<i class="far fa-eye-slash"></i>';
+          } else {
+              passwordField.type = "password";
+              toggleButton.innerHTML = '<i class="far fa-eye"></i>';
+          }
+      }
+    </script>
   </body>
 </html>
