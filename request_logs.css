@@ -106,7 +106,7 @@ header h1{
 /* MENU BAR*/
 
 .container{
-    height: 81.7%;
+    height: 100%;
     width: 270px;
     position: absolute;
     margin-top: 0px;
@@ -387,10 +387,10 @@ table tr td{
 /* RESPONSIVE */
 @media screen and (min-width: 768px) {
     .container{
-        height: 81.7%;
+        height: 100%;
         width: 210px;
         position: absolute;
-        margin-top: -0%;
+        margin-top: 0.5%;
         background: #162fa0;
         z-index: 1;
         transition: transform 0.5s;
@@ -485,7 +485,7 @@ table tr td{
     }
     .total-quantity{
         position: absolute;
-        margin: 40% 0px 0px 72%;
+        margin: 50% 0px 0px 72%;
     }
     .total-quantity input{
         border: 2px solid black;
@@ -514,10 +514,10 @@ table tr td{
 
 @media screen and (min-width: 843px) {
     .container{
-        height: 81.7%;
+        height: 100%;
         width: 210px;
         position: absolute;
-        margin-top: -0%;
+        margin-top: 0.5%;
         background: #162fa0;
         z-index: 1;
         transition: transform 0.5s;
@@ -612,7 +612,7 @@ table tr td{
     }
     .total-quantity{
         position: absolute;
-        margin: 35% 0px 0px 76%;
+        margin: 50% 0px 0px 76%;
     }
     .total-quantity input{
         border: 2px solid black;
@@ -642,10 +642,10 @@ table tr td{
 
 @media screen and (min-width: 931px) {
     .container{
-        height: 81.7%;
+        height: 100%;
         width: 210px;
         position: absolute;
-        margin-top: -0%;
+        margin-top: 0.5%;
         background: #162fa0;
         z-index: 1;
         transition: transform 0.5s;
@@ -740,7 +740,7 @@ table tr td{
     }
     .total-quantity{
         position: absolute;
-        margin: 32% 0px 0px 60%;
+        margin: 45% 0px 0px 60%;
     }
     .total-quantity input{
         border: 2px solid black;
@@ -769,10 +769,10 @@ table tr td{
 
 @media screen and (min-width: 1024px) {
     .container{
-        height: 81.7%;
+        height: 100%;
         width: 210px;
         position: absolute;
-        margin-top: -0%;
+        margin-top: 0.5%;
         background: #162fa0;
         z-index: 1;
         transition: transform 0.5s;
@@ -781,7 +781,7 @@ table tr td{
 
     .container .head{
         color: white;
-        font-size: 20px;
+        font-size: 23px;
         font-weight: bold;
         padding: 30px;
         text-transform: uppercase;
@@ -795,7 +795,7 @@ table tr td{
         padding: 20px 20px 0px 0px;
         text-decoration: none;
         display: block;
-        font-size: 15px;
+        font-size: 16px;
         letter-spacing: 1px;
         position: relative;
         transition: 0.3s;
@@ -867,7 +867,7 @@ table tr td{
     }
     .total-quantity{
         position: absolute;
-        margin: 29% 0px 0px 64%;
+        margin: 40% 0px 0px 64%;
     }
     .total-quantity input{
         border: 2px solid black;
@@ -897,10 +897,10 @@ table tr td{
 
 @media screen and (min-width: 1041px) {
     .container{
-        height: 81.7%;
+        height: 100%;
         width: 250px;
         position: absolute;
-        margin-top: 0%;
+        margin-top: 0.5%;
         background: #162fa0;
         z-index: 1;
         transition: transform 0.5s;
@@ -909,7 +909,7 @@ table tr td{
 
     .container .head{
         color: white;
-        font-size: 23px;
+        font-size: 24px;
         font-weight: bold;
         padding: 30px;
         text-transform: uppercase;
@@ -923,7 +923,7 @@ table tr td{
         padding: 20px 20px 0px 0px;
         text-decoration: none;
         display: block;
-        font-size: 16px;
+        font-size: 17px;
         letter-spacing: 1px;
         position: relative;
         transition: 0.3s;
@@ -995,7 +995,7 @@ table tr td{
     }
     .total-quantity{
         position: absolute;
-        margin: 30% 0px 0px 65%;
+        margin: 40% 0px 0px 65%;
     }
     .total-quantity input{
         border: 2px solid black;
@@ -1026,7 +1026,7 @@ table tr td{
 
 @media screen and (min-width: 1169px) {
     .container{
-        height: 81.7%;
+        height: 100%;
         width: 250px;
         position: absolute;
         margin-top: 0%;
@@ -1038,7 +1038,7 @@ table tr td{
 
     .container .head{
         color: white;
-        font-size: 23px;
+        font-size: 24px;
         font-weight: bold;
         padding: 30px;
         text-transform: uppercase;
@@ -1063,7 +1063,7 @@ table tr td{
     ol li a i{
         margin-left: -10px;
         width: 70px;
-        font-size: 20px;
+        font-size: 19px;
         text-align: center;
     }
 
@@ -1124,7 +1124,7 @@ table tr td{
     }
     .total-quantity{
         position: absolute;
-        margin: 25% 0px 0px 68%;
+        margin: 35% 0px 0px 68%;
     }
     .total-quantity input{
         border: 2px solid black;
@@ -1156,7 +1156,7 @@ table tr td{
 
 @media screen and (min-width: 1280px) {
     .container{
-        height: 81.7%;
+        height: 100%;
         width: 250px;
         position: absolute;
         margin-top: 0%;
@@ -1182,7 +1182,7 @@ table tr td{
         padding: 20px 20px 0px 0px;
         text-decoration: none;
         display: block;
-        font-size: 15px;
+        font-size: 17px;
         letter-spacing: 1px;
         position: relative;
         transition: 0.3s;
@@ -1254,7 +1254,7 @@ table tr td{
     }
     .total-quantity{
         position: absolute;
-        margin: 25% 0px 0px 65%;
+        margin: 35% 0px 0px 65%;
     }
     .total-quantity input{
         border: 2px solid black;
@@ -1283,7 +1283,7 @@ table tr td{
 
 @media screen and (min-width: 1336px) {
     .container{
-        height: 81.7%;
+        height: 100%;
         width: 250px;
         position: absolute;
         margin-top: 0%;
@@ -1309,7 +1309,7 @@ table tr td{
         padding: 20px 20px 0px 0px;
         text-decoration: none;
         display: block;
-        font-size: 15px;
+        font-size: 17px;
         letter-spacing: 1px;
         position: relative;
         transition: 0.3s;
@@ -1320,7 +1320,7 @@ table tr td{
     ol li a i{
         margin-left: -10px;
         width: 70px;
-        font-size: 19px;
+        font-size: 21px;
         text-align: center;
     }
 
@@ -1381,7 +1381,7 @@ table tr td{
     }
     .total-quantity{
         position: absolute;
-        margin: 23% 0px 0px 68%;
+        margin: 35% 0px 0px 68%;
     }
     .total-quantity input{
         border: 2px solid black;
@@ -1410,7 +1410,7 @@ table tr td{
 
 @media screen and (min-width: 1383px) {
     .container{
-        height: 81.7%;
+        height: 100%;
         width: 270px;
         position: absolute;
         margin-top: 0%;
@@ -1508,7 +1508,7 @@ table tr td{
     }
     .total-quantity{
         position: absolute;
-        margin: 21% 0px 0px 72%;
+        margin: 35% 0px 0px 72%;
     }
     .total-quantity input{
         border: 2px solid black;
@@ -1537,7 +1537,7 @@ table tr td{
 
 @media screen and (min-width: 1440px) {
     .container{
-        height: 81.7%;
+        height: 100%;
         width: 270px;
         position: absolute;
         margin-top: 0%;
@@ -1549,7 +1549,7 @@ table tr td{
 
     .container .head{
         color: white;
-        font-size: 26px;
+        font-size: 25px;
         font-weight: bold;
         padding: 30px;
         text-transform: uppercase;
@@ -1563,7 +1563,7 @@ table tr td{
         padding: 20px 20px 0px 0px;
         text-decoration: none;
         display: block;
-        font-size: 19px;
+        font-size: 18px;
         letter-spacing: 1px;
         position: relative;
         transition: 0.3s;
@@ -1574,7 +1574,7 @@ table tr td{
     ol li a i{
         margin-left: -10px;
         width: 70px;
-        font-size: 23px;
+        font-size: 22px;
         text-align: center;
     }
 
@@ -1635,7 +1635,7 @@ table tr td{
     }
     .total-quantity{
         position: absolute;
-        margin: 20% 0px 0px 73%;
+        margin: 30% 0px 0px 73%;
     }
     .total-quantity input{
         border: 2px solid black;
@@ -1664,7 +1664,7 @@ table tr td{
 
 @media screen and (min-width: 1572px) {
     .container{
-        height: 81.7%;
+        height: 100%;
         width: 270px;
         position: absolute;
         margin-top: 0%;
@@ -1676,7 +1676,7 @@ table tr td{
 
     .container .head{
         color: white;
-        font-size: 26px;
+        font-size: 25px;
         font-weight: bold;
         padding: 30px;
         text-transform: uppercase;
@@ -1690,7 +1690,7 @@ table tr td{
         padding: 20px 20px 0px 0px;
         text-decoration: none;
         display: block;
-        font-size: 19px;
+        font-size: 18px;
         letter-spacing: 1px;
         position: relative;
         transition: 0.3s;
@@ -1701,7 +1701,7 @@ table tr td{
     ol li a i{
         margin-left: -10px;
         width: 70px;
-        font-size: 23px;
+        font-size: 22px;
         text-align: center;
     }
 
@@ -1762,7 +1762,7 @@ table tr td{
     }
     .total-quantity{
         position: absolute;
-        margin: 20% 0px 0px 70%;
+        margin: 30% 0px 0px 70%;
     }
     .total-quantity input{
         border: 2px solid black;
@@ -1798,7 +1798,7 @@ table tr td{
 
 @media screen and (min-width: 1742px) {
     .container{
-        height: 81.7%;
+        height: 100%;
         width: 270px;
         position: absolute;
         margin-top: 0%;
@@ -1896,7 +1896,7 @@ table tr td{
     }
     .total-quantity{
         position: absolute;
-        margin: 18% 0px 0px 77%;
+        margin: 30% 0px 0px 77%;
     }
     .total-quantity input{
         border: 2px solid black;
@@ -1933,14 +1933,14 @@ table tr td{
 
 @media screen and (min-width: 1880px) {
     .container{
-        height: 81.7%;
-        width: 270px;
+        height: 100%;
+        width: 290px;
         position: absolute;
         margin-top: 0%;
         background: #162fa0;
         z-index: 1;
         transition: transform 0.5s;
-        transform: translateX(-270px);
+        transform: translateX(-290px);
     }
 
     .container .head{
@@ -2032,7 +2032,7 @@ table tr td{
     }
     .total-quantity{
         position: absolute;
-        margin: 16% 0px 0px 78%;
+        margin: 30% 0px 0px 78%;
     }
     .total-quantity input{
         border: 2px solid black;

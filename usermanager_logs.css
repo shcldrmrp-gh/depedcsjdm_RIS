@@ -239,7 +239,6 @@ table tr td{
     font-size: 18px;
     border: 2px solid black;
     line-height: 20px;
-    
 }
 
 
@@ -255,61 +254,540 @@ table tr td{
 /* TABLE */
 
 /* RESPONSIVE */
-@media screen and (min-width:1880px){
-    table{
-        font-size: 20px;
-        margin-left: 117px;
-        width: 93%;
-        border: 2px solid black;
-        border-collapse: collapse;  
+@media screen and (min-width: 768px) {
+    .container{
+        height: 100%;
+        width: 210px;
+        position: absolute;
+        margin-top: 0%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-210px);
     }
 
-    .scroll{
-        margin-left: 5%;
-        margin-top: 10px;
-        width: 90%;
-        height: 350px;
-        overflow-y: scroll;
+    .container .head{
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
     }
-    h2{
-        font-size: 40px;
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 15px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 20px;
         text-align: center;
     }
-    
-    
-}
 
-@media screen and (max-width:1366px){
-    .container{
-        width: 300px;
-        transform: translateX(-300px);
+    h2{
+        font-size: 25px;
+        text-align: center;
     }
+
     table{
-        font-size: 20px;
-        margin-left: 0%;
+        font-size: 17px;
+        margin-left: 0px;
         width: 100%;
         border: 2px solid black;
         border-collapse: collapse;  
     }
 
+    table tr td{
+        margin-left: 10px;
+        font-size: 15px;
+        border: 2px solid black;
+        line-height: 20px;
+    }
+
     .scroll{
-        margin-left: 5%;
+        margin-left: 4%;
         margin-top: 10px;
-        width: 90%;
+        width: 92%;
         height: 350px;
         overflow-y: scroll;
     }
-}
 
-@media screen and (max-width:1200px){
     
 }
 
-@media screen and (max-width:1024px){
+@media screen and (min-width: 848px) {
+    .container{
+        height: 100%;
+        width: 210px;
+        position: absolute;
+        margin-top: 0%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-210px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 15px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 20px;
+        text-align: center;
+    }
     
 }
 
-@media screen and (max-width:768px){
+@media screen and (min-width: 936px) {
+    .container{
+        height: 100%;
+        width: 210px;
+        position: absolute;
+        margin-top: 0%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-210px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 15px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 20px;
+        text-align: center;
+    }
     
+}
+
+@media screen and (min-width: 1050px) {
+    .container{
+        height: 100%;;
+        width: 250px;
+        position: absolute;
+        margin-top: 0%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-250px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 23px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+}
+
+@media screen and (min-width: 1168px) {
+    .container{
+        height: 100%;
+        width: 270px;
+        position: absolute;
+        margin-top: 0%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-270px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 17px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1257px) {
+    .container{
+        height: 100%;
+        width: 270px;
+        position: absolute;
+        margin-top: 0%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-270px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 18px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 22px;
+        text-align: center;
+    }
+    
+}
+
+@media screen and (min-width: 1350px) {
+    .container{
+        height: 100%;;
+        width: 270px;
+        position: absolute;
+        margin-top: 0%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-270px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 19px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    h2{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    table{
+        font-size: 17px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse;  
+    }
+
+    table tr td{
+        margin-left: 10px;
+        font-size: 15px;
+        border: 2px solid black;
+        line-height: 20px;
+    }
+
+    .scroll{
+        margin-left: 4%;
+        margin-top: 10px;
+        width: 92%;
+        height: 350px;
+        overflow-y: scroll;
+    }
+    
+}
+
+@media screen and (min-width: 1411px) {
+    .container{
+        height: 100%;
+        width: 270px;
+        position: absolute;
+        margin-top: 0%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-270px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 19px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 22px;
+        text-align: center;
+    }
+    
+}
+
+@media screen and (min-width: 1615px) {
+    .container{
+        height: 100%;;
+        width: 270px;
+        position: absolute;
+        margin-top: 0%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-270px);
+    }
+    .container .head{
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 18px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    h2{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    table{
+        font-size: 17px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse;  
+    }
+
+    table tr td{
+        margin-left: 10px;
+        font-size: 15px;
+        border: 2px solid black;
+        line-height: 20px;
+    }
+
+    .scroll{
+        margin-left: 4%;
+        margin-top: 10px;
+        width: 92%;
+        height: 350px;
+        overflow-y: scroll;
+    }
+    
+}
+
+@media screen and (min-width: 1771px) {
+    .container{
+        height: 100%;
+        width: 290px;
+        position: absolute;
+        margin-top: 0%;
+        background: #162fa0;
+        z-index: 1;
+        transition: transform 0.5s;
+        transform: translateX(-290px);
+    }
+
+    .container .head{
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        padding: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        background: #7c9885;
+    }
+
+    ol li a{
+        color: white;
+        padding: 20px 20px 0px 0px;
+        text-decoration: none;
+        display: block;
+        font-size: 20px;
+        letter-spacing: 1px;
+        position: relative;
+        transition: 0.3s;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+
+    ol li a i{
+        margin-left: -10px;
+        width: 70px;
+        font-size: 25px;
+        text-align: center;
+    }
+    
+    h2{
+        font-size: 30px;
+        text-align: center;
+    }
     
 }

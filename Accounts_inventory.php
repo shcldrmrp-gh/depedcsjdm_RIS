@@ -127,16 +127,34 @@
                 </select>
             </div>
             <div class="accountname">
-                <label>Account Name:</label>
-                <input type="text" name="account_Name[]" required><br>
+                <label>Name:</label>
+                <input type="text" name="account_Name[]" placeholder="Full Name" required><br>
             </div>
             <div class="userposition">
-                <label>User Position:</label>
+                <label>Position:</label>
                 <input type="text" name="user_Position[]" required><br>
             </div>
             <div class="useroffice">
-                <label>User Office:</label>
-                <input type="text" name="user_Office[]" required>
+                <label>Office:</label>
+                <select name="user_Office[]" class="dropdownuserOffice" id="userOfficeSelect"> 
+                    <option value="">Select Office</option>
+                    <option value="Accounting">Accounting</option>
+                    <option value="Assistant Schools Division Superintendent">Assistant Schools Division Superintendent</option>
+                    <option value="BAC">BAC</option>
+                    <option value="Budget">Budget</option>
+                    <option value="Cashier">Cashier</option>
+                    <option value="Commission on Audit">Commission on Audit</option>
+                    <option value="Curriculum Implementation Division">Curriculum Implementation Division</option>
+                    <option value="General Services">General Services</option>
+                    <option value="Information Communications Technology">Information Communications Technology</option>
+                    <option value="Legal">Legal</option>
+                    <option value="Payroll">Payroll</option>
+                    <option value="Personnel">Personnel</option>
+                    <option value="Property and Supply">Property and Supply</option>
+                    <option value="Records">Records</option>
+                    <option value="Schools Division Superintendent">Schools Division Superintendent</option>
+                    <option value="School Governance Operations Division">School Governance Operations Division</option>
+                </select>
             </div>
             <div class="centercode">
                 <label>Center Code:</label>
@@ -150,7 +168,7 @@
     
             </script>
             <div class="accountpass">
-                <label>Account Pass:</label>
+                <label>Password:</label>
                 <input type="text" name="account_Pass[]" required>
             </div>
 

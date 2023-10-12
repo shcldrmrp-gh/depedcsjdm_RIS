@@ -83,6 +83,14 @@ table{
     border-collapse: collapse; 
 }
 
+table tr:nth-child(even) {
+    background-color: lightgray; 
+}
+
+ table tr:nth-child(odd) {
+    background-color: #ffffff; 
+}
+
 .table-number{
     width: 2%;
 }
@@ -102,6 +110,7 @@ table{
 table tr {
     text-align: center;
     border: 2px solid black;
+    height: 40px;
 }
 
 table tr th{
@@ -117,9 +126,10 @@ table tr th{
 table tr td{
     height: 50px;
     font-size: 18px;
-    border: 2px solid black;
-    
+    border: 2px solid black;  
+    line-height: 20px;
 }
+
 .align-item-description{
     text-align: left;
     padding: 0px 0px 0px 20px;
@@ -142,104 +152,755 @@ table tr td{
 }
 
 
-@media screen and (min-width: 2560px){
+/* RESPONSIVE */
+@media screen and (min-width: 768px) {
+    header img{
+        margin-top: 10px;
+        width: 100px;
+    }
+
+    .headerTitles{
+        margin-top: -.3%;
+        margin-left: 1%;
+    }
+    
+    .headerTitles h1{
+        font-size: 130%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 100px;
+        
+    }
+    
+    .headerTitles h2{
+        font-size: 120%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 100px;
+        font-weight: 100;
+        
+    }
+    
+    .headerTitles h3{
+        font-size: 95%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 100px;
+        font-weight: 100;
+        
+    }
+
+    .backbtn{
+        float: right;
+        margin-top: -70px;
+        margin-right: 10px;
+        padding: 12px 12px 12px 12px;
+        color: white;
+        text-decoration: none;
+        border: 2px solid black;
+        border-radius: 10px;
+        font-size: 13px;
+    }
+
+    .title h2{
+        text-align: center;
+        font-size: 30px;
+        margin-left: 10%;
+    }
+
     table{
-        font-size: 20px;
+        font-size: 17px;
         margin-left: 0%;
+        margin-top: 20px;
         width: 100%;
         border: 2px solid black;
         border-collapse: collapse; 
     }
+
+    table tr td{
+        height: 50px;
+        font-size: 15px;
+        border: 2px solid black;  
+        line-height: 20px;
+    }
+
     .scroll{
-        width: 1000px;
-        margin-left: 33%;
+        width: 90%;
+        margin-left: 6%;
         overflow-y: scroll;
     }
+
+    
 }
 
-@media screen and (max-width: 1440px){
-    .title h2{
-        text-align: center;
-        font-size: 200%;
-        margin-top: 20px;
-        margin-bottom: 2%;
-        margin-left: 10%;
+@media screen and (min-width: 848px) {
+    header img{
+        margin-top: 10px;
+        width: 100px;
     }
-}
 
-@media screen and (max-width: 1367px){
-    .scroll{
-        width: 80%;
-        margin-left: 11%;
-        overflow-y: scroll;
+    .headerTitles{
+        margin-top: -.3%;
+        margin-left: 1%;
     }
-}
-
-@media screen and (max-width: 1326px){
-    .scroll{
-        width: 80%;
-        margin-left: 10%;
-        overflow-y: scroll;
+    
+    .headerTitles h1{
+        font-size: 130%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 100px;
+        
     }
-}
-
-@media screen and (max-width: 1271px){
-    .scroll{
-        width: 80%;
-        margin-left: 10%;
-        overflow-y: scroll;
+    
+    .headerTitles h2{
+        font-size: 120%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 100px;
+        font-weight: 100;
+        
     }
-}
+    
+    .headerTitles h3{
+        font-size: 95%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 100px;
+        font-weight: 100;
+        
+    }
 
-@media screen and (max-width: 1200px){
     .backbtn{
         float: right;
+        margin-top: -70px;
+        margin-right: 10px;
+        padding: 12px 12px 12px 12px;
+        color: white;
+        text-decoration: none;
+        border: 2px solid black;
+        border-radius: 10px;
+        font-size: 13px;
+    }
+
+    .title h2{
+        text-align: center;
+        font-size: 30px;
+        margin-left: 10%;
+    }
+
+    table{
+        font-size: 17px;
+        margin-left: 0%;
+        margin-top: 20px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    table tr td{
+        height: 50px;
+        font-size: 15px;
+        border: 2px solid black;  
+        line-height: 20px;
+    }
+
+    .scroll{
+        width: 90%;
+        margin-left: 6%;
+        overflow-y: scroll;
+    }
+    
+}
+
+@media screen and (min-width: 936px) {
+    header img{
+        margin-top: 10px;
+        width: 100px;
+    }
+
+    .headerTitles{
+        margin-top: -.3%;
+        margin-left: 1%;
+    }
+    
+    .headerTitles h1{
+        font-size: 130%;
+        color: white;
+        position: absolute;
         margin-top: -90px;
-        margin-right: 20px;
-        padding: 12px 15px 12px 15px;
+        margin-left: 100px;
+        
+    }
+    
+    .headerTitles h2{
+        font-size: 120%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 100px;
+        font-weight: 100;
+        
+    }
+    
+    .headerTitles h3{
+        font-size: 95%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 100px;
+        font-weight: 100;
+        
+    }
+
+    .backbtn{
+        float: right;
+        margin-top: -70px;
+        margin-right: 10px;
+        padding: 12px 12px 12px 12px;
+        color: white;
+        text-decoration: none;
+        border: 2px solid black;
+        border-radius: 10px;
+        font-size: 13px;
+    }
+
+    .title h2{
+        text-align: center;
+        font-size: 30px;
+        margin-left: 10%;
+    }
+
+    table{
+        font-size: 17px;
+        margin-left: 0%;
+        margin-top: 20px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    table tr td{
+        height: 50px;
+        font-size: 15px;
+        border: 2px solid black;  
+        line-height: 20px;
+    }
+
+    .scroll{
+        width: 90%;
+        margin-left: 6%;
+        overflow-y: scroll;
+    }
+    
+}
+
+@media screen and (min-width: 1050px) {
+    header img{
+        margin-top: 10px;
+        width: 100px;
+    }
+
+    .headerTitles{
+        margin-top: -.3%;
+        margin-left: 1%;
+    }
+    
+    .headerTitles h1{
+        font-size: 130%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 100px;
+        
+    }
+    
+    .headerTitles h2{
+        font-size: 120%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 100px;
+        font-weight: 100;
+        
+    }
+    
+    .headerTitles h3{
+        font-size: 95%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 100px;
+        font-weight: 100;
+        
+    }
+
+    .backbtn{
+        float: right;
+        margin-top: -70px;
+        margin-right: 10px;
+        padding: 12px 12px 12px 12px;
+        color: white;
+        text-decoration: none;
+        border: 2px solid black;
+        border-radius: 10px;
+        font-size: 13px;
+    }
+
+    .title h2{
+        text-align: center;
+        font-size: 30px;
+        margin-left: 5%;
+    }
+
+    table{
+        font-size: 17px;
+        margin-left: 0%;
+        margin-top: 20px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    table tr td{
+        height: 50px;
+        font-size: 15px;
+        border: 2px solid black;  
+        line-height: 20px;
+    }
+
+    .scroll{
+        width: 90%;
+        margin-left: 6%;
+        overflow-y: scroll;
+    }
+    
+}
+
+@media screen and (min-width: 1168px) {
+    header img{
+        margin-top: 10px;
+        width: 100px;
+    }
+
+    .headerTitles{
+        margin-top: -.3%;
+        margin-left: 1%;
+    }
+    
+    .headerTitles h1{
+        font-size: 130%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 100px;
+        
+    }
+    
+    .headerTitles h2{
+        font-size: 120%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 100px;
+        font-weight: 100;
+        
+    }
+    
+    .headerTitles h3{
+        font-size: 95%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 100px;
+        font-weight: 100;
+        
+    }
+
+    .backbtn{
+        float: right;
+        margin-top: -70px;
+        margin-right: 10px;
+        padding: 12px 12px 12px 12px;
         color: white;
         text-decoration: none;
         border: 2px solid black;
         border-radius: 10px;
         font-size: 15px;
     }
-    .scroll{
-        width: 80%;
-        margin-left: 12%;
-        overflow-y: scroll;
-    }
-}
 
-@media screen and (max-width: 1024px){
+    .title h2{
+        text-align: center;
+        font-size: 30px;
+        margin-left: 5%;
+    }
+
     table{
-        font-size: 20px;
+        font-size: 18px;
         margin-left: 0%;
+        margin-top: 20px;
         width: 100%;
         border: 2px solid black;
         border-collapse: collapse; 
     }
+
+    table tr td{
+        height: 50px;
+        font-size: 16px;
+        border: 2px solid black;  
+        line-height: 20px;
+    }
+
     .scroll{
-        width: 850px;
-        margin-left: 10%;
+        width: 83%;
+        margin-left: 11%;
         overflow-y: scroll;
     }
-
+    
 }
 
-@media screen and (max-width: 992px){
-
-
-}
-
-
-@media screen and (max-width: 768px){
+@media screen and (min-width: 1257px) {
     header img{
         margin-top: 10px;
-        width: 110px;
+        width: 100px;
+    }
+
+    .headerTitles{
+        margin-top: -.3%;
+        margin-left: 1%;
     }
     
+    .headerTitles h1{
+        font-size: 130%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 100px;
+        
+    }
+    
+    .headerTitles h2{
+        font-size: 120%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 100px;
+        font-weight: 100;
+        
+    }
+    
+    .headerTitles h3{
+        font-size: 95%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 100px;
+        font-weight: 100;
+        
+    }
+
+    .backbtn{
+        float: right;
+        margin-top: -70px;
+        margin-right: 10px;
+        padding: 12px 12px 12px 12px;
+        color: white;
+        text-decoration: none;
+        border: 2px solid black;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+
+    .title h2{
+        text-align: center;
+        font-size: 30px;
+        margin-left: 5%;
+    }
+
+    table{
+        font-size: 19px;
+        margin-left: 0%;
+        margin-top: 20px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    table tr td{
+        height: 50px;
+        font-size: 17px;
+        border: 2px solid black;  
+        line-height: 20px;
+    }
+
+    .scroll{
+        width: 83%;
+        margin-left: 11%;
+        overflow-y: scroll;
+    }
+    
+}
+
+@media screen and (min-width: 1350px) {
+    header img{
+        margin-top: 10px;
+        width: 100px;
+    }
+
     .headerTitles{
-        margin-top: 0;
+        margin-top: -.3%;
+        margin-left: 1%;
+    }
+    
+    .headerTitles h1{
+        font-size: 130%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 93px;
+        
+    }
+    
+    .headerTitles h2{
+        font-size: 120%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 93px;
+        font-weight: 100;
+        
+    }
+    
+    .headerTitles h3{
+        font-size: 95%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 93px;
+        font-weight: 100;
+        
+    }
+
+    .backbtn{
+        float: right;
+        margin-top: -70px;
+        margin-right: 20px;
+        padding: 13px 13px 13px 13px;
+        color: white;
+        text-decoration: none;
+        border: 2px solid black;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+
+    .title h2{
+        text-align: center;
+        font-size: 32px;
+        margin-left: 5%;
+    }
+
+    table{
+        font-size: 19px;
+        margin-left: 0%;
+        margin-top: 15px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    table tr td{
+        height: 50px;
+        font-size: 17px;
+        border: 2px solid black;  
+        line-height: 20px;
+    }
+
+    .scroll{
+        width: 83%;
+        margin-left: 11%;
+        overflow-y: scroll;
+    }
+    
+}
+
+@media screen and (min-width: 1411px) {
+    header img{
+        margin-top: 10px;
+        width: 100px;
+    }
+
+    .headerTitles{
+        margin-top: -.3%;
+        margin-left: 1%;
+    }
+    
+    .headerTitles h1{
+        font-size: 130%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 93px;
+        
+    }
+    
+    .headerTitles h2{
+        font-size: 120%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 93px;
+        font-weight: 100;
+        
+    }
+    
+    .headerTitles h3{
+        font-size: 95%;
+        color: white;
+        position: absolute;
+        margin-top: -90px;
+        margin-left: 93px;
+        font-weight: 100;
+        
+    }
+
+    .backbtn{
+        float: right;
+        margin-top: -70px;
+        margin-right: 20px;
+        padding: 13px 13px 13px 13px;
+        color: white;
+        text-decoration: none;
+        border: 2px solid black;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+
+    .title h2{
+        text-align: center;
+        font-size: 32px;
+        margin-left: 5%;
+    }
+
+    table{
+        font-size: 19px;
+        margin-left: 0%;
+        margin-top: 15px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    table tr td{
+        height: 50px;
+        font-size: 17px;
+        border: 2px solid black;  
+        line-height: 20px;
+    }
+
+    .scroll{
+        width: 82%;
+        margin-left: 11%;
+        overflow-y: scroll;
+    }
+    
+}
+
+@media screen and (min-width: 1615px) {
+    header img{
+        margin-top: 10px;
+        width: 120px;
+    }
+
+    .headerTitles{
+        margin-top: -.3%;
+        margin-left: 1%;
+    }
+    
+    .headerTitles h1{
+        font-size: 130%;
+        color: white;
+        position: absolute;
+        margin-top: -100px;
+        margin-left: 110px;
+        
+    }
+    
+    .headerTitles h2{
+        font-size: 120%;
+        color: white;
+        position: absolute;
+        margin-top: -100px;
+        margin-left: 110px;
+        font-weight: 100;
+        
+    }
+    
+    .headerTitles h3{
+        font-size: 95%;
+        color: white;
+        position: absolute;
+        margin-top: -100px;
+        margin-left: 110px;
+        font-weight: 100;
+        
+    }
+
+    .backbtn{
+        float: right;
+        margin-top: -90px;
+        margin-right: 20px;
+        padding: 14px 14px 14px 14px;
+        color: white;
+        text-decoration: none;
+        border: 2px solid black;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+
+    .title h2{
+        text-align: center;
+        font-size: 35px;
+        margin-left: 5%;
+    }
+
+    table{
+        font-size: 20px;
+        margin-left: 0%;
+        margin-top: 15px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    table tr td{
+        height: 50px;
+        font-size: 18px;
+        border: 2px solid black;  
+        line-height: 20px;
+    }
+
+    .scroll{
+        width: 82%;
+        margin-left: 11%;
+        overflow-y: scroll;
+    }
+    
+}
+
+@media screen and (min-width: 1771px) {
+    header img{
+        margin-top: 10px;
+        width: 130px;
+    }
+
+    .headerTitles{
+        margin-top: -.3%;
+        margin-left: 1%;
     }
     
     .headerTitles h1{
@@ -270,182 +931,47 @@ table tr td{
         font-weight: 100;
         
     }
-    
-    .title h2{
-        text-align: center;
-        font-size: 200%;
-        margin-top: 20px;
-        margin-bottom: 2%;
-        margin-left: 20%;
-    }
-    
+
     .backbtn{
         float: right;
-        margin-top: -80px;
-        margin-right: 10px;
-        padding: 12px 15px 12px 15px;
+        margin-top: -105px;
+        margin-right: 20px;
+        padding: 14px 14px 14px 14px;
         color: white;
         text-decoration: none;
         border: 2px solid black;
         border-radius: 10px;
-        font-size: 15px;
+        font-size: 18px;
     }
-    .scroll{
-        width: 650px;
-        margin-left: 9%;
-        overflow-y: scroll;
-    }
-}
 
-
-@media screen and (max-width: 600px){
-    header img{
-        margin-top: 10px;
-        width: 100px;
-    }
-    
-    .headerTitles{
-        margin-top: 0;
-    }
-    
-    .headerTitles h1{
-        font-size: 100%;
-        color: white;
-        position: absolute;
-        margin-top: -90px;
-        margin-left: 110px;
-        
-    }
-    
-    .headerTitles h2{
-        font-size: 95%;
-        color: white;
-        position: absolute;
-        margin-top: -90px;
-        margin-left: 110px;
-        font-weight: 100;
-        
-    }
-    
-    .headerTitles h3{
-        font-size: 90%;
-        color: white;
-        position: absolute;
-        margin-top: -90px;
-        margin-left: 110px;
-        font-weight: 100;
-        
-    }
-    
     .title h2{
         text-align: center;
-        font-size: 25px;
-        margin-top: 20px;
-        margin-bottom: 2%;
-        margin-left: 9%;
-    }
-    
-    .backbtn{
-        float: right;
-        margin-top: -65px;
-        margin-right: 15px;
-        padding: 12px 15px 12px 15px;
-        color: white;
-        text-decoration: none;
-        border: 2px solid black;
-        border-radius: 10px;
-        font-size: 12px;
+        font-size: 35px;
+        margin-left: 5%;
     }
 
     table{
-        font-size: 15px;
+        font-size: 22px;
         margin-left: 0%;
+        margin-top: 15px;
         width: 100%;
         border: 2px solid black;
         border-collapse: collapse; 
     }
 
-    .scroll{
-        width: 500px;
-        margin-left: 10%;
-        overflow-y: scroll;
-    }
-}
-
-
-@media screen and (max-width: 426px){
-    header img{
-        margin-top: 10px;
-        width: 100px;
-    }
-    
-    .headerTitles{
-        margin-top: 0;
-    }
-    
-    .headerTitles h1{
-        font-size: 100%;
-        color: white;
-        position: absolute;
-        margin-top: -100px;
-        margin-left: 110px;
-        
-    }
-    
-    .headerTitles h2{
-        font-size: 95%;
-        color: white;
-        position: absolute;
-        margin-top: -100px;
-        margin-left: 110px;
-        font-weight: 100;
-        
-    }
-    
-    .headerTitles h3{
-        font-size: 90%;
-        color: white;
-        position: absolute;
-        margin-top: -100px;
-        margin-left: 110px;
-        font-weight: 100;
-        
-    }
-    
-    .title h2{
-        text-align: center;
-        font-size: 25px;
-        margin-top: 20px;
-        margin-bottom: 2%;
-        margin-left: 9%;
-    }
-    
-    .backbtn{
-        float: right;
-        margin-top: -65px;
-        margin-right: 10px;
-        padding: 12px 15px 12px 15px;
-        color: white;
-        text-decoration: none;
-        border: 2px solid black;
-        border-radius: 10px;
-        font-size: 12px;
-    }
-
-    table{
-        font-size: 15px;
-        margin-left: 0%;
-        width: 100%;
-        border: 2px solid black;
-        border-collapse: collapse; 
+    table tr td{
+        height: 50px;
+        font-size: 20px;
+        border: 2px solid black;  
+        line-height: 20px;
     }
 
     .scroll{
-        width: 400px;
-        margin-left: 2%;
+        width: 80%;
+        margin-left: 12%;
         overflow-y: scroll;
     }
-
+    
 }
 
 

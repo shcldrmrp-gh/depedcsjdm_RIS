@@ -532,546 +532,135 @@ table tr td{
 /* Delete Drescription*/
 
 
-/* RESPONSIVE WEBSITE */
-@media screen and (min-width: 2560px){
-    .searchbar{
-        position: absolute;
-        margin-left: 80%;
-        margin-top: -38px; 
-    }
-    table{
-        font-size: 20px;
-        margin-left: 12%;
-        width: 87%;
-        border: 2px solid black;
-        border-collapse: collapse; 
-    }
-    .sorting{
-        position: absolute;
-        font-size: 18px;
-        font-weight: bold;
-        margin: 10px 0px 0px 87%;
-    }
-}
-
-@media screen and (min-width: 2506px){
-    .searchbar{
-        position: absolute;
-        margin-left: 80%;
-        margin-top: -38px; 
-    }
-    table{
-        font-size: 20px;
-        margin-left: 12%;
-        width: 87%;
-        border: 2px solid black;
-        border-collapse: collapse; 
-    }
-    .sorting{
-        position: absolute;
-        font-size: 18px;
-        font-weight: bold;
-        margin: 10px 0px 0px 87%;
-    }
-}
-
-@media screen and (min-width: 1920px){
-    .searchbar{
-        position: absolute;
-        margin-left: 74%;
-        margin-top: -38px; 
-    }
-    table{
-        font-size: 20px;
-        margin-left: 13%;
-        width: 87%;
-        border: 2px solid black;
-        border-collapse: collapse; 
-    }
-    .sorting{
-        position: absolute;
-        font-size: 18px;
-        font-weight: bold;
-        margin: 10px 0px 0px 83%;
-    }
-    .scroll{
-        margin-top: 40px; 
-        overflow-y: scroll;
-        margin-left: -2%
-     }
-}
-
-@media screen and (min-width: 1880px){
-    .searchbar{
-        position: absolute;
-        margin-left: 74%;
-    }
-    table{
-        font-size: 20px;
-        margin-left: 12.5%;
-        width: 87%;
-        border: 2px solid black;
-        border-collapse: collapse; 
-    }
-
-    .scroll{
-        margin-top: 40px; 
-        overflow-y: scroll;
-        margin-left: -2%
-     }
-}
-
-
-
-
-@media screen and (max-width: 1366px){
-    .searchbar{
-        position: absolute;
-        margin-left: 68%;
-        margin-top: -38px; 
-    }
-    table{
-        font-size: 20px;
-        margin-left: 160px;
-        width: 87%;
-        border: 2px solid black;
-        border-collapse: collapse; 
-    }
-    ul li a{
-        font-size: 11px;
-        padding: 15px 15px 15px 15px;
-    }
-
-    .title h2{
-        margin-top: -30px;
-        font-size: 40px;
-        margin-left: 35%;
-    }    
-    .sorting{
-        position: absolute;
-        font-size: 18px;
-        font-weight: bold;
-        margin: 10px 0px 0px 80%;
-    }
-}
-
-@media screen and (max-width: 1326px){
-    .searchbar{
-        position: absolute;
-        margin-left: 845px;
-        margin-top: -38px; 
-    }
-    table{
-        font-size: 20px;
-        margin-left: 145px;
-        width: 87%;
-        border: 2px solid black;
-        border-collapse: collapse; 
-    }
-    .sorting{
-        position: absolute;
-        font-size: 18px;
-        font-weight: bold;
-        margin: 10px 0px 0px 81%;
-    }
-}
-
-@media screen and (max-width: 1271px){
-    .searchbar{
-        position: absolute;
-        margin-left: 65%;
-        margin-top: -38px; 
-    }
-    table{
-        font-size: 20px;
-        margin-left: 145px;
-        width: 87%;
-        border: 2px solid black;
-        border-collapse: collapse; 
-    }
-}
-
-@media screen and (max-width: 1200px){
-    .searchbar{
-        position: absolute;
-        margin-left: 62%;
-        margin-top: -38px; 
-    }
-    table{
-        font-size: 20px;
-        margin-left: 135px;
-        width: 87%;
-        border: 2px solid black;
-        border-collapse: collapse; 
-    }
-    .sorting{
-        position: absolute;
-        font-size: 18px;
-        font-weight: bold;
-        margin: 10px 0px 0px 80%;
-    }
-}
-
-@media screen and (max-width: 1024px){
-    .title h2{
-        margin-top: -30px;
-        font-size: 40px;
-        margin-left: 300px;
-    } 
-    .searchbar{
-        position: absolute;
-        margin-left: 64%;
-        margin-top: -25px; 
-    }
-    .searchbar input{
-        height: 25px;
-        width: 150px;
-     }
-     nav{
-        float: right;
-        margin-right: 10px;
-        padding-top: 85px ;
-
-    }
-
-    ul li a{
-        display: block;
-        margin: 20px 0px 0px 0px;
-        padding: 12px 15px;
-        color: white;
-        text-decoration: none;
-        text-align: center;
-        font-size: 10px;
-        outline: 2px solid black;
-        box-shadow: 2px darkblue;
-        border-radius: 5px;
-        box-sizing: border-box;
-    }
-    table{
-        font-size: 20px;
-        margin-left: 120px;
-        width: 87%;
-        border: 2px solid black;
-        border-collapse: collapse; 
-    }
-    table tr {
-        text-align: center;
-        border: 2px solid black;
-        height: 40px;
-    }
-    table tr td{
-        border: 2px solid black;
-        line-height: 20px;
-    }
-    .scroll{
-        margin-top: 40px; 
-        margin-right: 20px;
-         overflow-y: scroll;    
-     }
-     .sorting{
-        position: absolute;
-        font-size: 18px;
-        font-weight: bold;
-        margin: 10px 0px 0px 790px;
-    }
-
-}
-
-@media screen and (max-width: 992px){
-    .searchbar{
-        position: absolute;
-        margin-left: 640px;
-        margin-top: -20px; 
-    }
-
-    .searchbar input{
-       width: 150px;
-    }
-
-    table{
-        font-size: 20px;
-        margin-left: 110px;
-        width: 87%;
-        border: 2px solid black;
-        border-collapse: collapse; 
-    }
-    .sorting{
-        position: absolute;
-        font-size: 18px;
-        font-weight: bold;
-        margin: 10px 0px 0px 760px;
-    }
-    
+/* RESPONSIVE */
+@media screen and (min-width: 768px) {
     header img{
         margin-top: 10px;
-        width: 110px;
+        width: 100px;
     }
 
-    .headerTitles{
-        margin-top: 0;
-    }
-    
     .headerTitles h1{
         font-size: 110%;
         color: white;
         position: absolute;
-        margin-top: -125px;
-        margin-left: 110px;
+        margin-top: -130px;
+        margin-left: 105px;
         
     }
     
     .headerTitles h2{
-        font-size: 120%;
+        font-size: 110%;
         color: white;
         position: absolute;
-        margin-top: -120px;
-        margin-left: 110px;
+        margin-top: -130px;
+        margin-left: 105px;
         font-weight: 100;
         
     }
     
     .headerTitles h3{
-        font-size: 95%;
+        font-size: 85%;
         color: white;
         position: absolute;
-        margin-top: -120px;
-        margin-left: 110px;
+        margin-top: -130px;
+        margin-left: 105px;
         font-weight: 100;
+        
     }
-
+    
     .title h2{
         margin-top: -30px;
-        font-size: 40px;
-        margin-left: 300px;
-    }    
-
-    nav{
-        float: right;
-        margin-right: 10px;
-        padding-top: 85px ;
-
+        font-size: 27px;
+        margin-left: 30%;
     }
+    
+    .searchbar{
+        position: absolute;
+        margin-left: 52%;
+        margin-top: -5px; 
+    }
+    
+    .searchbar input{
+        background: white;
+        width: 150px;
+        height: 28px;
+        border: 2px solid black;
+        border-radius: 10px;
+        color: black;
+        text-align: center;
+        outline: none;
+    }
+
+    .update{
+        margin-top: 20px;
+        margin-right: 20px;
+        width: 100%;
+    }
+
+    .settings1{
+        margin-top: 20px;
+        margin-right: 10px;
+        width: 100%;
+    }
+    
 
     ul li a{
         display: block;
-        margin: 15px 0px 0px 0px;
-        padding: 12px 15px;
+        margin: 5px 0px 0px 0px;
+        padding: 10px 10px 10px 10px;
         color: white;
         text-decoration: none;
         text-align: center;
+        font-size: 12px;
         outline: 2px solid black;
         box-shadow: 2px darkblue;
         border-radius: 5px;
         box-sizing: border-box;
     }
 
-}
-
-
-@media screen and (max-width: 768px){
-    header img{
-        margin-top: 5px;
-        width: 100px;
-    }
-
-    .headerTitles{
-        margin-top: 0;
-    }
-    
-    .headerTitles h1{
-        font-size: 100%;
-        color: white;
-        position: absolute;
-        margin-top: -135px;
-        margin-left: 100px;
-        
-    }
-    
-    .headerTitles h2{
-        font-size: 120%;
-        color: white;
-        position: absolute;
-        margin-top: -135px;
-        margin-left: 100px;
-        font-weight: 100;
-        
-    }
-    
-    .headerTitles h3{
-        font-size: 95%;
-        color: white;
-        position: absolute;
-        margin-top: -135px;
-        margin-left: 100px;
-        font-weight: 100;
-    }
-    .searchbar{
-        position: absolute;
-        margin-left: 430px;
-        margin-top: 5px; 
-    }
-    .searchbar input{
-        width: 150px;
-        height: 20px;
-     }
-     ul li a{
-        display: block;
-        margin: 28px 0px 0px 0px;
-        padding: 8px 10px;
-        color: white;
-        text-decoration: none;
-        text-align: center;
-        outline: 2px solid black;
-        box-shadow: 2px darkblue;
-        border-radius: 5px;
-        box-sizing: border-box;
-     }
-
-     .title h2{
-        margin-top: -30px;
-        font-size: 32px;
-        margin-left: 26%;
-    }    
-
-    table{
-        font-size: 20px;
-        margin-left: 12%;
-        width: 87%;
-        border: 2px solid black;
-        border-collapse: collapse; 
-    }
-
-    .sorting{
-        position: absolute;
-        font-size: 18px;
-        font-weight: bold;
-        margin: 10px 0px 0px 72%;
-    }
-
-    .sorting select{
-        font-size: 14px;
-    }
-}
-
-
-@media screen and (max-width: 600px){
-    header img{
-        margin-top: 5px;
-        width: 100px;
-    }
-
-    .headerTitles{
-        margin-top: 0;
-    }
-    
-    .headerTitles h1{
-        font-size: 100%;
-        color: white;
-        position: absolute;
-        margin-top: -135px;
-        margin-left: 100px;
-        
-    }
-    
-    .headerTitles h2{
-        font-size: 120%;
-        color: white;
-        position: absolute;
-        margin-top: -135px;
-        margin-left: 100px;
-        font-weight: 100;
-        
-    }
-    
-    .headerTitles h3{
-        font-size: 95%;
-        color: white;
-        position: absolute;
-        margin-top: -135px;
-        margin-left: 100px;
-        font-weight: 100;
-    }
-    .searchbar{
-        position: absolute;
-        margin-left: 270px;
-        margin-top: 5px; 
-    }
-    .searchbar input{
-        width: 150px;
-        height: 20px;
-     }
-     ul li a{
-        display: block;
-        margin: 25px 0px 0px 0px;
-        padding: 8px 10px;
-        color: white;
-        text-decoration: none;
-        text-align: center;
-        outline: 2px solid black;
-        box-shadow: 2px darkblue;
-        border-radius: 5px;
-        box-sizing: border-box;
-     }
-
-     .title h2{
-        margin-top: -30px;
-        font-size: 40px;
-        margin-left: 100px;
-    }    
-
-    table{
-        font-size: 20px;
-        margin-left: 64px;
-        width: 87%;
-        border: 2px solid black;
-        border-collapse: collapse; 
-    }
-}
-
-
-@media screen and (max-width: 426px){
-    header img{
-        margin-top: 5px;
-        width: 100px;
-    }
-    .searchbar{
-        position: absolute;
-        margin-left: 5px;
-    }
-    .title h2{
-        margin-top: -30px;
-        font-size: 25px;
-        margin-left: 80px;
-    }   
     table{
         font-size: 15px;
-        margin-left: 27px;
-        width: 90%;
+        margin-left: 0px;
+        width: 100%;
         border: 2px solid black;
         border-collapse: collapse; 
     }
+
+    table tr{
+        height: 30px;
+        border: 2px solid black;
+    }
+
+    table tr td{
+        font-size: 12px;
+        border: 2px solid black;
+        line-height: 10px;
+    }
+
     .scroll{
-        margin-top: 40px;
-         width: 100%;
-         height: 350px;
-         overflow-y: scroll;    
+        margin-top: 50px;
+        margin-left: 15px;
+        width: 95%;
+        height: 450px;
+        overflow-y: scroll;    
      }
+
      .sorting{
         position: absolute;
         font-size: 15px;
         font-weight: bold;
-        margin: 14px 0px 0px 66%;
+        margin: 10px 0px 0px 77%;
     }
-    
+
     .sorting select{
-        border: 2px solid black;
-        font-size: 12px;
+       font-size: 13px;
     }
+
     .popup{
         position: absolute;
         background: #fff;
         height: 270px;
-        width: 350px;
+        width: 412px;
         position: absolute;
         border: 3px solid black;
         border-radius: 10px;
@@ -1082,7 +671,6 @@ table tr td{
         visibility: hidden;
         transition: transform 0.4s;
     }
-    
     .open-popup{
         visibility: visible;
         top: 50%;
@@ -1091,25 +679,23 @@ table tr td{
 
     .popup h2{
         text-align: center;
-        font-size: 20px;
-        margin-left: 0px;
-        height: 11%;
-        background-color: #162fa0;
+        font-size: 19px;
+        margin-right: 0px;
+        height: 10%;
+        background: #162fa0;
         color: white;
         cursor: pointer;
-        width: 350px;
-        
     }
+    
     .Item label{
         position: absolute;
-        margin-left: 15px;
-        margin-top: -10px;
-        
+        margin-left: 20px;
+        margin-top: 20px;
     }
     .Item input{
         position: absolute;
         margin-left: 150px;
-        margin-top: -10px;
+        margin-top: 20px;
         border: 2px solid black;
         margin-bottom: 20px;
         width: 50%;
@@ -1121,13 +707,13 @@ table tr td{
     }
     .Stock label{
         position: absolute;
-        margin-top: 60px;
+        margin-top: 40px;
         margin-left: 50px;
     
     }
     .Stock input{
         position: absolute;
-        margin-top: 60px;
+        margin-top: 40px;
         border: 2px solid black;
         margin-left: 150px;
         width: 50%;
@@ -1167,30 +753,27 @@ table tr td{
     .buttons{
         display: flex;
         justify-content: space-between;
-        margin: 120px;
+        margin: 135px;
     }
     
     .Save{
-        font-size: 15px;
-        margin-left: 0px;
-        width: 50%;
-        height: 25px;
-    
+        margin-left: 20px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
     }
     .Close{
-        font-size: 15px;
-        margin-right: -10px;
-        width: 50%;
-        height: 25px;
+        margin-right: -30px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
     }
-
-
 
     .popup2{
         position: absolute;
         background: #fff;
         height: 200px;
-        width: 350px;
+        width: 400px;
         position: absolute;
         border: 3px solid black;
         border-radius: 10px;
@@ -1206,32 +789,1641 @@ table tr td{
         top: 50%;
         transform: translate(-50%, -50%)scale(1);
     }
-    /* Popup Edit Animation*/
-    
-    
-    
-    /* Popup Edit Description*/
+
     .popup2 h2{
         text-align: center;
-        font-size: 25px;
+        font-size: 19px;
         margin-left: 0px;
         height: 11%;
         background-color: #162fa0;
         color: white;
         cursor: pointer;
-        width: 350px;
     }
     
-    
-    
-    
-    /* Popup Edit Dropdown*/
     .dropdownedit{
-        width: 250px;
+        width: 300px;
         height: 40px;
         position: relative;
         margin-top: 20px;
-        margin-left: 53px;
+        margin-left: 60px;
+        margin-bottom: 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+        text-align: left;
+        font-size: 13px;
+        cursor: pointer;
+    }
+    
+    .dropdownedit *{
+        box-sizing: border-box;
+    }
+    
+    
+    .Quantity2 label{
+        margin-left: 110px;
+        font-size: 17px;
+    
+    }
+    
+    .Quantity2 input{
+        border: 2px solid black;
+        width: 15%;
+        height: 15px;
+        margin-left: 7px;
+        font-size: 13px;
+    }
+    
+    .buttons2{
+        display: flex;
+        justify-content: space-between;
+        margin: 100px;
+        margin-top: 20px;
+    }
+    
+    .Save2{
+        font-size: 13px;
+        margin-left: 40px;
+        width: 30%;
+        height: 22px;
+        cursor: pointer;
+    
+    }
+    .Close2{
+        font-size: 13px;
+        margin-right: 20px;
+        width: 30%;
+        height: 22px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 848px) {
+    header img{
+        margin-top: 10px;
+        width: 100px;
+    }
+
+    .headerTitles h1{
+        font-size: 110%;
+        color: white;
+        position: absolute;
+        margin-top: -130px;
+        margin-left: 105px;
+        
+    }
+    
+    .headerTitles h2{
+        font-size: 110%;
+        color: white;
+        position: absolute;
+        margin-top: -130px;
+        margin-left: 105px;
+        font-weight: 100;
+        
+    }
+    
+    .headerTitles h3{
+        font-size: 85%;
+        color: white;
+        position: absolute;
+        margin-top: -130px;
+        margin-left: 105px;
+        font-weight: 100;
+        
+    }
+    
+    .title h2{
+        margin-top: -30px;
+        font-size: 27px;
+        margin-left: 32%;
+    }
+    
+    .searchbar{
+        position: absolute;
+        margin-left: 58%;
+        margin-top: -5px; 
+    }
+    
+    .searchbar input{
+        background: white;
+        width: 150px;
+        height: 28px;
+        border: 2px solid black;
+        border-radius: 10px;
+        color: black;
+        text-align: center;
+        outline: none;
+    }
+
+    .update{
+        margin-top: 20px;
+        margin-right: 20px;
+        width: 100%;
+    }
+
+    .settings1{
+        margin-top: 20px;
+        margin-right: 10px;
+        width: 100%;
+    }
+    
+
+    ul li a{
+        display: block;
+        margin: 5px 0px 0px 0px;
+        padding: 10px 10px 10px 10px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 12px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    table{
+        font-size: 15px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    table tr{
+        height: 30px;
+        border: 2px solid black;
+    }
+
+    table tr td{
+        font-size: 12px;
+        border: 2px solid black;
+        line-height: 10px;
+    }
+
+    .scroll{
+        margin-top: 50px;
+        margin-left: 15px;
+        width: 95%;
+        height: 450px;
+        overflow-y: scroll;    
+     }
+
+     .sorting{
+        position: absolute;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 20px 0px 0px 79%;
+    }
+
+    .sorting select{
+       font-size: 13px;
+    }
+
+    .popup{
+        position: absolute;
+        background: #fff;
+        height: 270px;
+        width: 412px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    .open-popup{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup h2{
+        text-align: center;
+        font-size: 19px;
+        margin-right: 0px;
+        height: 10%;
+        background: #162fa0;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .Item label{
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .Item input{
+        position: absolute;
+        margin-left: 150px;
+        margin-top: 20px;
+        border: 2px solid black;
+        margin-bottom: 20px;
+        width: 50%;
+    }
+    
+    
+    .Stock{
+        margin-bottom: 10px;
+    }
+    .Stock label{
+        position: absolute;
+        margin-top: 40px;
+        margin-left: 50px;
+    
+    }
+    .Stock input{
+        position: absolute;
+        margin-top: 40px;
+        border: 2px solid black;
+        margin-left: 150px;
+        width: 50%;
+    }
+    
+    .Unit label{
+        position: absolute;
+        margin-top: 50px;
+        margin-left: 70px;
+        
+    }
+    .Unit .dropdownunit{
+        position: absolute;
+        border: 2px solid black;
+        margin-top: 50px;
+        margin-left: 150px;
+        width: 50%;
+        margin-bottom: 20px;
+        font-size: 15px;
+        
+    }
+    .Quantity label{
+        position: absolute;
+        margin-top: 90px;
+        margin-left: 55px;
+    
+    }
+    .Quantity input{
+        position: absolute;
+        border: 2px solid black;
+        width: 50%;
+        margin-top: 90px;
+        margin-left: 150px
+    
+    }
+    
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        margin: 135px;
+    }
+    
+    .Save{
+        margin-left: 20px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
+    }
+    .Close{
+        margin-right: -30px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .popup2{
+        position: absolute;
+        background: #fff;
+        height: 200px;
+        width: 400px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    .open-popup2{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup2 h2{
+        text-align: center;
+        font-size: 19px;
+        margin-left: 0px;
+        height: 11%;
+        background-color: #162fa0;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .dropdownedit{
+        width: 300px;
+        height: 40px;
+        position: relative;
+        margin-top: 20px;
+        margin-left: 60px;
+        margin-bottom: 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+        text-align: left;
+        font-size: 13px;
+        cursor: pointer;
+    }
+    
+    .dropdownedit *{
+        box-sizing: border-box;
+    }
+    
+    
+    .Quantity2 label{
+        margin-left: 110px;
+        font-size: 17px;
+    
+    }
+    
+    .Quantity2 input{
+        border: 2px solid black;
+        width: 15%;
+        height: 15px;
+        margin-left: 7px;
+        font-size: 13px;
+    }
+    
+    .buttons2{
+        display: flex;
+        justify-content: space-between;
+        margin: 100px;
+        margin-top: 20px;
+    }
+    
+    .Save2{
+        font-size: 13px;
+        margin-left: 40px;
+        width: 30%;
+        height: 22px;
+        cursor: pointer;
+    
+    }
+    .Close2{
+        font-size: 13px;
+        margin-right: 20px;
+        width: 30%;
+        height: 22px;
+        cursor: pointer;
+    }
+    
+}
+
+@media screen and (min-width: 936px) {
+    header img{
+        margin-top: 10px;
+        width: 100px;
+    }
+
+    .headerTitles h1{
+        font-size: 110%;
+        color: white;
+        position: absolute;
+        margin-top: -130px;
+        margin-left: 105px;
+        
+    }
+    
+    .headerTitles h2{
+        font-size: 110%;
+        color: white;
+        position: absolute;
+        margin-top: -130px;
+        margin-left: 105px;
+        font-weight: 100;
+        
+    }
+    
+    .headerTitles h3{
+        font-size: 85%;
+        color: white;
+        position: absolute;
+        margin-top: -130px;
+        margin-left: 105px;
+        font-weight: 100;
+        
+    }
+    
+    .title h2{
+        margin-top: -30px;
+        font-size: 27px;
+        margin-left: 35%;
+    }
+    
+    .searchbar{
+        position: absolute;
+        margin-left: 61%;
+        margin-top: -7px; 
+    }
+    
+    .searchbar input{
+        background: white;
+        width: 150px;
+        height: 28px;
+        border: 2px solid black;
+        border-radius: 10px;
+        color: black;
+        text-align: center;
+        outline: none;
+    }
+
+    .update{
+        margin-top: 20px;
+        margin-right: 20px;
+        width: 100%;
+    }
+
+    .settings1{
+        margin-top: 20px;
+        margin-right: 10px;
+        width: 100%;
+    }
+    
+
+    ul li a{
+        display: block;
+        margin: 5px 0px 0px 0px;
+        padding: 10px 10px 10px 10px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 12px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    table{
+        font-size: 16px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    table tr{
+        height: 30px;
+        border: 2px solid black;
+    }
+
+    table tr td{
+        font-size: 13px;
+        border: 2px solid black;
+        line-height: 10px;
+    }
+
+    .scroll{
+        margin-top: 50px;
+        margin-left: 15px;
+        width: 95%;
+        height: 450px;
+        overflow-y: scroll;    
+     }
+
+     .sorting{
+        position: absolute;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 20px 0px 0px 79%;
+    }
+
+    .sorting select{
+       font-size: 13px;
+    }
+
+    .popup{
+        position: absolute;
+        background: #fff;
+        height: 270px;
+        width: 412px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    .open-popup{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup h2{
+        text-align: center;
+        font-size: 19px;
+        margin-right: 0px;
+        height: 10%;
+        background: #162fa0;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .Item label{
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .Item input{
+        position: absolute;
+        margin-left: 150px;
+        margin-top: 20px;
+        border: 2px solid black;
+        margin-bottom: 20px;
+        width: 50%;
+    }
+    
+    
+    .Stock{
+        margin-bottom: 10px;
+    }
+    .Stock label{
+        position: absolute;
+        margin-top: 40px;
+        margin-left: 50px;
+    
+    }
+    .Stock input{
+        position: absolute;
+        margin-top: 40px;
+        border: 2px solid black;
+        margin-left: 150px;
+        width: 50%;
+    }
+    
+    .Unit label{
+        position: absolute;
+        margin-top: 50px;
+        margin-left: 70px;
+        
+    }
+    .Unit .dropdownunit{
+        position: absolute;
+        border: 2px solid black;
+        margin-top: 50px;
+        margin-left: 150px;
+        width: 50%;
+        margin-bottom: 20px;
+        font-size: 15px;
+        
+    }
+    .Quantity label{
+        position: absolute;
+        margin-top: 90px;
+        margin-left: 55px;
+    
+    }
+    .Quantity input{
+        position: absolute;
+        border: 2px solid black;
+        width: 50%;
+        margin-top: 90px;
+        margin-left: 150px
+    
+    }
+    
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        margin: 135px;
+    }
+    
+    .Save{
+        margin-left: 20px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
+    }
+    .Close{
+        margin-right: -30px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .popup2{
+        position: absolute;
+        background: #fff;
+        height: 200px;
+        width: 400px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    .open-popup2{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup2 h2{
+        text-align: center;
+        font-size: 19px;
+        margin-left: 0px;
+        height: 11%;
+        background-color: #162fa0;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .dropdownedit{
+        width: 300px;
+        height: 40px;
+        position: relative;
+        margin-top: 20px;
+        margin-left: 60px;
+        margin-bottom: 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+        text-align: left;
+        font-size: 13px;
+        cursor: pointer;
+    }
+    
+    .dropdownedit *{
+        box-sizing: border-box;
+    }
+    
+    
+    .Quantity2 label{
+        margin-left: 110px;
+        font-size: 17px;
+    
+    }
+    
+    .Quantity2 input{
+        border: 2px solid black;
+        width: 15%;
+        height: 15px;
+        margin-left: 7px;
+        font-size: 13px;
+    }
+    
+    .buttons2{
+        display: flex;
+        justify-content: space-between;
+        margin: 100px;
+        margin-top: 20px;
+    }
+    
+    .Save2{
+        font-size: 13px;
+        margin-left: 40px;
+        width: 30%;
+        height: 22px;
+        cursor: pointer;
+    
+    }
+    .Close2{
+        font-size: 13px;
+        margin-right: 20px;
+        width: 30%;
+        height: 22px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 1050px) {
+    header img{
+        margin-top: 10px;
+        width: 110px;
+    }
+
+    .headerTitles h1{
+        font-size: 115%;
+        color: white;
+        position: absolute;
+        margin-top: -125px;
+        margin-left: 115px;
+        
+    }
+    
+    .headerTitles h2{
+        font-size: 110%;
+        color: white;
+        position: absolute;
+        margin-top: -125px;
+        margin-left: 115px;
+        font-weight: 100;
+        
+    }
+    
+    .headerTitles h3{
+        font-size: 85%;
+        color: white;
+        position: absolute;
+        margin-top: -125px;
+        margin-left: 115px;
+        font-weight: 100;
+        
+    }
+    
+    .title h2{
+        margin-top: -30px;
+        font-size: 29px;
+        margin-left: 37%;
+    }
+    
+    .searchbar{
+        position: absolute;
+        margin-left: 64%;
+        margin-top: -20px; 
+    }
+    
+    .searchbar input{
+        background: white;
+        width: 150px;
+        height: 28px;
+        border: 2px solid black;
+        border-radius: 10px;
+        color: black;
+        text-align: center;
+        outline: none;
+    }
+
+    .update{
+        margin-top: 14px;
+        margin-right: 20px;
+        width: 100%;
+    }
+
+    .settings1{
+        margin-top: 14px;
+        margin-right: 10px;
+        width: 100%;
+    }
+    
+
+    ul li a{
+        display: block;
+        margin: 5px 0px 0px 0px;
+        padding: 12px 12px 12px 12px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 13px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    table{
+        font-size: 18px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    table tr{
+        height: 30px;
+        border: 2px solid black;
+    }
+
+    table tr td{
+        font-size: 15px;
+        border: 2px solid black;
+        line-height: 10px;
+    }
+
+    .scroll{
+        margin-top: 40px;
+        margin-left: 15px;
+        width: 95%;
+        height: 450px;
+        overflow-y: scroll;    
+     }
+
+     .sorting{
+        position: absolute;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 13px 0px 0px 82%;
+    }
+
+    .sorting select{
+       font-size: 14px;
+    }
+
+    .popup{
+        position: absolute;
+        background: #fff;
+        height: 270px;
+        width: 450px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    .open-popup{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup h2{
+        text-align: center;
+        font-size: 19px;
+        height: 10%;
+        background: #162fa0;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .Item label{
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .Item input{
+        position: absolute;
+        margin-left: 150px;
+        margin-top: 20px;
+        border: 2px solid black;
+        margin-bottom: 20px;
+        width: 50%;
+    }
+    
+    
+    .Stock{
+        margin-bottom: 10px;
+    }
+    .Stock label{
+        position: absolute;
+        margin-top: 40px;
+        margin-left: 50px;
+    
+    }
+    .Stock input{
+        position: absolute;
+        margin-top: 40px;
+        border: 2px solid black;
+        margin-left: 150px;
+        width: 50%;
+    }
+    
+    .Unit label{
+        position: absolute;
+        margin-top: 50px;
+        margin-left: 70px;
+        
+    }
+    .Unit .dropdownunit{
+        position: absolute;
+        border: 2px solid black;
+        margin-top: 50px;
+        margin-left: 150px;
+        width: 50%;
+        margin-bottom: 20px;
+        font-size: 15px;
+        
+    }
+    .Quantity label{
+        position: absolute;
+        margin-top: 90px;
+        margin-left: 55px;
+    
+    }
+    .Quantity input{
+        position: absolute;
+        border: 2px solid black;
+        width: 50%;
+        margin-top: 90px;
+        margin-left: 150px
+    
+    }
+    
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        margin: 135px;
+    }
+    
+    .Save{
+        margin-left: 20px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
+    }
+    .Close{
+        margin-right: -30px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .popup2{
+        position: absolute;
+        background: #fff;
+        height: 200px;
+        width: 425px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    .open-popup2{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup2 h2{
+        text-align: center;
+        font-size: 19px;
+        margin-left: 0px;
+        height: 11%;
+        background-color: #162fa0;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .dropdownedit{
+        width: 320px;
+        height: 40px;
+        position: relative;
+        margin-top: 20px;
+        margin-left: 60px;
+        margin-bottom: 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+        text-align: left;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    
+    .dropdownedit *{
+        box-sizing: border-box;
+    }
+    
+    
+    .Quantity2 label{
+        margin-left: 120px;
+        font-size: 17px;
+    
+    }
+    
+    .Quantity2 input{
+        border: 2px solid black;
+        width: 15%;
+        height: 15px;
+        margin-left: 7px;
+        font-size: 13px;
+    }
+    
+    .buttons2{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    
+    .Save2{
+        font-size: 14px;
+        margin-left: 40px;
+        width: 30%;
+        height: 25px;
+        cursor: pointer;
+    
+    }
+    .Close2{
+        font-size: 14px;
+        margin-right: 20px;
+        width: 30%;
+        height: 25px;
+        cursor: pointer;
+    }
+    
+}
+
+@media screen and (min-width: 1168px) {
+    header img{
+        margin-top: 10px;
+        width: 114px;
+    }
+
+    .headerTitles h1{
+        font-size: 120%;
+        color: white;
+        position: absolute;
+        margin-top: -125px;
+        margin-left: 120px;
+        
+    }
+    
+    .headerTitles h2{
+        font-size: 110%;
+        color: white;
+        position: absolute;
+        margin-top: -125px;
+        margin-left: 120px;
+        font-weight: 100;
+        
+    }
+    
+    .headerTitles h3{
+        font-size: 85%;
+        color: white;
+        position: absolute;
+        margin-top: -125px;
+        margin-left: 120px;
+        font-weight: 100;
+        
+    }
+    
+    .title h2{
+        margin-top: -30px;
+        font-size: 29px;
+        margin-left: 37%;
+    }
+    
+    .searchbar{
+        position: absolute;
+        margin-left: 68%;
+        margin-top: -25px; 
+    }
+    
+    .searchbar input{
+        background: white;
+        width: 150px;
+        height: 28px;
+        border: 2px solid black;
+        border-radius: 10px;
+        color: black;
+        text-align: center;
+        outline: none;
+    }
+
+    .update{
+        margin-top: 14px;
+        margin-right: 20px;
+        width: 100%;
+    }
+
+    .settings1{
+        margin-top: 14px;
+        margin-right: 10px;
+        width: 100%;
+    }
+    
+
+    ul li a{
+        display: block;
+        margin: 5px 0px 0px 0px;
+        padding: 12px 12px 12px 12px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 13px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    table{
+        font-size: 19px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    table tr{
+        height: 30px;
+        border: 2px solid black;
+    }
+
+    table tr td{
+        font-size: 16px;
+        border: 2px solid black;
+        line-height: 10px;
+    }
+
+    .scroll{
+        margin-top: 40px;
+        margin-left: 30px;
+        width: 95%;
+        height: 450px;
+        overflow-y: scroll;    
+     }
+
+     .sorting{
+        position: absolute;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 13px 0px 0px 82%;
+    }
+
+    .sorting select{
+       font-size: 14px;
+    }
+
+    .popup{
+        position: absolute;
+        background: #fff;
+        height: 270px;
+        width: 450px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    .open-popup{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup h2{
+        text-align: center;
+        font-size: 19px;
+        height: 10%;
+        background: #162fa0;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .Item label{
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .Item input{
+        position: absolute;
+        margin-left: 150px;
+        margin-top: 20px;
+        border: 2px solid black;
+        margin-bottom: 20px;
+        width: 50%;
+    }
+    
+    
+    .Stock{
+        margin-bottom: 10px;
+    }
+    .Stock label{
+        position: absolute;
+        margin-top: 40px;
+        margin-left: 50px;
+    
+    }
+    .Stock input{
+        position: absolute;
+        margin-top: 40px;
+        border: 2px solid black;
+        margin-left: 150px;
+        width: 50%;
+    }
+    
+    .Unit label{
+        position: absolute;
+        margin-top: 50px;
+        margin-left: 70px;
+        
+    }
+    .Unit .dropdownunit{
+        position: absolute;
+        border: 2px solid black;
+        margin-top: 50px;
+        margin-left: 150px;
+        width: 50%;
+        margin-bottom: 20px;
+        font-size: 15px;
+        
+    }
+    .Quantity label{
+        position: absolute;
+        margin-top: 90px;
+        margin-left: 55px;
+    
+    }
+    .Quantity input{
+        position: absolute;
+        border: 2px solid black;
+        width: 50%;
+        margin-top: 90px;
+        margin-left: 150px
+    
+    }
+    
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        margin: 135px;
+    }
+    
+    .Save{
+        margin-left: 20px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
+    }
+    .Close{
+        margin-right: -30px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .popup2{
+        position: absolute;
+        background: #fff;
+        height: 200px;
+        width: 425px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    .open-popup2{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup2 h2{
+        text-align: center;
+        font-size: 19px;
+        margin-left: 0px;
+        height: 11%;
+        background-color: #162fa0;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .dropdownedit{
+        width: 320px;
+        height: 40px;
+        position: relative;
+        margin-top: 20px;
+        margin-left: 60px;
+        margin-bottom: 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+        text-align: left;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    
+    .dropdownedit *{
+        box-sizing: border-box;
+    }
+    
+    
+    .Quantity2 label{
+        margin-left: 120px;
+        font-size: 17px;
+    
+    }
+    
+    .Quantity2 input{
+        border: 2px solid black;
+        width: 15%;
+        height: 15px;
+        margin-left: 7px;
+        font-size: 13px;
+    }
+    
+    .buttons2{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    
+    .Save2{
+        font-size: 14px;
+        margin-left: 40px;
+        width: 30%;
+        height: 25px;
+        cursor: pointer;
+    
+    }
+    .Close2{
+        font-size: 14px;
+        margin-right: 20px;
+        width: 30%;
+        height: 25px;
+        cursor: pointer;
+    }
+    
+}
+
+@media screen and (min-width: 1257px) {
+    header img{
+        margin-top: 10px;
+        width: 114px;
+    }
+
+    .headerTitles h1{
+        font-size: 123%;
+        color: white;
+        position: absolute;
+        margin-top: -125px;
+        margin-left: 120px;
+        
+    }
+    
+    .headerTitles h2{
+        font-size: 113%;
+        color: white;
+        position: absolute;
+        margin-top: -125px;
+        margin-left: 120px;
+        font-weight: 100;
+        
+    }
+    
+    .headerTitles h3{
+        font-size: 88%;
+        color: white;
+        position: absolute;
+        margin-top: -125px;
+        margin-left: 120px;
+        font-weight: 100;
+        
+    }
+    
+    .title h2{
+        margin-top: -30px;
+        font-size: 30px;
+        margin-left: 39%;
+    }
+    
+    .searchbar{
+        position: absolute;
+        margin-left: 68%;
+        margin-top: -25px; 
+    }
+    
+    .searchbar input{
+        background: white;
+        width: 170px;
+        height: 28px;
+        border: 2px solid black;
+        border-radius: 10px;
+        color: black;
+        text-align: center;
+        outline: none;
+    }
+
+    .update{
+        margin-top: 14px;
+        margin-right: 20px;
+        width: 100%;
+    }
+
+    .settings1{
+        margin-top: 14px;
+        margin-right: 10px;
+        width: 100%;
+    }
+    
+
+    ul li a{
+        display: block;
+        margin: 5px 0px 0px 0px;
+        padding: 12px 12px 12px 12px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 13px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    table{
+        font-size: 20px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    table tr{
+        height: 30px;
+        border: 2px solid black;
+    }
+
+    table tr td{
+        font-size: 17px;
+        border: 2px solid black;
+        line-height: 10px;
+    }
+
+    .scroll{
+        margin-top: 40px;
+        margin-left: 30px;
+        width: 95%;
+        height: 450px;
+        overflow-y: scroll;    
+     }
+
+     .sorting{
+        position: absolute;
+        font-size: 17px;
+        font-weight: bold;
+        margin: 12px 0px 0px 84%;
+    }
+
+    .sorting select{
+       font-size: 15px;
+    }
+
+    .popup{
+        position: absolute;
+        background: #fff;
+        height: 270px;
+        width: 470px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    .open-popup{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup h2{
+        text-align: center;
+        font-size: 19px;
+        height: 10%;
+        background: #162fa0;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .Item label{
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .Item input{
+        position: absolute;
+        margin-left: 150px;
+        margin-top: 20px;
+        border: 2px solid black;
+        margin-bottom: 20px;
+        width: 50%;
+    }
+    
+    
+    .Stock{
+        margin-bottom: 10px;
+    }
+    .Stock label{
+        position: absolute;
+        margin-top: 40px;
+        margin-left: 50px;
+    
+    }
+    .Stock input{
+        position: absolute;
+        margin-top: 40px;
+        border: 2px solid black;
+        margin-left: 150px;
+        width: 50%;
+    }
+    
+    .Unit label{
+        position: absolute;
+        margin-top: 50px;
+        margin-left: 70px;
+        
+    }
+    .Unit .dropdownunit{
+        position: absolute;
+        border: 2px solid black;
+        margin-top: 50px;
+        margin-left: 150px;
+        width: 50%;
+        margin-bottom: 20px;
+        font-size: 15px;
+        
+    }
+    .Quantity label{
+        position: absolute;
+        margin-top: 90px;
+        margin-left: 55px;
+    
+    }
+    .Quantity input{
+        position: absolute;
+        border: 2px solid black;
+        width: 50%;
+        margin-top: 90px;
+        margin-left: 150px
+    
+    }
+    
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        margin: 135px;
+    }
+    
+    .Save{
+        margin-left: 20px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
+    }
+    .Close{
+        margin-right: -30px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .popup2{
+        position: absolute;
+        background: #fff;
+        height: 200px;
+        width: 450px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    .open-popup2{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup2 h2{
+        text-align: center;
+        font-size: 19px;
+        margin-left: 0px;
+        height: 11%;
+        background-color: #162fa0;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .dropdownedit{
+        width: 350px;
+        height: 40px;
+        position: relative;
+        margin-top: 20px;
+        margin-left: 60px;
         margin-bottom: 20px;
         border: 2px solid black;
         border-radius: 5px;
@@ -1244,49 +2436,1330 @@ table tr td{
         box-sizing: border-box;
     }
     
-    /* Popup Edit Dropdown*/
-    
-    
     
     .Quantity2 label{
-        margin-left: 80px;
-        font-size: 15px;
+        margin-left: 120px;
+        font-size: 17px;
     
     }
     
     .Quantity2 input{
         border: 2px solid black;
-        width: 20%;
+        width: 15%;
+        height: 15px;
         margin-left: 7px;
-        font-size: 15px;
-        
-        
-    
+        font-size: 13px;
     }
     
     .buttons2{
         display: flex;
         justify-content: space-between;
-        margin: 100px;
         margin-top: 20px;
-          
+    }
+    
+    .Save2{
+        font-size: 14px;
+        margin-left: 40px;
+        width: 30%;
+        height: 25px;
+        cursor: pointer;
+    
+    }
+    .Close2{
+        font-size: 14px;
+        margin-right: 20px;
+        width: 30%;
+        height: 25px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    header img{
+        margin-top: 10px;
+        width: 114px;
+    }
+
+    .headerTitles h1{
+        font-size: 123%;
+        color: white;
+        position: absolute;
+        margin-top: -125px;
+        margin-left: 120px;
+        
+    }
+    
+    .headerTitles h2{
+        font-size: 113%;
+        color: white;
+        position: absolute;
+        margin-top: -125px;
+        margin-left: 120px;
+        font-weight: 100;
+        
+    }
+    
+    .headerTitles h3{
+        font-size: 88%;
+        color: white;
+        position: absolute;
+        margin-top: -125px;
+        margin-left: 120px;
+        font-weight: 100;
+        
+    }
+    
+    .title h2{
+        margin-top: -30px;
+        font-size: 31px;
+        margin-left: 39%;
+    }
+    
+    .searchbar{
+        position: absolute;
+        margin-left: 70%;
+        margin-top: -25px; 
+    }
+    
+    .searchbar input{
+        background: white;
+        width: 170px;
+        height: 28px;
+        border: 2px solid black;
+        border-radius: 10px;
+        color: black;
+        text-align: center;
+        outline: none;
+    }
+
+    .update{
+        margin-top: 14px;
+        margin-right: 20px;
+        width: 100%;
+    }
+
+    .settings1{
+        margin-top: 14px;
+        margin-right: 10px;
+        width: 100%;
+    }
+    
+
+    ul li a{
+        display: block;
+        margin: 5px 0px 0px 0px;
+        padding: 12px 12px 12px 12px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 13px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    table{
+        font-size: 21px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    table tr{
+        height: 30px;
+        border: 2px solid black;
+    }
+
+    table tr td{
+        font-size: 18px;
+        border: 2px solid black;
+        line-height: 10px;
+    }
+
+    .scroll{
+        margin-top: 40px;
+        margin-left: 33px;
+        width: 95%;
+        height: 450px;
+        overflow-y: scroll;    
+     }
+
+     .sorting{
+        position: absolute;
+        font-size: 17px;
+        font-weight: bold;
+        margin: 12px 0px 0px 85%;
+    }
+
+    .sorting select{
+       font-size: 15px;
+    }
+
+    .popup{
+        position: absolute;
+        background: #fff;
+        height: 270px;
+        width: 470px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    .open-popup{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup h2{
+        text-align: center;
+        font-size: 19px;
+        height: 10%;
+        background: #162fa0;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .Item label{
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .Item input{
+        position: absolute;
+        margin-left: 150px;
+        margin-top: 20px;
+        border: 2px solid black;
+        margin-bottom: 20px;
+        width: 50%;
+    }
+    
+    
+    .Stock{
+        margin-bottom: 10px;
+    }
+    .Stock label{
+        position: absolute;
+        margin-top: 40px;
+        margin-left: 50px;
+    
+    }
+    .Stock input{
+        position: absolute;
+        margin-top: 40px;
+        border: 2px solid black;
+        margin-left: 150px;
+        width: 50%;
+    }
+    
+    .Unit label{
+        position: absolute;
+        margin-top: 50px;
+        margin-left: 70px;
+        
+    }
+    .Unit .dropdownunit{
+        position: absolute;
+        border: 2px solid black;
+        margin-top: 50px;
+        margin-left: 150px;
+        width: 50%;
+        margin-bottom: 20px;
+        font-size: 15px;
+        
+    }
+    .Quantity label{
+        position: absolute;
+        margin-top: 90px;
+        margin-left: 55px;
+    
+    }
+    .Quantity input{
+        position: absolute;
+        border: 2px solid black;
+        width: 50%;
+        margin-top: 90px;
+        margin-left: 150px
+    
+    }
+    
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        margin: 135px;
+    }
+    
+    .Save{
+        margin-left: 20px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
+    }
+    .Close{
+        margin-right: -30px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .popup2{
+        position: absolute;
+        background: #fff;
+        height: 200px;
+        width: 450px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    .open-popup2{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup2 h2{
+        text-align: center;
+        font-size: 19px;
+        margin-left: 0px;
+        height: 11%;
+        background-color: #162fa0;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .dropdownedit{
+        width: 350px;
+        height: 40px;
+        position: relative;
+        margin-top: 20px;
+        margin-left: 60px;
+        margin-bottom: 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+        text-align: left;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+    .dropdownedit *{
+        box-sizing: border-box;
+    }
+    
+    
+    .Quantity2 label{
+        margin-left: 120px;
+        font-size: 17px;
+    
+    }
+    
+    .Quantity2 input{
+        border: 2px solid black;
+        width: 15%;
+        height: 15px;
+        margin-left: 7px;
+        font-size: 13px;
+    }
+    
+    .buttons2{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    
+    .Save2{
+        font-size: 14px;
+        margin-left: 40px;
+        width: 30%;
+        height: 25px;
+        cursor: pointer;
+    
+    }
+    .Close2{
+        font-size: 14px;
+        margin-right: 20px;
+        width: 30%;
+        height: 25px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 1411px) {
+    header img{
+        margin-top: 10px;
+        width: 115px;
+    }
+
+    .headerTitles h1{
+        font-size: 125%;
+        color: white;
+        position: absolute;
+        margin-top: -120px;
+        margin-left: 120px;
+        
+    }
+    
+    .headerTitles h2{
+        font-size: 115%;
+        color: white;
+        position: absolute;
+        margin-top: -120px;
+        margin-left: 120px;
+        font-weight: 100;
+        
+    }
+    
+    .headerTitles h3{
+        font-size: 90%;
+        color: white;
+        position: absolute;
+        margin-top: -120px;
+        margin-left: 120px;
+        font-weight: 100;
+        
+    }
+    
+    .title h2{
+        margin-top: -30px;
+        font-size: 31px;
+        margin-left: 39%;
+    }
+    
+    .searchbar{
+        position: absolute;
+        margin-left: 72%;
+        margin-top: -25px; 
+    }
+    
+    .searchbar input{
+        background: white;
+        width: 170px;
+        height: 28px;
+        border: 2px solid black;
+        border-radius: 10px;
+        color: black;
+        text-align: center;
+        outline: none;
+    }
+
+    .update{
+        margin-top: 14px;
+        margin-right: 20px;
+        width: 100%;
+    }
+
+    .settings1{
+        margin-top: 14px;
+        margin-right: 10px;
+        width: 100%;
+    }
+    
+
+    ul li a{
+        display: block;
+        margin: 5px 0px 0px 0px;
+        padding: 12px 12px 12px 12px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 13px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    table{
+        font-size: 21px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    table tr{
+        height: 30px;
+        border: 2px solid black;
+    }
+
+    table tr td{
+        font-size: 18px;
+        border: 2px solid black;
+        line-height: 10px;
+    }
+
+    .scroll{
+        margin-top: 40px;
+        margin-left: 33px;
+        width: 95%;
+        height: 450px;
+        overflow-y: scroll;    
+     }
+
+     .sorting{
+        position: absolute;
+        font-size: 17px;
+        font-weight: bold;
+        margin: 12px 0px 0px 85%;
+    }
+
+    .sorting select{
+       font-size: 15px;
+    }
+
+    .popup{
+        position: absolute;
+        background: #fff;
+        height: 270px;
+        width: 470px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    .open-popup{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup h2{
+        text-align: center;
+        font-size: 19px;
+        height: 10%;
+        background: #162fa0;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .Item label{
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .Item input{
+        position: absolute;
+        margin-left: 150px;
+        margin-top: 20px;
+        border: 2px solid black;
+        margin-bottom: 20px;
+        width: 50%;
+    }
+    
+    
+    .Stock{
+        margin-bottom: 10px;
+    }
+    .Stock label{
+        position: absolute;
+        margin-top: 40px;
+        margin-left: 50px;
+    
+    }
+    .Stock input{
+        position: absolute;
+        margin-top: 40px;
+        border: 2px solid black;
+        margin-left: 150px;
+        width: 50%;
+    }
+    
+    .Unit label{
+        position: absolute;
+        margin-top: 50px;
+        margin-left: 70px;
+        
+    }
+    .Unit .dropdownunit{
+        position: absolute;
+        border: 2px solid black;
+        margin-top: 50px;
+        margin-left: 150px;
+        width: 50%;
+        margin-bottom: 20px;
+        font-size: 15px;
+        
+    }
+    .Quantity label{
+        position: absolute;
+        margin-top: 90px;
+        margin-left: 55px;
+    
+    }
+    .Quantity input{
+        position: absolute;
+        border: 2px solid black;
+        width: 50%;
+        margin-top: 90px;
+        margin-left: 150px
+    
+    }
+    
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        margin: 135px;
+    }
+    
+    .Save{
+        margin-left: 20px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
+    }
+    .Close{
+        margin-right: -30px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .popup2{
+        position: absolute;
+        background: #fff;
+        height: 200px;
+        width: 450px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    .open-popup2{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup2 h2{
+        text-align: center;
+        font-size: 19px;
+        margin-left: 0px;
+        height: 11%;
+        background-color: #162fa0;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .dropdownedit{
+        width: 350px;
+        height: 40px;
+        position: relative;
+        margin-top: 20px;
+        margin-left: 60px;
+        margin-bottom: 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+        text-align: left;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+    .dropdownedit *{
+        box-sizing: border-box;
+    }
+    
+    
+    .Quantity2 label{
+        margin-left: 120px;
+        font-size: 17px;
+    
+    }
+    
+    .Quantity2 input{
+        border: 2px solid black;
+        width: 15%;
+        height: 15px;
+        margin-left: 7px;
+        font-size: 13px;
+    }
+    
+    .buttons2{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    
+    .Save2{
+        font-size: 14px;
+        margin-left: 40px;
+        width: 30%;
+        height: 25px;
+        cursor: pointer;
+    
+    }
+    .Close2{
+        font-size: 14px;
+        margin-right: 20px;
+        width: 30%;
+        height: 25px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 1615px) {
+    header img{
+        margin-top: 10px;
+        width: 120px;
+    }
+
+    .headerTitles h1{
+        font-size: 130%;
+        color: white;
+        position: absolute;
+        margin-top: -120px;
+        margin-left: 125px;
+        
+    }
+    
+    .headerTitles h2{
+        font-size: 120%;
+        color: white;
+        position: absolute;
+        margin-top: -120px;
+        margin-left: 125px;
+        font-weight: 100;
+        
+    }
+    
+    .headerTitles h3{
+        font-size: 95%;
+        color: white;
+        position: absolute;
+        margin-top: -120px;
+        margin-left: 125px;
+        font-weight: 100;
+        
+    }
+    
+    .title h2{
+        margin-top: -30px;
+        font-size: 35px;
+        margin-left: 40%;
+    }
+    
+    .searchbar{
+        position: absolute;
+        margin-left: 72%;
+        margin-top: -32px; 
+    }
+    
+    .searchbar input{
+        background: white;
+        width: 190px;
+        height: 28px;
+        border: 2px solid black;
+        border-radius: 10px;
+        color: black;
+        text-align: center;
+        outline: none;
+    }
+
+    .update{
+        margin-top: 8px;
+        margin-right: 20px;
+        width: 100%;
+    }
+
+    .settings1{
+        margin-top: 8px;
+        margin-right: 10px;
+        width: 100%;
+    }
+    
+
+    ul li a{
+        display: block;
+        margin: 5px 0px 0px 0px;
+        padding: 15px 15px 15px 15px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 14px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    table{
+        font-size: 25px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    table tr{
+        height: 30px;
+        border: 2px solid black;
+    }
+
+    table tr td{
+        font-size: 20px;
+        border: 2px solid black;
+        line-height: 10px;
+    }
+
+    .scroll{
+        margin-top: 40px;
+        margin-left: 33px;
+        width: 95%;
+        height: 450px;
+        overflow-y: scroll;    
+     }
+
+     .sorting{
+        position: absolute;
+        font-size: 19px;
+        font-weight: bold;
+        margin: 12px 0px 0px 86%;
+    }
+
+    .sorting select{
+       font-size: 16px;
+    }
+
+    .popup{
+        position: absolute;
+        background: #fff;
+        height: 290px;
+        width: 490px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    .open-popup{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup h2{
+        text-align: center;
+        font-size: 25px;
+        height: 10%;
+        background: #162fa0;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .Item label{
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .Item input{
+        position: absolute;
+        margin-left: 150px;
+        margin-top: 20px;
+        border: 2px solid black;
+        margin-bottom: 20px;
+        width: 50%;
+    }
+    
+    
+    .Stock{
+        margin-bottom: 10px;
+    }
+    .Stock label{
+        position: absolute;
+        margin-top: 40px;
+        margin-left: 50px;
+    
+    }
+    .Stock input{
+        position: absolute;
+        margin-top: 40px;
+        border: 2px solid black;
+        margin-left: 150px;
+        width: 50%;
+    }
+    
+    .Unit label{
+        position: absolute;
+        margin-top: 50px;
+        margin-left: 70px;
+        
+    }
+    .Unit .dropdownunit{
+        position: absolute;
+        border: 2px solid black;
+        margin-top: 50px;
+        margin-left: 150px;
+        width: 50%;
+        margin-bottom: 20px;
+        font-size: 15px;
+        
+    }
+    .Quantity label{
+        position: absolute;
+        margin-top: 90px;
+        margin-left: 55px;
+    
+    }
+    .Quantity input{
+        position: absolute;
+        border: 2px solid black;
+        width: 50%;
+        margin-top: 90px;
+        margin-left: 150px
+    
+    }
+    
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        margin: 145px;
+    }
+    
+    .Save{
+        margin-left: 20px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
+    }
+    .Close{
+        margin-right: -30px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .popup2{
+        position: absolute;
+        background: #fff;
+        height: 240px;
+        width: 490px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    .open-popup2{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup2 h2{
+        text-align: center;
+        font-size: 25px;
+        margin-left: 0px;
+        height: 11%;
+        background-color: #162fa0;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .dropdownedit{
+        width: 370px;
+        height: 50px;
+        position: relative;
+        margin-top: 20px;
+        margin-left: 60px;
+        margin-bottom: 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+        text-align: left;
+        font-size: 17px;
+        cursor: pointer;
+    }
+    
+    .dropdownedit *{
+        box-sizing: border-box;
+    }
+    
+    
+    .Quantity2 label{
+        margin-left: 140px;
+        font-size: 19px;
+    
+    }
+    
+    .Quantity2 input{
+        border: 2px solid black;
+        width: 16%;
+        height: 15px;
+        margin-left: 7px;
+        font-size: 13px;
+    }
+    
+    .buttons2{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
     }
     
     .Save2{
         font-size: 15px;
-        margin-left: 0px;
-        width: 50%;
-        height: 25px;
-       
+        margin-left: 40px;
+        width: 30%;
+        height: 27px;
+        cursor: pointer;
     
     }
     .Close2{
         font-size: 15px;
-        margin-right: -10px;
-        width: 50%;
-        height: 25px;
-       
+        margin-right: 20px;
+        width: 30%;
+        height: 27px;
+        cursor: pointer;
     }
     
 }
 
+@media screen and (min-width: 1771px) {
+    header img{
+        margin-top: 10px;
+        width: 120px;
+    }
+
+    .headerTitles h1{
+        font-size: 130%;
+        color: white;
+        position: absolute;
+        margin-top: -120px;
+        margin-left: 125px;
+        
+    }
+    
+    .headerTitles h2{
+        font-size: 120%;
+        color: white;
+        position: absolute;
+        margin-top: -120px;
+        margin-left: 125px;
+        font-weight: 100;
+        
+    }
+    
+    .headerTitles h3{
+        font-size: 95%;
+        color: white;
+        position: absolute;
+        margin-top: -120px;
+        margin-left: 125px;
+        font-weight: 100;
+        
+    }
+    
+    .title h2{
+        margin-top: -30px;
+        font-size: 35px;
+        margin-left: 40%;
+    }
+    
+    .searchbar{
+        position: absolute;
+        margin-left: 75%;
+        margin-top: -32px; 
+    }
+    
+    .searchbar input{
+        background: white;
+        width: 190px;
+        height: 28px;
+        border: 2px solid black;
+        border-radius: 10px;
+        color: black;
+        text-align: center;
+        outline: none;
+    }
+
+    .update{
+        margin-top: 8px;
+        margin-right: 20px;
+        width: 100%;
+    }
+
+    .settings1{
+        margin-top: 8px;
+        margin-right: 10px;
+        width: 100%;
+    }
+    
+
+    ul li a{
+        display: block;
+        margin: 5px 0px 0px 0px;
+        padding: 15px 15px 15px 15px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 14px;
+        outline: 2px solid black;
+        box-shadow: 2px darkblue;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    table{
+        font-size: 25px;
+        margin-left: 0px;
+        width: 100%;
+        border: 2px solid black;
+        border-collapse: collapse; 
+    }
+
+    table tr{
+        height: 30px;
+        border: 2px solid black;
+    }
+
+    table tr td{
+        font-size: 20px;
+        border: 2px solid black;
+        line-height: 10px;
+    }
+
+    .scroll{
+        margin-top: 40px;
+        margin-left: 33px;
+        width: 95%;
+        height: 450px;
+        overflow-y: scroll;    
+     }
+
+     .sorting{
+        position: absolute;
+        font-size: 19px;
+        font-weight: bold;
+        margin: 12px 0px 0px 86%;
+    }
+
+    .sorting select{
+       font-size: 16px;
+    }
+
+    .popup{
+        position: absolute;
+        background: #fff;
+        height: 290px;
+        width: 490px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    .open-popup{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup h2{
+        text-align: center;
+        font-size: 25px;
+        height: 10%;
+        background: #162fa0;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .Item label{
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .Item input{
+        position: absolute;
+        margin-left: 150px;
+        margin-top: 20px;
+        border: 2px solid black;
+        margin-bottom: 20px;
+        width: 50%;
+    }
+    
+    
+    .Stock{
+        margin-bottom: 10px;
+    }
+    .Stock label{
+        position: absolute;
+        margin-top: 40px;
+        margin-left: 50px;
+    
+    }
+    .Stock input{
+        position: absolute;
+        margin-top: 40px;
+        border: 2px solid black;
+        margin-left: 150px;
+        width: 50%;
+    }
+    
+    .Unit label{
+        position: absolute;
+        margin-top: 50px;
+        margin-left: 70px;
+        
+    }
+    .Unit .dropdownunit{
+        position: absolute;
+        border: 2px solid black;
+        margin-top: 50px;
+        margin-left: 150px;
+        width: 50%;
+        margin-bottom: 20px;
+        font-size: 15px;
+        
+    }
+    .Quantity label{
+        position: absolute;
+        margin-top: 90px;
+        margin-left: 55px;
+    
+    }
+    .Quantity input{
+        position: absolute;
+        border: 2px solid black;
+        width: 50%;
+        margin-top: 90px;
+        margin-left: 150px
+    
+    }
+    
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        margin: 145px;
+    }
+    
+    .Save{
+        margin-left: 20px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
+    }
+    .Close{
+        margin-right: -30px;
+        width: 40%;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .popup2{
+        position: absolute;
+        background: #fff;
+        height: 240px;
+        width: 490px;
+        position: absolute;
+        border: 3px solid black;
+        border-radius: 10px;
+        top: 0;
+        left: 50%;
+        display: grid;
+        transform: translate(-50%, -50%)scale(0.1);
+        visibility: hidden;
+        transition: transform 0.4s;
+    }
+    .open-popup2{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%)scale(1);
+    }
+
+    .popup2 h2{
+        text-align: center;
+        font-size: 25px;
+        margin-left: 0px;
+        height: 11%;
+        background-color: #162fa0;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .dropdownedit{
+        width: 370px;
+        height: 50px;
+        position: relative;
+        margin-top: 20px;
+        margin-left: 60px;
+        margin-bottom: 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+        text-align: left;
+        font-size: 17px;
+        cursor: pointer;
+    }
+    
+    .dropdownedit *{
+        box-sizing: border-box;
+    }
+    
+    
+    .Quantity2 label{
+        margin-left: 140px;
+        font-size: 19px;
+    
+    }
+    
+    .Quantity2 input{
+        border: 2px solid black;
+        width: 16%;
+        height: 15px;
+        margin-left: 7px;
+        font-size: 13px;
+    }
+    
+    .buttons2{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+    }
+    
+    .Save2{
+        font-size: 15px;
+        margin-left: 40px;
+        width: 30%;
+        height: 27px;
+        cursor: pointer;
+    
+    }
+    .Close2{
+        font-size: 15px;
+        margin-right: 20px;
+        width: 30%;
+        height: 27px;
+        cursor: pointer;
+    }
+    
+}

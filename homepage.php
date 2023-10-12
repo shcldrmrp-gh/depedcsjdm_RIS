@@ -40,6 +40,7 @@
     </div>
 
     <footer>
+      <h3>Developer: <a href="https://www.facebook.com/ivan.policarpio.01"> Ivan Policarpio</a> and <a href="https://www.facebook.com/oerchaos">Austin Condalor</a></h3>
       <!--DISABLED BACK BUTTON-->
       <script src="disableBackButton.js"></script>
     </footer>

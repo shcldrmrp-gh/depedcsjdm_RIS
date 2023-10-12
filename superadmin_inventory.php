@@ -15,7 +15,7 @@
     <link rel="icon" type="png" href="logos/depedcsjdmlogo.png">
     <link rel="stylesheet" href="superadmin_inventory.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="table2excel.js"></script>
+   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -132,7 +132,7 @@
         </form>   
     </div>
     <!-----Delete Prompt------->
-    
+    <script src="table2excel.js"></script>
     <script src="autoLogoutFunction.js"></script>
     <script src="superadmin_inventory.js"></script>
 </body>

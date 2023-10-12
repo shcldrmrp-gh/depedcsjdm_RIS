@@ -244,6 +244,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const selectElement = document.getElementById('userOfficeSelect');
+
+    selectElement.addEventListener('click', function() {
+        const placeholderOption = selectElement.querySelector('option[value=""]');
+        placeholderOption.style.display = 'none';
+    });
+});
+
+
 // COLOR ALTERNATING FUNCTION
 function applyAlternateRowColors() {
     $('tbody tr:visible:odd').css('background-color', 'lightgrey');
