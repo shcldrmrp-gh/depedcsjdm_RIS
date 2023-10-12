@@ -3,7 +3,7 @@ let form = document.querySelector("#formContainer");
         
         
         var opt = {
-            margin:         [-10, -3 , 0, -80],
+            margin:         [-13.75, -3 , 0, -80],
             filename:       'ris-form.pdf',
             image:          { type: 'jpeg', quality: .95},
             html2canvas:  { scale: 2, allowMagnification: false, width: 1500, height: 1550},
