@@ -117,39 +117,38 @@ footer{
 /* RESPONSIVE */
 @media screen and (min-width: 768px) {
   footer{
-    margin-left: 25%;
-    margin-top: -20%;
+    margin-left: 0%;
+    margin-top: -13%;
   }
   
 }
 
 @media screen and (min-width: 848px) {
   footer{
-    margin-left: 25%;
-    margin-top: -15%;
+    margin-left: 0%;
+    margin-top: -13%;
   }
   
 }
 
 @media screen and (min-width: 936px) {
   footer{
-    margin-left: 29%;
-    margin-top: -15%;
+    margin-left: 0%;
+    margin-top: -13%;
   }
   
 }
 
 @media screen and (min-width: 1050px) {
   footer{
-    margin-left: 29%;
-    margin-top: -15%;
+    margin-left: 0%;
+    margin-top: -13%;
   }
-  
 }
 
 @media screen and (min-width: 1168px) {
   footer{
-    margin-left: 33.5%;
+    margin-left: 0%;
     margin-top: -10%;
   }
   
@@ -157,7 +156,7 @@ footer{
 
 @media screen and (min-width: 1257px) {
   footer{
-    margin-left: 33.5%;
+    margin-left: 0%;
     margin-top: -10%;
   }
   
@@ -165,7 +164,7 @@ footer{
 
 @media screen and (min-width: 1350px) {
   footer{
-    margin-left: 35.5%;
+    margin-left: 0%;
     margin-top: -10%;
   }
   
@@ -173,7 +172,7 @@ footer{
 
 @media screen and (min-width: 1411px) {
   footer{
-    margin-left: 35.5%;
+    margin-left: 0%;
     margin-top: -10%;
   }
   
@@ -183,7 +182,7 @@ footer{
 
 @media screen and (min-width: 1536px) {
   footer{
-    margin-left: 37%;
+    margin-left: 0%;
     margin-top: -10%;
   }
   
@@ -192,32 +191,31 @@ footer{
 
 @media screen and (min-width: 1615px) {
   footer{
-    margin-left: 38%;
-    margin-top: -8%;
+    margin-left: 0%;
+    margin-top: -5%;
   }
   
 }
 
 @media screen and (min-width: 1771px) {
   footer{
-    margin-left: 39%;
-    margin-top: -8%;
+    margin-left: 0%;
+    margin-top: -5%;
   }
   
 }
 
 @media screen and (min-width: 1880px) {
   footer{
-    margin-left: 39.5%;
-    margin-top: -8%;
+    margin-left: 0%;
+    margin-top: 0%;
   }
   
 }
 
 @media screen and (min-width: 1920px) {
   footer{
-    margin-left: 40%;
-    margin-top: -8%;
+    margin-left: 0%;
+    margin-top: 0%;
   }
-  
 }
