@@ -50,7 +50,7 @@
                         <a href="#">SETTINGS</a>
                         <ul class="settings">
                             <li><a href="queuing system.php">QUEUING</a></li>
-                            <li><a href="admin_risform.php">RIS FORM</a></li>
+                            <li><a href="usermanager_ris.php">RIS FORM</a></li>
                             <li><a href="changePasswordForm.php">CHANGE PASSWORD</a></li>
                             <li><a href="logout.php">LOGOUT</a></li>
                         </ul>
