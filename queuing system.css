@@ -77,7 +77,7 @@ header img{
 /* TABLE */
 table{
     font-size: 20px;
-    margin-left: 0%;
+    margin-top: 0px;
     width: 100%;
     border: 2px solid black;
     border-collapse: collapse; 
@@ -137,6 +137,7 @@ table tr td{
 
 .scroll{
     width: 1000px;
+    height: 500px;
     margin-left: 18%;
     overflow-y: scroll;
 }
@@ -150,7 +151,6 @@ table tr td{
 .openRelease:hover{
     color: blue;
 }
-
 
 /* RESPONSIVE */
 @media screen and (min-width: 768px) {
@@ -213,12 +213,12 @@ table tr td{
 
     table{
         font-size: 17px;
-        margin-left: 0%;
-        margin-top: 20px;
+        margin-top: 0px;
         width: 100%;
         border: 2px solid black;
         border-collapse: collapse; 
     }
+    
 
     table tr td{
         height: 50px;
@@ -232,9 +232,9 @@ table tr td{
         margin-left: 6%;
         overflow-y: scroll;
     }
-
-    
 }
+    
+
 
 @media screen and (min-width: 848px) {
     header img{
@@ -296,8 +296,7 @@ table tr td{
 
     table{
         font-size: 17px;
-        margin-left: 0%;
-        margin-top: 20px;
+        margin-top: 0px;
         width: 100%;
         border: 2px solid black;
         border-collapse: collapse; 
@@ -378,8 +377,7 @@ table tr td{
 
     table{
         font-size: 17px;
-        margin-left: 0%;
-        margin-top: 20px;
+        margin-top: 0px;
         width: 100%;
         border: 2px solid black;
         border-collapse: collapse; 
@@ -460,8 +458,7 @@ table tr td{
 
     table{
         font-size: 17px;
-        margin-left: 0%;
-        margin-top: 20px;
+        margin-top: 0px;
         width: 100%;
         border: 2px solid black;
         border-collapse: collapse; 
@@ -542,8 +539,7 @@ table tr td{
 
     table{
         font-size: 18px;
-        margin-left: 0%;
-        margin-top: 20px;
+        margin-top: 0px;
         width: 100%;
         border: 2px solid black;
         border-collapse: collapse; 
@@ -624,8 +620,7 @@ table tr td{
 
     table{
         font-size: 19px;
-        margin-left: 0%;
-        margin-top: 20px;
+        margin-top: 0px;
         width: 100%;
         border: 2px solid black;
         border-collapse: collapse; 
@@ -706,8 +701,7 @@ table tr td{
 
     table{
         font-size: 19px;
-        margin-left: 0%;
-        margin-top: 15px;
+        margin-top: 0px;
         width: 100%;
         border: 2px solid black;
         border-collapse: collapse; 
@@ -788,8 +782,7 @@ table tr td{
 
     table{
         font-size: 19px;
-        margin-left: 0%;
-        margin-top: 15px;
+        margin-top: 0px;
         width: 100%;
         border: 2px solid black;
         border-collapse: collapse; 
@@ -870,8 +863,7 @@ table tr td{
 
     table{
         font-size: 20px;
-        margin-left: 0%;
-        margin-top: 15px;
+        margin-top: 0px;
         width: 100%;
         border: 2px solid black;
         border-collapse: collapse; 
@@ -952,8 +944,7 @@ table tr td{
 
     table{
         font-size: 22px;
-        margin-left: 0%;
-        margin-top: 15px;
+        margin-top: 0px;
         width: 100%;
         border: 2px solid black;
         border-collapse: collapse; 
@@ -973,6 +964,9 @@ table tr td{
     }
     
 }
+
+
+
 
 
 
