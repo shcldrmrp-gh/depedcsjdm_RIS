@@ -193,7 +193,7 @@
 
             <div class="Quantity2">
                 <label for="addQuantity">Quantity:</label>
-                <input type="text" name="add_quantity" id="addQuantity">
+                <input type="text" name="add_quantity" id="addQuantity" required>
             </div>
 
             <div class="buttons2">

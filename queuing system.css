@@ -229,6 +229,7 @@ table tr td{
 
     .scroll{
         width: 90%;
+        height: 400px;
         margin-left: 6%;
         overflow-y: scroll;
     }
@@ -311,6 +312,7 @@ table tr td{
 
     .scroll{
         width: 90%;
+        height: 400px;
         margin-left: 6%;
         overflow-y: scroll;
     }
@@ -392,6 +394,7 @@ table tr td{
 
     .scroll{
         width: 90%;
+        height: 400px;
         margin-left: 6%;
         overflow-y: scroll;
     }
@@ -473,6 +476,7 @@ table tr td{
 
     .scroll{
         width: 90%;
+        height: 400px;
         margin-left: 6%;
         overflow-y: scroll;
     }
@@ -554,6 +558,7 @@ table tr td{
 
     .scroll{
         width: 83%;
+        height: 400px;
         margin-left: 11%;
         overflow-y: scroll;
     }
@@ -635,6 +640,7 @@ table tr td{
 
     .scroll{
         width: 83%;
+        height: 400px;
         margin-left: 11%;
         overflow-y: scroll;
     }
@@ -716,6 +722,7 @@ table tr td{
 
     .scroll{
         width: 83%;
+        height: 400px;
         margin-left: 11%;
         overflow-y: scroll;
     }
@@ -797,6 +804,7 @@ table tr td{
 
     .scroll{
         width: 82%;
+        height: 400px;
         margin-left: 11%;
         overflow-y: scroll;
     }
@@ -878,6 +886,7 @@ table tr td{
 
     .scroll{
         width: 82%;
+        height: 500px;
         margin-left: 11%;
         overflow-y: scroll;
     }
@@ -959,6 +968,7 @@ table tr td{
 
     .scroll{
         width: 80%;
+        height: 500px;
         margin-left: 12%;
         overflow-y: scroll;
     }
